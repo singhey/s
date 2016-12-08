@@ -10,9 +10,9 @@ $(window).load(function(){
 			openComment = false;
 			styles = $('.style-text').html().replace(/(\/[^\/]*\*)$/, '<em class="comment">$1/</em>');
 		}else if(a == ":"){
-			styles = $('.style-text').html().replace(/([a-zA-Z- ^\n]*)$/, '<span class="property">$1</span> : ');
+			styles = $('.style-text').html().replace(/([a-zA-Z- ^\n]*)$/, '<span class="property">$1 </span>:');
 		}else if(a == ";"){
-			styles = $('.style-text').html().replace(/([^:]*)$/,'<span class="value">$1</span>;');
+			styles = $('.style-text').html().replace(/([^:]*)$/,'<span class="value"> $1</span>;');
 		}else if(a == "{"){
 			styles = $('.style-text').html().replace(/(.*)$/, '<span class="selector">$1</span> {');
 		}else{
