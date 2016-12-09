@@ -1,6 +1,6 @@
 *{
 	-webkit-transition:all 1s ease-out;
 }
-span i{
+span i::before{
 	font-family: 'Aref Ruqaa', serif;
 }
