@@ -40,6 +40,7 @@ $(window).load(function(){
 	}
 	
 	$('span.skip').click(function(){
+		console.log("Entered");
 		interval = 0;
 	});
 	writeStyle(styles, 0, 20);
