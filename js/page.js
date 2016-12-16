@@ -31,9 +31,10 @@ $(window).load(function(){
 			$(body).scrollTop($(body).prop('scrollHeight'));
 			char(message[index++]);
 			$('span.skip').click(function(){
-		console.log("Entered");
-		interval = 0;
-	});
+				console.log("Entered");
+				interval = 0;
+				console.log(interval);
+			});
 			console.log(interval);
 			if(index==message.length-200){
 				select();
