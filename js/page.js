@@ -34,7 +34,7 @@ $(window).load(function(){
 			$('span.skip').click(function(){
 				$('body').html(all);
 				select();
-				return;
+				return false;
 			});
 			if(index==message.length-200){
 				select();
