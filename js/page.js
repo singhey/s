@@ -33,6 +33,7 @@ $(window).load(function(){
 			char(message[index++]);
 			$('span.skip').click(function(){
 				$('body').html(all);
+				index = message.length+100;
 				select();
 				return false;
 			});
