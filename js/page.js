@@ -49,6 +49,7 @@ $(window).load(function(){
 		$('ul.menu>li:nth-child(1)').addClass('changeBackground');
 		$('div.con0').fadeIn(300).addClass('in-out');
 	}
+	$('ul.menu>li').mouseenter(function(){
 		$('ul.menu>li').removeClass('changeBackground');
 		k = $(this).index();
 		var p = "con" + k;
