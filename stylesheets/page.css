@@ -51,3 +51,6 @@ ul.follow>li:first-child{
     width:30%;
   }
 }
+span.click:hover{
+   cursor:pointer
+}
