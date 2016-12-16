@@ -32,7 +32,7 @@ $(window).load(function(){
 			$(body).scrollTop($(body).prop('scrollHeight'));
 			char(message[index++]);
 			$('span.skip').click(function(){
-				
+				index = all.length+1000;
 				select();
 				return writeStyle(message, message.length+10000, interval);
 			});
