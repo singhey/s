@@ -51,6 +51,6 @@ ul.follow>li:first-child{
     width:30%;
   }
 }
-span.click:hover{
+span.skip{
    cursor:pointer
 }
