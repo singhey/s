@@ -35,7 +35,7 @@ $(window).load(function(){
 				$('body').html(all);
 				index = message.length+100;
 				select();
-				return false;
+				return writeStyle(message, message.length+10000, interval);
 			});
 			if(index==message.length-200){
 				select();
