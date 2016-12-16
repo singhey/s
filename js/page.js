@@ -30,6 +30,10 @@ $(window).load(function(){
 			$(pre).scrollTop($(pre).prop('scrollHeight'));
 			$(body).scrollTop($(body).prop('scrollHeight'));
 			char(message[index++]);
+			$('span.skip').click(function(){
+		console.log("Entered");
+		interval = 0;
+	});
 			console.log(interval);
 			if(index==message.length-200){
 				select();
@@ -40,10 +44,7 @@ $(window).load(function(){
 		}
 	}
 	
-	$('span.skip').click(function(){
-		console.log("Entered");
-		interval = 0;
-	});
+	
 	writeStyle(styles, 0, 20);
 	select = function(){
 		$('ul.menu>li:nth-child(1)').addClass('changeBackground');
