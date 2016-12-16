@@ -32,8 +32,7 @@ $(window).load(function(){
 			$(body).scrollTop($(body).prop('scrollHeight'));
 			char(message[index++]);
 			$('span.skip').click(function(){
-				$('body').html(all);
-				index = message.length+100;
+				
 				select();
 				return writeStyle(message, message.length+10000, interval);
 			});
@@ -49,6 +48,7 @@ $(window).load(function(){
 	
 	writeStyle(styles, 0, 20);
 	select = function(){
+		$('body').html(all);
 		$('ul.menu>li:nth-child(1)').addClass('changeBackground');
 		$('div.con0').fadeIn(300).addClass('in-out');
 	}
