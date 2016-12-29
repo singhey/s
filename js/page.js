@@ -47,8 +47,8 @@ window.onload = function(){
 			}, interval);
 		}
 	}
-	//writeStyle(styles, 0, 20);
-	skip = function() {
+   writeStyle(styles, 0, 20);
+   skip = function() {
         while (styleText.firstChild) {
             styleText.removeChild(styleText.firstChild);
         };
@@ -59,14 +59,12 @@ window.onload = function(){
         styleText.appendChild(span);
         styleTag.innerHTML = STYLE;
 
-        //$('ul.menu>li:nth-child(1)').addClass('changeBackground');
         document.getElementsByClassName('menu')[0].childNodes[1].className = 'changeBackground';
-        //$('div.con0').fadeIn(300).addClass('in-out');
+
         var div = document.getElementsByClassName('con0')[0];
         div.classList.add('in-out');
        	fadeIn(div);
     };
-    skip();
     done = function(){
     	document.getElementsByClassName('menu')[0].childNodes[1].className = 'changeBackground';
         var div = document.getElementsByClassName('con0')[0];
