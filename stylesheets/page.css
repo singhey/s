@@ -43,5 +43,8 @@ ul.follow>li:first-child{
   }
 }
 span#skip{
-   cursor:pointer
+   cursor:pointer;
+   border:1px solid #0077B5;
+  font-family:tahoma;
+  color:#0077B5;
 }
