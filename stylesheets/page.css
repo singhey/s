@@ -48,3 +48,11 @@ span#skip{
   font-family:tahoma;
   color:#0077B5;
 }
+a{
+  text-decoration:none;
+  cursor:pointer;
+  color:red;
+}
+ol li{
+  padding:3px 0px;
+}
