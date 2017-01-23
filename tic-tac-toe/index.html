@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="theme" content="#288CC7">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tic-Tac-Toe Game | Singhey</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+			font-family: Roboto;
+		}
+		canvas{
+			display:block;
+			margin:auto;
+			margin-top:16px;
+		}
+		span{
+			-webkit-transform: translateY(90%);	
+		}
+		p{
+			font-size:18px;
+			font-weight: lighter;
+			text-align: center;
+			letter-spacing: 1px;
+			line-height: 1.6;
+		}
+		p#turn{
+			letter-spacing: 2px;
+		}	
+	</style>
+	<script type="text/javascript" src="./tic-tac.js"></script>
+</head>
+<body>
+	<button id="start" style="position:absolute;border:0;background:#2ae;border-radius:4px;padding:8px 20px; font-size: 24px;color:#fff;bottom:10px;right:20px;cursor:pointer;">Restart</button>
+	<p>Player 1 <span id="scoreP1"> score: 0</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Player 2 <span id="scoreP2"> score: 0</span></p>
+	<p id="turn">X's turn</p>
+</body>
+</html>
