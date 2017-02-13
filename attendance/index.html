@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="theme-color" content="#0B69D1"/>
+	<title>Attendence</title>
+	<script>var a = document.getElementsByTagName("title")[0];if(localStorage.name)a.innerHTML = "Attendence | "+localStorage.name;</script>
+	<link rel="stylesheet" type="text/css" href="./bunk.css">
+	<script type="text/javascript" src="./data.js"></script>
+	<script type="text/javascript" src="./bunk.js"></script>
+
+</head>
+<body>
+	<div class="background"></div>
+	<nav class="side-nav">
+			<ul class="navigation">
+				<li><a href="#">Private</a></li>
+				<li><a href="#">Commence</a></li>
+				<li><a href="#">order</a></li>
+				<li><a href="#">69</a></li>
+			</ul>
+			<span id="clear">Clear all data</span>
+		</nav>
+	<!--<img src="/images/7-charts.jpg">-->
+	<header>
+		<nav>
+			<input type="text" name="personName" class="name-input" placeholder="Your name">
+			<svg height="20" width="32" id="toggler">
+				<line x1="3" y1="3" x2="27" y2="3"/>
+				<line x1="3" y1="10" x2="16" y2="10"/>
+				<line x1="3" y1="18" x2="22" y2="18"/>
+			</svg>
+			<span id="date">Last update date</span>
+		</nav>
+		<ul class="switcher">
+			<li class="active"><a href="#">Current</a></li>
+			<li><a href="#">Update</a></li>
+			<li><a href="#">Feed</a></li>
+		</ul>
+	</header>
+	<div class="main-container">
+		<div class="container">
+			<div class="chart-box">
+				<svg viewBox="0 0 800 800">
+					<circle cx="400" cy="400" r="315" id="background-circle"/>
+					<circle cx="400" cy="400" r="300" id="outer"/>
+					<circle cx="400" cy="400" r="300" id="inner"/>
+					<text x="300" y="420" class="main">00</text>
+					<text x = "400" y="420" class="dec">.00%</text>
+
+				</svg>
+			</div>
+			<div class="subject-box">
+				<div class="block"><span id="attend">Attend : 10</span><span id="bunk">Bunk : 0</span></div>
+				<ul class="subjects">
+					<li class="selected">Subjects</li>
+					<li>Subjects</li>
+					<li>Subjects</li>
+					<li>Subjects</li>
+					<li>Subjects</li>
+					<li>Subjects</li>
+					<li>Subjects</li>
+					<li>Subjects</li>
+				</ul>
+			</div>
+		</div>
+		<div class="update">
+			<div class="legend"><span class="total">Attended</span><span class="attended">Bunked</span></div>
+			<ul class="update-subjects">
+				<script>
+					var u = document.getElementsByClassName("update-subjects")[0];
+					for(var i = 0;i < 8; i++){
+						var li = document.createElement("li");
+							li.innerHTML = '<span class="subjectName"></span><span class="bunk"></span><span class="attend"></span>';
+						u.appendChild(li);
+					}
+				</script>
+			</ul>
+		</div>
+		<div class="feed">
+			<div class="legend"><span class="total">Total</span><span class="attended">Present</span></div>
+			<ul class="feedUl">
+				<script>
+					var q = document.getElementsByClassName("feedUl")[0];
+					for(var i = 0;i < 8; i++){
+						var li = document.createElement("li");
+							li.innerHTML = '<span class="subjectNameFeed"></span><input type="text" class="input-field" name="total"><input type="text" name="attended" class="input-field"/>';
+						q.appendChild(li);
+					}
+				</script>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
