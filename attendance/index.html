@@ -64,42 +64,44 @@
 			<div class="subject-box">
 				<div class="block"><span id="attend">Attend : 10</span><span id="bunk">Bunk : 0</span></div>
 				<ul class="subjects">
-					<li class="selected">Subjects</li>
-					<li>Subjects</li>
-					<li>Subjects</li>
-					<li>Subjects</li>
-					<li>Subjects</li>
-					<li>Subjects</li>
-					<li>Subjects</li>
-					<li>Subjects</li>
+					<li class="selected"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
 				</ul>
 			</div>
 		</div>
 		<div class="update">
 			<div class="legend"><span class="total">Attended</span><span class="attended">Bunked</span></div>
 			<ul class="update-subjects">
-				<script>
-					var u = document.getElementsByClassName("update-subjects")[0];
-					for(var i = 0;i < 8; i++){
-						var li = document.createElement("li");
-							li.innerHTML = '<span class="subjectName"></span><span class="bunk"></span><span class="attend"></span>';
-						u.appendChild(li);
-					}
-				</script>
+				
 			</ul>
+			<script>
+				var u = document.getElementsByClassName("update-subjects")[0];
+				for(var i = 0;i < 8; i++){
+					var li = document.createElement("li");
+					li.innerHTML = '<span class="subjectName"></span><span class="bunk"></span><span class="attend"></span>';
+					u.appendChild(li);
+				}
+			</script>
 		</div>
 		<div class="feed">
 			<div class="legend"><span class="total">Total</span><span class="attended">Present</span></div>
 			<ul class="feedUl">
-				<script>
-					var q = document.getElementsByClassName("feedUl")[0];
-					for(var i = 0;i < 8; i++){
-						var li = document.createElement("li");
-							li.innerHTML = '<span class="subjectNameFeed"></span><input type="text" class="input-field" name="total"><input type="text" name="attended" class="input-field"/>';
-						q.appendChild(li);
-					}
-				</script>
+				
 			</ul>
+			<script>
+				var q = document.getElementsByClassName("feedUl")[0];
+				for(var i = 0;i < 8; i++){
+					var li = document.createElement("li");
+					li.innerHTML = '<span class="subjectNameFeed"></span><input type="text" class="input-field" name="total"><input type="text" name="attended" class="input-field"/>';
+					q.appendChild(li);
+				}
+			</script>
 		</div>
 	</div>
 </body>
