@@ -1,6 +1,5 @@
 window.onload = function(){
 	var circumference = 1884,
-		fps = 60,
 		required = {
 			addClass: function(el, className){
 				el.classList.add(className);
@@ -92,13 +91,17 @@ window.onload = function(){
 			finalDec = "."+s[1]+'%';
 			var increment = parseFloat((parseInt(sub[i].percentage) - parseInt(mainText.innerHTML.replace("%", "")))/29).toFixed(2),
 			subMain = 0, subDec = 0, value = 0,valuePrev = parseInt(mainText.innerHTML.replace("%", ""));
-			if(finalMain.length == 1){
-						finalMain = '0'+finalMain;
-					}else if(finalMain.length == 3){
-						mainText.setAttribute("x", "230");
-					}else{
-						mainText.setAttribute("x", "290");
-					}
+			var prevLength = valuePrev.toString();
+				prevLength = prevLength.split(".");
+			if(finalMain.length == 3 && prevLength[0].length === 3){
+				mainText.setAttribute("x", "250");
+			}else{
+				mainText.setAttribute("x", "300");
+			}
+			if(parseFloat(valuePrev) == parseFloat(sub[i].percentage)){
+				prev = i;
+				return;
+			}
 			p = setInterval(function(){
 				i++;
 				value = parseFloat(parseFloat(valuePrev)+parseFloat(increment)).toFixed(2);
@@ -110,16 +113,16 @@ window.onload = function(){
 				subDec = "."+w[1]+'%';
 				mainText.innerHTML = subMain;
 				decimalText.innerHTML = subDec;
-				if(subMain.length == 1){
+				while(subMain.length<2){
 					subMain = '0'+subMain;
 				}
 				if(i >=29){
 					if(finalMain.length == 1){
 						finalMain = '0'+finalMain;
 					}else if(finalMain.length == 3){
-						mainText.setAttribute("x", "230");
+						mainText.setAttribute("x", "250");
 					}else{
-						mainText.setAttribute("x", "290");
+						mainText.setAttribute("x", "300");
 					}
 					mainText.innerHTML = finalMain;
 					decimalText.innerHTML = finalDec;
