@@ -92,7 +92,13 @@ window.onload = function(){
 			finalDec = "."+s[1]+'%';
 			var increment = parseFloat((parseInt(sub[i].percentage) - parseInt(mainText.innerHTML.replace("%", "")))/29).toFixed(2),
 			subMain = 0, subDec = 0, value = 0,valuePrev = parseInt(mainText.innerHTML.replace("%", ""));
-			mainText.setAttribute("x", "300");
+			if(finalMain.length == 1){
+						finalMain = '0'+finalMain;
+					}else if(finalMain.length == 3){
+						mainText.setAttribute("x", "230");
+					}else{
+						mainText.setAttribute("x", "290");
+					}
 			p = setInterval(function(){
 				i++;
 				value = parseFloat(parseFloat(valuePrev)+parseFloat(increment)).toFixed(2);
@@ -113,7 +119,7 @@ window.onload = function(){
 					}else if(finalMain.length == 3){
 						mainText.setAttribute("x", "230");
 					}else{
-						mainText.setAttribute("x", "280");
+						mainText.setAttribute("x", "290");
 					}
 					mainText.innerHTML = finalMain;
 					decimalText.innerHTML = finalDec;
