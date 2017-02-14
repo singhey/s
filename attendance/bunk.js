@@ -111,9 +111,9 @@ window.onload = function(){
 					if(finalMain.length == 1){
 						finalMain = '0'+finalMain;
 					}else if(finalMain.length == 3){
-						mainText.setAttribute("x", "250");
+						mainText.setAttribute("x", "230");
 					}else{
-						mainText.setAttribute("x", "300");
+						mainText.setAttribute("x", "280");
 					}
 					mainText.innerHTML = finalMain;
 					decimalText.innerHTML = finalDec;
