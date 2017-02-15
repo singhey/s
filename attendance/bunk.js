@@ -233,7 +233,7 @@ window.onload = function(){
 
 	var clear = document.getElementById("clear");
 	clear.addEventListener("click", function(){
-		localStorage.clear();
+		if(confirm("Do you wish to clear all Data"))localStorage.clear();
 		required.addClass(this, "clicked");
 	},false);
 };
