@@ -11,6 +11,7 @@
 	font-size:15px;
 	font-weight:lighter;
 	letter-spacing:0.5px;
+	background:#F2DEDE;
 }
 
 html{
@@ -28,7 +29,9 @@ html{
 	border-bottom:1px solid #899;
 	text-align:center;
 }
-
+.box:last-child{
+	border:0;
+}
 .free{
     background:#DFF0D8;
 	color:#477E47;
