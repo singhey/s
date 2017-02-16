@@ -6,7 +6,7 @@ window.onload = function(){
 		createDivs(el, arr);
 	}
 	function resizeDivs(){
-		var height = window.innerHeight,
+		var height = window.innerHeight - 40,
 			div = document.getElementsByClassName('box'),
 			calcHeight = 0;
 
