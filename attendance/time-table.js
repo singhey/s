@@ -40,8 +40,8 @@ function getDay(){
 	day = day.toString();
 	day = day.split(" ");
 	day = day[0];
-	//return day;
-	return 'Mon';
+	return day;
+	
 }
 
 function getArray(){
