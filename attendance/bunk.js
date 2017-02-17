@@ -1,5 +1,6 @@
 window.onload = function(){
 	var circumference = 1884,
+		fps = 60,
 		required = {
 			addClass: function(el, className){
 				el.classList.add(className);
@@ -233,7 +234,28 @@ window.onload = function(){
 
 	var clear = document.getElementById("clear");
 	clear.addEventListener("click", function(){
-		if(confirm("Do you wish to clear all Data"))localStorage.clear();
+		if(confirm("wish to clear all data"))localStorage.clear();
 		required.addClass(this, "clicked");
 	},false);
+
+	var exhausted = document.getElementById("exhausted");
+	exhausted.addEventListener("click", function(){
+		if(confirm("Day done??")){
+			var s = localStorage.dayLength,
+				d = new Date(),
+				x = '',
+				c;
+			c = d.toString();
+			c = c.split(" ");
+			c[0] = 'Sat';
+			if(c[0] == 'Thu' && d.getHours() > 14){
+				x = s + " | 17:00 ";
+				localStorage.dayLength = x;
+			}else if((c[0] == 'Sat' && d.getHours() > 13)){
+				localStorage.dayLength = s+" | 17:00";
+			}else{
+				localStorage.dayLength = s+" | "+d.getHours()+':'+d.getMinutes();
+			}
+		}
+	}, false);
 };
