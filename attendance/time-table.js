@@ -29,7 +29,7 @@ timeTable[1] = ['Tue', '15CS44', '15CSL47', 'LUNCH', '15MAT41', '15CS43', '15CS4
 timeTable[2] = ['Wed', '15MAT41', '15CS43', '15CS44', 'TEA BREAK', '15CS45', 'LUNCH', '15CS43', '15MAT41', 'HOD/COUN', '15CS42'];
 timeTable[3] = ['Thu', '15CS45', '15MAT41', '15CS43', 'TEA BREAK', '15CS45', 'LUNCH', '15CS46'];
 timeTable[4] = ['Fri', '15CS45', '15CS42', 'NPTEL', 'TEA BREAK', '15CS42', 'LUNCH', '15CS46', '15CSL48'];
-timeTable[5] = ['Sat', '15CS46', '15MAT41', 'TEA BREAK', '15CS44', '15CS42'];
+timeTable[5] = ['Sat', '15CS46', '15CS46', '15MAT41', 'TEA BREAK', '15CS44', '15CS42'];
 
 var days = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY'],
 	subAndTeachers = ['15MAT41 Mathematics Sarada', '15CS42 Software Arun', '15CS43 Algoritm Santhiya', '15CS44 Microprocessor Supriya', '15CS45 Object_Oriented Jyothi', '15CS46 Communication Some_Bitch', '15CSL47 Algorithm_Lab', '15CSL48 Microprocessor_Lab'];
