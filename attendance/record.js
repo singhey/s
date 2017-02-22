@@ -12,6 +12,7 @@ function getHeight(a, h){
 	var x = a.split(":"),
 		hours = x[0],
 		minutes = x[1];
+	console.log(hours);
 		if(hours>=17){hours = 17;minutes= 0;}
 	return parseInt((hours - 9)* 60) + parseInt(minutes);
 }
