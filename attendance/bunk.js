@@ -240,7 +240,8 @@ window.onload = function(){
 
 	var exhausted = document.getElementById("exhausted");
 	exhausted.addEventListener("click", function(){
-		if(confirm("Day done??")){
+		var str = prompt("BreakDown Time");
+		if(str == ''){
 			var s = localStorage.dayLength,
 				d = new Date(),
 				x = '',
@@ -256,6 +257,9 @@ window.onload = function(){
 			}else{
 				localStorage.dayLength = s+" | "+d.getHours()+':'+d.getMinutes();
 			}
+		}else{
+			var s = localStorage.dayLength
+			localStorage.dayLength = s+" | "+str;
 		}
 	}, false);
 };
