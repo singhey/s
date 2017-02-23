@@ -258,8 +258,8 @@ window.onload = function(){
 				localStorage.dayLength = s+" | "+d.getHours()+':'+d.getMinutes();
 			}
 		}else{
-			var s = localStorage.dayLength
-			localStorage.dayLength = s+" | "+str;
+			var s = localStorage.dayLength;			
+localStorage.dayLength = s+" | "+str;
 		}
 	}, false);
 };
