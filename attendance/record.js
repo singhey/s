@@ -1,18 +1,17 @@
 window.onload = function(){
-	var container = document.getElementsByClassName("container")[0],
+	var container = document.getElementsByClassName("bars")[0],
 		divisionsVertical = parseInt(getComputedStyle(container)["height"].replace("px", "")),
 		divisionsHorizontal = parseInt(getComputedStyle(container)["width"].replace("px", ""));
-		time = (17 - 9) * 60,
-		eachMinuteVertical = parseFloat(divisionsVertical/time).toFixed(2),
-		eachMinuteHorizontal = Math.floor(divisionsHorizontal/60);
-	addBars(container, eachMinuteVertical, eachMinuteHorizontal/2);
+		time = localStorage.dayLength.split(" | ").length,
+		eachMinuteVertical = parseFloat(divisionsVertical/((17 - 9) * 60)).toFixed(2),
+		eachMinuteHorizontal = Math.floor(divisionsHorizontal/time);
+	addBars(container, eachMinuteVertical, eachMinuteHorizontal);
 };
 
 function getHeight(a, h){
 	var x = a.split(":"),
 		hours = x[0],
 		minutes = x[1];
-	console.log(hours);
 		if(hours>=17){hours = 17;minutes= 0;}
 	return parseInt((hours - 9)* 60) + parseInt(minutes);
 }
@@ -27,7 +26,7 @@ function addBars(el, h, w){
 		div.setAttribute("class", "bar");
 		div.style.height = (height * h)+'px';
 		div.style.width = w+'px';
-		div.style.left = ((w * i * 2))+'px';
+		div.style.left = ((w * i))+'px';
 		el.appendChild(div);
 	}
 }
