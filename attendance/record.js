@@ -5,6 +5,7 @@ window.onload = function(){
 		time = localStorage.dayLength.split(" | ").length,
 		eachMinuteVertical = parseFloat(divisionsVertical/((17 - 9) * 60)).toFixed(2),
 		eachMinuteHorizontal = Math.floor(divisionsHorizontal/time);
+		if(eachMinuteHorizontal >=6) eachMinuteHorizontal = 6;
 	addBars(container, eachMinuteVertical, eachMinuteHorizontal);
 };
 
