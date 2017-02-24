@@ -3,20 +3,24 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<meta name="theme-color" content="#0B69D1"/>
-	<title>Record</title>
-	<script>var a = document.getElementsByTagName("title")[0];if(localStorage.name)a.innerHTML = "Attendence | "+localStorage.name;</script>
+	<title>SVG Record | Singhey</title>
+	<script>var a = document.getElementsByTagName("title")[0];if(localStorage.name)a.innerHTML = "SVG Record | "+localStorage.name;</script>
 	<link rel="stylesheet" type="text/css" href="./record.css">
-	<script type="text/javascript" src="./record.js"></script>
+	<script type="text/javascript" src="./svgrecord.js"></script>
 </head>
 <body>
-	<a class="jump" href="./index.html">Back to base</a>
+	<a class="jump" href="./index.html">Return to Home</a>
 	<div class="container">
 		<ul>
 			<li><span>Whole day</span></li>
 			<li><span>After noon</span></li>
 			<li><span>Morning</span></li>
 		</ul>
-		<div class="bars"></div>
+		<div class="bars">
+			<svg>
+				<polygon points=""></polygon>
+			</svg>
+		</div>
 	</div>
 </body>
 </html>
