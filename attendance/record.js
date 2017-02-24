@@ -14,7 +14,7 @@ window.onload = function(){
 	reAlign();
 	addCircles();
 	var p = document.getElementsByTagName("polygon")[0];
-	console.log(polygon_length(p));
+	//console.log(polygon_length(p));
 	addStroke();
 };
 var data = [];
@@ -80,8 +80,9 @@ function getVertical(a){
 
 
 function addStroke(){
-	var p = document.getElementsByTagName("polygon")[0];
-	p.style.strokeDasharray = polygon_length(p)+' '+polygon_length(p);
+	var p = document.getElementsByTagName("polygon")[0],
+	    w = polygon_length(p);
+	p.style.strokeDasharray = w+' '+w;
 }
 
 function coord(c_str) {
@@ -111,7 +112,6 @@ function polygon_length(el) {
     // measure polygon
     if (points.length > 2) {
       for (var i=0; i<points.length-1; i++) {
-      	console.log(points[i]+' '+points[i+1]);
         len += dist(coord(points[i]), coord(points[i+1]));
       }
     }
