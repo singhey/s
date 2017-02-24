@@ -13,6 +13,9 @@ window.onload = function(){
 	getPoints();
 	reAlign();
 	addCircles();
+	var p = document.getElementsByTagName("polygon")[0];
+	console.log(p.getTotalLength());
+	addStroke();
 };
 var data = [];
 function makeSVGEl(tag, attrs) {
@@ -73,4 +76,10 @@ function getVertical(a){
 		minutes = x[1];
 		if(hours>=17){hours = 17;minutes= 0;}
 	return parseInt((hours - 9)* 60) + parseInt(minutes);
+}
+
+
+function addStroke(){
+	var p = document.getElementsByTagName("polygon")[0];
+	p.style.strokeDasharray = p.getTotalLength()+' '+p.getTotalLength();
 }
