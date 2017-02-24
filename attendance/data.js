@@ -1,7 +1,7 @@
 var subjects = ["Mathematics", "Software", "Algorithm", "Microprocessor", "Object_Oriented", "Communications", "Algorithm_Lab", "lab microproces.."],
-	attended = [1, 1, 2 ,0, 2, 1, 0, 0],
-	total = [1, 1, 2, 0, 2, 2, 0, 1],
-	dayLength = '16:00 | 12:45 | 15:10 | 16:20 | 14:20 ',
+	attended = [8, 5, 9, 7, 8, 6, 2, 0],
+	total = [11, 7, 11, 10, 10, 8, 2, 1],
+	dayLength = '16:00 | 12:45 | 15:10 | 16:20 | 14:20 | 15:55 | 16:00 | 12:40 | 16:00 | 17:00 ',
 	subjectsObj = function(n){
 		this.name = n;
 		this.attended = 0;
