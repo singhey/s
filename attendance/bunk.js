@@ -240,26 +240,25 @@ window.onload = function(){
 
 	var exhausted = document.getElementById("exhausted");
 	exhausted.addEventListener("click", function(){
-		var str = prompt("BreakDown Time");
-		if(str == ''){
-			var s = localStorage.dayLength,
-				d = new Date(),
-				x = '',
-				c;
+		var d = new Date(),
+			str = prompt("BreakDown Time", d.getHours()+':'+d.getMinutes()),
+			time,
+			c;
+			if(str!==null){
+			var t = str.split(":");
 			c = d.toString();
 			c = c.split(" ");
-			c[0] = 'Sat';
-			if(c[0] == 'Thu' && d.getHours() > 14){
-				x = s + " | 17:00 ";
-				localStorage.dayLength = x;
-			}else if((c[0] == 'Sat' && d.getHours() > 13)){
-				localStorage.dayLength = s+" | 17:00";
+			if(c[0] == 'Thu' && t[0]>14){
+				time = '17:00';
+			}else if(c[0] == 'Sat' && t[0]>13){
+				time = '17:00';
 			}else{
-				localStorage.dayLength = s+" | "+d.getHours()+':'+d.getMinutes();
+				time = str;
 			}
-		}else{
-			var s = localStorage.dayLength;			
-localStorage.dayLength = s+" | "+str;
+			if(time){
+				var s = localStorage.dayLength;
+				localStorage.dayLength = s +' | '+time;
+			}
 		}
 	}, false);
 };
