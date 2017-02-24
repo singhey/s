@@ -82,5 +82,5 @@ function getVertical(a){
 function addStroke(){
 	var p = document.getElementsByTagName("polygon")[0];
 	p.style.strokeDasharray = p.getTotalLength()+' '+p.getTotalLength();
-	console.log("hello");
+	alert("hello");
 }
