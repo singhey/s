@@ -14,7 +14,7 @@ window.onload = function(){
 	reAlign();
 	addCircles();
 	var p = document.getElementsByTagName("polygon")[0];
-	console.log(p.getTotalLength());
+	console.log(polygon_length(p));
 	addStroke();
 };
 var data = [];
@@ -36,11 +36,11 @@ function getPoints(){
 		timeArr = time.split("|"),
 		pSpace = parseFloat(w/(timeArr.length)).toFixed(2),
 		pHeight = parseFloat(h/((17 - 9) * 60)).toFixed(2);
-	points = '0 ,'+h;
+	points = '0,'+h;
 	data = [];
 	for(var i = 0;i <timeArr.length; i++){
 		var x = pSpace * i,
-			y = parseFloat(h - (getVertical(timeArr[i])*pHeight)).toFixed(2);;
+			y = parseFloat(h - (getVertical(timeArr[i])*pHeight)).toFixed(2);
 		if(y<5)y= 8;
 		points = points+' '+x+','+y;
 		data.push({cx:x, r:4, cy:y, title:timeArr[i]});
@@ -81,6 +81,44 @@ function getVertical(a){
 
 function addStroke(){
 	var p = document.getElementsByTagName("polygon")[0];
-	p.style.strokeDasharray = p.getTotalLength()+' '+p.getTotalLength();
-	alert("hello");
+	p.style.strokeDasharray = polygon_length(p)+' '+polygon_length(p);
+}
+
+function coord(c_str) {
+    var c = c_str.split(',');
+    if (c.length != 2) {
+        return; // return undefined
+    }
+    if (isNaN(c[0]) || isNaN(c[1])) {
+        return;
+    }
+    return [parseFloat(c[0]), parseFloat(c[1])];
+}
+
+function dist(c1, c2) {
+    if (c1 !== undefined && c2 !== undefined) {
+        return Math.sqrt(Math.pow((c2[0]-c1[0]), 2) + Math.pow((c2[1]-c1[1]), 2));
+    } else {
+        return 0;
+    }
+}
+
+function polygon_length(el) {
+  var points = el.getAttribute('points');
+  points = points.split(' ');
+  if (points.length > 1) {
+    var len = 0;
+    // measure polygon
+    if (points.length > 2) {
+      for (var i=0; i<points.length-1; i++) {
+      	console.log(points[i]+' '+points[i+1]);
+        len += dist(coord(points[i]), coord(points[i+1]));
+      }
+    }
+    // measure line or measure polygon close line
+    len += dist(coord(points[0]), coord(points[points.length-1]));
+    return len;
+  } else {
+    return 0;
+  }
 }
