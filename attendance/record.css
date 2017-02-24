@@ -68,7 +68,10 @@ li>span {
 
 polygon {
     fill: #C3D4E8;
-    -webkit-transition: all 1.2s ease-out;
+    -webkit-transition: all 5s linear;
+    stroke-width:2;
+    stroke:#4F81BD;
+    stroke-dasharray: 450 1000;
 }
 
 svg {
