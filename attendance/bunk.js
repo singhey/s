@@ -240,8 +240,8 @@ window.onload = function(){
 
 	var exhausted = document.getElementById("exhausted");
 	exhausted.addEventListener("click", function(){
-		var d = new Date(),
-			str = prompt("BreakDown Time", d.getHours()+':'+d.getMinutes()),
+		var d = new Date();
+		var str = prompt("BreakDown Time", d.getHours()+':'+d.getMinutes()+", "+d.getDate()+' '+months[d.getMonth()]),
 			time,
 			c;
 			if(str!==null){
@@ -262,3 +262,4 @@ window.onload = function(){
 		}
 	}, false);
 };
+var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
