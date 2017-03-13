@@ -130,7 +130,6 @@ function circlesEventListener(){
 	var circle = document.getElementsByTagName("circle");
 	for(var i = 0; i< circle.length; i++){
 		circle[i].addEventListener("click", makeTextBox);
-		console.log(circle[i].getAttribute("title"));
 	}
 }
 
