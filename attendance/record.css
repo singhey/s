@@ -68,7 +68,7 @@ li>span {
 
 polygon {
     fill: #C3D4E8;
-    -webkit-transition: all 5s linear;
+    -webkit-transition: all 2s linear;
     stroke-width:2;
     stroke:#4F81BD;
     stroke-dasharray: 450 1000;
@@ -85,7 +85,8 @@ circle {
 }
 
 text{
-    fill:#fff
+    fill:#fff;
+    font-size:6px;
 }
 rect {
     fill:#2f9192;
