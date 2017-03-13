@@ -14,6 +14,8 @@ window.onload = function(){
 	addCircles();
 	var p = document.getElementsByTagName("polygon")[0];
 	addStroke();
+	var h = document.getElementById("hide");
+	h.addEventListener("click", hideCircles);
 };
 var data = [];
 function makeSVGEl(tag, attrs) {
@@ -130,6 +132,7 @@ function circlesEventListener(){
 	var circle = document.getElementsByTagName("circle");
 	for(var i = 0; i< circle.length; i++){
 		circle[i].addEventListener("click", makeTextBox);
+		console.log(circle[i].getAttribute("title"));
 	}
 }
 
@@ -180,4 +183,11 @@ function move(el, attrs){
   			el.innerHTML = attrs[k];
   		}
     }
+}
+
+function hideCircles(){
+	var c = document.getElementsByTagName("circle");
+	for(var i = 0;i < c.length; i++){
+		c[i].style.fill = "transparent";
+	}
 }
