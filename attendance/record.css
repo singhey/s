@@ -23,20 +23,23 @@ ul {
 
 ul>li {
     list-style: none;
+    height: 45%;
     position: relative;
     border-bottom: 1px solid #ccc;
-    height:11.12%;
 }
+
+ul>li:first-child {
+    height: 10%;
+}
+
 li>span {
     position: absolute;
     bottom: 0;
     display: block;
-    width: 100%;
+    width: 45px;
     overflow: hidden;
     font-size: 10px;
-    height:100%;
-    text-align:right;
-    padding:5% 5%;
+    right: 0;
 }
 
 .bars {
@@ -79,4 +82,13 @@ svg {
 circle {
     fill: #4F81BD;
     cursor: pointer;
+}
+
+text{
+    fill:#fff
+}
+rect {
+    fill:#2f9192;
+    stroke-width:1;
+    stroke:#444;
 }
