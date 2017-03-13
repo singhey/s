@@ -1,5 +1,4 @@
 window.onload = function(){
-	console.log("loaded");
 	var container = document.getElementsByClassName("bars")[0],
 		svg = document.getElementsByTagName("svg")[0];
 	function reAlign(){
@@ -14,14 +13,17 @@ window.onload = function(){
 	reAlign();
 	addCircles();
 	var p = document.getElementsByTagName("polygon")[0];
-	//console.log(polygon_length(p));
 	addStroke();
 };
 var data = [];
 function makeSVGEl(tag, attrs) {
     var el = document.createElementNS('http://www.w3.org/2000/svg', tag);
     for (var k in attrs) {
-      el.setAttribute(k, attrs[k]);
+    	if(k!='text'){
+      		el.setAttribute(k, attrs[k]);
+  		}else{
+  			el.innerHTML = attrs[k];
+  		}
     }
     return el;
 }
@@ -40,10 +42,11 @@ function getPoints(){
 	data = [];
 	for(var i = 0;i <timeArr.length; i++){
 		var x = pSpace * i,
-			y = parseFloat(h - (getVertical(timeArr[i])*pHeight)).toFixed(2);
+			integer = timeArr[i].split(","),
+			y = parseFloat(h - (getVertical(integer[0])*pHeight)).toFixed(2);
 		if(y<5)y= 8;
 		points = points+' '+x+','+y;
-		data.push({cx:x, r:4, cy:y, title:timeArr[i]});
+		data.push({cx:x, r:4, cy:y, title:integer[0]+" "+integer[1]});
 	}
 	points = points+' '+w+','+h;
 	svg.children[0].setAttribute("points", points);
@@ -57,9 +60,10 @@ function addCircles(){
 			r:c.r,
 			cy:c.cy,
 			title:c.title
-		}));	
+		}));
 	});
-	
+
+	circlesEventListener();
 }
 
 function alignCircle(){
@@ -80,9 +84,8 @@ function getVertical(a){
 
 
 function addStroke(){
-	var p = document.getElementsByTagName("polygon")[0],
-	    w = polygon_length(p);
-	p.style.strokeDasharray = w+' '+w;
+	var p = document.getElementsByTagName("polygon")[0];
+	p.style.strokeDasharray = polygon_length(p)+' '+polygon_length(p);
 }
 
 function coord(c_str) {
@@ -121,4 +124,61 @@ function polygon_length(el) {
   } else {
     return 0;
   }
+}
+
+function circlesEventListener(){
+	var circle = document.getElementsByTagName("circle");
+	for(var i = 0; i< circle.length; i++){
+		circle[i].addEventListener("click", makeTextBox);
+		console.log(circle[i].getAttribute("title"));
+	}
+}
+
+function makeTextBox(){
+	var x = this.getAttribute("cx"), y = this.getAttribute("cy"), text = this.getAttribute("title"),
+		SVGRect, textBox;
+	if(document.getElementsByTagName("text").length<1){
+		var svg = document.getElementsByTagName("svg")[0];
+		svg.appendChild(makeSVGEl("text", {
+			x: x,
+			y: y,
+			text: text
+		}));
+		textBox = document.getElementsByTagName("text")[0],
+		SVGRect = textBox.getBBox();
+		svg.appendChild(makeSVGEl("rect", {
+			x: SVGRect.x,
+			y: SVGRect.y,
+			width: SVGRect.width,
+			height: SVGRect.height
+		}));
+		svg.appendChild(textBox);
+	}else{
+		textBox = document.getElementsByTagName("text")[0];
+		var rect = document.getElementsByTagName("rect")[0];
+		move(textBox, {
+			x: x,
+			y: y,
+			id: top,
+			text: text
+		});
+
+		SVGRect = textBox.getBBox();
+		move(rect, {
+			x: SVGRect.x-5,
+			y: SVGRect.y-5,
+			width: SVGRect.width+10,
+			height: SVGRect.height+10
+		});
+	}
+}
+
+function move(el, attrs){
+	for (var k in attrs) {
+    	if(k!='text'){
+      		el.setAttribute(k, attrs[k]);
+  		}else{
+  			el.innerHTML = attrs[k];
+  		}
+    }
 }
