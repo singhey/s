@@ -46,7 +46,7 @@ function getPoints(){
 			y = parseFloat(h - (getVertical(integer[0])*pHeight)).toFixed(2);
 		if(y<5)y= 8;
 		points = points+' '+x+','+y;
-		data.push({cx:x, r:4, cy:y, title:integer[0]+" "+integer[1]});
+		data.push({cx:x, r:4, cy:y, title:integer[1]});
 	}
 	points = points+' '+w+','+h;
 	svg.children[0].setAttribute("points", points);
