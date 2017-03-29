@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="theme-color" content="#4684EF"/>
+	<title>Pachmarhi | Serenity</title>
+	<link rel="stylesheet" type="text/css" href="./general.css">
+	<link rel="stylesheet" type="text/css" href="./slider.css">
+	<link rel="stylesheet" type="text/css" href="./header.css">
+	<link rel="stylesheet" type="text/css" href="./body.css">
+	<script type="text/javascript" src="./index.js"></script>
+	<style type="text/css">
+		@media(max-width:768px){
+			.detail-cards{
+				width:46%;
+				padding:2px 2px 2px 2px;
+			}
+			.detail-cards>.img-holder{
+				width:100%;
+			}
+			.text-holder{
+				width:100%;
+				padding:10px 10px 10px 10px;
+			}
+		}
+		@media(max-width:475px){
+			.header{
+				width:100%;
+				text-align:center;
+			}
+			.navigation{
+				height:100%;
+				width:200px;
+				position:fixed;
+				top:0;
+				z-index:999;
+				background:#fff;
+				margin-right:-200px;
+				-webkit-transition:all 0.3s ease-out;
+				-moz-transition:all 0.3s ease-out;
+				-ms-transition:all 0.3s ease-out;
+				-o-transition:all 0.3s ease-out;
+				transition:all 0.3s ease-out;
+			}
+			.main-menu{
+				padding-top:100px;
+			}
+			.main-menu>li{
+				float:none;
+			}
+			.detail-cards{
+				width:94%;
+			}
+			.menu-toggler{
+				display:block;
+			}
+			footer>*{
+				width:100%;
+			}
+			div.address{
+				border-right:0;
+				border-bottom:1px solid #777;
+				padding-bottom:50px;
+				margin-bottom: 40px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div id="background"></div>
+	<div class="container">
+		<header class="row header">
+			<div class="place-name">PACHMARHI</div>
+			<nav class="navigation side-nav">
+				<ul class="main-menu">
+					<li><a href="#">HOME</a></li>
+					<li><a href="#">CONTACT</a></li>
+					<li><a href="#">LOREM</a></li>
+					<li><a href="#">LOREM</a></li>
+					<li><a href="#">LOREM</a></li>
+				</ul>
+			</nav>
+			<div class="menu-toggler" id="nav-switcher">
+				<span class="bar-top bar"></span>
+				<span class="bar-middle bar"></span>
+				<span class="bar-bottom bar"></span>
+			</div>
+		</header>
+
+		<div class="image-slider">
+			<div class="slides">
+				<div class="slide slide1" position="1">
+					<h2 class="heading">Dense forest</h2>
+					<p class="desc">I don't know much about forest this is just for test main content for later</p>
+					<a href="../test/heading.html"><button class="btn-in-slider">Let's roll</button></a>
+				</div>
+				<div class="slide slide2" position="2">
+					<h2 class="heading">Wildlife</h2>
+					<p class="desc">A bunch of cheeta sitting together in search for a prey</p>
+					<a href="../test/heading.html"><button class="btn-in-slider">Let's roll</button></a>
+				</div>
+				<div class="slide slide3" position="3">
+					<h2 class="heading">Dense forest</h2>
+					<p class="desc">I don't know much about forest this is just for test main content for later</p>
+					<a href="../test/heading.html"><button class="btn-in-slider">Let's roll</button></a>
+				</div>
+			</div>
+			<div id="buttons">
+				<a href="#" class="clicked"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+			</div>
+		</div>
+
+		<div class="content">
+			<h1 class="highlight-point">Dive in serenity</h1>
+			<div class="details">
+				<div class="detail-cards">
+					<div class="img-holder">
+						<img src="./background1.jpg" class="detail-card-image"/>
+					</div>
+					<div class="text-holder">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+					</div>
+				</div>
+				<div class="detail-cards">
+					<div class="img-holder">
+						<img src="./background2.jpg" class="detail-card-image"/>
+					</div>
+					<div class="text-holder">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+					</div>
+					
+				</div><div class="detail-cards">
+					<div class="img-holder">
+						<img src="./background3.jpg" class="detail-card-image"/>
+					</div>
+					<div class="text-holder">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<h1 class="contact-us">Contact Us</h1>
+		<footer>
+
+			<div class="address">
+				<p class="support-desc">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+				</p>
+				<p>Bangalore-560000</p>
+				<p>Ph no: +91 99 99 999999</p>
+				<p>Email: name@domain.com</p>
+			</div>
+			<div class="message">
+				<form method='post' action="#">
+					<input type="text" name="name" class="input-field name" placeholder="Name*">
+					<input type="text" name="email" class="input-field email" placeholder="Email*">
+					<textarea name="message" rows="5" cols="50" placeholder="Message"></textarea>
+					<button name="submit" class="btn">Submit</button>
+				</form>
+
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
