@@ -7,6 +7,13 @@ window.onload = function(){
 	window.onresize = function(){
 		width = window.innerWidth;
 		fitImage(width);
+		var slideContainer = document.getElementsByClassName("slides")[0];
+		slideContainer.style.marginLeft = "0px";
+		var buttons = document.getElementById("buttons").children;
+		for(var i = 0; i< buttons.length; i++){
+			buttons[i].classList.remove("clicked");
+		}
+		buttons[0].classList.add("clicked");
 	}
 	init();
 }
