@@ -64,5 +64,12 @@ header{
 	-webkit-transform:translateX(-80px);
 }
 
+h1.display-content{
+	font-size:24px;
+}
+.display-content{
+	font-size:16px;
+}
+
 }
 
