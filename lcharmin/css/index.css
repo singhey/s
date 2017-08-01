@@ -257,7 +257,7 @@ side nav end
 }
 /* assigning images to each card */
 .card-1{
-	background:url('/images/choose.jpg') center center;
+	background:url('./images/choose.jpg') center center;
 	background-size: cover;
 }
 
