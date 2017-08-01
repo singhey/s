@@ -1,0 +1,68 @@
+@media(max-width: 1024px){
+
+.card p:first-child{
+	font-size:32px;
+}
+
+}
+@media(max-width:767px){
+
+.message-me, .about-me{
+	width:100%;
+	position:absolute;
+	left:0;
+	top:0;
+	padding:20px 16px;
+}
+.on-screen .message-me.stay-left{
+	-webkit-transform:translate3d(100%, 0, 0);
+}
+header{
+	padding:0px 16px;
+	margin-top:24px;
+}
+.logo{
+	font-size:22px;
+}
+.for-mobile{
+	visibility:visible;
+}
+.close-about-me-box::after, .close-about-me-box::before, .switch-message-me::after, .switch-message-me::before{
+	background:#000;
+}
+
+.holder{
+	margin-top: 20px;
+}
+.message-me .holder{
+	margin-top:70px;
+}
+.name{
+	font-size:28px
+}
+.close, .switch-screen{
+	height:24px;
+	width:24px;
+}
+
+/* card design*/
+.card-content-holder{
+	padding:70px 20px;
+}
+.card p:first-child{
+	font-size: 24px;
+}
+.button{
+	font-size: 16px;
+}
+
+.nav-holder>li{
+	width:100px;
+	font-size:20px;
+}
+.nav-holder>li:hover{
+	-webkit-transform:translateX(-80px);
+}
+
+}
+
