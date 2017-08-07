@@ -1,0 +1,13 @@
+@media (max-width:767px) {
+  p.promo-heading{
+    text-align:left;
+  }
+}
+
+@media (max-width:767px) {
+  p.promo-sub-content span{
+    display:block;
+    margin-top:.3em;
+  }
+}
+

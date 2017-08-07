@@ -1,0 +1,137 @@
+div.jumbotron.prom-background{
+  background:-webkit-linear-gradient(-45deg , #667eea, #764ba2);
+  margin-bottom:0;
+}
+
+p.promo-heading{
+  font-size:32px;
+  color:#fff;
+}
+
+.promo-text{
+  padding-top:100px;
+  padding-bottom:100px;
+}
+
+div.gap{
+  padding:0;
+  margin:0;
+  min-height:1.4em;
+}
+
+p.promo-sub-content{
+  color:#fff;
+  font-size:16px;
+}
+
+.tab-heading{
+  margin:0;
+  padding:0;
+  display:inline-table;
+  width:100%;
+}
+
+.tab-heading > li{
+  float:left;
+  width:20%;
+  text-align:center;
+}
+
+.tab-heading a{
+  display:block;
+  padding:20px;
+}
+
+p.tab-data-desc{
+  min-height:500px;
+}
+
+section.tabs-container{
+  background:#efefef;
+}
+
+div.portfolio-image-holder img{
+  width:100%;
+}
+
+div.portfolio-image-holder{
+  padding:0;
+}
+
+div.portfolio-image-holder div{
+  padding:16px 8px;
+  color:#fff;
+}
+
+div.portfolio-image-holder div:nth-child(1){
+  background:#2ae;
+}
+
+div.portfolio-image-holder div:nth-child(2){
+  background:#cea;
+}
+
+a.view-more-portfolio{
+  display:inline-block;
+  color:#fff;
+  padding:8px 16px;
+  position:relative;
+  z-index:2;
+  margin:48px;
+  border-radius:4px;
+  border:1px solid #fff;
+  -webkit-transition:all .3s linear;
+}
+
+p._portfolio{
+  text-align:center;
+}
+
+a.view-more-portfolio:hover{
+  color:#222;
+  text-decoration:none;
+}
+
+a.view-more-portfolio::after{
+  position:absolute;
+  content:'';
+  width:0%;
+  height:100%;
+  background:#fff;
+  z-index:-1;
+  left:0;
+  top:0;
+  -webkit-transition:all .3s linear;
+}
+
+a.view-more-portfolio:hover::after{
+  width:100%;
+}
+
+section.portfolio{
+  background:#414141;
+}
+
+div.col-md-12.solo-team{
+  min-height:500px;
+  color:#fff;
+  padding-top:200px;
+}
+
+section.team{
+  background:-webkit-linear-gradient(-45deg, #13547a,#80d0c7);
+}
+
+.individual{
+  color:#fff;
+  min-height:250px;
+  background:#EA8168;
+  padding-top:100px;
+}
+
+@media (max-width:767px) {
+  div.col-sm-3.col-xs-6.i{
+    padding:0px 5px;
+  }
+}
+
