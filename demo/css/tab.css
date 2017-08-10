@@ -1,0 +1,54 @@
+@media (max-width: 768px) {
+  .main-page-wrapper {
+    padding: 16px 16px; }
+    .main-page-wrapper .logo {
+      width: 50%; }
+    .main-page-wrapper .hello-customer {
+      color: #fff;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      text-align: right; }
+      .main-page-wrapper .hello-customer h2 {
+        font-size: 28px;
+        width: 60%;
+        float: right;
+        margin-left: 40%; }
+      .main-page-wrapper .hello-customer p {
+        font-size: 16px; }
+
+  #header-nav ul {
+    display: none; }
+
+  body {
+    overflow-x: hidden; }
+
+  .tabs-wrapper {
+    min-height: calc(100vh); }
+    .tabs-wrapper .tab .tab-content-wrapper {
+      width: 70%;
+      margin: auto; }
+
+  .testimonials {
+    background: #fff;
+    padding: 40px 0px; }
+    .testimonials .forward-arrow, .testimonials .backward-arrow {
+      height: 40px;
+      width: 40px;
+      top: calc(50% - 20px); }
+
+  .testimonials-wrapper .t__holder .t {
+    background: #fff; }
+    .testimonials-wrapper .t__holder .t img {
+      width: 100px;
+      height: 100px; }
+    .testimonials-wrapper .t__holder .t * {
+      width: 80%;
+      margin: auto; }
+
+  footer {
+    padding: 50px 16px; }
+    footer .contact-wrapper {
+      padding: 40px 16px;
+      width: 70%; } }
+
+/*# sourceMappingURL=tab.css.map */

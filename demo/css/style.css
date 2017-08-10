@@ -1,0 +1,20 @@
+*{
+	margin:0;
+	padding:0;
+	line-height: 1.7;
+	font-family: 'Josefin Sans', sans-serif;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition:all; .3s ease-out;
+}
+.gap{
+	padding:0;
+	margin:0;
+	min-height:50px;
+}
+
+.container{
+	-webkit-transition:margin .3s ease-out;
+}
