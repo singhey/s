@@ -1,11 +1,10 @@
-window.onload = function(){
+$(function(){
 	var width;
 	function realign(){
 		width = $(window).innerWidth();
-
-		$(".t__holder").css({'width': $('.t').length * width+"px"});
+		$(".t__holder").css({'width': 4 * width+"px"});
 		$(".t").css({'width':width+"px"});
-
+		console.log($('.t').width() + " "+ $(".t__holder").width());
 		$(".tabs-holder").css({'width': $('.tab').length * width+"px"});
 		$(".tab").css({'width':width+"px"});
 	}
@@ -41,6 +40,32 @@ window.onload = function(){
 		}
 	});
 
+	//for colors in each portfolio tab
+	var colors = ['#ff9a9e', '#2ae', '#a1c4fd', '#667eea', '#89f7fe', '#13547a', '#434343', '#4ae'];
+	$('.folio-column > div').each(function(i){
+ 		$(this).css({'background':colors[i]});
+       	console.log(i+"entered");
+	});
+
 	$(window).resize(realign);
 	realign();
-};
+
+	//call once the page has loaded
+	setTimeout(function(){
+		$('.flipX').removeClass("flipX");
+		$('.be-left').addClass('fade-in-right visible');
+	},300);
+
+
+	$(window).scroll(function(){
+		if($('.folio-column').inView()){
+			$('.be-down').addClass("fade-in");
+		}
+		if($('.t').inView()){
+			$('.t').addClass("fade-in visible");
+		}
+		if($('.team').inView()){
+			$('.member-card').addClass("fade-in");
+		}
+	});
+});

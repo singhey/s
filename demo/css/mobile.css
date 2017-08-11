@@ -63,12 +63,15 @@
   .testimonials {
     padding: 24px 0px; }
     .testimonials .forward-arrow, .testimonials .backward-arrow {
-      height: 30px;
-      width: 30px; }
+      height: 20px;
+      width: 20px; }
     .testimonials .testimonials-wrapper .t__holder .t {
       padding: 8px; }
       .testimonials .testimonials-wrapper .t__holder .t *:not(img) {
         width: 100%; }
+
+  .team .member-card {
+    width: 50%; }
 
   footer .contact-wrapper {
     width: 100%; } }

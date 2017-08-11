@@ -46,5 +46,23 @@ footer {
       -webkit-transform: rotateY(90deg); }
     footer .contact-wrapper .input-field:focus + span::after {
       -webkit-transform: rotateY(0deg); }
+  footer .btn {
+    display: block;
+    border: 0;
+    background: #000;
+    color: #fff;
+    padding: 6px 16px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 32px auto; }
+  footer .btn:hover {
+    background: #444; }
+  footer p {
+    font-size: 24px;
+    color: #fff;
+    text-align: center; }
+    footer p a {
+      color: #2ae;
+      text-decoration: none; }
 
 /*# sourceMappingURL=footer.css.map */

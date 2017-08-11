@@ -10,9 +10,8 @@
       text-align: right; }
       .main-page-wrapper .hello-customer h2 {
         font-size: 28px;
-        width: 60%;
-        float: right;
-        margin-left: 40%; }
+        width: 70%;
+        margin-left: 30%; }
       .main-page-wrapper .hello-customer p {
         font-size: 16px; }
 
@@ -35,6 +34,9 @@
       height: 40px;
       width: 40px;
       top: calc(50% - 20px); }
+
+  .team .member-card {
+    width: 33.333%; }
 
   .testimonials-wrapper .t__holder .t {
     background: #fff; }

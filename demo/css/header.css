@@ -13,32 +13,37 @@
       color: #ffd; }
   .main-page-wrapper .hello-customer {
     color: #fff;
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 120px;
+    padding-bottom: 120px;
     text-align: right; }
     .main-page-wrapper .hello-customer h2 {
       font-size: 32px;
-      font-weight: lighter;
+      font-weight: bold;
       width: 50%;
-      float: right;
       margin-left: 50%; }
       .main-page-wrapper .hello-customer h2 .highlighted {
         color: #2ae;
-        -webkit-transition: all 0.3s linear;
-        -moz-transition: all 0.3s linear;
-        -ms-transition: all 0.3s linear;
-        transition: all 0.3s linear; }
+        display: inline-block;
+        -webkit-transition: all 1s linear;
+        -moz-transition: all 1s linear;
+        -ms-transition: all 1s linear;
+        transition: all 1s linear; }
       .main-page-wrapper .hello-customer h2 .flipX {
-        -webkit-transform: rotateX(45deg); }
+        -webkit-transform: rotateX(90deg); }
     .main-page-wrapper .hello-customer p {
       font-size: 16px; }
 
 #header-nav ul {
   display: inline-table;
+  visibility: hidden;
   list-style: none;
   margin: 0;
   padding: 0;
-  float: right; }
+  float: right;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  transition: all 0.3s linear; }
   #header-nav ul > li {
     float: left; }
     #header-nav ul > li a {
@@ -49,5 +54,7 @@
       line-height: 54px; }
     #header-nav ul > li a:hover {
       text-decoration: underline; }
+#header-nav .visible {
+  visibility: visible; }
 
 /*# sourceMappingURL=header.css.map */
