@@ -1,56 +1,33 @@
-@media (max-width: 768px) {
-  .main-page-wrapper {
-    padding: 16px 16px; }
-    .main-page-wrapper .logo {
+@media (max-width: 1000px) {
+  .menu {
+    display: none; } }
+@media (max-width: 800px) {
+  .wrapper {
+    padding-left: 16px;
+    padding-right: 16px; }
+
+  /* promo-page text content */
+  .promo-content {
+    padding: 150px 0px 150px;
+    color: #fff;
+    text-align: left; }
+    .promo-content h1 {
+      font-size: 32px;
+      line-height: 40px;
+      letter-spacing: 1px; }
+
+  .tab ul {
+    list-style: none; }
+    .tab ul > li {
+      float: left;
       width: 50%; }
-    .main-page-wrapper .hello-customer {
-      color: #fff;
-      padding-top: 100px;
-      padding-bottom: 100px;
-      text-align: right; }
-      .main-page-wrapper .hello-customer h2 {
-        font-size: 28px;
-        width: 70%;
-        margin-left: 30%; }
-      .main-page-wrapper .hello-customer p {
-        font-size: 16px; }
 
-  #header-nav ul {
-    display: none; }
-
-  body {
-    overflow-x: hidden; }
-
-  .tabs-wrapper {
-    min-height: calc(100vh); }
-    .tabs-wrapper .tab .tab-content-wrapper {
-      width: 70%;
-      margin: auto; }
-
-  .testimonials {
-    background: #fff;
-    padding: 40px 0px; }
-    .testimonials .forward-arrow, .testimonials .backward-arrow {
-      height: 40px;
-      width: 40px;
-      top: calc(50% - 20px); }
-
+  /* team */
   .team .member-card {
-    width: 33.333%; }
+    width: 33.333%;
+    padding: 8px; }
 
-  .testimonials-wrapper .t__holder .t {
-    background: #fff; }
-    .testimonials-wrapper .t__holder .t img {
-      width: 100px;
-      height: 100px; }
-    .testimonials-wrapper .t__holder .t * {
-      width: 80%;
-      margin: auto; }
-
-  footer {
-    padding: 50px 16px; }
-    footer .contact-wrapper {
-      padding: 40px 16px;
-      width: 70%; } }
+  footer .contact-wrapper {
+    width: 70%; } }
 
 /*# sourceMappingURL=tab.css.map */

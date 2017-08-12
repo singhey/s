@@ -1,60 +1,50 @@
-.main-page-wrapper {
-  background: #222;
-  padding: 32px 80px; }
-  .main-page-wrapper header {
-    display: inline-table;
-    width: 100%; }
-  .main-page-wrapper .logo {
-    position: absolute;
-    width: 30%; }
-    .main-page-wrapper .logo h1 {
-      display: inline-block;
-      border-bottom: 2px solid #2ae;
-      color: #ffd; }
-  .main-page-wrapper .hello-customer {
-    color: #fff;
-    padding-top: 120px;
-    padding-bottom: 120px;
-    text-align: right; }
-    .main-page-wrapper .hello-customer h2 {
-      font-size: 32px;
-      font-weight: bold;
-      width: 50%;
-      margin-left: 50%; }
-      .main-page-wrapper .hello-customer h2 .highlighted {
-        color: #2ae;
-        display: inline-block;
-        -webkit-transition: all 1s linear;
-        -moz-transition: all 1s linear;
-        -ms-transition: all 1s linear;
-        transition: all 1s linear; }
-      .main-page-wrapper .hello-customer h2 .flipX {
-        -webkit-transform: rotateX(90deg); }
-    .main-page-wrapper .hello-customer p {
-      font-size: 16px; }
+.promo-page {
+  background: url("../images/top-bg.jpg") no-repeat top left; }
 
-#header-nav ul {
+header {
   display: inline-table;
-  visibility: hidden;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  float: right;
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -ms-transition: all 0.3s linear;
-  transition: all 0.3s linear; }
-  #header-nav ul > li {
-    float: left; }
-    #header-nav ul > li a {
-      color: #fff;
-      display: block;
-      padding: 4px 8px;
-      text-decoration: none;
-      line-height: 54px; }
-    #header-nav ul > li a:hover {
-      text-decoration: underline; }
-#header-nav .visible {
-  visibility: visible; }
+  width: 100%;
+  padding-top: 32px; }
+
+.logo {
+  position: absolute; }
+  .logo img {
+    width: 200px; }
+
+.menu {
+  display: inline-block;
+  float: right; }
+  .menu ul {
+    display: inline-table;
+    float: right;
+    list-style: none;
+    margin: 0; }
+    .menu ul > li {
+      float: left; }
+      .menu ul > li a {
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: block;
+        padding: 0px 16px;
+        font-size: 12px;
+        line-height: 70px; }
+      .menu ul > li a:hover {
+        text-decoration: underline; }
+
+/* promo-page text content */
+.promo-content {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  color: #fff;
+  text-align: right;
+  color: #fff; }
+  .promo-content h1 {
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: -2px; }
+    .promo-content h1 .highlighted {
+      color: #2ae; }
 
 /*# sourceMappingURL=header.css.map */

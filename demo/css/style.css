@@ -2,30 +2,31 @@
 	margin:0;
 	padding:0;
 	line-height: 1.7;
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'Lato', sans-serif;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
 	-webkit-transition:all; .3s ease-out;
 }
-.gap{
-	padding:0;
-	margin:0;
-	min-height:50px;
+ul{
+	list-style:none;
 }
-
-.container{
-	-webkit-transition:margin .3s ease-out;
+.wrapper{
+	padding-left:32px;
+	padding-right:32px;
 }
 
 .button{
 	text-decoration:none;
-	padding:8px 16px;
+	padding:4px 16px;
 	display:inline-block;
 	text-align:center;
 	position:relative;
+	cursor:pointer;
 	z-index:2;
+	border:1px solid #000;
+	border-radius:3px;
 	-webkit-transition:all .3s ease-out;
 	-moz-transition:all .3s ease-out;
 	-ms-transition:all .3s ease-out;
@@ -58,6 +59,7 @@
 .button-white:hover::after{
 	width:100%;
 }
+
 .fade-in-right{
 	animation-name: a;
 	animation-duration: 2.5s;
