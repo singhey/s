@@ -1,0 +1,33 @@
+@media (max-width: 1000px) {
+  .menu {
+    display: none; } }
+@media (max-width: 800px) {
+  .wrapper {
+    padding-left: 16px;
+    padding-right: 16px; }
+
+  /* promo-page text content */
+  .promo-content {
+    padding: 150px 0px 150px;
+    color: #fff;
+    text-align: left; }
+    .promo-content h1 {
+      font-size: 32px;
+      line-height: 40px;
+      letter-spacing: 1px; }
+
+  .tab ul {
+    list-style: none; }
+    .tab ul > li {
+      float: left;
+      width: 50%; }
+
+  /* team */
+  .team .member-card {
+    width: 33.333%;
+    padding: 8px; }
+
+  footer .contact-wrapper {
+    width: 70%; } }
+
+/*# sourceMappingURL=tab.css.map */
