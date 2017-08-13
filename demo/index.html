@@ -8,26 +8,24 @@
 	<link rel="stylesheet" type="text/css" href="./css/index.css">
 	<link rel="stylesheet" type="text/css" href="./css/header.css">
 	<link rel="stylesheet" type="text/css" href="./css/body.css">
-	<link rel="stylesheet" type="text/css" href="./css/footer.css">
-	<link rel="stylesheet" type="text/css" href="./css/tab.css">
-	<link rel="stylesheet" type="text/css" href="./css/mobile.css">
+
 	<script type="text/javascript" src="./js/jquery.min.js"></script>
-	<script type="text/javascript" src="./js/index.js"></script>
+	<script async type="text/javascript" src="./js/index.js"></script>
 </head>
 <body>
 	<div class="all-wrapper">
 		<nav  class="side-nav">
 			<ul class="side-nav-holder">
 				<li><a href="#"><img src="./images/logo.png" style="width:150px; margin:auto;display:block"/></a></li>
-				<li><a href="#">Services</a></li>
+				<li><a href="#services">Services</a></li>
 				<li><a href="#">Design</a></li>
 				<li><a href="#">Development</a></li>
 				<li><a href="#">Branding</a></li>
-				<li><a href="#">portfolio</a></li>
-				<li><a href="#">About Us</a></li>
-				<li><a href="#">Team</a></li>
-				<li><a href="#">Testimonials</a></li>
-				<li><a href="#">Contact us</a></li>
+				<li><a href="#portfolio">Portfolio</a></li>
+				<li><a href="#about">About Us</a></li>
+				<li><a href="#team">Team</a></li>
+				<li><a href="#testimonials">Testimonials</a></li>
+				<li><a href="#contact">Contact us</a></li>
 			</ul>
 			<div class="toggler">
 				<ul>
@@ -46,14 +44,14 @@
 					<nav class="menu">
 						<ul>
 							<li><a href="#">Services</a></li>
-							<li><a href="#">Design</a></li>
+							<li><a href="#design">Design</a></li>
 							<li><a href="#">Development</a></li>
 							<li><a href="#">Branding</a></li>
-							<li><a href="#">portfolio</a></li>
-							<li><a href="#">About Us</a></li>
-							<li><a href="#">Team</a></li>
-							<li><a href="#">Testimonials</a></li>
-							<li><a href="#">Contact us</a></li>
+							<li><a href="#portfolio">portfolio</a></li>
+							<li><a href="#about">About Us</a></li>
+							<li><a href="#team">Team</a></li>
+							<li><a href="#testimonials">Testimonials</a></li>
+							<li><a href="#contact">Contact us</a></li>
 						</ul>
 					</nav>
 				</header>
@@ -73,7 +71,7 @@
 				<div class="services-tab"><span>Mobile App</span></div>
 			</div>
 			<div class="services-tab-mobile">
-				<select class="services" name="services-mobile">
+				<select class="services-mobile-menu" name="services-mobile">
 					<option value="">Web Development</option>
 					<option value="">Responsive websites</option>
 					<option value="">Graphic Design</option>
@@ -204,51 +202,60 @@
 					</ul>
 				</div>
 			</div>
+			<div class="tab">
+				<div class="wrapper">
+					<h1 class="tab-title">I have a website but it doesn't do anything for my business...</h1>
+					<h4 class="tab-subtitle">Don't let that happen to you. Your website can be your biggest asset but only if it reaches your audience and then converts them into new clients. Let our marketing experts boost your visibility and your conversions.</h4>
+					<ul class="graphics">
+					</ul>
+				</div>
+			</div>
 		</section>
-		<section class="portfolio">
+		<section class="portfolio" id="portfolio">
 			<h1 style="text-align: center; padding:48px 0px; color:#fff;
 				font-size:32px;">Portfolio</h1>
+				<p style="padding:50px 0px 100px; font-size:16px; text-align:center;color: #fff;">We have vast experience working with various industries from non profits and government contractors to investment firms and manufacturing</p>
 			<div class="portfolio-wrapper">
 				<div class="folio-column be-down">
 					<div>
-						<h4 class="text-center">Site Name</h4><img src="./images/port1.jpg">
+						<h4 class="text-center">Site Name</h4><div><img src="./images/port1.jpg"></div>
 					</div>
 					<div>
-						<h4 class="text-center">Site Name</h4><img src="./images/port2.jpg">
-					</div>
-				</div>
-				<div class="folio-column be-down">
-					<div>
-						<h4 class="text-center">Site Name</h4><img src="./images/ecommerce1.jpg">
-					</div>
-					<div>
-						<h4 class="text-center">Site Name</h4><img src="./images/ecommerce.jpg">
+						<h4 class="text-center">Site Name</h4><div><img src="./images/port2.jpg"></div>
 					</div>
 				</div>
 				<div class="folio-column be-down">
 					<div>
-						<h4 class="text-center">Site Name</h4><img src="./images/music1.jpg">
+						<h4 class="text-center">Site Name</h4><div><img src="./images/ecommerce1.jpg"></div>
 					</div>
 					<div>
-						<h4 class="text-center">Site Name</h4><img src="./images/music2.jpg">
+						<h4 class="text-center">Site Name</h4><div><img src="./images/ecommerce.jpg"></div>
 					</div>
 				</div>
 				<div class="folio-column be-down">
 					<div>
-						<h4 class="text-center">Site Name</h4><img src="./images/music.jpg">
+						<h4 class="text-center">Site Name</h4><div><img src="./images/music1.jpg"></div>
 					</div>
 					<div>
-						<h4 class="text-center">Site Name</h4><img src="./images/music3.jpg">
+						<h4 class="text-center">Site Name</h4><div><img src="./images/music2.jpg"></div>
+					</div>
+				</div>
+				<div class="folio-column be-down">
+					<div>
+						<h4 class="text-center">Site Name</h4><div><img src="./images/music.jpg"></div>
+					</div>
+					<div>
+						<h4 class="text-center">Site Name</h4><div><img src="./images/music3.jpg"></div>
 					</div>
 				</div>
 			</div>
 			<p style="text-align:center; padding:24px 0px"><a class="button button-white" href="#">See More</a></p>
 		</section>
-		<section class="about">
+		<section class="about" id="about">
 			
 		</section>
-		<section class="team">
-			<h1 style="text-align: center; padding:48px 0px; color:#000;
+		<section class="team" id="team">
+			<h1 style="text-align: center; padding:48px 0px;
 				font-size:32px;">Team</h1>
 			<script type="text/javascript">
 				for(var i = 0; i<8; i++){
@@ -261,7 +268,40 @@
 				}
 			</script>
 		</section>
-		<footer>
+		<section id="testimonials" class="others-think">
+			<h1>Testimonials</h1>
+			<h4>Not even a single person leaves unhappy</h4>
+			<ul class="testimonial-wrapper">
+				<li>
+					<h2>Jacob Thomas</h2>
+					<p>Lcharmin is a team of highly professional and deicated persons. Has built my site in required BUdget and always on time completeion of project.Lcharmin is a team of highly professional and deicated persons. Has built my site in required BUdget and always on time completeion of project.Lcharmin is a team of highly professional and deicated persons. Has built my site in required BUdget and always on time completeion of project.</p>
+				</li>
+				<li>
+					<h2>Jacob Thomas</h2>
+					<p>Lcharmin is a team of highly professional and deicated persons. Has built my site in required BUdget and always on time completeion of project.Lcharmin is a team of highly professional and deicated persons. Has built my site in required BUdget and always on time completeion of project.Lcharmin is a team of highly professional and deicated persons. Has built my site in required BUdget and always on time completeion of project.</p>
+				</li>
+				<li>
+					<h2>Jacob Thomas</h2>
+					<p>Lcharmin is a team of highly professional and deicated persons. Has built my site in required BUdget and always on time completeion of project.Lcharmin is a team of highly professional and deicated persons. Has built my site in required BUdget and always on time completeion of project.Lcharmin is a team of highly professional and deicated persons. Has built my site in required BUdget and always on time completeion of project.</p>
+				</li>
+				<li>
+					<h2>Jacob Thomas</h2>
+					<p>Lcharmin is a team of highly professional and deicated persons. Has built my site in required BUdget and always on time completeion of project.Lcharmin is a team of highly professional and deicated persons. Has built my site in required BUdget and always on time completeion of project.Lcharmin is a team of highly professional and deicated persons. Has built my site in required BUdget and always on time completeion of project.</p>
+				</li>
+				<li>
+					<h2>Jacob Thomas</h2>
+					<p>Lcharmin is a team of highly professional and deicated persons. Has built my site in required BUdget and always on time completeion of project.Lcharmin is a team of highly professional and deicated persons. Has built my site in required BUdget and always on time completeion of project.Lcharmin is a team of highly professional and deicated persons. Has built my site in required BUdget and always on time completeion of project.</p>
+				</li>
+				<li>
+					<h2>Jacob Thomas</h2>
+					<p>Lcharmin is a team of highly professional and deicated persons. Has built my site in required BUdget and always on time completeion of project.Lcharmin is a team of highly professional and deicated persons. Has built my site in required BUdget and always on time completeion of project.Lcharmin is a team of highly professional and deicated persons. Has built my site in required BUdget and always on time completeion of project.</p>
+				</li>
+			</ul>
+		</section>
+		<link rel="stylesheet" type="text/css" href="./css/footer.css">
+	<link rel="stylesheet" type="text/css" href="./css/tab.css">
+	<link rel="stylesheet" type="text/css" href="./css/mobile.css">
+		<footer id="contact">
 			<div class="contact-wrapper">
 				<img style="width:200px;margin:auto;" src="./images/logo-white.png">
 				<h1>Contact Lcharmin</h1>
