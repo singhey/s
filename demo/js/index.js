@@ -20,11 +20,16 @@ $(function(){
 		$('body').toggleClass("menu-visible");
 	});
 	$(window).scroll(function(){
-		if($('.folio-column').inView()){
-			$('.folio-column').addClass("fade-in");
-		}
-		if($('.team').inView()){
-			$('.member-card').addClass("fade-in");
-		}
+		$('.folio-column').children().each(function(){
+			if($(this).inView()){
+				$(this).addClass("fade-in");
+			}
+		});
+		$('.member-card').each(function(){
+			if($(this).inView()){
+				$(this).addClass("fade-in");
+			}
+		});
+		
 	});
 });
