@@ -9,12 +9,17 @@
 	box-sizing: border-box;
 	-webkit-transition:all; .3s ease-out;
 }
+
+body{
+	overflow-x:hidden;
+}
+
 ul{
 	list-style:none;
 }
 .wrapper{
-	padding-left:32px;
-	padding-right:32px;
+	padding-left:64px;
+	padding-right:64px;
 }
 
 .button{
@@ -62,7 +67,7 @@ ul{
 
 .fade-in-right{
 	animation-name: a;
-	animation-duration: 2.5s;
+	animation-duration: 2s;
 }
 @keyframes a{
 	0% {
@@ -83,12 +88,25 @@ ul{
 @keyframes b{
 	0% {
     	opacity: 0;
-    	-webkit-transform: translate3d(0,50%,0);
-    	transform: translate3d(0,50%,0);
+    	-webkit-transform: translate3d(0,100%,0);
+    	transform: translate3d(0,100%,0);
 	}
 	100% {
     	opacity: 1;
 	    -webkit-transform: none;
     	transform: none;
+	}
+}
+
+.flipX{
+	animation-name: c;
+	animation-duration: 2s;
+}
+@keyframes c{
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
 	}
 }

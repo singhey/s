@@ -34,6 +34,7 @@
 	display:table;
 	background:#fff;
 	right:0;
+	border-left:1px solid #999;
 	-webkit-transform:translateX(200px);
 	@include t(all .3s linear);
 	ul{
@@ -59,8 +60,8 @@
 	width:80px;
 	padding:8px;
 	top:calc(50% - 50px);
-	border-bottom:1px solid #000;
-	border-left:1px solid #000;
+	border-bottom:1px solid #999;
+	border-left:1px solid #999;
 	transform: matrix3d(0.71,0.71,0.00,0,-0.71,0.71,0.00,0,0,0,1,0,-40,0,0,1);
 -webkit-transform: matrix3d(0.71,0.71,0.00,0,-0.71,0.71,0.00,0,0,0,1,0,-40,0,0,1);
 
@@ -125,6 +126,10 @@
 
 	.tab{
 		display:none;
+		ul{
+			display:inline-table;
+			width:100%;
+		}
 	}
 	.tab.visible-block{
 		display:block;
@@ -175,6 +180,7 @@ div.ex-img{
 
 .responsive-benefits{
 	display:inline-block;
+	width:100%;
 	>li{
 		float:left;
 		margin-top:50px;
@@ -197,13 +203,13 @@ div.ex-img{
 }
 .portfolio-wrapper{
 	display:inline-table;
+	width:100%;
 
 	.folio-column{
 		width:25%;
 		float:left;
 		>div{
 			padding: 16px 12px;
-			overflow:hidden;
 
 			h4{
 				text-align:center;
@@ -221,6 +227,9 @@ div.ex-img{
 			img:hover{
 				-webkit-transform:scale(1.2);
 			}
+			div{
+				overflow:hidden;
+			}
 		}
 
 	}
@@ -229,7 +238,8 @@ div.ex-img{
 .team{
 	display:inline-table;
 	width:100%;
-	color:#000;
+	color:#fff;
+	background:#444;
 	.member-card{
 		width:20%;
 		padding:32px 16px;
@@ -251,5 +261,25 @@ div.ex-img{
 		 		text-align:center;
 		 	}
 		 }
+	}
+}
+
+.others-think{
+	padding:50px 16px;
+
+	h1{
+		line-height:50px;
+	}
+	h4{
+		padding-bottom:40px;
+	}
+	ul{
+		display:inline-table;
+		width:100%;
+		li{
+			float:left;
+			padding:32px 8px;
+			width:33.333%;
+		}
 	}
 }

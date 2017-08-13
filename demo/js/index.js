@@ -30,6 +30,41 @@ $(function(){
 				$(this).addClass("fade-in");
 			}
 		});
+		if($(".visible-block h1, .visible-block h4").inView()){
+			$(".visible-block h1, .visible-block h4").addClass("fade-in");
+		}
 		
+		$('.visible-block ul, .testimonial-wrapper').children().each(function(){
+			if($(this).inView()){
+				$(this).addClass("fade-in");
+			}
+		});
 	});
+	function tabSwitcher(index){
+		$('.tab').removeClass("visible-block");
+		$('#tabs-wrapper .tab:nth-child('+(index+1)+')').addClass("visible-block");
+		$('.visible-block h1, .visible-block h4').addClass("fade-in");
+		$('.visible-block ul').children().each(function(){
+			$(this).addClass("fade-in");
+		});
+	}
+	//switching of services-tab
+	$('.services-tab').click(function(){
+		$('.services-tab').removeClass("active");
+		$(this).addClass('active');
+		var index = $(this).index();
+		tabSwitcher(index);
+	});
+
+	$(".services-mobile-menu").change(function(){
+		var index = $(".services-mobile-menu").prop('selectedIndex');
+		tabSwitcher(index);
+	});
+
+	//animations when page loads
+	function start(){
+		$('nav.menu').addClass("fade-in-right");
+		$('.highlighted').addClass("flipX");
+	}
+	start();
 });
