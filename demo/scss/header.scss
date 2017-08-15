@@ -13,7 +13,10 @@
 }
 
 
-
+.highlighted{
+	visibility: visible;
+	display:inline-block;
+}
 .promo-page{
 	background: url('../images/top-bg.jpg') no-repeat top left;
 }
@@ -26,8 +29,14 @@ header{
 .logo{
 	position:absolute;
 
-	img{
+	svg{
 		width:200px;
+		#grey{
+			fill:#fff;
+		}
+		text{
+			fill:#fff;
+		}
 	}
 }
 

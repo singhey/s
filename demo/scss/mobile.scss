@@ -1,4 +1,4 @@
-@media(max-width:500px){
+@media(max-width:650px){
 
 .wrapper{
 	padding-left: 16px;
@@ -62,12 +62,41 @@
 
 	}
 }
+/* about-us*/
+
+.why-us-reasons{
+	>ul{
+		display:inline-table;
+		width:100%;
+		>li{
+			width:100%;
+			padding:32px 16px;
+			float:left;
+			ul{
+				padding:8px;
+			}
+		}
+
+		>li:last-child{
+			border-bottom:1px solid #ccc;
+		}
+	}
+}
 
 /* team */
 .team{
 	.member-card{
 		width:50%;
 		padding:8px;
+	}
+}
+
+.others-think{
+	ul{
+		>li{
+			float:none;
+			width:100%;
+		}
 	}
 }
 footer{

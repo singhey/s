@@ -5,22 +5,29 @@
 	transition: $w;
 }
 
+@mixin trans($w){
+	-webkit-trasnform: $w;
+	-moz-transform: $w;
+	-ms-transform: $w;
+	transform:$w;
+}
+
 .menu-visible{
 	.side-nav{
-		-webkit-transform:translateX(0px);
+		@include trans(translateX(0px));
 	}
 	.toggler{
 		ul{
 			li:nth-child(1){
 			-webkit-transform-origin:10%  40%;
-				-webkit-transform:rotate(45deg);
+				@include trans(rotate(45deg));
 			}
 			li:nth-child(2){
 				opacity:0;
 			}
 			li:nth-child(3){
 			-webkit-transform-origin:10%  40%;
-				-webkit-transform:rotate(-45deg);
+				@include trans(rotate(-45deg));
 			}
 		}
 	}
@@ -28,6 +35,7 @@
 
 .side-nav{
 	position:fixed;
+	height:calc(100vh);
 	height:100%;
 	width:200px;
 	z-index:99;
@@ -35,7 +43,7 @@
 	background:#fff;
 	right:0;
 	border-left:1px solid #999;
-	-webkit-transform:translateX(200px);
+	@include trans(translateX(200px));
 	@include t(all .3s linear);
 	ul{
 		padding-top:100px;
@@ -62,15 +70,14 @@
 	top:calc(50% - 50px);
 	border-bottom:1px solid #999;
 	border-left:1px solid #999;
-	transform: matrix3d(0.71,0.71,0.00,0,-0.71,0.71,0.00,0,0,0,1,0,-40,0,0,1);
--webkit-transform: matrix3d(0.71,0.71,0.00,0,-0.71,0.71,0.00,0,0,0,1,0,-40,0,0,1);
+	@include trans(matrix3d(0.71,0.71,0.00,0,-0.71,0.71,0.00,0,0,0,1,0,-40,0,0,1));
 
 	
 	ul{
 		display:table-cell;
 		vertical-align:middle;
 		padding:0;
-		-webkit-transform:rotate(-45deg);
+		@include trans(rotate(-45deg));
 		margin:auto;
 		li{
 
@@ -137,11 +144,14 @@
 	h1{
 		line-height:40px;
 		padding-bottom:10px;
+		max-width:900px;
 	}
 	h4{
 		line-height:30px;
 		padding-bottom:50px;
+		max-width:900px;
 	}
+
 }
 
 /* tab 1*/
@@ -175,6 +185,7 @@ div.ex-img{
 	p{
 		text-align:center;
 		padding:70px 0px;
+		line-height:50px;
 	}
 }
 
@@ -210,6 +221,7 @@ div.ex-img{
 		float:left;
 		>div{
 			padding: 16px 12px;
+			box-shadow:0px 0px 20px #444;
 
 			h4{
 				text-align:center;
@@ -225,13 +237,50 @@ div.ex-img{
 				cursor:pointer;
 			}
 			img:hover{
-				-webkit-transform:scale(1.2);
+				@include trans(scale(1.2));
 			}
 			div{
 				overflow:hidden;
 			}
 		}
 
+	}
+}
+
+
+/* About us wrapper*/
+
+.about{
+	padding-top:80px;
+	padding-bottom:80px;
+	h1, h3{
+		text-align:center;
+		line-height:2em;
+	}
+	h1{
+		font-size:32px;
+	}
+	>div{
+		position:relative;
+	}
+}
+
+.why-us-reasons{
+	>ul{
+		display:inline-table;
+		width:100%;
+		>li{
+			width:50%;
+			padding:32px 16px;
+			float:left;
+			ul{
+				padding:8px;
+			}
+		}
+
+		img{
+			width:100%;
+		}
 	}
 }
 

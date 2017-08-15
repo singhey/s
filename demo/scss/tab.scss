@@ -44,4 +44,25 @@ footer{
 		width:70%;
 	}
 }
+
+.others-think{
+	padding:50px 16px;
+
+	h1{
+		line-height:50px;
+	}
+	h4{
+		padding-bottom:40px;
+	}
+	ul{
+		display:inline-table;
+		width:100%;
+		li{
+			float:left;
+			padding:32px 8px;
+			width:50%;
+		}
+	}
+}
+
 }

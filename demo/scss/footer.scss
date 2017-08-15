@@ -1,11 +1,23 @@
 footer{
 	padding:100px 16px;
-	background:#000;
-
+	background:url('../images/location.png') center center;
+	background-size:cover;
+	position:relative;
+	.contact-logo{
+		max-width:200px;
+		margin:auto;
+		svg{
+			text{
+				fill:#fff;
+			}
+		}
+	}
 	.contact-wrapper{
 		padding:40px 16px;
 		width:50%;
-		background: #A84D36;
+		max-width:500px;
+		background: #a84d36;
+		background: -webkit-linear-gradient(top, #de917e, #A84D36, #A84D36, #A84D36);
 		position:relative;
 
 		h1{
