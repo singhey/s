@@ -12,7 +12,7 @@ $.fn.inView = function(){
     return(visibleArea >= objEndPos && scrollPosition <= objEndPos ? true : false);
 };
 $(function(){
-	var colors = ['#ff9a9e', '#2ae', '#a1c4fd', '#667eea', '#89f7fe', '#13547a', '#434343', '#4ae'],
+	var colors = ['#131516', '#f7941d', '#e3cb33', '#2B6504', '#22aaee', '#272A2D', '#620B10', '#261E1C'],
 		width = 1200;
 	$('.folio-column > div').each(function(i){
  		$(this).css({'background':colors[i]});
@@ -94,5 +94,22 @@ $(function(){
 	$(window).resize(function(){
 
 	});	
+	//add images to tab-2
+	$('.reason-img').each(function(i){
+		$(this).attr("style", 'background-image:url("./images/tab2-i'+(i+1)+'.png")');
+	});
+	//add images to tab-3
+	$('.graphics-tools').each(function(i){
+		$(this).attr("style", 'background-image:url("./images/tab3-i'+(i+1)+'.png")');
+	});
 
+	// add images to tab-4
+	$('.digital-marketing .graphics-tools').each(function(i){
+		$(this).attr("style", 'background-image:url("./images/tab4-i'+(i+1)+'.png")');
+	});
+
+	//add images in tab-5
+	$('.mobile-app-development .graphics-tools').each(function(i){
+		$(this).attr("style", 'background-image:url("./images/tab5-i'+(i+1)+'.png")');
+	});
 });

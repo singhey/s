@@ -22,16 +22,16 @@
   position: fixed;
   height: calc(100vh);
   height: 100%;
-  width: 200px;
+  width: 250px;
   z-index: 99;
   display: table;
   background: #fff;
   right: 0;
-  border-left: 1px solid #999;
-  -webkit-trasnform: translateX(200px);
-  -moz-transform: translateX(200px);
-  -ms-transform: translateX(200px);
-  transform: translateX(200px);
+  box-shadow: 0px 0px 10px #ccc;
+  -webkit-trasnform: translateX(250px);
+  -moz-transform: translateX(250px);
+  -ms-transform: translateX(250px);
+  transform: translateX(250px);
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   -ms-transition: all 0.3s linear;
@@ -55,8 +55,7 @@
   width: 80px;
   padding: 8px;
   top: calc(50% - 50px);
-  border-bottom: 1px solid #999;
-  border-left: 1px solid #999;
+  box-shadow: -2px 2px 3px #ccc;
   -webkit-trasnform: matrix3d(0.71, 0.71, 0, 0, -0.71, 0.71, 0, 0, 0, 0, 1, 0, -40, 0, 0, 1);
   -moz-transform: matrix3d(0.71, 0.71, 0, 0, -0.71, 0.71, 0, 0, 0, 0, 1, 0, -40, 0, 0, 1);
   -ms-transform: matrix3d(0.71, 0.71, 0, 0, -0.71, 0.71, 0, 0, 0, 0, 1, 0, -40, 0, 0, 1);
@@ -127,7 +126,8 @@
 #tabs-wrapper h4 {
   line-height: 30px;
   padding-bottom: 50px;
-  max-width: 900px; }
+  max-width: 900px;
+  color: #aaa; }
 
 /* tab 1*/
 div.ex-img {
@@ -164,17 +164,53 @@ div.ex-img img:hover {
   display: inline-block;
   width: 100%; }
 .responsive-benefits > li {
+  width: 50%;
   float: left;
-  margin-top: 50px;
-  width: 25%; }
+  position: relative;
+  min-height: 240px;
+  margin-bottom: 60px;
+  border-left: 1px solid #ccc; }
 .responsive-benefits > li p {
   padding: 16px 0px;
   text-align: left; }
 
-.graphics > li {
-  line-height: 50px;
-  padding: 16px 0px; }
+/* Each content of tab design */
+.reason-img {
+  max-height: 80px;
+  max-width: 80px;
+  background-color: #2ae;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  float: left; }
 
+.reason-img + div {
+  max-width: 350px;
+  margin-left: 110px;
+  padding-right: 16px; }
+
+/* End of tab-2 design */
+/* tab-3 design */
+.graphics > li {
+  padding: 16px 0px;
+  width: 33.33%;
+  float: left; }
+.graphics > li p {
+  padding-top: 16px;
+  padding: 0px 16px;
+  width: 68%;
+  min-height: 110px; }
+.graphics > li > * {
+  float: left; }
+
+.graphics-tools {
+  height: 80px;
+  width: 80px;
+  background-color: #2ae;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  display: inline-block; }
+
+/* End of tab -3 design */
 /* Portfolio*/
 .portfolio {
   background: #333; }
@@ -186,8 +222,7 @@ div.ex-img img:hover {
   width: 25%;
   float: left; }
 .portfolio-wrapper .folio-column > div {
-  padding: 16px 12px;
-  box-shadow: 0px 0px 20px #444; }
+  padding: 16px 16px; }
 .portfolio-wrapper .folio-column > div h4 {
   text-align: center;
   color: #fff;
@@ -195,7 +230,6 @@ div.ex-img img:hover {
   line-height: 40px; }
 .portfolio-wrapper .folio-column > div img {
   width: 100%;
-  box-shadow: 0px 0px 10px #000;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
@@ -207,7 +241,8 @@ div.ex-img img:hover {
   -ms-transform: scale(1.2);
   transform: scale(1.2); }
 .portfolio-wrapper .folio-column > div div {
-  overflow: hidden; }
+  overflow: hidden;
+  box-shadow: 0px 0px 10px #000; }
 
 /* About us wrapper*/
 .about {

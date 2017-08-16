@@ -68,7 +68,19 @@ ul{
 .button-white:hover::after{
 	width:100%;
 }
-
+.button-black{
+	color:#000;
+	border:1px solid rgba(0, 0, 0 , .4);
+}
+.button-black::after{
+	background:#000;
+}
+.button-black:hover{
+	color:#fff;
+}
+.button-black:hover::after{
+	width:100%;
+}
 .animate{
 	visibility: hidden;;
 }

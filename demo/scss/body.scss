@@ -37,13 +37,13 @@
 	position:fixed;
 	height:calc(100vh);
 	height:100%;
-	width:200px;
+	width:250px;
 	z-index:99;
 	display:table;
 	background:#fff;
 	right:0;
-	border-left:1px solid #999;
-	@include trans(translateX(200px));
+	box-shadow:0px 0px 10px #ccc;
+	@include trans(translateX(250px));
 	@include t(all .3s linear);
 	ul{
 		padding-top:100px;
@@ -68,8 +68,7 @@
 	width:80px;
 	padding:8px;
 	top:calc(50% - 50px);
-	border-bottom:1px solid #999;
-	border-left:1px solid #999;
+	box-shadow:-2px 2px 3px #ccc;
 	@include trans(matrix3d(0.71,0.71,0.00,0,-0.71,0.71,0.00,0,0,0,1,0,-40,0,0,1));
 
 	
@@ -150,6 +149,7 @@
 		line-height:30px;
 		padding-bottom:50px;
 		max-width:900px;
+		color: #aaa;
 	}
 
 }
@@ -193,20 +193,61 @@ div.ex-img{
 	display:inline-block;
 	width:100%;
 	>li{
+		width:50%;
 		float:left;
-		margin-top:50px;
-		width:25%;
+		position: relative;
+		min-height: 240px;
+		margin-bottom: 60px;
+		border-left:1px solid #ccc;
 		p{
 			padding:16px 0px;
 			text-align:left;
 		}
 	}
 }
-.graphics >li{
-	line-height:50px;
-	padding:16px 0px;
+/* Each content of tab design */
+.reason-img{
+	max-height: 80px;
+	max-width: 80px;
+	background-color: #2ae;
+	background-position: 50%;
+	background-repeat: no-repeat;
+	float:left;
+}
+.reason-img + div{
+	max-width:350px;
+	margin-left:110px;
+	padding-right:16px;
 }
 
+/* End of tab-2 design */
+
+/* tab-3 design */
+.graphics >li{
+	p{
+		padding-top:16px;
+		padding:0px 16px;
+		width:68%;
+		min-height:110px;
+	}
+	>*{
+		float:left;
+	}
+	padding:16px 0px;
+	width:33.33%;
+	float:left;
+}
+
+.graphics-tools{
+	height: 80px;
+	width: 80px;
+	background-color: #2ae;
+	background-position: 50%;
+	background-repeat: no-repeat;
+	display:inline-block;
+}
+
+/* End of tab -3 design */
 /* Portfolio*/
 
 .portfolio{
@@ -220,8 +261,7 @@ div.ex-img{
 		width:25%;
 		float:left;
 		>div{
-			padding: 16px 12px;
-			box-shadow:0px 0px 20px #444;
+			padding: 16px 16px;
 
 			h4{
 				text-align:center;
@@ -232,7 +272,6 @@ div.ex-img{
 
 			img{
 				width:100%;
-				box-shadow:0px 0px 10px #000;
 				@include t(.3s);
 				cursor:pointer;
 			}
@@ -241,6 +280,7 @@ div.ex-img{
 			}
 			div{
 				overflow:hidden;
+				box-shadow:0px 0px 10px #000;
 			}
 		}
 
