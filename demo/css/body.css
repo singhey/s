@@ -20,18 +20,18 @@
 
 .side-nav {
   position: fixed;
-  height: calc(100vh);
-  height: 100%;
-  width: 250px;
+ 
+  height: 100%; height: calc(100vh);
+  width: 200px;
   z-index: 99;
   display: table;
   background: #fff;
   right: 0;
   box-shadow: 0px 0px 10px #ccc;
-  -webkit-trasnform: translateX(250px);
-  -moz-transform: translateX(250px);
-  -ms-transform: translateX(250px);
-  transform: translateX(250px);
+  -webkit-trasnform: translateX(200px);
+  -moz-transform: translateX(200px);
+  -ms-transform: translateX(200px);
+  transform: translateX(200px);
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   -ms-transition: all 0.3s linear;
