@@ -176,8 +176,9 @@ div.ex-img img:hover {
 
 /* Each content of tab design */
 .reason-img {
-  max-height: 80px;
-  max-width: 80px;
+  display:inline-block;
+  height: 80px;
+  width: 80px;
   background-color: #2ae;
   background-position: 50%;
   background-repeat: no-repeat;
