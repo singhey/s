@@ -77,9 +77,9 @@ window.onload = function() {
 	$('#menu').click(function() {
 		$(this).toggleClass("menu-visible");
 		$('#site-nav').toggleClass('reveal');
-
-		if($(window).scrollTop() < 5) {
-			$('header').addClass('scrolled');
+		$('header').addClass('scrolled');
+		if($(window).scrollTop() < 5 && !$(this).hasClass('menu-visible')) {
+			window.setTimeout(function(){ $('header').removeClass('scrolled'); }, 1500);
 		}
 	});
 
