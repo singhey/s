@@ -81,6 +81,11 @@ window.onload = function() {
 		    }
 	  });
 	});
+	var currentSlide = 0;
+	window.setInterval(function() {
+		console.log("called");
+		changeSlide((currentSlide++)%$('.slide').length);
+	}, 5000);
 
 	Ripple.init();
 };
