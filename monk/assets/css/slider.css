@@ -30,6 +30,7 @@
   left: 0;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   transform: translateX(100%);
   transition: transform .5s .5s linear; }
   .slide.active {

@@ -17,7 +17,7 @@ window.onload = function() {
 			subHeading: "Lorem Ipsem dolor set amet con sect",
 			slides: [
 				{
-					image: "./assets/images/img-1.webp",
+					image: "./assets/images/img-1.jpg",
 					text: "Slide 1 image",
 				},
 				{
@@ -25,11 +25,11 @@ window.onload = function() {
 					text: "Slide 1 image",
 				},
 				{
-					image: "./assets/images/img-3.webp",
+					image: "./assets/images/img-3.jpg",
 					text: "Slide 1 image",
 				},
 				{
-					image: "./assets/images/img-4.webp",
+					image: "./assets/images/img-4.jpg",
 					text: "Slide 1 image",
 				},
 				{
