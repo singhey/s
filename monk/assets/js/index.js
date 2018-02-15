@@ -19,22 +19,27 @@ window.onload = function() {
 				{
 					image: "./assets/images/img-1.jpg",
 					text: "Slide 1 image",
+					heading: "Marketing",
 				},
 				{
 					image: "./assets/images/img-2.jpg",
 					text: "Slide 1 image",
+					heading: "Marketing",
 				},
 				{
 					image: "./assets/images/img-3.jpg",
 					text: "Slide 1 image",
+					heading: "Content Writing",
 				},
 				{
 					image: "./assets/images/img-4.jpg",
 					text: "Slide 1 image",
+					heading: "Web Development",
 				},
 				{
 					image: "./assets/images/img-5.jpg",
 					text: "Slide 1 image",
+					heading: "Just a long sentence to see transition",
 				},
 			],
 		},
@@ -54,7 +59,7 @@ window.onload = function() {
 
 	$('.slide-toggle-button').click(function() {
 		var index = $(this).index();
-
+		currentSlide = index;
 		changeSlide(index);
 	});
 
@@ -93,7 +98,7 @@ window.onload = function() {
 	  		$('header').removeClass("scrolled");
 	  	}
 
-	  	if(prevScroll < $(window).scrollTop()) {
+	  	if(prevScroll < $(window).scrollTop() && $(window).scrollTop() > 100) {
 	  		$('header').addClass('hidden');
 	  	}else {
 	  		$('header').removeClass('hidden');
@@ -103,8 +108,8 @@ window.onload = function() {
 	});
 	var currentSlide = 0;
 	window.setInterval(function() {
-		console.log("called");
-		changeSlide((currentSlide++)%$('.slide').length);
+		//console.log("called");
+		//changeSlide((currentSlide++)%$('.slide').length);
 	}, 5000);
 
 	Ripple.init();

@@ -56,8 +56,22 @@
 						<div class="slide" v-bind:style="{ backgroundImage: 'url(' + s.image+ ')' }">
 							<div class="overlay-slide  d-flex">
 								<div class="slide-text align-self-end">
-									<h1 class="text-fade-up"><span>{{heading}}</span></h1>
-									<h3 class="text-fade-up"><span>{{subHeading}}</span></h3>
+									<div class="row">
+										<h1 class="offset-2 col-8">
+											<span class="_slide-left">
+												<span class="slide-left">{{s.heading}}</span>
+											</span>
+										</h1>
+									</div>
+									<div class="row">
+										<p class="offset-2 col-8">
+											<span class="_slide-left">
+												<span class="slide-left">{{subHeading}}</span>
+											</span>
+										</p>
+
+									</div>
+									<a href="#" class="btn btn-link">Know More</a>
 								</div>
 							</div>
 						</div>
