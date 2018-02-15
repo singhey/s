@@ -110,7 +110,7 @@ window.onload = function() {
 	window.setInterval(function() {
 		//console.log("called");
 		changeSlide((currentSlide++)%$('.slide').length);
-	}, 5000);
+	}, 10000);
 
 	//find classes with slide text-left and change there inner html
 	$('.slide-text-left').each(function(){
