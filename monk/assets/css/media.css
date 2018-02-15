@@ -1,0 +1,44 @@
+@media (max-width: 576px) {
+  header {
+    padding-left: 0px;
+    padding-right: 0px; }
+    header .logo span {
+      display: none; }
+    header #menu {
+      padding: 0; }
+    header .page-nav {
+      padding-right: 16px; }
+    header .menu-text-separate {
+      display: none; }
+
+  .why-us .text {
+    padding: 32px 16px; }
+
+  .services h1 {
+    padding-left: 8px; }
+  .services .service-card {
+    margin: 16px 0px; }
+
+  .desc-something h1 {
+    font-size: 28px; }
+  .desc-something .side-img-text {
+    padding: 32px 16px; }
+
+  .site-links a {
+    padding: 4px !important;
+    font-size: 14px; } }
+@media (max-width: 992px) {
+  .desc-something h1 {
+    font-size: 32px; }
+  .desc-something .side-img-text {
+    padding: 48px 16px; } }
+@media (max-width: 1200px) {
+  .side-img {
+    min-height: 400px; }
+
+  .desc-something h1 {
+    font-size: 32px; }
+  .desc-something .side-img-text {
+    padding: 56px 16px; } }
+
+/*# sourceMappingURL=media.css.map */

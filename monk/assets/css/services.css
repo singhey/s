@@ -1,5 +1,6 @@
 .services {
-  background-color: #efefef; }
+  background-color: #efefef;
+  padding-bottom: 64px; }
   .services h1 {
     padding: 64px 0px 32px;
     font-weight: 600; }
@@ -18,7 +19,60 @@
   .service-card:hover {
     background-color: #fff;
     box-shadow: 0px 0px 16px #ccc; }
+  .service-card .se-icon {
+    display: inline-block;
+    background: #14ABF4;
+    padding: 16px;
+    color: #fff;
+    position: relative;
+    margin: auto;
+    border-radius: 3px; }
+    .service-card .se-icon::after {
+      border-radius: 3px;
+      content: '';
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      transform: rotate(10deg);
+      background: #89D5F9;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      animation-name: back-fro;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-direction: alternate; }
+  .service-card .se-blue {
+    background-color: #14ABF4; }
+    .service-card .se-blue::after {
+      background-color: #89D5F9; }
+  .service-card .se-red {
+    background-color: #c73e28; }
+    .service-card .se-red::after {
+      background-color: #e28272; }
+  .service-card .se-pink {
+    background-color: #d52e7e; }
+    .service-card .se-pink::after {
+      background-color: #e272a8; }
+  .service-card .se-green {
+    background-color: #81DA34; }
+    .service-card .se-green::after {
+      background-color: #C0EC99; }
+  .service-card.full .slide-text-left span {
+    transition: transform .3s .5s ease-out;
+    transform: translateX(0%); }
+  .service-card .slide-text-left {
+    overflow: hidden; }
+  .service-card .slide-text-left span {
+    transform: translateX(-100%);
+    display: inline-block; }
 
+@keyframes back-fro {
+  0% {
+    transform: rotate(35deg); }
+  100% {
+    transform: rotate(55deg); } }
 .side-img {
   background-image: url("../images/person.jpg");
   background-size: cover;
@@ -38,7 +92,18 @@
       width: 100px; }
 
 .full-screen {
-  height: 100vh; }
+  min-height: 100vh; }
+
+.desc-something.full .slide-text-left span {
+  transition: transform .3s .5s ease-out;
+  transform: translateX(0%); }
+.desc-something .slide-text-left {
+  overflow: hidden; }
+.desc-something .slide-text-left span {
+  transform: translateX(-100%);
+  display: inline-block; }
+.desc-something.full {
+  animation: none; }
 
 footer {
   padding: 32px 0px 0px; }

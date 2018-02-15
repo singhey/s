@@ -98,13 +98,13 @@ window.onload = function() {
 	  		$('header').removeClass("scrolled");
 	  	}
 
-	  	if(prevScroll < $(window).scrollTop() && $(window).scrollTop() > 100) {
+	  	/*if(prevScroll < $(window).scrollTop() && $(window).scrollTop() > 100) {
 	  		$('header').addClass('hidden');
 	  	}else {
 	  		$('header').removeClass('hidden');
-	  	}
+	  	}*/
 
-	  	prevScroll = $(window).scrollTop();
+	  	//prevScroll = $(window).scrollTop();
 	});
 	var currentSlide = 0;
 	window.setInterval(function() {
@@ -112,5 +112,14 @@ window.onload = function() {
 		//changeSlide((currentSlide++)%$('.slide').length);
 	}, 5000);
 
+	//find classes with slide text-left and change there inner html
+	$('.slide-text-left').each(function(){
+		var text = $(this).text();
+		$(this).html('').append("<span class='anim-left'>"+text+"</span>");
+	});
+	//show details card
+	$('.logo img, .logo span, ._detail-card').hover(function() {
+		$('._detail-card').toggleClass("active");
+	});
 	Ripple.init();
 };

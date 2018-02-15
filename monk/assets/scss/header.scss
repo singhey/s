@@ -15,7 +15,7 @@ header {
 		color: $dark;
 		height: 64px;
 
-		.burger {
+		#menu .burger {
 			background-color: rgba(0, 0, 0, 1);
 
 			&:after, &:before {
@@ -87,7 +87,7 @@ header {
 
 	&.menu-visible {
 		.burger {
-			background-color: rgba(255, 255, 255, 0);
+			background-color: rgba(255, 255, 255, 0) !important;
 			transition: background-color .5s ease-in-out;
 			&:after, &:before {
 				transition: transform .5s .3s ease-in-out, width .5s ease-out;
@@ -217,4 +217,48 @@ header {
 	}
 
 	
+}
+
+._detail-card {
+	position: fixed;
+	display: none;
+	width: 100%;
+	z-index:99;
+	top: 100px;
+	left: 100px;
+	.detail-card {
+		padding: 16px;
+		color: #fff;
+		background-image: linear-gradient(135deg, #ed21ff 0%, #9e21ff 100%, #9e21ff 100%);
+
+		> .row > *{
+			padding: 8px;
+		}
+	}
+	&.active{
+		display: block;
+	}
+	img {
+		width: 50%;
+		margin: auto;
+		display: block;
+	}
+	a {
+		color: #fff;
+		&:hover {
+			text-decoration: none;
+			color: #dadada;
+		}
+	}
+	.social-icons a {
+		padding: 8px;
+	}
+	&::after {
+		position: absolute;
+		top:-150px;
+		content:'';
+		height: 150px;
+		width: 300px;
+		left:-50px;
+	}
 }

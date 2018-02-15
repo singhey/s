@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title>The Online Monk</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width" />
 	<link rel="stylesheet" type="text/css" href="./assets/css/framework/bootstrap-reboot.min.css">
 	<link rel="stylesheet" type="text/css" href="./assets/css/framework/bootstrap-grid.min.css">
 	<link rel="stylesheet" type="text/css" href="./assets/css/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
@@ -14,8 +16,8 @@
 	<div class="container-fluid">
 		<header class="row">
 			<div class="col-10 logo"><img src="./assets/images/logo-transparent.png" alt=" The Online Monk "> <span>"THE ONLINE MONK" </span></div>
-			<div class="offset-10 col-1 uppercase">Menu</div>
-			<div class="col-1" id="menu">
+			<div class="offset-md-10 offset-sm-7 offset-xs-6 col-lg-1 col-md-1 col-sm-2 col-xs-3 col-3 offset-7 uppercase" style="text-align: right">Menu</div>
+			<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 col-2" id="menu">
 				<span class="burger"></span>
 			</div>
 			<div id="site-nav" class="r">
@@ -48,7 +50,48 @@
 				</div>
 			</div>
 		</header>
+		<div class="_detail-card row">
+			<div class="col-12 detail-card col-lg-5 col-md-6 col-sm-8 col-xs-10">
+				<div class="row no-gutters">
+					<div class="col-6">
+						<img src="./assets/images/logo-transparent.png" alt=" The Online Monk ">
 
+						<p>
+							</br></br>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua.
+						</p>
+					</div>
+					<div class="col-6">
+						<p>
+							</br>
+							<a href="callto:+919090909090"> M: +91 90 90 909090</a> </br>
+							<a href="mailto:contact@monk.com">Mail: contact@monk.com</a>
+						</p>
+
+						<p>
+							<address>
+								<p><b>Address</b></br>
+									#001 XYZ street,</br>
+									XYZ Area,</br>
+									Bangalore - 560083</br></br>
+								</p>
+							</address>
+						</p>
+
+						<p class="social-icons">
+							<a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+							<a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+							<a href="#" title="Behance"><i class="fab fa-behance"></i></a>
+							<a href="#" title="Dribbble"><i class="fab fa-dribbble"></i></a>
+							<a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- image slider -->
 		<div class="row">
 			<div class="col-12" style="padding:0;">
 				<div class="slide-holder" id="image-slider">
@@ -57,14 +100,14 @@
 							<div class="overlay-slide  d-flex">
 								<div class="slide-text align-self-end">
 									<div class="row">
-										<h1 class="offset-2 col-8">
+										<h1 class="offset-md-2 offset-sm-1 col-12 col-lg-8 col-md-8 col-sm-10 col-xs-12">
 											<span class="_slide-left">
 												<span class="slide-left">{{s.heading}}</span>
 											</span>
 										</h1>
 									</div>
 									<div class="row">
-										<p class="offset-2 col-8">
+										<p class="offset-md-2 offset-sm-1 col-12 col-lg-8 col-md-8 col-sm-10 col-xs-12">
 											<span class="_slide-left">
 												<span class="slide-left">{{subHeading}}</span>
 											</span>
@@ -84,6 +127,8 @@
 			</div>
 		</div>
 
+
+		<!-- why us -->
 		<div class="row">
 			<div class="col-12 why-us">
 				<div class="diagonal">
@@ -117,77 +162,78 @@
 				</div>
 			</div>
 		</div>
+
 		<!-- services -->
 		<div class="row services">
 			<div class="container">
 				<div class="row">
 					<h1 class="col-12">Services Provided</h1>
-					<div class="col-4">
+					<div class="col-lg-4 col-md-6 col-xs-12">
 						<div class="service-card animated">
 							<div class="row no-gutters service-icon">
-								<i class="fas fa-desktop"></i>
+								<i class="fas fa-desktop se-icon se-red"></i>
 							</div>
 							<h2 class="service-heading">Advertising</h2>
-							<p class="service-desc">With our advertising solutions, you can create targeted adverts to reach different audience and meet required goals.</p>
+							<p class="service-desc slide-text-left">With our advertising solutions, you can create targeted adverts to reach different audience and meet required goals.</p>
 						</div>
 					</div>
-					<div class="col-4">
+					<div class="col-lg-4 col-md-6 col-xs-12">
 						<div class="service-card animated">
 							<div class="row no-gutters service-icon">
-								<i class="fas fa-pencil-alt"></i>
+								<i class="fas fa-pencil-alt se-icon se-blue"></i>
 							</div>
 							<h2 class="service-heading">Content Writing</h2>
-							<p class="service-desc">With our advertising solutions, you can create targeted adverts to reach different audience and meet required goals.</p>
+							<p class="service-desc slide-text-left">With our advertising solutions, you can create targeted adverts to reach different audience and meet required goals.</p>
 						</div>
 					</div>
-					<div class="col-4">
+					<div class="col-lg-4 col-md-6 col-xs-12">
 						<div class="service-card animated">
 							<div class="row no-gutters service-icon">
-								<i class="fas fa-tv"></i>
+								<i class="fas fa-tv se-icon se-pink"></i>
 							</div>
 							<h2 class="service-heading">Web Designing</h2>
-							<p class="service-desc">With our advertising solutions, you can create targeted adverts to reach different audience and meet required goals.</p>
+							<p class="service-desc slide-text-left">With our advertising solutions, you can create targeted adverts to reach different audience and meet required goals.</p>
 						</div>
 					</div>
-					<div class="col-4">
+					<div class="col-lg-4 col-md-6 col-xs-12">
 						<div class="service-card animated">
 							<div class="row no-gutters service-icon">
-								<i class="fas fa-desktop"></i>
+								<i class="fas fa-desktop se-icon se-green"></i>
 							</div>
 							<h2 class="service-heading">Advertising</h2>
-							<p class="service-desc">With our advertising solutions, you can create targeted adverts to reach different audience and meet required goals.</p>
+							<p class="service-desc slide-text-left">With our advertising solutions, you can create targeted adverts to reach different audience and meet required goals.</p>
 						</div>
 					</div>
-					<div class="col-4">
+					<div class="col-lg-4 col-md-6 col-xs-12">
 						<div class="service-card animated">
 							<div class="row no-gutters service-icon">
-								<i class="fas fa-pencil-alt"></i>
+								<i class="fas fa-pencil-alt se-icon se-red"></i>
 							</div>
 							<h2 class="service-heading">Content Writing</h2>
-							<p class="service-desc">With our advertising solutions, you can create targeted adverts to reach different audience and meet required goals.</p>
+							<p class="service-desc slide-text-left">With our advertising solutions, you can create targeted adverts to reach different audience and meet required goals.</p>
 						</div>
 					</div>
-					<div class="col-4">
+					<div class="col-lg-4 col-md-6 col-xs-12">
 						<div class="service-card animated">
 							<div class="row no-gutters service-icon">
-								<i class="fas fa-tv"></i>
+								<i class="fas fa-tv se-icon se-blue"></i>
 							</div>
 							<h2 class="service-heading">Web Designing</h2>
-							<p class="service-desc">With our advertising solutions, you can create targeted adverts to reach different audience and meet required goals.</p>
+							<p class="service-desc slide-text-left">With our advertising solutions, you can create targeted adverts to reach different audience and meet required goals.</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="row">
-			<div class="col-5 side-img">
-						
-			</div>
-			<div class="col-7 side-img-text">
+		<div class="row desc-something animated">
+				<div class="col-lg-5 col-md-5 col-sm-12 side-img">
+							
+				</div>
+			<div class="col-lg-7 col-md-7 col-sm-12 side-img-text">
 				<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
 				<span class="divider half"></span>
-				<p>
+				<p class="slide-text-left">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco.Lorem ipsum dolor sit amet.
@@ -195,7 +241,7 @@
 
 				<span class="divider thin"></span>
 
-				<p>
+				<p class="slide-text-left">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -206,7 +252,7 @@
 		</div>
 
 		<section class="row full-screen">
-			<div class="col-6 contact-image-holder full-screen" style="padding:0; color: #fff;">
+			<div class="col-lg-6 col-md-6 col-sm-12 contact-image-holder full-screen" style="padding:0; color: #fff;">
 				<div class="row no-gutters overlay d-flex full-screen">
 					<div class="align-self-center row">
 						<div class="address col-12 row">
@@ -244,7 +290,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-6 contact-form-holder">
+			<div class="col-lg-6 col-md-6 col-sm-12 contact-form-holder">
 				<form class="contact-form">
 					<h2>Contact Us</h2>
 					<div class="form-row">
@@ -269,10 +315,10 @@
 		</section>
 
 		<footer class="row">
-			<div class="col-6 offset-1">
+			<div class="col-lg-6 col-md-4 col-sm-12 offset-lg-1 offset-lg-1">
 				<img src="./assets/images/icon.png"/>
 			</div>
-			<div class="col-5">
+			<div class="col-lg-5 col-md-7 col-sm-12">
 				<p class="site-links">
 					<a href="#">HOME</a>
 					<a href="#">ABOUT</a>

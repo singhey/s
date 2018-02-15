@@ -12,9 +12,9 @@ header {
     background-color: #fff;
     color: #121212;
     height: 64px; }
-    header.scrolled .burger {
+    header.scrolled #menu .burger {
       background-color: black; }
-      header.scrolled .burger:after, header.scrolled .burger:before {
+      header.scrolled #menu .burger:after, header.scrolled #menu .burger:before {
         background-color: #121212 !important; }
   header.hidden {
     transform: translateY(-100%); }
@@ -62,7 +62,7 @@ header {
     #menu .burger:before {
       top: -8px; }
   #menu.menu-visible .burger {
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0) !important;
     transition: background-color .5s ease-in-out; }
     #menu.menu-visible .burger:after, #menu.menu-visible .burger:before {
       transition: transform .5s .3s ease-in-out, width .5s ease-out; }
@@ -165,5 +165,39 @@ header {
       top: 0;
       right: 0;
       display: block; }
+
+._detail-card {
+  position: fixed;
+  display: none;
+  width: 100%;
+  z-index: 99;
+  top: 100px;
+  left: 100px; }
+  ._detail-card .detail-card {
+    padding: 16px;
+    color: #fff;
+    background-image: linear-gradient(135deg, #ed21ff 0%, #9e21ff 100%, #9e21ff 100%); }
+    ._detail-card .detail-card > .row > * {
+      padding: 8px; }
+  ._detail-card.active {
+    display: block; }
+  ._detail-card img {
+    width: 50%;
+    margin: auto;
+    display: block; }
+  ._detail-card a {
+    color: #fff; }
+    ._detail-card a:hover {
+      text-decoration: none;
+      color: #dadada; }
+  ._detail-card .social-icons a {
+    padding: 8px; }
+  ._detail-card::after {
+    position: absolute;
+    top: -150px;
+    content: '';
+    height: 150px;
+    width: 300px;
+    left: -50px; }
 
 /*# sourceMappingURL=header.css.map */
