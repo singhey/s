@@ -1,0 +1,50 @@
+.why-us {
+  padding: 0;
+  position: relative; }
+  .why-us .diagonal {
+    background: #2ae;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1; }
+    .why-us .diagonal:after {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: #2ae;
+      content: '';
+      transform: skewY(5deg);
+      transform-origin: 0% 0%; }
+  .why-us .text {
+    padding: 64px;
+    position: relative;
+    z-index: 2; }
+  .why-us .divider {
+    margin: 32px 0px;
+    border-bottom: 1px solid #3f86d2; }
+
+.btn {
+  display: inline-block;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 8px 16px;
+  border-radius: 3px;
+  transition: color .3s linear;
+  position: relative; }
+  .btn::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    z-index: -1;
+    background: #fff;
+    top: 0;
+    left: 0;
+    transition: width .3s linear; }
+  .btn:hover {
+    text-decoration: none;
+    color: #000; }
+    .btn:hover::after {
+      width: 100%; }
+
+/*# sourceMappingURL=why-us.css.map */
