@@ -12,6 +12,10 @@ header {
   font-weight: bold;
   position: relative;
   z-index: 99; }
+  .logo > img {
+    width: 70px;
+    top: -10px;
+    position: absolute; }
 
 .uppercase {
   text-transform: uppercase; }
