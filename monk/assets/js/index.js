@@ -63,6 +63,13 @@ window.onload = function() {
 		changeSlide(index);
 	});
 
+	//scroll to top
+	$('.scroll-to-top').click(function(){
+		$('html, body').animate({
+			scrollTop: 0,
+		}, 1000);
+	});
+
 	function changeSlide(index){
 		$('.slide-toggle-button').removeClass('active');
 		$('.slide-toggle-button:eq('+index+')').addClass('active');
@@ -99,6 +106,15 @@ window.onload = function() {
 	  	}
 
 	  	if($('header').hasClass("scrolled")) {
+	  	}
+
+	  	//check if contact form in view and add parallax
+	  	if($('.contact-image-holder').isInViewport()) {
+	  		var move = -($('.contact-image-holder').offset().top - $(window).scrollTop()) / 4.3 + 40;
+	  		console.log(move);
+	  		$('.contact-image-holder').css({
+	  			"background-position":"50%"+ move +"%",
+	  		});
 	  	}
 	  	/*if(prevScroll < $(window).scrollTop() && $(window).scrollTop() > 100) {
 	  		$('header').addClass('hidden');

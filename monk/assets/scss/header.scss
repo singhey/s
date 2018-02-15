@@ -1,6 +1,7 @@
 $dark : #121212;
 $light : #fff;
-header {
+
+header{
 	padding: 16px;
 	position: fixed;
 	z-index:90;
@@ -27,6 +28,7 @@ header {
 	&.hidden {
 		transform: translateY(-100%);
 	}
+
 }
 
 .logo {
@@ -34,8 +36,8 @@ header {
 	font-size:24px;
 	font-weight: bold;
 	position:absolute;
-	height: 100%;
-	top:0;
+	height: 90%;
+	top:5%;
 	z-index:99;
 
 	> img {
@@ -260,5 +262,27 @@ header {
 		height: 150px;
 		width: 300px;
 		left:-50px;
+	}
+}
+
+.scroll-to-top {
+	background: $light;
+	bottom: 32px;
+	right: 32px;
+	position: fixed;
+	z-index:99;
+	text-align:center;
+	padding: 8px 8px;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+	transition: all .3s ease-out;
+	cursor: pointer;
+	color: $dark;
+	&:hover {
+		box-shadow: 0px 0px 8px #ccc;
+	}
+
+	> * {
+		display: block;
 	}
 }

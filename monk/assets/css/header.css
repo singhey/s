@@ -24,8 +24,8 @@ header {
   font-size: 24px;
   font-weight: bold;
   position: absolute;
-  height: 100%;
-  top: 0;
+  height: 90%;
+  top: 5%;
   z-index: 99; }
   .logo > img {
     height: 100%; }
@@ -199,5 +199,23 @@ header {
     height: 150px;
     width: 300px;
     left: -50px; }
+
+.scroll-to-top {
+  background: #fff;
+  bottom: 32px;
+  right: 32px;
+  position: fixed;
+  z-index: 99;
+  text-align: center;
+  padding: 8px 8px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  transition: all .3s ease-out;
+  cursor: pointer;
+  color: #121212; }
+  .scroll-to-top:hover {
+    box-shadow: 0px 0px 8px #ccc; }
+  .scroll-to-top > * {
+    display: block; }
 
 /*# sourceMappingURL=header.css.map */
