@@ -1,21 +1,36 @@
 header {
   padding: 16px;
-  background-color: #fff;
-  color: #121212;
   position: fixed;
   z-index: 90;
-  width: 100%; }
+  width: 100%;
+  color: #fff;
+  height: 80px;
+  background-color: transparent;
+  transition: height .3s linear, background-color .5s ease-in-out, box-shadow .3s ease-out,  transform .3s ease-out; }
+  header.scrolled {
+    box-shadow: 0px 0px 16px #999;
+    background-color: #fff;
+    color: #121212;
+    height: 64px; }
+    header.scrolled .burger {
+      background-color: black; }
+      header.scrolled .burger:after, header.scrolled .burger:before {
+        background-color: #121212 !important; }
+  header.hidden {
+    transform: translateY(-100%); }
 
 .logo {
   text-transform: uppercase;
   font-size: 24px;
   font-weight: bold;
-  position: relative;
+  position: absolute;
+  height: 100%;
+  top: 0;
   z-index: 99; }
   .logo > img {
-    width: 168px;
-    top: -13px;
-    position: absolute; }
+    height: 100%; }
+  .logo span {
+    font-size: 16px; }
 
 .uppercase {
   text-transform: uppercase; }
@@ -27,7 +42,7 @@ header {
   #menu .burger {
     height: 1px;
     width: 32px;
-    background-color: black;
+    background-color: white;
     position: relative;
     display: inline-block;
     transform: translateY(-4px);
@@ -37,7 +52,7 @@ header {
       position: absolute;
       height: 100%;
       width: 100%;
-      background-color: #121212;
+      background-color: #fff;
       transform-origin: 15% 50%;
       transition: transform .4s .3s ease-in-out, width .8s .3s ease-out; }
     #menu .burger:after {
@@ -47,7 +62,7 @@ header {
     #menu .burger:before {
       top: -8px; }
   #menu.menu-visible .burger {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(255, 255, 255, 0);
     transition: background-color .5s ease-in-out; }
     #menu.menu-visible .burger:after, #menu.menu-visible .burger:before {
       transition: transform .5s .3s ease-in-out, width .5s ease-out; }

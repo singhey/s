@@ -2,24 +2,48 @@ $dark : #121212;
 $light : #fff;
 header {
 	padding: 16px;
-	background-color: $light;
-	color: $dark;
 	position: fixed;
 	z-index:90;
 	width: 100%;
+	color: $light;
+	height: 80px;
+	background-color: transparent;
+	transition: height .3s linear, background-color .5s ease-in-out, box-shadow .3s ease-out,  transform .3s ease-out;
+	&.scrolled {
+		box-shadow: 0px 0px 16px #999;
+		background-color: $light;
+		color: $dark;
+		height: 64px;
+
+		.burger {
+			background-color: rgba(0, 0, 0, 1);
+
+			&:after, &:before {
+				background-color: $dark !important;
+			}
+		}
+	}
+
+	&.hidden {
+		transform: translateY(-100%);
+	}
 }
 
 .logo {
 	text-transform: uppercase;
 	font-size:24px;
 	font-weight: bold;
-	position:relative;
+	position:absolute;
+	height: 100%;
+	top:0;
 	z-index:99;
 
 	> img {
-		width:168px;
-		top: -13px;
-		position:absolute;
+		height: 100%;
+	}
+
+	span {
+		font-size: 16px;
 	}
 }
 
@@ -34,7 +58,7 @@ header {
 	.burger {
 		height: 1px;
 		width:32px;
-		background-color: rgba(0, 0, 0, 1);
+		background-color: rgba(255, 255, 255, 1);
 		position:relative;
 		display: inline-block;
 		transform: translateY(-4px);
@@ -44,7 +68,7 @@ header {
 			position:absolute;
 			height: 100%;
 			width: 100%;
-			background-color: $dark;
+			background-color: $light;
 			transform-origin: 15% 50%;
 			transition: transform .4s .3s ease-in-out, width .8s .3s ease-out;
 		}
@@ -63,7 +87,7 @@ header {
 
 	&.menu-visible {
 		.burger {
-			background-color: rgba(0, 0, 0, 0);
+			background-color: rgba(255, 255, 255, 0);
 			transition: background-color .5s ease-in-out;
 			&:after, &:before {
 				transition: transform .5s .3s ease-in-out, width .5s ease-out;
