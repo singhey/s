@@ -98,6 +98,8 @@ window.onload = function() {
 	  		$('header').removeClass("scrolled");
 	  	}
 
+	  	if($('header').hasClass("scrolled")) {
+	  	}
 	  	/*if(prevScroll < $(window).scrollTop() && $(window).scrollTop() > 100) {
 	  		$('header').addClass('hidden');
 	  	}else {
@@ -110,7 +112,7 @@ window.onload = function() {
 	window.setInterval(function() {
 		//console.log("called");
 		changeSlide((currentSlide++)%$('.slide').length);
-	}, 10000);
+	}, 5000);
 
 	//find classes with slide text-left and change there inner html
 	$('.slide-text-left').each(function(){
