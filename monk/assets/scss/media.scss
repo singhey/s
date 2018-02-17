@@ -1,4 +1,15 @@
+@media(max-width: 373px){
+	//remove margin from testimony slides;
+	.testimony .testimony-card {
+		margin-left:0;
+	}
 
+	.testimony .align-self-center svg{
+		transform: rotate(90deg) translate(150px, 16px);
+		position:relative;
+		z-index:3;
+	}
+}
 //for xs devices
 @media (max-width: 576px) {
 	header {

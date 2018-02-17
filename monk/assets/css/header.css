@@ -46,7 +46,7 @@ header {
     position: relative;
     display: inline-block;
     transform: translateY(-4px);
-    transition: background-color 1s 1.4s ease-in-out; }
+    transition: background-color .3s .4s ease-in-out; }
     #menu .burger:after, #menu .burger:before {
       content: '';
       position: absolute;
@@ -54,7 +54,7 @@ header {
       width: 100%;
       background-color: #fff;
       transform-origin: 15% 50%;
-      transition: transform .4s .3s ease-in-out, width .8s .3s ease-out; }
+      transition: transform .4s .3s ease-in-out, width .8s .3s ease-out, background-color .3s .4s ease-in-out; }
     #menu .burger:after {
       width: 60%;
       top: 8px;
@@ -212,10 +212,13 @@ header {
   border: 1px solid #ccc;
   transition: all .3s ease-out;
   cursor: pointer;
-  color: #121212; }
+  color: #121212;
+  opacity: 0; }
   .scroll-to-top:hover {
     box-shadow: 0px 0px 8px #ccc; }
   .scroll-to-top > * {
     display: block; }
+  .scroll-to-top.visible {
+    opacity: 1; }
 
 /*# sourceMappingURL=header.css.map */

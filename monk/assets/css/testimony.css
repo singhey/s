@@ -1,0 +1,76 @@
+.testimony .left {
+  background-color: #000;
+  position: relative; }
+  .testimony .left::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    top: 0;
+    right: 0;
+    transition: width .4s .5s ease-out; }
+  .testimony .left h1 {
+    color: #2ae;
+    position: relative;
+    z-index: 2; }
+  .testimony .left .light {
+    font-weight: 400; }
+.testimony .right {
+  background: transparent;
+  position: relative; }
+  .testimony .right::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #4ae;
+    top: 0;
+    left: 0;
+    transition: width .4s .5s ease-out; }
+.testimony svg {
+  transform: rotate(90deg) translate(150px, 45px);
+  background: #fff;
+  border-radius: 100%;
+  box-shadow: 0px 0px 32px #999; }
+.testimony ._testimony-cards-holder {
+  overflow: hidden;
+  padding: 16px;
+  padding-left: 0px; }
+.testimony .testimony-cards-holder {
+  transition: transform .3s linear; }
+.testimony .testimony-card {
+  width: 350px;
+  min-height: 250px;
+  margin-left: 32px;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0px 0px 16px #444;
+  float: left;
+  transition: transform .5s .3s linear;
+  transform: scale(1); }
+  .testimony .testimony-card.shrink {
+    transition: transform .3s linear;
+    transform: scale(0.01); }
+.testimony .customer-img {
+  height: 40px;
+  width: 40px;
+  background-image: linear-gradient(135deg, #ed21ff 0%, #9e21ff 100%, #9e21ff 100%);
+  border-radius: 100%;
+  marin-top: 32px; }
+.testimony .customer-name {
+  font-weight: bold; }
+.testimony .customer-company {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #aaa; }
+.testimony .customer-testimony {
+  color: #aaa; }
+.testimony.hidden .left::before {
+  width: 0%; }
+.testimony.hidden .right::before {
+  width: 0%; }
+.testimony.hidden .testimony-card {
+  transform: scale(0.01); }
+
+/*# sourceMappingURL=testimony.css.map */

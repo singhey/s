@@ -1,3 +1,11 @@
+@media (max-width: 373px) {
+  .testimony .testimony-card {
+    margin-left: 0; }
+
+  .testimony .align-self-center svg {
+    transform: rotate(90deg) translate(150px, 16px);
+    position: relative;
+    z-index: 3; } }
 @media (max-width: 576px) {
   header {
     padding-left: 0px;

@@ -31,7 +31,9 @@
     color: #fff;
     position: relative;
     margin: auto;
-    border-radius: 3px; }
+    border-radius: 3px;
+    width: 100px;
+    height: 100px; }
     .service-card .se-icon::after {
       border-radius: 3px;
       content: '';
@@ -48,6 +50,9 @@
       animation-iteration-count: infinite;
       animation-timing-function: linear;
       animation-direction: alternate; }
+    .service-card .se-icon path, .service-card .se-icon rect, .service-card .se-icon polygon {
+      fill: #fff;
+      stroke: #fff; }
   .service-card .se-blue {
     background-color: #14ABF4; }
     .service-card .se-blue::after {
@@ -78,37 +83,8 @@
     transform: rotate(35deg); }
   100% {
     transform: rotate(55deg); } }
-.side-img {
-  background-image: url("../images/person.jpg");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.side-img-text {
-  padding: 32px 32px 32px 64px; }
-  .side-img-text h1 {
-    font-size: 40px;
-    color: #666; }
-  .side-img-text .divider {
-    display: inline-block;
-    width: 100%;
-    border-bottom: 2px solid #666;
-    margin: 32px 0px; }
-    .side-img-text .divider.half {
-      width: 100px; }
-
 .full-screen {
   min-height: 100vh; }
-
-.desc-something.full .slide-text-left span {
-  transition: transform .3s .5s ease-out;
-  transform: translateX(0%); }
-.desc-something .slide-text-left {
-  overflow: hidden; }
-.desc-something .slide-text-left span {
-  transform: translateX(-100%);
-  display: inline-block; }
-.desc-something.full {
-  animation: none; }
 
 footer {
   padding: 32px 0px 0px; }

@@ -1,0 +1,13 @@
+.banner-img-holder{
+	height: 100vh;
+	background-image: url('../images/img-1.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	color: #fff;
+	text-align:center;
+
+	h1 {
+		text-transform: uppercase;
+	}
+}

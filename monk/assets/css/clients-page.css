@@ -1,0 +1,28 @@
+.banner-img-holder {
+  height: 100vh;
+  color: #fff;
+  text-align: center;
+  background-image: url("../images/img-3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-align: center; }
+  .banner-img-holder h1 {
+    text-transform: uppercase; }
+
+.clients-card {
+  margin: 16px;
+  box-shadow: 0px 0px 32px #dfdfdf;
+  padding: 8px; }
+  .clients-card h2 {
+    padding: 16px 32px; }
+  .clients-card p {
+    padding: 8px 32px 16px 32px; }
+  .clients-card .client-img {
+    background-image: url("../images/img-3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: 0px 0px 4px #ccc; }
+
+/*# sourceMappingURL=clients-page.css.map */

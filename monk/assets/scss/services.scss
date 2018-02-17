@@ -40,6 +40,8 @@
 		position: relative;
 		margin: auto;
 		border-radius: 3px;
+		width: 100px;
+		height: 100px;
 
 		&::after {
 			border-radius: 3px;
@@ -57,6 +59,11 @@
 			animation-iteration-count: infinite;
 			animation-timing-function: linear;
 			animation-direction: alternate;
+		}
+
+		path, rect, polygon {
+			fill: #fff;
+			stroke: #fff;
 		}
 	}
 
@@ -113,53 +120,8 @@
 		transform: rotate(55deg);
 	}
 }
-
-.side-img {
-	background-image: url("../images/person.jpg");
-	background-size:cover;
-	background-repeat: no-repeat;
-	//background-attachment: fixed;
-}
-
-.side-img-text {
-	padding: 32px 32px 32px 64px;
-	h1 {
-		font-size:40px;
-		color: #666;
-	}
-
-	.divider {
-		display: inline-block;
-		width: 100%;
-		border-bottom: 2px solid #666;
-		margin: 32px 0px;
-		&.half{
-			width: 100px;
-		}
-	}
-}
 .full-screen {
 	min-height: 100vh;
-}
-
-.desc-something {
-	&.full .slide-text-left span {
-		transition: transform .3s .5s ease-out;
-		transform: translateX(0%);
-	}
-
-	.slide-text-left {
-		overflow:hidden;
-	}
-
-	.slide-text-left span {
-		transform: translateX(-100%);
-		display: inline-block;
-	}
-
-	&.full {
-		animation: none;
-	}
 }
 
 footer {
