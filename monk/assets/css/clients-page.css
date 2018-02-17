@@ -19,10 +19,11 @@
   .clients-card p {
     padding: 8px 32px 16px 32px; }
   .clients-card .client-img {
-    background-image: url("../images/img-3.jpg");
+    background-color: #2ae;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    box-shadow: 0px 0px 4px #ccc; }
+    box-shadow: 0px 0px 4px #ccc;
+    min-height: 150px; }
 
 /*# sourceMappingURL=clients-page.css.map */

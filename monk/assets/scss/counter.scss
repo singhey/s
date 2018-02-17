@@ -1,5 +1,11 @@
+.counter-block {
+	border-right: 1px solid #ccc;
+	&:last-child{
+		border:0;
+	}
+}
 .counter {
-	padding: 64px 0px;
+	padding: 48px 0px;
 	text-align:center;
 
 	.count {

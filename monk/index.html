@@ -137,25 +137,25 @@
 		<!-- Counter -->
 
 		<div class="row counter">
-			<div class="col-lg-3 col-md-3 col-sm-6 col-xm-6 col-12">
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xm-6 col-12 counter-block">
 				<p>
 					<span class="count">9+</span>
 					<span class="counter-text"><i class="fas fa-globe"></i> &nbsp;&nbsp;Countries</span>
 				</p>
 			</div>
-			<div class="col-lg-3 col-md-3 col-sm-6 col-xm-6 col-12">
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xm-6 col-12 counter-block">
 				<p>
 					<span class="count">600+</span>
 					<span class="counter-text"><i class="fas fa-clipboard"></i> &nbsp;&nbsp;Projects</span>
 				</p>
 			</div>
-			<div class="col-lg-3 col-md-3 col-sm-6 col-xm-6 col-12">
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xm-6 col-12 counter-block">
 				<p>
 					<span class="count">15+</span>
 					<span class="counter-text"><i class="fas fa-trophy"></i> &nbsp;&nbsp;Trophies</span>
 				</p>
 			</div>
-			<div class="col-lg-3 col-md-3 col-sm-6 col-xm-6 col-12">
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xm-6 col-12 counter-block">
 				<p>
 					<span class="count">3+</span>
 					<span class="counter-text"><i class="fas fa-map-marker-alt"></i> &nbsp;&nbsp;Office locations</span>
@@ -345,7 +345,7 @@
 										</svg>
 									</i>
 								</div>
-								<h2 class="service-heading">Web Graphics</h2>
+								<h2 class="service-heading">Graphic Designing</h2>
 								<p class="service-desc slide-text-left">With our advertising solutions, you can create targeted adverts to reach different audience and meet required goals.</p>
 							</div>
 						</div>
@@ -356,7 +356,7 @@
 
 		<!-- Testimony -->
 
-		<div class="row testimony full-screen hidden">
+		<div class="row testimony hidden">
 			<div class="col-12 col-xs-12 col-sm-4 d-flex left">
 				<div class="align-self-center">
 					<h1 style="padding: 32px;">Customer <br> <span class="light">Stories</span></h1>
@@ -364,13 +364,14 @@
 			</div>
 			<div class="col-12 col-xs-12 col-sm-8 d-flex right">
 				<div class="align-self-center" style="width: 100%;">
-					<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="-275 398.7 44.2 44.2"  id="testimony-switcher"><path fill="#000" d="M-275 420.8c0-12.2 9.9-22.1 22.1-22.1s22.1 9.9 22.1 22.1c0 12.2-9.9 22.1-22.1 22.1s-22.1-9.9-22.1-22.1zm42.7 0c0-11.4-9.2-20.6-20.6-20.6-11.4 0-20.6 9.2-20.6 20.6 0 11.4 9.2 20.6 20.6 20.6 11.4 0 20.6-9.3 20.6-20.6zM-260.6 418c0-.2.1-.4.2-.5.3-.3.8-.3 1.1 0l6.8 6.8 6.8-6.8c.3-.3.8-.3 1.1 0 .3.3.3.8 0 1.1l-7.3 7.3c-.3.3-.8.3-1.1 0l-7.3-7.3c-.3-.2-.3-.4-.3-.6z"/></svg>
+					<span id="testimony-switcher" ripple ripple-dark>
+					</span>
 					<div class="_testimony-cards-holder" id="testimony">
 						<div class="testimony-cards-holder">
 							<div class="testimony-card" v-for="t in testimony">
 								<div class="container-fluid">
 									<div class="row" style="padding:16px 0px">
-										<div class="col-2 offset-1">
+										<div class="col-2 xs-offset-1">
 											<div class="customer-img">
 											</div>
 										</div>
@@ -382,7 +383,7 @@
 										</div>
 									</div>
 									<div class="row">
-										<div class="col-10 offset-1">
+										<div class="xs-col-10 col-11 xs-offset-1">
 											<p class="customer-testimony">{{t.review}}</p>
 										</div>
 									</div>
@@ -392,17 +393,6 @@
 					</div>
 				</div>
 			</div>
-
-			<!-- <h1 class="col-12" style="padding: 32px;">Customer <span class="light">stories</span></h1>
-			<div class="_accordion-slider">
-				<ul class="accordion-slider">
-					<li class="tab">
-						<div class="row no-gutters">
-							<div class="col-12"></div>
-						</div>
-					</li>
-				</ul>
-			</div> -->
 		</div>
 
 		<!-- Contact us -->

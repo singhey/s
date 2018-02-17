@@ -1,0 +1,71 @@
+.faq {
+	background: #efefef;
+	padding-top: 64px;
+	padding-bottom: 64px;
+	>h1{
+		padding-bottom: 24px;
+		padding-left: 5%;
+		font-weight: 500;
+	}
+}
+
+.accordion { 
+	background-color: #fefffa;
+	max-width: 980px;
+	margin: auto;
+	border-top: 6px solid #2ae;
+	line-height: 1.6;
+	box-shadow: 5px 5px 10px 0px #a4bac1;
+  
+	&__item {
+		border-bottom: 1px solid #dce7eb;
+		&.is-expanded span.close{
+			transform: rotate(270deg);
+		}
+	}
+
+	&__title {
+		padding: 15px 15px 15px 40px;
+		display: block;
+		position: relative;
+		font-weight: 400;
+    
+	    h5 {
+			border-bottom: 1px solid #fefffa;
+			display:block;
+			position:relative;
+
+			span.close {
+				display: inline-block;
+				position: absolute;
+				right: 0;
+				top:-6px;
+				font-size:20px;
+				font-weight: bold;
+				transform: rotate(45deg);
+				transition: transform .3s ease-out;
+			}
+	    }
+
+	    &:hover,
+	    &:focus {
+			cursor: pointer;
+			outline: none;
+			h5 {
+				display:block;
+			}
+	    }
+	}
+
+    &__content-inner {
+        padding: 0 40px 10px 40px;
+    }
+
+
+
+	&__content {
+		transition: height 0.3s ease-out;
+		height: 0;
+		overflow: hidden;
+	}
+}

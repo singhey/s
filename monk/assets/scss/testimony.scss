@@ -1,5 +1,7 @@
 .testimony {
 	.left {
+		padding-top: 64px;
+		padding-bottom: 64px;
 		background-color: #000;
 		position:relative;
 		&::before {
@@ -23,6 +25,8 @@
 	}
 
 	.right {
+		padding-top: 64px;
+		padding-bottom: 64px;
 		background: transparent;
 		position:relative;
 		&::before {
@@ -36,8 +40,24 @@
 			transition: width .4s .5s ease-out;
 		}
 	}
-	svg {
+	span#testimony-switcher {
+		display: inline-block;
+		height: 50px;
+		width: 50px;
 		transform: rotate(90deg) translate(150px, 45px); background: #fff; border-radius: 100%; box-shadow: 0px 0px 32px #999;
+		position:relative;
+		cursor: pointer;
+		&::after {
+			content: '';
+			position:absolute;
+			height: 12px;
+			width:12px;
+			border-top: 2px solid #000;
+			border-left: 2px solid #000;
+			transform: rotate(-135deg);
+			top: 18px;
+			left: 19px;
+		}
 	}
 	._testimony-cards-holder {
 		overflow: hidden;

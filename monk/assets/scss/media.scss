@@ -4,7 +4,7 @@
 		margin-left:0;
 	}
 
-	.testimony .align-self-center svg{
+	.testimony .align-self-center span#testimony-switcher{
 		transform: rotate(90deg) translate(150px, 16px);
 		position:relative;
 		z-index:3;
@@ -59,6 +59,14 @@
 			padding: 4px !important;
 			font-size:14px;
 		}
+	}
+
+	//clients page
+	.clients-card {
+		margin: 16px 0px !important;
+	}
+	.clients-card p, .clients-card h2 {
+		padding: 8px !important;
 	}
 }
 

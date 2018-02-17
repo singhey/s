@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Contact Us - The Online Monk</title>
+	<title>Clients - The Online Monk</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width" />
 	<link rel="stylesheet" type="text/css" href="./assets/css/framework/bootstrap-reboot.min.css">
@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="./assets/css/contact.css">
 	<link rel="stylesheet" type="text/css" href="./assets/css/all.css">
 	<link rel="stylesheet" type="text/css" href="./assets/css/clients-page.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/faq.css">
 </head>
 <body>
 	<div class="container-fluid">
@@ -50,7 +51,7 @@
 
 			<!-- scroll to top button -->
 			<div class="scroll-to-top">
-				<i class="fas fa-angle-up"></i>
+				<span class="top-arrow"></span>
 				<span>TOP</span>
 			</div>
 		</header>
@@ -66,13 +67,42 @@
 			</div>
 		</div>
 
+		<!-- Counter -->
+		<div class="row counter">
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xm-6 col-12 counter-block">
+				<p>
+					<span class="count">9+</span>
+					<span class="counter-text"><i class="fas fa-globe"></i> &nbsp;&nbsp;Countries</span>
+				</p>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xm-6 col-12 counter-block">
+				<p>
+					<span class="count">600+</span>
+					<span class="counter-text"><i class="fas fa-clipboard"></i> &nbsp;&nbsp;Projects</span>
+				</p>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xm-6 col-12 counter-block">
+				<p>
+					<span class="count">15+</span>
+					<span class="counter-text"><i class="fas fa-trophy"></i> &nbsp;&nbsp;Trophies</span>
+				</p>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xm-6 col-12 counter-block">
+				<p>
+					<span class="count">3+</span>
+					<span class="counter-text"><i class="fas fa-map-marker-alt"></i> &nbsp;&nbsp;Office locations</span>
+				</p>
+			</div>
+		</div>
+
 		<!-- All about clients -->
-		<div class="row">
+		<div class="row" style="padding-bottom: 64px;">
+			<h1 class="col-12" style="font-weight: 500; padding: 32px;">SEO, Writers, Technology cards</h1>
 			<div class="col-12 animated">
 				<div class="row no-gutters clients-card">
-					<div class="col-4 client-img"></div>
-					<div class="col-8">
-						<h2 class="client-company">XYZ company</h2>
+					<div class="col-12 col-sm-4 client-img"></div>
+					<div class="col-12 col-sm-8">
+						<h2 class="client-company">SEO</h2>
 						<p class="client-desc">
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -87,11 +117,10 @@
 					</div>
 				</div>
 			</div>
-
 			<div class="col-12 animated">
 				<div class="row no-gutters clients-card">
-					<div class="col-8">
-						<h2 class="client-company">XYZ company</h2>
+					<div class="col-12 col-sm-8">
+						<h2 class="client-company">SEO</h2>
 						<p class="client-desc">
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -104,15 +133,14 @@
 							<a href="#" class="btn btn-dark" style="padding: 4px 16px;">Visit Site</a>
 						</p>
 					</div>
-					<div class="col-4 client-img"></div>
+					<div class="col-12 col-sm-4 client-img"></div>
 				</div>
 			</div>
-
 			<div class="col-12 animated">
 				<div class="row no-gutters clients-card">
-					<div class="col-4 client-img"></div>
-					<div class="col-8">
-						<h2 class="client-company">XYZ company</h2>
+					<div class="col-12 col-sm-4 client-img"></div>
+					<div class="col-12 col-sm-8">
+						<h2 class="client-company">SEO</h2>
 						<p class="client-desc">
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -125,6 +153,85 @@
 							<a href="#" class="btn btn-dark" style="padding: 4px 16px;">Visit Site</a>
 						</p>
 					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 5 awesome reasons -->
+		<div class="reasons row" id="reasons" style="padding-bottom: 64px; border-bottom: 1px solid #efefef; background: #efefef;">
+			<h1 class="col-12" style="font-weight: 500; padding: 32px;">5 Awesome reasons why everyone loves us!</h1>
+			<div class="col-6 animated" v-for="r in reason">
+				<div class="row no-gutters clients-card" style="background-color: #fff">
+					<div class="col-12 col-sm-4 client-img"></div>
+					<div class="col-12 col-sm-8">
+						<h2 class="client-company">{{r.heading}}</h2>
+						<p class="client-desc">
+							{{ r.reason }}
+							<br>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Testimony -->
+
+		<div class="row testimony hidden">
+			<div class="col-12 col-xs-12 col-sm-4 d-flex left">
+				<div class="align-self-center">
+					<h1 style="padding: 32px;">Customer <br> <span class="light">Stories</span></h1>
+				</div>
+			</div>
+			<div class="col-12 col-xs-12 col-sm-8 d-flex right">
+				<div class="align-self-center" style="width: 100%;">
+					<span id="testimony-switcher" ripple ripple-dark>
+					</span>
+					<div class="_testimony-cards-holder" id="testimony">
+						<div class="testimony-cards-holder">
+							<div class="testimony-card" v-for="t in testimony">
+								<div class="container-fluid">
+									<div class="row" style="padding:16px 0px">
+										<div class="col-2 offset-1">
+											<div class="customer-img">
+											</div>
+										</div>
+										<div class="col-8">
+											<p>
+												<span class="customer-name">{{t.user}}</span><br>
+												<span class="customer-company">{{t.company}}</span>
+											</p>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-10 offset-1">
+											<p class="customer-testimony">{{t.review}}</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- FAQ -->
+
+		<div class="row faq" id="faq">
+			<h1 class="col-12">FAQ's</h1>
+			<div class="col-12 accordion-holder">
+				<div class="accordion-sliders accordion"  role="tablist" aria-live="polite" data-behavior="accordion" >
+				    	<article class="accordion__item js-show-item-default" data-binding="expand-accordion-item" v-for="f in faq">
+					        <span id="tab5" tabindex="0" class="accordion__title" aria-controls="panel5" role="tab" aria-selected="false" aria-expanded="false" data-binding="expand-accordion-trigger">
+					        	<h5>{{f.question}} <span class="close">&times;</span></h5>
+					        </span>
+
+					        <div id="panel5" class="accordion__content" role="tabpanel" aria-hidden="true" aria-labelledby="tab5" data-binding="expand-accordion-container">
+					        	<div class="accordion__content-inner">
+					            	<p>{{f.answer}}</p>
+					          	</div>
+					        </div>
+				     	</article>
 				</div>
 			</div>
 		</div>
@@ -170,5 +277,6 @@
 	<script type="text/javascript" src="./assets/js/jquery.js"></script>
 	<!-- <script type="text/javascript" src="./assets/js/header.js"></script> -->
 	<script type="text/javascript" src="./assets/js/index.js"></script>
+	<script type="text/javascript" src="./assets/js/reasons.js"></script>
 </body>
 </html>

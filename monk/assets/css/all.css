@@ -202,8 +202,8 @@ header {
 
 .scroll-to-top {
   background: #fff;
-  bottom: 32px;
-  right: 32px;
+  bottom: 24px;
+  right: 24px;
   position: fixed;
   z-index: 99;
   text-align: center;
@@ -213,13 +213,21 @@ header {
   transition: all .3s ease-out;
   cursor: pointer;
   color: #121212;
-  opacity: 0; }
+  opacity: 0;
+  font-size: 12px; }
   .scroll-to-top:hover {
     box-shadow: 0px 0px 8px #ccc; }
   .scroll-to-top > * {
     display: block; }
   .scroll-to-top.visible {
     opacity: 1; }
+  .scroll-to-top span.top-arrow {
+    height: 12px;
+    width: 12px;
+    margin: auto;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    transform: rotate(45deg); }
 
 .slide-holder {
   height: 100vh;
@@ -315,8 +323,13 @@ header {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6); }
 
+.counter-block {
+  border-right: 1px solid #ccc; }
+  .counter-block:last-child {
+    border: 0; }
+
 .counter {
-  padding: 64px 0px;
+  padding: 48px 0px;
   text-align: center; }
   .counter .count {
     color: #2ae;
@@ -458,7 +471,7 @@ header {
 .customers-carousel {
   padding-bottom: 64px; }
   .customers-carousel h1 {
-    padding: 64px 0px; }
+    padding: 64px 32px; }
 
 ._slider-customer {
   overflow-x: hidden; }
@@ -606,6 +619,8 @@ footer {
     text-align: center; }
 
 .testimony .left {
+  padding-top: 64px;
+  padding-bottom: 64px;
   background-color: #000;
   position: relative; }
   .testimony .left::before {
@@ -624,6 +639,8 @@ footer {
   .testimony .left .light {
     font-weight: 400; }
 .testimony .right {
+  padding-top: 64px;
+  padding-bottom: 64px;
   background: transparent;
   position: relative; }
   .testimony .right::before {
@@ -635,11 +652,26 @@ footer {
     top: 0;
     left: 0;
     transition: width .4s .5s ease-out; }
-.testimony svg {
+.testimony span#testimony-switcher {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
   transform: rotate(90deg) translate(150px, 45px);
   background: #fff;
   border-radius: 100%;
-  box-shadow: 0px 0px 32px #999; }
+  box-shadow: 0px 0px 32px #999;
+  position: relative;
+  cursor: pointer; }
+  .testimony span#testimony-switcher::after {
+    content: '';
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+    transform: rotate(-135deg);
+    top: 18px;
+    left: 19px; }
 .testimony ._testimony-cards-holder {
   overflow: hidden;
   padding: 16px;
@@ -684,7 +716,7 @@ footer {
   .testimony .testimony-card {
     margin-left: 0; }
 
-  .testimony .align-self-center svg {
+  .testimony .align-self-center span#testimony-switcher {
     transform: rotate(90deg) translate(150px, 16px);
     position: relative;
     z-index: 3; } }
@@ -716,7 +748,13 @@ footer {
 
   .site-links a {
     padding: 4px !important;
-    font-size: 14px; } }
+    font-size: 14px; }
+
+  .clients-card {
+    margin: 16px 0px !important; }
+
+  .clients-card p, .clients-card h2 {
+    padding: 8px !important; } }
 @media (max-width: 992px) {
   .desc-something h1 {
     font-size: 32px; }
