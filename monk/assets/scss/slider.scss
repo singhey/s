@@ -5,7 +5,7 @@
 	overflow: hidden;
 	.slide-buttons{
 		position: absolute;
-		z-index:11;
+		z-index:30;
 		width: 100%;
 		text-align: center;
 		bottom: 32px;
@@ -14,7 +14,7 @@
 			height: 8px;
 			width:8px;
 			border-radius: 4px;
-			background-color:#fff;
+			background-color:#121212;
 			margin: 0px 16px;
 			cursor:pointer;
 			transition: .3s ease-in-out;
@@ -42,12 +42,18 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	transform: translateX(100%);
 	transition: transform 0s 1s linear;
 	&.active{
 		z-index:2;
-		transform: translateX(0%);
 		transition: transform .5s .5s  ease-in-out;
+		.slide-text{
+			transform: translateX(0%);
+			transition: transform .5s 1s  ease-in-out;
+		}
+		.slide-image {
+			transform: translateX(0%);
+			transition: transform .5s 1s  ease-in-out;
+		}
 		h1 span._slide-left, p span._slide-left {
 			&:after {
 				animation-name: slide;
@@ -58,8 +64,26 @@
 			transform: translateY(0%);
 			transition: transform 0s 1.2s ease-out;
 		}
-	}
 
+		.slide-button {
+			opacity: 1;
+			transition: opacity .5s 1.4s linear;
+		}
+
+		.graph {
+			transition: transform .3s 1s linear;
+			transform: translateY(0%);
+			img {
+				animation: updown;
+				animation-direction: alternate;
+				animation-duration: 5s;
+				animation-iteration-count: infinite;
+			}
+		}
+	}
+	.align-self-center {
+		width:100%;
+	}
 	h1, p {
 		span {
 			display: inline-block;
@@ -67,14 +91,52 @@
 			overflow: hidden;
 		}
 	}
-	
+
+	.slide-text, .slide-image {
+		position: absolute;
+		height: 100%;
+	}
+
+	.d-flex{
+		height: 100%;
+	}
+	.slide-text {
+		z-index:3;
+		transform:translateX(-100%);
+		transition: transform .5s .5s ease-in-out;
+
+	}
+	.slide-image {
+		right:0;
+		z-index:1;
+		transform: translateX(100%);
+		transition: transform .5s .5s ease-in-out;
+		overflow: hidden;
+		padding:0;
+		img {
+			max-width: 100%;
+			max-height: 400px;
+			margin: auto;
+			display: block;
+		}
+
+	}
+
+	.slide-overlay {
+		position: absolute;
+		z-index: 2;
+		height: 100%;
+		left:0;
+		top:0;
+	}
+
 	h1 span.slide-left, p span.slide-left {
 		transform: translateY(100%);
 		transition: transform .4s .1s ease-out;
 	}
 
 	span._slide-left:after {
-		background: #fff;
+		background: #212121;
 		width:100%;
 		position: absolute;
 		height: 100%;
@@ -86,18 +148,30 @@
 		animation-delay: 1s;
 	}
 
+	.slide-button {
+		opacity: 0;
+		transition: opacity .3s linear;
+	}
+
 	.btn {
 		z-index:2;
 		&:hover::after {
-			background-color: #fff;
+			background-color: #000;
 		}
 	}
-	.slide-text{
+
+	.graph {
+		position:absolute;
+		bottom:0;
+		z-index:0;
 		width: 100%;
-		padding-bottom: 100px;
-		color: #fff;
-		text-align: center;
+		padding:0;
+		transform: translateY(101%);
+		img {
+			width: 100%;
+		}
 	}
+
 }
 
 @keyframes slide {
@@ -117,19 +191,57 @@
 	}
 }
 
+@keyframes updown {
+	0% {
+		transform: translateY(0%);
+	}
+
+	100% {
+		transform: translateY(6%);
+	}
+}
+
 .text-fade-up {
 	overflow: hidden;
 
 	>span {
 		display: block;
-		transform: translateY(100%);
+		transform: translateY(-100%);
 		transition: inherit;
 	}
 }
+.continuous-switch {
+  padding:0;
+  margin:0;
+  transform: translate(-3px, 12px);
+  overflow: hidden;
+  position:relative;
+  height: 50px !important;
+  width: 100px !important;
+}
+.continuous-switch > span {
+  position:absolute !important;
+  animation-duration:3s;
+  animation-direction:alternate;
+  animation-iteration-count: infinite;
+  animation-name: front-n-back;
+}
+.continuous-switch span:nth-child(1) {
+  color:red;
+}
 
-.overlay-slide{
-	position:absolute;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, .6);
+.continuous-switch span:nth-child(2) {
+  color:blue;
+  animation-delay: 3s;
+}
+
+@keyframes front-n-back {
+  	0% {
+    transform: translateX(0%); }
+  40% {
+    transform:translateX(0%) }
+  60% {
+    transform: translateX(-110%); }
+  100% {
+    transform: translateX(-110%); }
 }

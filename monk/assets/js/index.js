@@ -17,28 +17,28 @@ window.onload = function() {
 			subHeading: "Lorem Ipsem dolor set amet con sect",
 			slides: [
 				{
-					image: "./assets/images/img-1.jpg",
-					text: "Slide 1 image",
+					image: "./assets/images/laptop.png",
+					text: "Short description about the current slide. Preferable length would be around 150 characters",
 					heading: "Marketing",
 				},
 				{
 					image: "./assets/images/img-2.jpg",
-					text: "Slide 1 image",
+					text: "Short description about the current slide. Preferable length would be around 150 characters",
 					heading: "Marketing",
 				},
 				{
 					image: "./assets/images/img-3.jpg",
-					text: "Slide 1 image",
+					text: "Short description about the current slide. Preferable length would be around 150 characters",
 					heading: "Content Writing",
 				},
 				{
 					image: "./assets/images/img-4.jpg",
-					text: "Slide 1 image",
+					text: "Short description about the current slide. Preferable length would be around 150 characters",
 					heading: "Web Development",
 				},
 				{
 					image: "./assets/images/img-5.jpg",
-					text: "Slide 1 image",
+					text: "Short description about the current slide. Preferable length would be around 150 characters",
 					heading: "Just a long sentence to see transition",
 				},
 			],
@@ -133,8 +133,6 @@ window.onload = function() {
 
 	}
 
-	changeSlide(0);
-
 	$('#menu').click(function() {
 		$(this).toggleClass("menu-visible");
 		$('#site-nav').toggleClass('reveal');
@@ -182,7 +180,7 @@ window.onload = function() {
 	var currentSlide = 0;
 	window.setInterval(function() {
 		//console.log("called");
-		changeSlide((currentSlide++)%$('.slide').length);
+		//changeSlide((currentSlide++)%$('.slide').length);
 	}, 5000);
 
 	//find classes with slide text-left and change there inner html
@@ -209,7 +207,7 @@ window.onload = function() {
 		$('.testimony-card:eq('+currentTestimonySlide+')').addClass("shrink");
 		currentTestimonySlide = ++currentTestimonySlide % $('.testimony-card').length;
 		// remove margin on smaller devices
-		margin = ($(window).width() > 373) ? 32 : 0;
+		margin = ($(window).width() > 577) ? 32 : 0;
 		var p = ($('.testimony-card').width() + margin) * currentTestimonySlide;
 		var s = "translateX(-"+p+"px)";
 		$('.testimony-cards-holder').css({
@@ -235,7 +233,7 @@ window.onload = function() {
 			return;
 		}
 		var cur = Math.ceil(start + (final / steps) * inc);
-		console.log(start, final, inc, cur);
+		//console.log(start, final, inc, cur);
 		ele.html(cur+"+");
 		window.setTimeout(function(){
 			countTill(start, final, ele, ++inc);
@@ -255,6 +253,7 @@ window.onload = function() {
 	}
 
 	startCurousel();
-
-	Ripple.init();
+	startCurousel();
+	console.log("called");
+	changeSlide(0);
 };

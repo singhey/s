@@ -41,6 +41,22 @@
     transform: rotate(90deg) translate(150px, 16px);
     position: relative;
     z-index: 3; } }
+@media (max-width: 768px) {
+  .slide {
+    color: #fff; }
+    .slide .slide-overlay {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff; }
+    .slide .btn-dark {
+      color: #fff;
+      border: 1px solid #fff; }
+      .slide .btn-dark:after {
+        background-color: #fff !important; }
+      .slide .btn-dark:hover {
+        color: #212121 !important; }
+
+  .slide-holder .slide-buttons .slide-toggle-button {
+    background-color: #fff; } }
 @media (max-width: 992px) {
   .desc-something h1 {
     font-size: 32px; }

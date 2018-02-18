@@ -87,7 +87,8 @@
   min-height: 100vh; }
 
 footer {
-  padding: 32px 0px 0px; }
+  padding: 32px 0px 0px;
+  background-color: #efefef; }
   footer img {
     width: 150px;
     margin: 16px 0px;

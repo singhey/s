@@ -1,13 +1,13 @@
 .why-us {
 	padding:0;
 	position: relative;
-	background: #efefef;
 	.diagonal {
 		background: #2ae;
 		height: 100%;
 		width: 100%;
 		position: absolute;
 		z-index:1;
+		border-radius: 15px;
 		&:after {
 			position:absolute;
 			height: 100%;
@@ -16,6 +16,7 @@
 			content: '';
 			transform: skewY(5deg);
 			transform-origin: 0% 0%;
+			border-radius: 15px;
 		}
 	}
 	h1 {
@@ -43,13 +44,22 @@
 			display: inline-block;
 		}
 		.wu-card{
-			background: #dfdfdf;
+			background: #14abf4;
 			border-radius: 3px;
 			padding: 16px 8px;
+			box-shadow: 0px 0px 16px #07698e;
 			transition: all .3s ease-out;
 			&:hover {
 				background: #fff;
 				box-shadow: 0px 0px 16px #444;
+
+				.wu-card-heading {
+					color: #444;
+				}
+
+				.wu-card-desc{
+					color: #444;
+				}
 			}
 
 			&-icon {
@@ -63,11 +73,12 @@
 			&-heading {
 				font-weight: 500;
 				padding: 16px;
+				color: #fff;
 			}
 
 			&-desc{
 				font-size: 14px;
-				color: #888;
+				color: #fff;
 				padding:16px;
 			}
 		}

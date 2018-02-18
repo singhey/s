@@ -3,7 +3,7 @@ header {
   position: fixed;
   z-index: 90;
   width: 100%;
-  color: #fff;
+  color: #121212;
   height: 80px;
   background-color: transparent;
   transition: height .3s linear, background-color .5s ease-in-out, box-shadow .3s ease-out,  transform .3s ease-out; }
@@ -42,7 +42,7 @@ header {
   #menu .burger {
     height: 1px;
     width: 32px;
-    background-color: white;
+    background-color: #121212;
     position: relative;
     display: inline-block;
     transform: translateY(-4px);
@@ -52,7 +52,7 @@ header {
       position: absolute;
       height: 100%;
       width: 100%;
-      background-color: #fff;
+      background-color: #121212;
       transform-origin: 15% 50%;
       transition: transform .4s .3s ease-in-out, width .8s .3s ease-out, background-color .3s .4s ease-in-out; }
     #menu .burger:after {

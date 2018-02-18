@@ -1,15 +1,3 @@
-@media(max-width: 373px){
-	//remove margin from testimony slides;
-	.testimony .testimony-card {
-		margin-left:0;
-	}
-
-	.testimony .align-self-center span#testimony-switcher{
-		transform: rotate(90deg) translate(150px, 16px);
-		position:relative;
-		z-index:3;
-	}
-}
 //for xs devices
 @media (max-width: 576px) {
 	header {
@@ -68,11 +56,43 @@
 	.clients-card p, .clients-card h2 {
 		padding: 8px !important;
 	}
+
+	//testimony container
+	.testimony .testimony-card {
+		margin-left:0;
+	}
+
+	.testimony .align-self-center span#testimony-switcher{
+		transform: rotate(90deg) translate(150px, 16px);
+		position:relative;
+		z-index:3;
+	}
 }
 
 //for sm devices
 @media (max-width: 768px) {
+	.slide {
+		color: #fff;
+		.slide-overlay{
+			background-color: rgba(0, 0, 0, .8);
+			color: #fff;
+		}
 
+		.btn-dark {
+			color:#fff;
+			border: 1px solid #fff;
+			&:after{
+				background-color: #fff !important;
+			}
+			&:hover {
+				color: #212121 !important;
+			}
+		}
+	}
+
+	.slide-holder .slide-buttons .slide-toggle-button{
+		background-color: #fff;
+	}
 }
 
 //for md devices
