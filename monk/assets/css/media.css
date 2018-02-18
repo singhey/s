@@ -1,11 +1,3 @@
-@media (max-width: 373px) {
-  .testimony .testimony-card {
-    margin-left: 0; }
-
-  .testimony .align-self-center span#testimony-switcher {
-    transform: rotate(90deg) translate(150px, 16px);
-    position: relative;
-    z-index: 3; } }
 @media (max-width: 576px) {
   header {
     padding-left: 0px;
@@ -40,7 +32,15 @@
     margin: 16px 0px !important; }
 
   .clients-card p, .clients-card h2 {
-    padding: 8px !important; } }
+    padding: 8px !important; }
+
+  .testimony .testimony-card {
+    margin-left: 0; }
+
+  .testimony .align-self-center span#testimony-switcher {
+    transform: rotate(90deg) translate(150px, 16px);
+    position: relative;
+    z-index: 3; } }
 @media (max-width: 992px) {
   .desc-something h1 {
     font-size: 32px; }
