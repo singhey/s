@@ -17,12 +17,8 @@
   .services h1 {
     padding-left: 8px; }
   .services .service-card {
-    margin: 16px 0px; }
-
-  .desc-something h1 {
-    font-size: 28px; }
-  .desc-something .side-img-text {
-    padding: 32px 16px; }
+    margin: 16px 0px;
+    padding: 0px 0px; }
 
   .site-links a {
     padding: 4px !important;
@@ -41,34 +37,19 @@
     transform: rotate(90deg) translate(150px, 16px);
     position: relative;
     z-index: 3; } }
-@media (max-width: 768px) {
-  .slide {
-    color: #fff; }
-    .slide .slide-overlay {
-      background-color: rgba(0, 0, 0, 0.8);
-      color: #fff; }
-    .slide .btn-dark {
-      color: #fff;
-      border: 1px solid #fff; }
-      .slide .btn-dark:after {
-        background-color: #fff !important; }
-      .slide .btn-dark:hover {
-        color: #212121 !important; }
+@media (max-width: 767px) {
+  .slide .slide-image {
+    display: none; }
 
   .slide-holder .slide-buttons .slide-toggle-button {
-    background-color: #fff; } }
+    background-color: #000; }
+
+  .clients-card h2, .clients-card p {
+    padding: 8px !important; } }
 @media (max-width: 992px) {
   .desc-something h1 {
     font-size: 32px; }
   .desc-something .side-img-text {
     padding: 48px 16px; } }
-@media (max-width: 1200px) {
-  .side-img {
-    min-height: 400px; }
-
-  .desc-something h1 {
-    font-size: 32px; }
-  .desc-something .side-img-text {
-    padding: 56px 16px; } }
 
 /*# sourceMappingURL=media.css.map */

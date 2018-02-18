@@ -252,7 +252,12 @@ window.onload = function() {
 		window.setTimeout(startCurousel, 300000);
 	}
 
-	startCurousel();
+	$('.slide-down-button').click(function() {
+		$('html, body').animate({
+			scrollTop: $(window).height(),
+		}, 1000);
+	});
+
 	startCurousel();
 	console.log("called");
 	changeSlide(0);

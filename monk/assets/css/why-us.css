@@ -36,10 +36,10 @@
       transform: translateX(-100%);
       display: inline-block; }
     .why-us .wu-card-holder .wu-card {
-      background: #14abf4;
+      background: #0f3e54;
       border-radius: 3px;
       padding: 16px 8px;
-      box-shadow: 0px 0px 16px #07698e;
+      box-shadow: 0px 0px 16px #444;
       transition: all .3s ease-out; }
       .why-us .wu-card-holder .wu-card:hover {
         background: #fff;

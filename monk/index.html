@@ -10,6 +10,13 @@
 	<link rel="stylesheet" type="text/css" href="./assets/css/ripple.css">
 	<link rel="stylesheet" type="text/css" href="./assets/css/all.css">
 	<link rel="stylesheet" type="text/css" href="./assets/css/contact.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/clients-page.css">
+	<style>
+		.clients-card {
+			box-shadow: 0px 0px 16px #444;
+			border-radius: 5px;
+		}
+	</style>
 </head>
 <body>
 
@@ -101,7 +108,7 @@
 		<!-- image slider -->
 		<div class="row">
 			<div class="col-12" style="padding:0;">
-				<div class="slide-holder" id="image-slider">
+				<div class="slide-holder floating-img" id="image-slider">
 					<div class="slide" v-for="s in slides">
 						<div class="slide-overlay col-12">
 							
@@ -136,6 +143,9 @@
 
 					<div class="slide-buttons">
 						
+					</div>
+					<div class="col-12 graph">
+						<img src="./assets/images/graph4.png"  style="width:100%"/>
 					</div>
 				</div>
 			</div>
@@ -176,20 +186,76 @@
 				<div class="diagonal">
 				</div>
 				<div class="col-12">
-					<div class="row" id="why-us">
+					<div class="row" id="why-us" style="position: relative; z-index:2;">
 						<h1 class="col-12">5 Awesome Reasons Clients Keep Working with us!</h1>
-						<div class="col-lg-3 col-md-4 col-xs-6 col-12" v-for="w in whyUs">
-							<div class="wu-card-holder animated">
-								<div class="wu-card">
-									<div class="wu-card-icon">
-										<i class="fas fa-desktop se-icon se-red"></i>
-									</div>
-									<div>
-										<h2 class="wu-card-heading">{{w.heading}}</h2>
-									</div>
-									<div>
-										<p class="wu-card-desc slide-text-left">{{w.desc}}</p>
-									</div>
+						<div class="col-sm-6 col-12 animated">
+							<div class="row no-gutters clients-card" style="background-color: #fff">
+								<div class="col-12 col-sm-12 col-lg-4 client-img order-first d-flex">
+									<img src="./assets/images/listen.png" class="align-self-center" />
+								</div>
+								<div class="col-12 col-lg-8 col-sm-12">
+									<h2 class="client-company">We Listen</h2>
+									<p class="client-desc">
+										We are experts at content but we understand that each client has a different requirement and goal. We do not offer cookie cutter plans but instead hear our client issues and create content according to their specifications.
+										<br>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-12 animated">
+							<div class="row no-gutters clients-card" style="background-color: #fff">
+								<div class="col-12 col-sm-12 col-lg-4 client-img order-first d-flex">
+									<img src="./assets/images/quality.png" class="align-self-center" />
+								</div>
+								<div class="col-12 col-lg-8 col-sm-12">
+									<h2 class="client-company">We provide quality</h2>
+									<p class="client-desc">
+										We keep our writers happy and it reflects in the kind of work we deliver! We ensure that we hire the best writers with a professional or academic background in a particular niche and assign projects. This translates to high quality content for your projects. 
+										<br>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-12 animated">
+							<div class="row no-gutters clients-card" style="background-color: #fff">
+								<div class="col-12 col-sm-12 col-lg-4 client-img order-first d-flex">
+									<img src="./assets/images/consistent.png" class="align-self-center" />
+								</div>
+								<div class="col-12 col-lg-8 col-sm-12">
+									<h2 class="client-company">We are consistent</h2>
+									<p class="client-desc">
+										We offer consistency in the quality of our work. We dedicate writers to your project to ensure that there is consistency in the writing quality. 
+										<br>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-12 animated">
+							<div class="row no-gutters clients-card" style="background-color: #fff">
+								<div class="col-12 col-sm-12 col-lg-4 client-img order-first d-flex">
+									<img src="./assets/images/available.png" class="align-self-center" />
+								</div>
+								<div class="col-12 col-lg-8 col-sm-12">
+									<h2 class="client-company">We are available</h2>
+									<p class="client-desc">
+										We understand that working with an external agency takes effort but we are here to make it easy for you. We are available 24 X 7 to revert to your queries be it through Email, WhatsApp or Phone.  
+										<br>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-12 animated">
+							<div class="row no-gutters clients-card" style="background-color: #fff">
+								<div class="col-12 col-sm-12 col-lg-4 client-img order-first d-flex">
+									<img src="./assets/images/flexible.png" class="align-self-center" />
+								</div>
+								<div class="col-12 col-lg-8 col-sm-12">
+									<h2 class="client-company">We are flexible</h2>
+									<p class="client-desc">
+										We are a young and agile company and understand that there is no ‘one box fits all’ approach. We offer a plethora of services and you can hire us simply for one e-book or allow us to manage your entire yearly blog content, the choice is yours! 
+										<br>
+									</p>
 								</div>
 							</div>
 						</div>

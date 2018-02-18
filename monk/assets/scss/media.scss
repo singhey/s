@@ -30,15 +30,7 @@
 
 		.service-card {
 			margin: 16px 0px;
-		}
-	}
-
-	.desc-something {
-		h1 {
-			font-size: 28px;
-		}
-		.side-img-text {
-			padding: 32px 16px;
+			padding:0px 0px;
 		}
 	}
 
@@ -70,28 +62,19 @@
 }
 
 //for sm devices
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	.slide {
-		color: #fff;
-		.slide-overlay{
-			background-color: rgba(0, 0, 0, .8);
-			color: #fff;
-		}
 
-		.btn-dark {
-			color:#fff;
-			border: 1px solid #fff;
-			&:after{
-				background-color: #fff !important;
-			}
-			&:hover {
-				color: #212121 !important;
-			}
+		.slide-image {
+			display: none;
 		}
 	}
 
 	.slide-holder .slide-buttons .slide-toggle-button{
-		background-color: #fff;
+		background-color: #000;
+	}
+	.clients-card h2, .clients-card p {
+		padding: 8px !important;
 	}
 }
 
@@ -110,16 +93,6 @@
 //for lg devices
 
 @media (max-width: 1200px) {
-	.side-img {
-		min-height: 400px;
-	}
-	.desc-something {
-		h1 {
-			font-size: 32px;
-		}
-		.side-img-text {
-			padding: 56px 16px;
-		}
-	}
+	
 }
 
