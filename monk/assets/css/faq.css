@@ -9,7 +9,6 @@
 
 .accordion {
   background-color: #fefffa;
-  max-width: 980px;
   margin: auto;
   border-top: 6px solid #2ae;
   line-height: 1.6;
@@ -19,7 +18,7 @@
     .accordion__item.is-expanded span.close {
       transform: rotate(270deg); }
   .accordion__title {
-    padding: 15px 15px 15px 40px;
+    padding: 16px;
     display: block;
     position: relative;
     font-weight: 400; }
