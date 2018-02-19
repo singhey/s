@@ -7,13 +7,15 @@
 
 .service-card {
   padding: 32px 16px;
-  width: 100%; }
+  width: 100%;
+  height: 100%; }
   .service-card .service-icon {
     font-size: 56px;
     padding: 32px 0px; }
   .service-card h2, .service-card p {
     padding: 8px 0px; }
   .service-card .s-card {
+    height: 100%;
     background-color: #e1e1e1;
     padding: 24px;
     transition: box-shadow .3s ease-out, background-color .3s ease-out, transform .3s ease-out;
@@ -85,38 +87,5 @@
     transform: rotate(55deg); } }
 .full-screen {
   min-height: 100vh; }
-
-footer {
-  padding: 32px 0px 0px;
-  box-shadow: -4px -4px 16px #ccc;
-  border-top: 2px solid #ccc; }
-  footer img {
-    width: 150px;
-    margin: 16px 0px;
-    display: block; }
-  footer .site-links {
-    margin: 32px 0px; }
-    footer .site-links a {
-      color: #000;
-      text-transform: uppercase;
-      transition: color .3s ease-out;
-      display: inline-block;
-      padding: 8px 16px;
-      font-weight: bold; }
-      footer .site-links a:hover {
-        color: #777;
-        text-decoration: none; }
-  footer .social-icons a {
-    color: #ccc;
-    font-size: 24px;
-    display: inline-block;
-    padding: 8px 16px;
-    transition: color .3s ease-out; }
-    footer .social-icons a:hover {
-      color: #000; }
-  footer .copyright {
-    padding: 16px 0px;
-    border-top: 1px solid #ccc;
-    text-align: center; }
 
 /*# sourceMappingURL=services.css.map */

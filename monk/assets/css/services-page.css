@@ -1,11 +1,10 @@
 .se-service {
-  position: relative;
-  color: #fff; }
+  position: relative; }
   .se-service .se-overlay {
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(200, 200, 200, 0.8);
     z-index: 1; }
   .se-service h1, .se-service h2 {
     font-weight: 400; }
