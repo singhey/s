@@ -1,13 +1,25 @@
-.se-service h1, .se-service h2 {
-  font-weight: 400; }
-.se-service p {
-  padding: 8px 0px; }
-.se-service:nth-child(2n) {
-  background-color: #efefef; }
-  .se-service:nth-child(2n) .text-card {
-    padding-right: 64px; }
-.se-service:nth-child(2n+1) .text-card {
-  padding-left: 64px; }
+.se-service {
+  position: relative;
+  color: #fff; }
+  .se-service .se-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1; }
+  .se-service h1, .se-service h2 {
+    font-weight: 400; }
+  .se-service p {
+    padding: 8px 0px; }
+  .se-service .text-card {
+    position: relative;
+    z-index: 2; }
+  .se-service:nth-child(2n) {
+    background-color: #efefef; }
+    .se-service:nth-child(2n) .text-card {
+      padding-right: 64px; }
+  .se-service:nth-child(2n+1) .text-card {
+    padding-left: 64px; }
 
 .se-sub-service-name {
   padding: 4px 0px 4px 32px;
