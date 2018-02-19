@@ -210,11 +210,6 @@ window.onload = function() {
 		}, duration);
 	}
 	//start customer curousel
-	function startCurousel(){
-		$('.slider-customer').removeClass("sliding");
-		window.setTimeout(function() {$('.slider-customer').addClass("sliding");}, 100);
-		window.setTimeout(startCurousel, 50000);
-	}
 
 	$('.slide-down-button').click(function() {
 		$('html, body').animate({
@@ -222,7 +217,6 @@ window.onload = function() {
 		}, 1000);
 	});
 
-	startCurousel();
 	console.log("called");
 	changeSlide(0);
 };
