@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width" />
 	<link rel="stylesheet" type="text/css" href="./assets/css/framework/bootstrap-reboot.min.css">
 	<link rel="stylesheet" type="text/css" href="./assets/css/framework/bootstrap-grid.min.css">
-	<link rel="stylesheet" type="text/css" href="./assets/css/contact.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
 	<link rel="stylesheet" type="text/css" href="./assets/css/all.css">
 	<link rel="stylesheet" type="text/css" href="./assets/css/clients-page.css">
 	<link rel="stylesheet" type="text/css" href="./assets/css/faq.css">
@@ -18,7 +18,7 @@
 			margin:auto;
 		}
 		.s-card {
-			height: 588px !important;
+			height: 510px !important;
 		}
 	</style>
 </head>
@@ -68,6 +68,46 @@
 			</div>
 		</header>
 
+		<div class="_detail-card row hidden-sm-down">
+			<div class="col-12 detail-card col-lg-5 col-md-6 col-sm-8 col-xs-10">
+				<div class="row no-gutters">
+					<div class="col-6">
+						<img src="./assets/images/logo-transparent.png" alt=" The Online Monk ">
+
+						<p>
+							</br></br>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua.
+						</p>
+					</div>
+					<div class="col-6">
+						<p>
+							</br>
+							<a href="callto:+919090909090"> M: +91 90 90 909090</a> </br>
+							<a href="mailto:contact@monk.com">Mail: contact@monk.com</a>
+						</p>
+
+						<p>
+							<address>
+								<p><b>Address</b></br>
+									#001 XYZ street,</br>
+									XYZ Area,</br>
+									Bangalore - 560083</br></br>
+								</p>
+							</address>
+						</p>
+
+						<p class="social-icons">
+							<a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+							<a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+							<a href="#" title="Behance"><i class="fab fa-behance"></i></a>
+							<a href="#" title="Dribbble"><i class="fab fa-dribbble"></i></a>
+							<a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<!-- Banner -->
 		<div class="row">
@@ -152,7 +192,7 @@
 		<div class="row" style="padding-bottom: 64px; background: #efefef">
 			<div class="container">
 				<div class="row">
-					<h1 class="col-12" style="padding-top: 32px;">Got skills?</h1>
+					<h1 class="col-12" style="padding-top: 64px;">Got skills?</h1>
 					<div class="col-lg-4 col-md-6 col-xs-12">
 						<div class="service-card animated">
 							<div class="s-card">
@@ -405,6 +445,7 @@
 							</div>
 						</div>
 					</div>
+					<h3 class="col-12" style="text-align: center;padding: 16px;">Want to join us &nbsp;<a href="./contact.html" class="btn btn-dark" style="z-index: 2; padding: 4px 8px">Click Here</a></h3>
 				</div>
 			</div>
 		</div>
@@ -487,7 +528,7 @@
 
 		<!-- Testimony -->
 
-		<!-- <div class="row testimony hidden">
+		<div class="row testimony hidden">
 			<div class="col-12 col-xs-12 col-sm-4 d-flex left">
 				<div class="align-self-center">
 					<h1 style="padding: 32px;">Customer <br> <span class="light">Stories</span></h1>
@@ -497,25 +538,73 @@
 				<div class="align-self-center" style="width: 100%;">
 					<span id="testimony-switcher" ripple ripple-dark>
 					</span>
-					<div class="_testimony-cards-holder" id="testimony">
-						<div class="testimony-cards-holder">
-							<div class="testimony-card" v-for="t in testimony">
+					<div class="_testimony-cards-holder">
+						<div class="testimony-cards-holder d-flex" style="width: 1000px">
+							<div class="testimony-card align-self-center">
 								<div class="container-fluid">
 									<div class="row" style="padding:16px 0px">
-										<div class="col-2 offset-1">
+										<div class="col-3">
 											<div class="customer-img">
+												<img src="./assets/images/arun.png" />
 											</div>
 										</div>
 										<div class="col-8">
 											<p>
-												<span class="customer-name">{{t.user}}</span><br>
-												<span class="customer-company">{{t.company}}</span>
+												<span class="customer-name">Arun Kumar</span><br>
+												<span class="customer-company">Designer</span>
 											</p>
 										</div>
 									</div>
 									<div class="row">
-										<div class="col-10 offset-1">
-											<p class="customer-testimony">{{t.review}}</p>
+										<div class="col-12">
+											<p class="customer-testimony">It's been few months since I started working with the online monk and it's been great so far. I consider myself fortunate to work with them. We have a structured and well organized system that enables us to focus on our game and deliver the best. The down to earth attitude of the management is an asset. Wishing all the very best for the company to unravel higher levels of success.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="testimony-card align-self-center">
+								<div class="container-fluid">
+									<div class="row" style="padding:16px 0px">
+										<div class="col-3">
+											<div class="customer-img">
+												<img src="./assets/images/archana.png" />
+											</div>
+										</div>
+										<div class="col-8">
+											<p>
+												<span class="customer-name">Archana</span><br>
+												<span class="customer-company">Writer</span>
+											</p>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<p class="customer-testimony">I have been writing for TOM for a few months now and I have no complaints at all. The payments happen proactively and there is a cohesive discussion before content requests are sent out. What more can a writer ask for?
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="testimony-card align-self-center">
+								<div class="container-fluid">
+									<div class="row" style="padding:16px 0px">
+										<div class="col-3">
+											<div class="customer-img">
+												<img src="./assets/images/Iti.png" />
+											</div>
+										</div>
+										<div class="col-8">
+											<p>
+												<span class="customer-name">Iti Shree</span><br>
+												<span class="customer-company">Writer</span>
+											</p>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<p class="customer-testimony">My experience has been great with TOM, it is like an amazing family. Arpan is amazingly cooperative. I have learned so many things here and besides all of that writing here is fun.",
+											</p>
 										</div>
 									</div>
 								</div>
@@ -524,11 +613,11 @@
 					</div>
 				</div>
 			</div>
-		</div> -->
+		</div>
 
 		<!-- FAQ -->
 
-		<!-- <div class="row faq" id="faq">
+		<div class="row faq" id="faq">
 			<h1 class="col-12">FAQ's</h1>
 			<div class="col-12 accordion-holder">
 				<div class="accordion-sliders accordion"  role="tablist" aria-live="polite" data-behavior="accordion" >
@@ -545,7 +634,7 @@
 				     	</article>
 				</div>
 			</div>
-		</div> -->
+		</div>
 
 		<!-- Footer -->
 		<footer class="row">
