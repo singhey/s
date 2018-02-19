@@ -11,7 +11,7 @@
 .slider-customer {
 	padding:0;
 	list-style: none;
-	width: 9999px;
+	width: 2200px;
 	transition: transform 0s linear;
 	transform: translateX(0%);
 	>li {
@@ -23,7 +23,11 @@
 	}
 	.customer-logo {
 		height: 160px;
-		background-color: #7177BF;
+		img {
+			width: 90%;
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 	p{
 		padding:16px 16px;
@@ -31,7 +35,7 @@
 		text-transform: uppercase;
 	}
 	&.sliding {
-		transition: transform 300s linear;
+		transition: transform 50s linear;
 		transform: translateX(-100%);
 	}
 }

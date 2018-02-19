@@ -1,0 +1,62 @@
+.se-service {
+  position: relative;
+
+  .se-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(200, 200, 200, .8);
+    z-index:1;
+  }
+  h1, h2 {
+    font-weight: 400;
+  }
+  p{
+    padding: 8px 0px;
+  }
+  .text-card {
+    position: relative;
+    z-index:2;
+  }
+  &:nth-child(2n) {
+    background-color: #efefef;
+    .text-card {
+      padding-right: 64px;
+    }
+  }
+
+  &:nth-child(2n+1) {
+    .text-card {
+      padding-left: 64px;
+    }
+  }
+}
+
+.se {
+  &-sub-service{
+    &-name {
+      padding: 4px 0px 4px 32px;
+      position: relative;
+      transition: color .3s linear;
+      &::after {
+        position:absolute;
+        content:'';
+        height: 8px;
+        width: 8px;
+        border-radius: 100px;
+        border: 1px solid #2ae;
+        background-color: transparent;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 16px;
+        transition: background-color .3s linear;
+      }
+      &:hover {
+        color: #2ae;
+      }
+      &:hover::after{
+        background-color: #2ae;
+      }
+    }
+  }
+}

@@ -51,59 +51,28 @@ window.onload = function() {
 		}
 	});
 
-	var testimony = new Vue({
+	/*var testimony = new Vue({
 		el: "#testimony",
 		data: {
 			testimony: [
 				{
-					user: "Singhey",
-					company: "Dell",
-					review: "With our advertising solutions, you can create targeted adverts to reach different audience and meet required goals.",
+					user: "Arun Kumar",
+					company: "Designer",
+					review: "It's been few months since I started working with the online monk and it's been great so far. I consider myself fortunate to work with them. We have a structured and well organized system that enables us to focus on our game and deliver the best. The down to earth attitude of the management is an asset. Wishing all the very best for the company to unravel higher levels of success. "
 				},
 				{
-					user: "Singhey",
-					company: "Dell",
-					review: "With our advertising solutions, you can create targeted adverts to reach different audience and meet required goals.",
+					user: "Archana",
+					company: "Writer",
+					review: "I have been writing for TOM for a few months now and I have no complaints at all. The payments happen proactively and there is a cohesive discussion before content requests are sent out. What more can a writer ask for? ",
 				},
 				{
-					user: "Singhey",
-					company: "Dell",
-					review: "With our advertising solutions, you can create targeted adverts to reach different audience and meet required goals.",
-				},
-				{
-					user: "Singhey",
-					company: "Dell",
-					review: "With our advertising solutions, you can create targeted adverts to reach different audience and meet required goals.",
-				},
-
-			]
-		}
-	});
-
-	//why us card
-	var whyUs = new Vue({
-		el: '#why-us',
-		data: {
-			whyUs: [
-				{
-					heading: "We Listen",
-					desc: "We are experts at content but we understand that each client has a different requirement and goal. We do not offer cookie cutter plans but instead hear our client issues and create content according to their specifications. ",
-				},
-				{
-					heading: "We Listen",
-					desc: "We are experts at content but we understand that each client has a different requirement and goal. We do not offer cookie cutter plans but instead hear our client issues and create content according to their specifications. ",
-				},
-				{
-					heading: "We Listen",
-					desc: "We are experts at content but we understand that each client has a different requirement and goal. We do not offer cookie cutter plans but instead hear our client issues and create content according to their specifications. ",
-				},
-				{
-					heading: "We Listen",
-					desc: "We are experts at content but we understand that each client has a different requirement and goal. We do not offer cookie cutter plans but instead hear our client issues and create content according to their specifications. ",
+					user: "Iti Shree",
+					company: "Writer",
+					review: "My experience has been great with TOM, it is like an amazing family. Arpan is amazingly cooperative. I have learned so many things here and besides all of that writing here is fun.",
 				},
 			]
 		}
-	});
+	});*/
 
 	//add slide buttons
 	$('.slide').each(function() {
@@ -190,7 +159,7 @@ window.onload = function() {
 	});
 
 	//show details card
-	$('.logo img, .logo span, ._detail-card').hover(function() {
+	$('.logo img, .logo span, ._detail-card, ._detail-card::after').hover(function() {
 		$('._detail-card').toggleClass("active");
 	});
 
@@ -209,6 +178,7 @@ window.onload = function() {
 		// remove margin on smaller devices
 		margin = ($(window).width() > 577) ? 32 : 0;
 		var p = ($('.testimony-card').width() + margin) * currentTestimonySlide;
+		//if(currentTestimonySlide == 0) {$('.testimony-card').removeClass("shrink");}
 		var s = "translateX(-"+p+"px)";
 		$('.testimony-cards-holder').css({
 			"transform" : s,
@@ -239,17 +209,11 @@ window.onload = function() {
 			countTill(start, final, ele, ++inc);
 		}, duration);
 	}
-
-	//add customer corousel
-	element = "<li><div class='customer-logo'></div><p>Company-name</p></li>";
-	for(i = 0;i < 10; i++) {
-		$('.slider-customer').append(element);
-	}
 	//start customer curousel
 	function startCurousel(){
 		$('.slider-customer').removeClass("sliding");
 		window.setTimeout(function() {$('.slider-customer').addClass("sliding");}, 100);
-		window.setTimeout(startCurousel, 300000);
+		window.setTimeout(startCurousel, 50000);
 	}
 
 	$('.slide-down-button').click(function() {
