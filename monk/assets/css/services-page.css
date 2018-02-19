@@ -1,37 +1,33 @@
-.accordion {
-  margin: 64px auto;
-  box-shadow: 4px 4px 16px #ccc;
-  padding: 0; }
-
-.accordion h1, h2, h3, h4 {
-  cursor: pointer;
-  margin: 0; }
-
-.accordion h1 {
-  padding: 15px 20px;
-  background-color: #fff;
-  font-weight: normal; }
-
-.accordion h1:hover {
-  color: #2ae; }
-
-.accordion div, .accordion p {
-  display: none; }
-
-.accordion h2 {
-  padding: 5px 25px;
-  background-color: #f9f9f9;
-  color: #333;
+.se-service h1, .se-service h2 {
   font-weight: 400; }
+.se-service p {
+  padding: 8px 0px; }
+.se-service:nth-child(2n) {
+  background-color: #efefef; }
+  .se-service:nth-child(2n) .text-card {
+    padding-right: 64px; }
+.se-service:nth-child(2n+1) .text-card {
+  padding-left: 64px; }
 
-.accordion h2:hover {
-  background-color: #ddd; }
-
-.accordion p {
-  margin: 0;
-  padding: 15px 35px;
-  background-color: #efefef;
-  color: #333;
-  line-height: 1.3rem; }
+.se-sub-service-name {
+  padding: 4px 0px 4px 32px;
+  position: relative;
+  transition: color .3s linear; }
+  .se-sub-service-name::after {
+    position: absolute;
+    content: '';
+    height: 8px;
+    width: 8px;
+    border-radius: 100px;
+    border: 1px solid #2ae;
+    background-color: transparent;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 16px;
+    transition: background-color .3s linear; }
+  .se-sub-service-name:hover {
+    color: #2ae; }
+  .se-sub-service-name:hover::after {
+    background-color: #2ae; }
 
 /*# sourceMappingURL=services-page.css.map */

@@ -204,33 +204,31 @@ header {
     left: -50px; }
 
 .scroll-to-top {
-  background: #fff;
+  height: 48px;
+  width: 48px;
+  background-color: #fff;
+  border-radius: 100%;
+  position: fixed;
   bottom: 24px;
   right: 24px;
-  position: fixed;
   z-index: 90;
-  text-align: center;
-  padding: 8px 8px;
-  border-radius: 3px;
-  border: 1px solid #ccc;
-  transition: all .3s ease-out;
-  cursor: pointer;
-  color: #121212;
-  opacity: 0;
-  font-size: 12px; }
+  box-shadow: 0px 0px 16px #444;
+  visibility: hidden; }
   .scroll-to-top:hover {
     box-shadow: 0px 0px 8px #ccc; }
-  .scroll-to-top > * {
-    display: block; }
   .scroll-to-top.visible {
-    opacity: 1; }
+    opacity: 1;
+    visibility: visible; }
+  .scroll-to-top span {
+    display: none; }
   .scroll-to-top span.top-arrow {
-    height: 12px;
-    width: 12px;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
     margin: auto;
     border-top: 1px solid #000;
     border-left: 1px solid #000;
-    transform: rotate(45deg); }
+    transform: translate(16px, 16px) rotate(45deg); }
 
 .button {
   display: inline-block;
