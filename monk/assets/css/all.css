@@ -615,8 +615,11 @@ header {
   padding: 0;
   list-style: none;
   width: 2200px;
-  transition: transform 0s linear;
-  transform: translateX(0%); }
+  animation-name: slide-left;
+  animation-duration: 50s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear; }
   .slider-customer > li {
     float: left;
     height: 220px;
@@ -633,10 +636,12 @@ header {
     padding: 16px 16px;
     text-align: center;
     text-transform: uppercase; }
-  .slider-customer.sliding {
-    transition: transform 50s linear;
-    transform: translateX(-100%); }
 
+@keyframes slide-left {
+  0% {
+    transform: translateX(0%); }
+  100% {
+    transform: translateX(-90%); } }
 .services {
   background-color: #efefef;
   padding-bottom: 64px; }
