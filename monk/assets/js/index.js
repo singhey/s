@@ -180,6 +180,7 @@ $(function() {
 		}else if($(window).width() < 768) {
 			margin = 16;
 		}
+		console.log(margin);
 		var p = ($('.testimony-card').width() + margin) * currentTestimonySlide;
 		//if(currentTestimonySlide == 0) {$('.testimony-card').removeClass("shrink");}
 		var s = "translateX(-"+p+"px)";
