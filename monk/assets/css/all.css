@@ -416,7 +416,7 @@ header {
   overflow: hidden; }
   .text-fade-up > span {
     display: block;
-    transform: translateY(-100%);
+    transform: translateY(-105%);
     transition: inherit; }
 
 .continuous-switch {

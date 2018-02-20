@@ -159,6 +159,8 @@ window.onload = function() {
 		$('.slide').removeClass('active');
 		$('.slide:eq('+index+')').addClass('active');
 
+		window.clearInterval(imageSliderTimer);
+		startImageSlider();
 	}
 
 	$('#menu').click(function() {
@@ -205,11 +207,13 @@ window.onload = function() {
 	  		$('.testimony').removeClass("hidden");
 	  	}
 	});
-	var currentSlide = 0;
-	window.setInterval(function() {
-		//console.log("called");
-		changeSlide((++currentSlide)%$('.slide').length);
-	}, 10000);
+	var currentSlide = 0,
+		imageSliderTimer;
+	function startImageSlider(){
+		imageSliderTimer = window.setInterval(function() {
+			changeSlide((++currentSlide)%$('.slide').length);
+		}, 10000);
+	}
 
 	//find classes with slide text-left and change there inner html
 	$('.slide-text-left').each(function(){
