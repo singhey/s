@@ -5,7 +5,7 @@
     height: 100%;
     width: 100%;
     z-index: 1;
-    background-image: -webkit-linear-gradient(left, #c8c8c8, rgba(200, 200, 200, 0.95), rgba(200, 200, 200, 0.8)); }
+    background-image: -webkit-linear-gradient(left, #c8c8c8, rgba(200, 200, 200, 0.98), rgba(200, 200, 200, 0.4)); }
   .se-service h1, .se-service h2 {
     font-weight: 400; }
   .se-service p {
@@ -13,13 +13,18 @@
   .se-service .text-card {
     position: relative;
     z-index: 2; }
-  .se-service:nth-child(2n) {
-    color: #ccc; }
-    .se-service:nth-child(2n) .text-card {
-      padding-right: 64px; }
+  .se-service:nth-child(2n) .text-card {
+    padding-right: 64px;
+    padding-top: 64px;
+    padding-bottom: 64px; }
   .se-service:nth-child(2n+1) .text-card {
+    padding-top: 64px;
+    padding-bottom: 64px;
     padding-left: 64px; }
 
+.se-service .service-image img {
+  width: 80%;
+  margin: auto; }
 .se-sub-service-name {
   padding: 4px 0px 4px 32px;
   position: relative;
