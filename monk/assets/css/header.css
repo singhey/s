@@ -261,7 +261,9 @@ header {
   padding-top: 32px;
   padding-bottom: 8px !important;
   margin-bottom: 12px;
-  position: relative; }
+  position: relative;
+  padding-left: 22px !important;
+  text-align: left !important; }
   .content-heading::after {
     position: absolute;
     content: '';
@@ -269,7 +271,7 @@ header {
     width: 100px;
     background-color: #2ae;
     bottom: 0;
-    left: 8px; }
+    left: 16px; }
 
 .template-holder {
   display: none; }

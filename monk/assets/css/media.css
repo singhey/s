@@ -54,7 +54,10 @@
   .testimony .align-self-center span#testimony-switcher {
     left: 0px;
     position: absolute;
-    z-index: 3; } }
+    z-index: 3; }
+
+  .footer-logo {
+    display: none; } }
 @media (max-width: 375px) {
   .testimony .left {
     padding-top: 0;
