@@ -421,28 +421,32 @@
 
 		<!-- FAQ -->
 
-		<div class="row faq" id="faq">
+		<div class="row faq">
 			<h1 class="col-12">FAQ's</h1>
 			<div class="col-12 accordion-holder">
-				<div class="accordion-sliders accordion"  role="tablist" aria-live="polite" data-behavior="accordion" >
-			    	<article class="accordion__item js-show-item-default" data-binding="expand-accordion-item" v-for="f in faq">
-				        <span id="tab5" tabindex="0" class="accordion__title" aria-controls="panel5" role="tab" aria-selected="false" aria-expanded="false" data-binding="expand-accordion-trigger">
-				        	<h5>{{f.question}} <span class="close">&times;</span></h5>
-				        </span>
-				        <div id="panel5" class="accordion__content" role="tabpanel" aria-hidden="true" aria-labelledby="tab5" data-binding="expand-accordion-container">
-				        	<div class="accordion__content-inner">
-				            	<p>{{f.answer}}</p>
-				          	</div>
-					    </div>
-				    </article>
+				<div class="accordion-sliders accordion" id="accordion" role="tablist" aria-live="polite" data-behavior="accordion" >
+			    	
 				</div>
 			</div>
+		</div>
+
+		<div class="template-holder">
+			<article class="accordion__item js-show-item-default" id="faq-template" data-binding="expand-accordion-item">
+			    <span id="tab5" tabindex="0" class="accordion__title" aria-controls="panel5" role="tab" aria-selected="false" aria-expanded="false" data-binding="expand-accordion-trigger">
+			    	<h5><span class="question"></span> <span class="close">&times;</span></h5>
+			    </span>
+			    <div id="panel5" class="accordion__content" role="tabpanel" aria-hidden="true" aria-labelledby="tab5" data-binding="expand-accordion-container">
+			    	<div class="accordion__content-inner">
+			        	<p class="answer"></p>
+			      	</div>
+			 	</div>
+			</article>
 		</div>
 
 		<!-- Footer -->
 		<footer class="row">
 			<div class="col-lg-6 col-md-4 col-sm-12 offset-lg-1 offset-lg-1">
-				<img src="./assets/images/icon.png"/>
+				<img src="./assets/images/logo-transparent.png"/>
 			</div>
 			<div class="col-lg-5 col-md-7 col-sm-12">
 				<p class="site-links">
@@ -473,6 +477,9 @@
 					opacity: 1;
 				  transform: translateY(0%);
 				}
+				.template-holder {
+					display: none;
+				}
 			</style>
 		</footer>
 	</div>
@@ -480,6 +487,7 @@
 	<script type="text/javascript" src="./assets/js/jquery.js"></script>
 	<!-- <script type="text/javascript" src="./assets/js/header.js"></script> -->
 	<script type="text/javascript" src="./assets/js/index.js"></script>
+	<script type="text/javascript" src="./assets/js/add-faq.js"></script>
 	<script type="text/javascript" src="./assets/js/reasons.js"></script>
 </body>
 </html>
