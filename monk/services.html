@@ -11,11 +11,18 @@
 	<link rel="stylesheet" type="text/css" href="./assets/css/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
 	<link rel="stylesheet" type="text/css" href="./assets/css/all.css">
 	<link rel="stylesheet" type="text/css" href="./assets/css/services-page.css">
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
 </head>
 <body>
 	<div class="container-fluid">
 		<header class="row">
-			<div class="col-10 logo"><img src="./assets/images/header-logo.jpg" alt=" The Online Monk "></div>
+			<div class="col-10 logo"><img src="./assets/images/header-logo.jpg" alt=" The Online Monk "> <span class="hover-me-text"> &nbsp;&nbsp;&nbsp;<- &nbsp;Hover me</span></div>
+			<style type="text/css">
+				.logo span.hover-me-text {
+					font-family: 'Nanum Brush Script', cursive;
+					font-size:24px;
+				}
+			</style>
 			<!-- <div class="hidden-sm-down"><a href="callto:+919090909090">+91 90 90 909090</a> <a href="mailto:cs@theonlinemonk.com">cs@theonlinemonk.com</a></div> -->
 			<div class="offset-md-10 offset-sm-7 offset-xs-6 col-lg-1 col-md-1 col-sm-2 col-xs-3 col-3 offset-7 uppercase" style="text-align: right">Menu</div>
 			<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 col-2" id="menu">
@@ -150,9 +157,7 @@
 				affordable, efficient, impactful</h1>
 			<div class="col-12">
 				<div class="row se-service d-flex">
-					<div class="se-overlay"></div>
-					<div class="align-self-center">
-						<div class="col-12 col-lg-6 text-card animated">
+						<div class="col-12 col-lg-6 text-card animated order-lg-first order-last">
 							<h1 class="content-heading">Content Writing</h1>
 							<p>Your business blog is your best PR machine, it is an excellent platform to inform and engage with your customers. It also acts as a SEO channel on your website and directs customers to your website. The key to using this channel effectively is through regular posting of relevant and interesting articles, which will increase interaction with your customers and eventually convert to sales. Our expert team of writers creates articles that are unique, well-researched and highly shareable.</p>
 
@@ -174,11 +179,13 @@
 								<div class="col-6 se-sub-service-name">Product Manuals</div>
 							</div>
 						</div>
-					</div>
+						<div class="col-12 col-lg-6 service-image d-flex order-lg-last order-first">
+							<img src="./assets/images/content.png" class="align-self-center" />
+						</div>
 				</div>
 				<div class="row se-service d-flex" style="">
 					<div class="col-12 col-lg-6 service-image d-flex">
-						<!-- <img src="./assets/images/web.png" class="align-self-center" /> -->
+						<img src="./assets/images/web-dev.png" class="align-self-center" />
 					</div>
 					<div class="col-12 col-lg-6 text-card animated full-screen">
 						<h1 class="content-heading">Web Development</h1>
@@ -195,7 +202,7 @@
 					</div>
 				</div>
 				<div class="row se-service d-flex">
-					<div class="col-12 col-lg-6 text-card animated">
+					<div class="col-12 col-lg-6 text-card animated order-last order-lg-first">
 						<h1 class="content-heading">Graphics Designing</h1>
 						<p>Your blogs and all articles on your websites deserve the best image to accompany them. True to the phrase, a picture speaks a thousand words, every image and every quote you put up in your articles and all across your websites, should communicate a powerful and very effective message to your audience; because we remember things in visuals and not in text.</p>
 						<h2>Our Graphics Design services</h2>
@@ -209,8 +216,8 @@
 							<div class="col-6 se-sub-service-name">Character Design</div>
 						</div>
 					</div>
-					<div class="col-12 col-lg-6 service-image d-flex">
-						<!-- <img src="./assets/images/graphics.png" class="align-self-center" /> -->
+					<div class="col-12 col-lg-6 service-image d-flex order-lg-last order-first">
+						<img src="./assets/images/graphics-slide.png" class="align-self-center" />
 					</div>
 				</div>
 			</div>
