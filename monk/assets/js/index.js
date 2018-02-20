@@ -174,7 +174,7 @@ $(function() {
 		$('.testimony-card:eq('+currentTestimonySlide+')').addClass("shrink");
 		currentTestimonySlide = ++currentTestimonySlide % $('.testimony-card').length;
 		// remove margin on smaller devices
-		var margin;
+		var margin = 32;
 		if($(window).width() < 375) {
 			margin = 8;
 		}else if($(window).width() < 768) {
