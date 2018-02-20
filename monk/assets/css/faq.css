@@ -4,8 +4,13 @@
   padding-bottom: 64px; }
   .faq > h1 {
     padding-bottom: 24px;
-    padding-left: 5%;
+    max-width: 1250px;
+    margin: auto;
     font-weight: 500; }
+
+.accordion-holder {
+  max-width: 1250px;
+  margin: auto; }
 
 .accordion {
   background-color: #fefffa;
