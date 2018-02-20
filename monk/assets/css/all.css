@@ -836,7 +836,10 @@ footer {
     background-color: #000; }
 
   .clients-card h2, .clients-card p {
-    padding: 8px !important; } }
+    padding: 8px !important; }
+
+  .service-card .s-card {
+    height: initial; } }
 @media (max-width: 576px) {
   header {
     padding-left: 0px;
