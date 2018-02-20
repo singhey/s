@@ -4,8 +4,8 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: rgba(200, 200, 200, 0.8);
-    z-index: 1; }
+    z-index: 1;
+    background-image: -webkit-linear-gradient(left, #c8c8c8, rgba(200, 200, 200, 0.95), rgba(200, 200, 200, 0.8)); }
   .se-service h1, .se-service h2 {
     font-weight: 400; }
   .se-service p {
@@ -14,7 +14,7 @@
     position: relative;
     z-index: 2; }
   .se-service:nth-child(2n) {
-    background-color: #efefef; }
+    color: #ccc; }
     .se-service:nth-child(2n) .text-card {
       padding-right: 64px; }
   .se-service:nth-child(2n+1) .text-card {
