@@ -1,5 +1,5 @@
 window.onload = function(){
-	var imageSlider = new Vue({
+	/*var imageSlider = new Vue({
 		el: "#image-slider",
 		data: {
 			heading: "Lorem Ipsem dolor set amet con sect",
@@ -38,7 +38,7 @@ window.onload = function(){
 				console.log("Hello");
 			}
 		}
-	});
+	});*/
 
 	$('.slide').each(function() {
 		$('.slide-buttons').append('<span class="slide-toggle-button"></span>');
