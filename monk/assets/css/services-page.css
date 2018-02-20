@@ -41,9 +41,9 @@
     left: 16px;
     transition: background-color .3s linear; }
   .se-sub-service-name:hover {
-    color: #0f6e9e; }
+    color: #2ae; }
   .se-sub-service-name:hover::after {
-    background-color: #09364c; }
+    background-color: #2ae; }
 
 .se-service {
   overflow: hidden;
