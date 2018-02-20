@@ -241,7 +241,7 @@ header {
     transform: translateX(-50%); }
 
 .animation {
-  animation-duration: 2s;
+  animation-duration: 4s;
   animation-timing-function: ease-in-out; }
   .animation--infinite {
     animation-iteration-count: infinite; }
@@ -422,7 +422,7 @@ header {
 .continuous-switch {
   padding: 0;
   margin: 0;
-  transform: translate(-3px, 12px);
+  transform: translate(0px, 12px);
   overflow: hidden;
   position: relative;
   height: 50px !important;
@@ -492,45 +492,6 @@ header {
     font-weight: 400;
     font-size: 24px;
     padding: 48px 16px 32px 16px; }
-  .why-us .wu-card-holder {
-    position: relative;
-    z-index: 2;
-    margin-bottom: 32px; }
-    .why-us .wu-card-holder.full .slide-text-left span {
-      transition: transform .3s .5s ease-out;
-      transform: translateX(0%); }
-    .why-us .wu-card-holder .slide-text-left {
-      overflow: hidden; }
-    .why-us .wu-card-holder .slide-text-left span {
-      transform: translateX(-100%);
-      display: inline-block; }
-    .why-us .wu-card-holder .wu-card {
-      background: #0f3e54;
-      border-radius: 3px;
-      padding: 16px 8px;
-      box-shadow: 0px 0px 16px #444;
-      transition: all .3s ease-out; }
-      .why-us .wu-card-holder .wu-card:hover {
-        background: #fff;
-        box-shadow: 0px 0px 16px #444; }
-        .why-us .wu-card-holder .wu-card:hover .wu-card-heading {
-          color: #444; }
-        .why-us .wu-card-holder .wu-card:hover .wu-card-desc {
-          color: #444; }
-      .why-us .wu-card-holder .wu-card-icon {
-        position: relative;
-        z-index: 1;
-        font-size: 48px;
-        text-align: center;
-        margin: 16px 0px; }
-      .why-us .wu-card-holder .wu-card-heading {
-        font-weight: 500;
-        padding: 16px;
-        color: #fff; }
-      .why-us .wu-card-holder .wu-card-desc {
-        font-size: 14px;
-        color: #fff;
-        padding: 16px; }
   .why-us .se-icon {
     display: inline-block;
     background: #14ABF4;
@@ -618,7 +579,6 @@ header {
   animation-name: slide-left;
   animation-duration: 50s;
   animation-iteration-count: infinite;
-  animation-direction: alternate;
   animation-timing-function: linear; }
   .slider-customer > li {
     float: left;
@@ -629,7 +589,7 @@ header {
   .slider-customer .customer-logo {
     height: 160px; }
     .slider-customer .customer-logo img {
-      width: 90%;
+      width: 80%;
       margin-left: auto;
       margin-right: auto; }
   .slider-customer p {
@@ -770,12 +730,15 @@ header {
   display: inline-block;
   height: 50px;
   width: 50px;
-  transform: rotate(90deg) translate(216px, 45px);
+  position: absolute;
+  top: 50%;
+  left: -27px;
+  transform: rotate(90deg) translateX(-50%);
   background: #fff;
   border-radius: 100%;
   box-shadow: 0px 0px 32px #999;
-  position: relative;
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 3; }
   .testimony span#testimony-switcher::after {
     content: '';
     position: absolute;
@@ -800,7 +763,7 @@ header {
   background-color: #fff;
   box-shadow: 0px 0px 16px #444;
   float: left;
-  transition: transform .5s .3s linear;
+  transition: transform 0s linear;
   transform: scale(1); }
   .testimony .testimony-card.shrink {
     transition: transform .3s linear;
@@ -832,7 +795,8 @@ header {
 footer {
   padding: 32px 0px 0px;
   box-shadow: -4px -4px 16px #ccc;
-  border-top: 2px solid #ccc; }
+  border-top: 2px solid #ccc;
+  background-color: #eaeaea; }
   footer img {
     width: 150px;
     margin: 16px 0px;
@@ -864,6 +828,15 @@ footer {
     border-top: 1px solid #ccc;
     text-align: center; }
 
+@media (max-width: 767px) {
+  .slide .slide-image {
+    display: none; }
+
+  .slide-holder .slide-buttons .slide-toggle-button {
+    background-color: #000; }
+
+  .clients-card h2, .clients-card p {
+    padding: 8px !important; } }
 @media (max-width: 576px) {
   header {
     padding-left: 0px;
@@ -897,25 +870,22 @@ footer {
     padding: 8px !important; }
 
   .testimony .testimony-card {
-    margin-left: 0; }
+    margin-left: 16px; }
 
   .testimony .align-self-center span#testimony-switcher {
-    transform: rotate(90deg) translate(150px, 16px);
-    position: relative;
+    left: 0px;
+    position: absolute;
     z-index: 3; } }
-@media (max-width: 767px) {
-  .slide .slide-image {
-    display: none; }
+@media (max-width: 375px) {
+  .testimony .left {
+    padding-top: 0;
+    padding-bottom: 0; }
 
-  .slide-holder .slide-buttons .slide-toggle-button {
-    background-color: #000; }
+  .service-card {
+    padding: 32px 0px; }
 
-  .clients-card h2, .clients-card p {
-    padding: 8px !important; } }
-@media (max-width: 992px) {
-  .desc-something h1 {
-    font-size: 32px; }
-  .desc-something .side-img-text {
-    padding: 48px 16px; } }
+  .testimony .testimony-card {
+    margin-left: 8px;
+    width: 282px; } }
 
 /*# sourceMappingURL=all.css.map */

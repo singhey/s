@@ -13,7 +13,6 @@
   animation-name: slide-left;
   animation-duration: 50s;
   animation-iteration-count: infinite;
-  animation-direction: alternate;
   animation-timing-function: linear; }
   .slider-customer > li {
     float: left;
@@ -24,7 +23,7 @@
   .slider-customer .customer-logo {
     height: 160px; }
     .slider-customer .customer-logo img {
-      width: 90%;
+      width: 80%;
       margin-left: auto;
       margin-right: auto; }
   .slider-customer p {

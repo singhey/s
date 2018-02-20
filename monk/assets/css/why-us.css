@@ -23,45 +23,6 @@
     font-weight: 400;
     font-size: 24px;
     padding: 48px 16px 32px 16px; }
-  .why-us .wu-card-holder {
-    position: relative;
-    z-index: 2;
-    margin-bottom: 32px; }
-    .why-us .wu-card-holder.full .slide-text-left span {
-      transition: transform .3s .5s ease-out;
-      transform: translateX(0%); }
-    .why-us .wu-card-holder .slide-text-left {
-      overflow: hidden; }
-    .why-us .wu-card-holder .slide-text-left span {
-      transform: translateX(-100%);
-      display: inline-block; }
-    .why-us .wu-card-holder .wu-card {
-      background: #0f3e54;
-      border-radius: 3px;
-      padding: 16px 8px;
-      box-shadow: 0px 0px 16px #444;
-      transition: all .3s ease-out; }
-      .why-us .wu-card-holder .wu-card:hover {
-        background: #fff;
-        box-shadow: 0px 0px 16px #444; }
-        .why-us .wu-card-holder .wu-card:hover .wu-card-heading {
-          color: #444; }
-        .why-us .wu-card-holder .wu-card:hover .wu-card-desc {
-          color: #444; }
-      .why-us .wu-card-holder .wu-card-icon {
-        position: relative;
-        z-index: 1;
-        font-size: 48px;
-        text-align: center;
-        margin: 16px 0px; }
-      .why-us .wu-card-holder .wu-card-heading {
-        font-weight: 500;
-        padding: 16px;
-        color: #fff; }
-      .why-us .wu-card-holder .wu-card-desc {
-        font-size: 14px;
-        color: #fff;
-        padding: 16px; }
   .why-us .se-icon {
     display: inline-block;
     background: #14ABF4;

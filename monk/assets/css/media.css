@@ -1,3 +1,12 @@
+@media (max-width: 767px) {
+  .slide .slide-image {
+    display: none; }
+
+  .slide-holder .slide-buttons .slide-toggle-button {
+    background-color: #000; }
+
+  .clients-card h2, .clients-card p {
+    padding: 8px !important; } }
 @media (max-width: 576px) {
   header {
     padding-left: 0px;
@@ -31,25 +40,22 @@
     padding: 8px !important; }
 
   .testimony .testimony-card {
-    margin-left: 0; }
+    margin-left: 16px; }
 
   .testimony .align-self-center span#testimony-switcher {
-    transform: rotate(90deg) translate(150px, 16px);
-    position: relative;
+    left: 0px;
+    position: absolute;
     z-index: 3; } }
-@media (max-width: 767px) {
-  .slide .slide-image {
-    display: none; }
+@media (max-width: 375px) {
+  .testimony .left {
+    padding-top: 0;
+    padding-bottom: 0; }
 
-  .slide-holder .slide-buttons .slide-toggle-button {
-    background-color: #000; }
+  .service-card {
+    padding: 32px 0px; }
 
-  .clients-card h2, .clients-card p {
-    padding: 8px !important; } }
-@media (max-width: 992px) {
-  .desc-something h1 {
-    font-size: 32px; }
-  .desc-something .side-img-text {
-    padding: 48px 16px; } }
+  .testimony .testimony-card {
+    margin-left: 8px;
+    width: 282px; } }
 
 /*# sourceMappingURL=media.css.map */
