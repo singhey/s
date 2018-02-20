@@ -861,7 +861,13 @@ footer {
     padding: 8px !important; }
 
   .service-card .s-card {
-    height: initial; } }
+    height: initial; }
+
+  .se-service:nth-child(2n+1) .text-card {
+    padding-left: 0px; }
+
+  .se-service:nth-child(2n) .text-card {
+    padding-right: 0px; } }
 @media (max-width: 576px) {
   header {
     padding-left: 0px;
