@@ -4,8 +4,7 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    z-index: 1;
-    background-image: -webkit-linear-gradient(left, #c8c8c8, rgba(200, 200, 200, 0.98), rgba(200, 200, 200, 0.4)); }
+    z-index: 1; }
   .se-service h1, .se-service h2 {
     font-weight: 400; }
   .se-service p {
@@ -45,5 +44,37 @@
     color: #2ae; }
   .se-sub-service-name:hover::after {
     background-color: #2ae; }
+
+.se-service {
+  overflow: hidden;
+  position: relative; }
+
+.se-service:nth-child(1)::after {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  background-color: #2ae;
+  height: 100%;
+  width: 100%;
+  transform: skew(-52deg, 0deg); }
+
+.se-service:nth-child(2)::after {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  background-color: #f12e76;
+  height: 100%;
+  width: 100%;
+  transform: skew(52deg, 0deg); }
+
+.se-service:nth-child(3)::after {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  background-color: #30ab99;
+  height: 100%;
+  width: 100%;
+  right: 0;
+  transform: skew(-52deg, 0deg); }
 
 /*# sourceMappingURL=services-page.css.map */

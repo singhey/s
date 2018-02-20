@@ -239,6 +239,8 @@ header {
     z-index: 95;
     position: absolute;
     transform: translateX(-50%); }
+    .button--scroll svg {
+      transform: translateX(-50%); }
 
 .animation {
   animation-duration: 4s;
@@ -255,5 +257,21 @@ header {
     transform: translateY(0); }
   100% {
     transform: translateY(-15px); } }
+.content-heading {
+  padding-top: 32px;
+  padding-bottom: 8px !important;
+  margin-bottom: 12px;
+  position: relative; }
+  .content-heading::after {
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 100px;
+    background-color: #2ae;
+    bottom: 0;
+    left: 8px; }
+
+.template-holder {
+  display: none; }
 
 /*# sourceMappingURL=header.css.map */
