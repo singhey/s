@@ -271,7 +271,7 @@ header {
     width: 100px;
     background-color: #2ae;
     bottom: 0;
-    left: 16px; }
+    left: 28px; }
 
 .template-holder {
   display: none; }
@@ -866,10 +866,21 @@ footer {
     height: initial; }
 
   .se-service:nth-child(2n+1) .text-card {
-    padding-left: 0px; }
+    padding-left: 8px !important;
+    padding-top: 16px !important; }
 
   .se-service:nth-child(2n) .text-card {
-    padding-right: 0px; } }
+    padding-right: 8px !important;
+    padding-top: 16px !important; }
+
+  .se-service::after {
+    width: 180% !important; }
+
+  .service-image {
+    padding-top: 32px;
+    padding-bottom: 32px; }
+    .service-image img {
+      width: 100% !important; } }
 @media (max-width: 576px) {
   header {
     padding-left: 0px;
