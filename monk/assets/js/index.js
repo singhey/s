@@ -158,7 +158,7 @@ $(function() {
 
 	//show details card
 	$('.logo img, .logo span, ._detail-card, ._detail-card::after').hover(function() {
-		$('._detail-card').toggleClass("active");
+		if($(window).width() > 757) $('._detail-card').toggleClass("active");
 	});
 
 
