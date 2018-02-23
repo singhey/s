@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>The Online Monk</title>
-	<meta charset="utf-8">
+	<title>The Online Monk - Home Page</title>
+		<meta charset="utf-8">
 	<meta name="theme-color" content="#22aaee">
 	<meta name="viewport" content="width=device-width" />
-	<link rel="shortcut icon" type="image/png" href="./assets/images/logo.png"/>
-	<link rel="stylesheet" type="text/css" href="./assets/css/framework/bootstrap-reboot.min.css">
-	<link rel="stylesheet" type="text/css" href="./assets/css/framework/bootstrap-grid.min.css">
-	<link rel="stylesheet" type="text/css" href="./assets/css/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
-	<link rel="stylesheet" type="text/css" href="./assets/css/ripple.css">
-	<link rel="stylesheet" type="text/css" href="./assets/css/all.css">
-	<link rel="stylesheet" type="text/css" href="./assets/css/contact.css">
-	<link rel="stylesheet" type="text/css" href="./assets/css/clients-page.css">
+	<link rel="shortcut icon" type="image/png" href="/assets/images/logo.png?v=2"/>
+	<link rel="stylesheet" type="text/css" href="/assets/css/framework/bootstrap-reboot.min.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/framework/bootstrap-grid.min.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/all.css">
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">	<link rel="stylesheet" type="text/css" href="/assets/css/all.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/contact.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/clients-page.css">
 	<style>
 		.clients-card {
 			box-shadow: 0px 0px 16px #444;
@@ -24,7 +24,13 @@
 
 	<div class="container-fluid">
 		<header class="row">
-			<div class="col-10 logo"><img src="./assets/images/header-logo.jpg" alt=" The Online Monk "></div>
+			<div class="col-10 logo"><img src="/assets/images/header-logo.jpg" alt=" The Online Monk "> <span class="hover-me-text"> &nbsp;&nbsp;&nbsp;<- &nbsp;Hover me</span></div>
+			<style type="text/css">
+				.logo span.hover-me-text {
+					font-family: 'Nanum Brush Script', cursive;
+					font-size:24px;
+				}
+			</style>
 			<!-- <div class="hidden-sm-down"><a href="callto:+919090909090">+91 90 90 909090</a> <a href="mailto:cs@theonlinemonk.com">cs@theonlinemonk.com</a></div> -->
 			<div class="offset-md-10 offset-sm-7 offset-xs-6 col-lg-1 col-md-1 col-sm-2 col-xs-3 col-3 offset-7 uppercase" style="text-align: right">Menu</div>
 			<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 col-2" id="menu">
@@ -41,19 +47,19 @@
 					<nav>
 						<ul class="page-nav">
 							<li>
-								<a href="index.html"><span class="nav-index">00</span> <span class="nav-line"></span>  Main Page</a>
+								<a href="/"><span class="nav-index">00</span> <span class="nav-line"></span>  Main Page</a>
 							</li>
 							<li>
-								<a href="services.html"><span class="nav-index">01</span> <span class="nav-line"></span>Services</a>
+								<a href="/services"><span class="nav-index">01</span> <span class="nav-line"></span>Services</a>
 							</li>
 							<li>
-								<a href="clients.html"><span class="nav-index">02</span> <span class="nav-line"></span>Clients</a>
+								<a href="/clients"><span class="nav-index">02</span> <span class="nav-line"></span>Clients</a>
 							</li>
 							<li>
-								<a href="career.html"><span class="nav-index">03</span> <span class="nav-line"></span>Career</a>
+								<a href="/career"><span class="nav-index">03</span> <span class="nav-line"></span>Career</a>
 							</li>
 							<li>
-								<a href="contact.html"><span class="nav-index">04</span> <span class="nav-line"></span>Contact Us</a>
+								<a href="/#contact"><span class="nav-index">04</span> <span class="nav-line"></span>Contact Us</a>
 							</li>
 						</ul>
 					</nav>
@@ -70,7 +76,7 @@
 			<div class="col-12 detail-card col-lg-5 col-md-6 col-sm-8 col-xs-10">
 				<div class="row no-gutters">
 					<div class="col-6">
-						<img src="./assets/images/logo.png" alt=" The Online Monk ">
+						<img src="/assets/images/logo.png" alt=" The Online Monk ">
 
 						<p>
 							</br>
@@ -103,10 +109,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
-
-		<!-- image slider -->
-		<div class="row">
+		</div><div class="row">
 			<div class="col-12" style="padding:0;">
 				<div class="slide-holder floating-img" id="image-slider">
 					<div class="slide">
@@ -233,6 +236,7 @@
 							</div>
 						</div>
 					</div>
+					
 					<div class="slide-buttons">
 						
 					</div>
@@ -241,11 +245,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
-
-		<!-- Counter -->
-
-		<div class="row counter">
+		</div>		<div class="row counter">
 			<div class="col-lg-3 col-md-3 col-sm-6 col-xm-6 col-12 counter-block">
 				<p>
 					<span class="count">3+</span>
@@ -271,7 +271,6 @@
 				</p>
 			</div>
 		</div>
-
 		<!-- why us -->
 		<div class="row">
 			<div class="col-12 why-us">
@@ -550,98 +549,7 @@
 			</div>
 		</div>
 
-		<!-- Testimony -->
-
-		<!-- <div class="row testimony hidden">
-			<div class="col-12 col-xs-12 col-sm-4 d-flex left">
-				<div class="align-self-center">
-					<h1 style="padding: 32px;">Customer <br> <span class="light">Stories</span></h1>
-				</div>
-			</div>
-			<div class="col-12 col-xs-12 col-sm-8 d-flex right">
-				<div class="align-self-center" style="width: 100%;">
-					<span id="testimony-switcher" ripple ripple-dark>
-					</span>
-					<div class="_testimony-cards-holder">
-						<div class="testimony-cards-holder d-flex" style="width: 1000px">
-							<div class="testimony-card align-self-center">
-								<div class="container-fluid">
-									<div class="row" style="padding:16px 0px">
-										<div class="col-3">
-											<div class="customer-img">
-												<img src="./assets/images/arun.png" />
-											</div>
-										</div>
-										<div class="col-8">
-											<p>
-												<span class="customer-name">Arun Kumar</span><br>
-												<span class="customer-company">Writer</span>
-											</p>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-12">
-											<p class="customer-testimony">It's been few months since I started working with the online monk and it's been great so far. I consider myself fortunate to work with them. We have a structured and well organized system that enables us to focus on our game and deliver the best. The down to earth attitude of the management is an asset. Wishing all the very best for the company to unravel higher levels of success.
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="testimony-card align-self-center">
-								<div class="container-fluid">
-									<div class="row" style="padding:16px 0px">
-										<div class="col-3">
-											<div class="customer-img">
-												<img src="./assets/images/archana.png" />
-											</div>
-										</div>
-										<div class="col-8">
-											<p>
-												<span class="customer-name">Archana</span><br>
-												<span class="customer-company">Writer</span>
-											</p>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-12">
-											<p class="customer-testimony">I have been writing for TOM for a few months now and I have no complaints at all. The payments happen proactively and there is a cohesive discussion before content requests are sent out. What more can a writer ask for?
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="testimony-card align-self-center">
-								<div class="container-fluid">
-									<div class="row" style="padding:16px 0px">
-										<div class="col-3">
-											<div class="customer-img">
-												<img src="./assets/images/Iti.png" />
-											</div>
-										</div>
-										<div class="col-8">
-											<p>
-												<span class="customer-name">Iti Shree</span><br>
-												<span class="customer-company">Writer</span>
-											</p>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-12">
-											<p class="customer-testimony">My experience has been great with TOM, it is like an amazing family. Arpan is amazingly cooperative. I have learned so many things here and besides all of that writing here is fun.",
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> -->
-
-		<!-- Contact us -->
-
-		<section class="row full-screen">
+				<section class="row full-screen" id="contact">
 			<div class="col-lg-6 col-md-6 col-sm-12 contact-image-holder full-screen" style="padding:0; color: #fff;">
 				<div class="row no-gutters overlay d-flex full-screen">
 					<div class="align-self-center row">
@@ -703,19 +611,17 @@
 					<button type="submit" class="submit-btn pointer">Submit</button>
 				</form>
 			</div>
-		</section>
-
-		<footer class="row">
+		</section>		<footer class="row">
 			<div class="col-lg-6 col-md-4 col-sm-12 offset-lg-1 offset-lg-1">
-				<img src="./assets/images/logo.png" class="footer-logo"/>
+				<img src="/assets/images/logo.png" class="footer-logo" alt="The online monk logo"/>
 			</div>
 			<div class="col-lg-5 col-md-7 col-sm-12">
 				<p class="site-links">
-					<a href="./index.html">HOME</a>
-					<a href="./services.html">SERVICES</a>
-					<a href="./clients.html">CLIENTS</a>
-					<a href="./career.html">CAREER</a>
-					<a href="./contact.html">CONTACT</a>
+					<a href="/">HOME</a>
+					<a href="/services">SERVICES</a>
+					<a href="/clients">CLIENTS</a>
+					<a href="/career">CAREER</a>
+					<a href="/#contact">CONTACT</a>
 				</p>
 				<p class="social-icons">
 					<a href="https://www.facebook.com/theonlinemonk" title="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -739,12 +645,9 @@
 			</style>
 		</footer>
 	</div>
-
-	<!-- <script type="text/javascript" src="./assets/js/vue.js"></script> -->
-	<script type="text/javascript" src="./assets/js/jquery.js"></script>
-	<script type="text/javascript" src="./assets/js/image-slider.js"></script>
-	<script type="text/javascript" src="./assets/js/ripple.js"></script>
-	<script type="text/javascript" src="./assets/js/index.js"></script>
-	<script type="text/javascript" src="./assets/js/infinite-scroll.js"></script>
+	<script type="text/javascript" src="/assets/js/jquery.js"></script>
+	<script type="text/javascript" src="/assets/js/image-slider.js"></script>
+	<script type="text/javascript" src="/assets/js/index.js"></script>
+	<script type="text/javascript" src="/assets/js/infinite-scroll.js"></script>
 </body>
 </html>
