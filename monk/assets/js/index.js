@@ -117,12 +117,12 @@ $(function() {
 	var prevScroll = 0;
 	counterInitiated = false;
 	$(window).on('resize scroll', function() {
-	  	$('.animated').each(function() {
-	    
-		    if ($(this).isInViewport()) {
-		    	$(this).addClass("full");
-		    }
-	  });
+		  	$('.animated').each(function() {
+		    
+			    if ($(this).isInViewport()) {
+			    	$(this).addClass("full");
+			    }
+		  });
 
 	  	//checking that header nav is at top or not and accordingly add its background
 	  	if($(window).scrollTop() > 5) {
@@ -138,15 +138,20 @@ $(function() {
 	  	}
 
 	  	//check if counter is in view port and start to animate it
-	  	if($('.counter').isInViewport() && !counterInitiated) {
-	  		startCounter();
-	  		counterInitiated = true;
-	  	}
+	  	if($('.counter').length!=0){
+		  	if($('.counter').isInViewport() && !counterInitiated) {
+		  		startCounter();
+		  		counterInitiated = true;
+		  	}
+		  }
 
 	  	//check if testimony is in view and modify it
-	  	if($('.testimony').isInViewport()) {
-	  		$('.testimony').removeClass("hidden");
-	  	}
+	  	if($('.testimony').length !=0){
+		  	if($('.testimony').isInViewport()) {
+		  		console.log("hello entered");
+		  		$('.testimony').removeClass("hidden");
+		  	}
+		  }
 	});
 	
 
