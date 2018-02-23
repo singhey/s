@@ -505,7 +505,7 @@ header {
       content: '';
       transform: skewY(5deg);
       transform-origin: 0% 0%;
-      box-shadow: 0px 16px 16px #ccc; }
+      box-shadow: 0px 16px 16px #666; }
   .why-us h1 {
     position: relative;
     z-index: 2;
