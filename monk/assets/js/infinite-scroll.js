@@ -18,12 +18,12 @@ $(function(){
 		$('.slider-customer').append(p);
 		window.setTimeout(function(){
 			$('.slider-customer').css({
-				"transition": "transform 2s linear",
+				"transition": "transform 4s linear",
 				"transform": "translateX(-"+(slideWidth * count)+"px)",
 			});
 		}, 20);
 		//console.log(p);
 		//console.log($('.slider-customer>li').length);
-	}, 2000);
+	}, 4000);
 
 });	
