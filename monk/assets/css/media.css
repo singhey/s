@@ -1,4 +1,7 @@
 @media (max-width: 767px) {
+  .logo span.hover-me-text {
+    display: none !important; }
+
   .slide .slide-image {
     display: none; }
 
@@ -13,20 +16,20 @@
 
   .se-service:nth-child(2n+1) .text-card {
     padding-left: 8px !important;
-    padding-top: 16px !important; }
+    padding-top: 0px !important; }
 
   .se-service:nth-child(2n) .text-card {
     padding-right: 8px !important;
-    padding-top: 16px !important; }
+    padding-top: 0px !important; }
 
   .se-service::after {
     width: 180% !important; }
 
   .service-image {
     padding-top: 32px;
-    padding-bottom: 32px; }
+    padding-bottom: 0px; }
     .service-image img {
-      width: 100% !important; } }
+      width: 65% !important; } }
 @media (max-width: 576px) {
   header {
     padding-left: 0px;

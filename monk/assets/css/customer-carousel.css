@@ -9,9 +9,6 @@
 .slider-customer {
   padding: 0;
   list-style: none;
-  width: 2200px;
-  transition: all .3s linear;
-  animation-name: slide-left;
   animation-duration: 50s;
   animation-iteration-count: infinite;
   animation-timing-function: linear; }
@@ -19,7 +16,7 @@
     float: left;
     height: 220px;
     margin: 16px 48px 16px 0px;
-    min-width: 210px;
+    width: 220px;
     transition: all .3s linear;
     box-shadow: 0px 0px 16px #dfdfdf; }
   .slider-customer .customer-logo {
