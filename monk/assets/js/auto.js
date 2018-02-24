@@ -47,4 +47,18 @@ $(function(){
   };
   time = 50;
   writeStyles(style, 0, time);
+
+
+  //move pen of content
+  function beginContentAnimation() {
+  	$(".lines li").removeClass("transition-begin");
+  	$('.pen').removeClass("active");
+  	window.setTimeout(function() {
+  		$('.pen').addClass("active");
+  		$(".lines li").addClass("transition-begin");
+  	}, 400);
+  }
+
+  window.setInterval(function(){beginContentAnimation();}, 12000);
+  beginContentAnimation();
 });
