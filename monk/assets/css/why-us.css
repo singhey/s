@@ -2,7 +2,6 @@
   padding: 0;
   position: relative; }
   .why-us .diagonal {
-    background: #92d5f6;
     height: 100%;
     width: 100%;
     position: absolute;
@@ -11,11 +10,9 @@
       position: absolute;
       height: 100%;
       width: 100%;
-      background: #92d5f6;
       content: '';
       transform: skewY(5deg);
-      transform-origin: 0% 0%;
-      box-shadow: 0px 16px 16px #bbb; }
+      transform-origin: 0% 0%; }
   .why-us h1 {
     position: relative;
     z-index: 2;

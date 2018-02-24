@@ -135,73 +135,75 @@
         top: 50px;
         transition: width .3s linear; }
         .content-writer .sheet .lines > li:nth-child(1).transition-begin {
-          transition: width 0.8s 1s linear; }
+          transition: width 1.8s 2s linear; }
       .content-writer .sheet .lines > li:nth-child(2) {
         width: 0%;
         top: 70px;
         transition: width .3s linear; }
         .content-writer .sheet .lines > li:nth-child(2).transition-begin {
-          transition: width 0.8s 2s linear; }
+          transition: width 1.8s 4s linear; }
       .content-writer .sheet .lines > li:nth-child(3) {
         width: 0%;
         top: 90px;
         transition: width .3s linear; }
         .content-writer .sheet .lines > li:nth-child(3).transition-begin {
-          transition: width 0.8s 3s linear; }
+          transition: width 1.8s 6s linear; }
       .content-writer .sheet .lines > li:nth-child(4) {
         width: 0%;
         top: 110px;
         transition: width .3s linear; }
         .content-writer .sheet .lines > li:nth-child(4).transition-begin {
-          transition: width 0.8s 4s linear; }
+          transition: width 1.8s 8s linear; }
       .content-writer .sheet .lines > li:nth-child(5) {
         width: 0%;
         top: 130px;
         transition: width .3s linear; }
         .content-writer .sheet .lines > li:nth-child(5).transition-begin {
-          transition: width 0.8s 5s linear; }
+          transition: width 1.8s 10s linear; }
       .content-writer .sheet .lines > li:nth-child(6) {
         width: 0%;
         top: 150px;
         transition: width .3s linear; }
         .content-writer .sheet .lines > li:nth-child(6).transition-begin {
-          transition: width 0.8s 6s linear; }
+          transition: width 1.8s 12s linear; }
       .content-writer .sheet .lines > li:nth-child(7) {
         width: 0%;
         top: 170px;
         transition: width .3s linear; }
         .content-writer .sheet .lines > li:nth-child(7).transition-begin {
-          transition: width 0.8s 7s linear; }
+          transition: width 1.8s 14s linear; }
       .content-writer .sheet .lines > li:nth-child(8) {
         width: 0%;
         top: 190px;
         transition: width .3s linear; }
         .content-writer .sheet .lines > li:nth-child(8).transition-begin {
-          transition: width 0.8s 8s linear; }
+          transition: width 1.8s 16s linear; }
       .content-writer .sheet .lines > li:nth-child(9) {
         width: 0%;
         top: 210px;
         transition: width .3s linear; }
         .content-writer .sheet .lines > li:nth-child(9).transition-begin {
-          transition: width 0.8s 9s linear; }
+          transition: width 1.8s 18s linear; }
       .content-writer .sheet .lines > li:nth-child(10) {
         width: 0%;
         top: 230px;
         transition: width .3s linear; }
         .content-writer .sheet .lines > li:nth-child(10).transition-begin {
-          transition: width 0.8s 10s linear; }
+          transition: width 1.8s 20s linear; }
       .content-writer .sheet .lines > li:nth-child(11) {
         width: 0%;
         top: 250px;
         transition: width .3s linear; }
         .content-writer .sheet .lines > li:nth-child(11).transition-begin {
-          transition: width 0.8s 11s linear; }
+          transition: width 1.8s 22s linear; }
       .content-writer .sheet .lines > li:nth-child(12) {
         width: 0%;
         top: 270px;
         transition: width .3s linear; }
         .content-writer .sheet .lines > li:nth-child(12).transition-begin {
-          transition: width 0.8s 12s linear; }
+          transition: width 1.8s 24s linear; }
+      .content-writer .sheet .lines > li:nth-child(5).transition-begin {
+        width: 50%; }
       .content-writer .sheet .lines > li.transition-begin {
         width: 85%; }
     .content-writer .sheet .pen {
@@ -210,12 +212,24 @@
       top: 20px;
       left: 9px;
       transform: skew(16deg, -11deg);
-      animation-duration: 12s;
+      animation-duration: 24s;
       animation-timing-function: linear;
-      animation-delay: .9s; }
+      animation-delay: 2s; }
       .content-writer .sheet .pen.active {
         animation-name: move-pen; }
 
+/* @keyframes move-pen {
+ 	@for $i from 0 through 10{
+ 		//{$i * 8.33%} {
+ 			left: 12px;
+ 			top: 16px + $i * 20px;
+ 		}
+ 		//{8.33% * $i + 8%} {
+ 			left: 180px;
+ 			top: 16px + $i * 20px;
+ 		} 
+ 	}
+} */
 @keyframes move-pen {
   0% {
     left: 12px;
@@ -245,7 +259,7 @@
     left: 12px;
     top: 96px; }
   41.32% {
-    left: 180px;
+    left: 110px;
     top: 96px; }
   41.65% {
     left: 12px;
