@@ -86,8 +86,8 @@
   .content-writer .sheet {
     height: 300px;
     width: 200px;
-    background-color: #fff;
-    box-shadow: 0px 0px 4px #000;
+    background-color: #fffff3;
+    box-shadow: 8px 8px 16px #999;
     border-radius: 3px;
     position: relative; }
     .content-writer .sheet .lines {
@@ -97,36 +97,191 @@
       position: absolute;
       height: 5px;
       list-style: none;
-      background-color: #444; }
+      background-color: #8ae;
+      /* &:nth-child(1){
+      	width: 90%;
+      	top:50px;
+      }
+      &:nth-child(2){
+      	width: 80%;
+      	top:70px;
+      }
+      &:nth-child(3){
+      	width: 70%;
+      	top:90px;
+      }
+      &:nth-child(4){
+      	width: 85%;
+      	top:110px;
+      }
+      &:nth-child(5){
+      	width: 75%;
+      	top:130px;
+      }
+      &:nth-child(6){
+      	width: 75%;
+      	top:150px;
+      }
+      &:nth-child(7){
+      	width: 75%;
+      	top:170px;
+      }
+      &:nth-child(8){
+      	width: 75%;
+      	top:190px;
+      } */ }
       .content-writer .sheet .lines > li:nth-child(1) {
-        width: 90%;
-        top: 50px; }
+        width: 0%;
+        top: 50px;
+        transition: width .3s linear; }
+        .content-writer .sheet .lines > li:nth-child(1).transition-begin {
+          transition: width 0.8s 1s linear; }
       .content-writer .sheet .lines > li:nth-child(2) {
-        width: 80%;
-        top: 70px; }
+        width: 0%;
+        top: 70px;
+        transition: width .3s linear; }
+        .content-writer .sheet .lines > li:nth-child(2).transition-begin {
+          transition: width 0.8s 2s linear; }
       .content-writer .sheet .lines > li:nth-child(3) {
-        width: 70%;
-        top: 90px; }
+        width: 0%;
+        top: 90px;
+        transition: width .3s linear; }
+        .content-writer .sheet .lines > li:nth-child(3).transition-begin {
+          transition: width 0.8s 3s linear; }
       .content-writer .sheet .lines > li:nth-child(4) {
-        width: 85%;
-        top: 110px; }
+        width: 0%;
+        top: 110px;
+        transition: width .3s linear; }
+        .content-writer .sheet .lines > li:nth-child(4).transition-begin {
+          transition: width 0.8s 4s linear; }
       .content-writer .sheet .lines > li:nth-child(5) {
-        width: 75%;
-        top: 130px; }
+        width: 0%;
+        top: 130px;
+        transition: width .3s linear; }
+        .content-writer .sheet .lines > li:nth-child(5).transition-begin {
+          transition: width 0.8s 5s linear; }
       .content-writer .sheet .lines > li:nth-child(6) {
-        width: 75%;
-        top: 150px; }
+        width: 0%;
+        top: 150px;
+        transition: width .3s linear; }
+        .content-writer .sheet .lines > li:nth-child(6).transition-begin {
+          transition: width 0.8s 6s linear; }
       .content-writer .sheet .lines > li:nth-child(7) {
-        width: 75%;
-        top: 170px; }
+        width: 0%;
+        top: 170px;
+        transition: width .3s linear; }
+        .content-writer .sheet .lines > li:nth-child(7).transition-begin {
+          transition: width 0.8s 7s linear; }
       .content-writer .sheet .lines > li:nth-child(8) {
-        width: 75%;
-        top: 190px; }
+        width: 0%;
+        top: 190px;
+        transition: width .3s linear; }
+        .content-writer .sheet .lines > li:nth-child(8).transition-begin {
+          transition: width 0.8s 8s linear; }
+      .content-writer .sheet .lines > li:nth-child(9) {
+        width: 0%;
+        top: 210px;
+        transition: width .3s linear; }
+        .content-writer .sheet .lines > li:nth-child(9).transition-begin {
+          transition: width 0.8s 9s linear; }
+      .content-writer .sheet .lines > li:nth-child(10) {
+        width: 0%;
+        top: 230px;
+        transition: width .3s linear; }
+        .content-writer .sheet .lines > li:nth-child(10).transition-begin {
+          transition: width 0.8s 10s linear; }
+      .content-writer .sheet .lines > li:nth-child(11) {
+        width: 0%;
+        top: 250px;
+        transition: width .3s linear; }
+        .content-writer .sheet .lines > li:nth-child(11).transition-begin {
+          transition: width 0.8s 11s linear; }
+      .content-writer .sheet .lines > li:nth-child(12) {
+        width: 0%;
+        top: 270px;
+        transition: width .3s linear; }
+        .content-writer .sheet .lines > li:nth-child(12).transition-begin {
+          transition: width 0.8s 12s linear; }
+      .content-writer .sheet .lines > li.transition-begin {
+        width: 85%; }
     .content-writer .sheet .pen {
       position: absolute;
       width: 32px;
       top: 20px;
       left: 9px;
-      transform: skew(16deg, -11deg); }
+      transform: skew(16deg, -11deg);
+      animation-duration: 12s;
+      animation-timing-function: linear;
+      animation-delay: .9s; }
+      .content-writer .sheet .pen.active {
+        animation-name: move-pen; }
+
+@keyframes move-pen {
+  0% {
+    left: 12px;
+    top: 16px; }
+  8% {
+    left: 180px;
+    top: 16px; }
+  8.33% {
+    left: 12px;
+    top: 36px; }
+  16.33% {
+    left: 180px;
+    top: 36px; }
+  16.66% {
+    left: 12px;
+    top: 56px; }
+  24.66% {
+    left: 180px;
+    top: 56px; }
+  24.99% {
+    left: 12px;
+    top: 76px; }
+  32.99% {
+    left: 180px;
+    top: 76px; }
+  33.32% {
+    left: 12px;
+    top: 96px; }
+  41.32% {
+    left: 180px;
+    top: 96px; }
+  41.65% {
+    left: 12px;
+    top: 116px; }
+  49.65% {
+    left: 180px;
+    top: 116px; }
+  49.98% {
+    left: 12px;
+    top: 136px; }
+  57.98% {
+    left: 180px;
+    top: 136px; }
+  58.31% {
+    left: 12px;
+    top: 156px; }
+  66.31% {
+    left: 180px;
+    top: 156px; }
+  66.64% {
+    left: 12px;
+    top: 176px; }
+  74.64% {
+    left: 180px;
+    top: 176px; }
+  74.97% {
+    left: 12px;
+    top: 196px; }
+  82.97% {
+    left: 180px;
+    top: 196px; }
+  83.3% {
+    left: 12px;
+    top: 216px; }
+  91.3% {
+    left: 180px;
+    top: 216px; } }
 
 /*# sourceMappingURL=laptop.css.map */
