@@ -297,5 +297,115 @@
   91.3% {
     left: 180px;
     top: 216px; } }
+.bulb-container {
+  width: 200px;
+  margin: 3em auto; }
+  .bulb-container svg {
+    width: 100%; }
+
+.st0 {
+  fill: #EFEFEF; }
+
+.st1 {
+  fill: none;
+  stroke: #EFEFEF;
+  stroke-width: 4;
+  stroke-miterlimit: 10; }
+
+.st2 {
+  fill: none;
+  opacity: .5;
+  stroke: #EFEFEF;
+  stroke-width: 2;
+  stroke-miterlimit: 10; }
+
+/* $list : ('#one', '#two', '#three', '#four', '#five', '#six', '#seven');
+
+@each $item in $list{
+	//{$item} {
+		-webkit-transform-origin: center;
+		-ms-transform-origin: center;
+		transform-origin: center;
+		-webkit-animation: line-glow 2s .2s * $i infinite;
+		animation: line-glow 2s .2s infinite;
+	}
+} */
+#one {
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-animation: line-glow 2s .2s infinite;
+  animation: line-glow 2s .2s infinite; }
+
+#two {
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-animation: line-glow 2s .4s infinite;
+  animation: line-glow 2s .4s infinite; }
+
+#three {
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-animation: line-glow 2s .6s infinite;
+  animation: line-glow 2s .6s infinite; }
+
+#four {
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-animation: line-glow 2s .8s infinite;
+  animation: line-glow 2s .8s infinite; }
+
+#five {
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-animation: line-glow 2s 1s infinite;
+  animation: line-glow 2s 1s infinite; }
+
+#six {
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-animation: line-glow 2s 1.2s infinite;
+  animation: line-glow 2s 1.2s infinite; }
+
+#seven {
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-animation: line-glow 2s 1.4s infinite;
+  animation: line-glow 2s 1.4s infinite; }
+
+#bulb-body-fill {
+  -webkit-animation: bulb-on 2s ease infinite;
+  animation: bulb-on 2s ease infinite; }
+
+@-webkit-keyframes line-glow {
+  10% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    opacity: 1; } }
+@keyframes line-glow {
+  10% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    opacity: 1; } }
+@-webkit-keyframes bulb-on {
+  0% {
+    opacity: 0; }
+  80% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@keyframes bulb-on {
+  0% {
+    opacity: 0; }
+  80% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
 
 /*# sourceMappingURL=laptop.css.map */
