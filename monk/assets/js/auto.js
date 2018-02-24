@@ -59,6 +59,6 @@ $(function(){
   	}, 400);
   }
 
-  window.setInterval(function(){beginContentAnimation();}, 12000);
+  window.setInterval(function(){beginContentAnimation();}, 24000);
   beginContentAnimation();
 });

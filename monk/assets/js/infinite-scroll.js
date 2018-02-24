@@ -7,8 +7,8 @@ $(function(){
 	$('.slider-customer').css({
 		"width": (($('.slider-customer > li').width() + 48) * $('.slider-customer > li').length)+"px",
 	});
-	window.setInterval( function() {
-		//console.log("hello", slideWidth, count);
+
+	function startCustomerCarousel(){
 		$('.slider-customer').css({
 			"transition": "transform 0s linear",
 			"transform": "translateX(0px)",
@@ -22,8 +22,8 @@ $(function(){
 				"transform": "translateX(-"+(slideWidth * count)+"px)",
 			});
 		}, 20);
-		//console.log(p);
-		//console.log($('.slider-customer>li').length);
-	}, 4000);
+		window.setTimeout(startCustomerCarousel, 4000);
+	}
 
+	startCustomerCarousel();
 });	
