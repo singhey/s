@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Orax - Home Page</title>
+	<?php
+		require_once($_SERVER['DOCUMENT_ROOT'].'/assets/required/common_import.php');
+	?>
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#444" />
+<link rel="stylesheet" type="text/css" href="/assets/css/framework/bootstrap-reboot.min.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/framework/bootstrap-grid.min.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
+
+	<link rel="stylesheet" type="text/css" href="./assets/css/all.css">
+</head>
+<body>
+
+	<div class="container-fluid">
+		<div class="row">
+			<header class="col-12">
+				<div class="row">
+					<div class="col-md-2 col-6">
+						<img src="./assets/images/logo.png" />
+					</div>
+
+					<div class="col-md-10 col-6 menu">
+						<span id="menu-toggle"> 
+							<span class="burger"></span>
+						</span>
+					</div>
+					<!-- <nav class="side-nav">
+						<ul>
+							<li><a href="#">HomePage</a></li>
+							<li><a href="#">About</a></li>
+							<li><a href="#">Services</a></li>
+							<li><a href="#">Our Works</a></li>
+							<li><a href="#">Team</a></li>
+							<li><a href="#">Contact Us</a></li>
+							<li class="section"></li>
+							<li class="social">
+								<a href="#" title="facebook"><i class="fab fa-facebook-f"></i></a>
+								<a href="#" title="twitter"><i class="fab fa-twitter"></i></a>
+							</li>
+						</ul>
+					</nav> -->
+					<div class="col-12">
+						<div class="row site-nav-holder">
+							<div class="col-6 site-nav-content">
+								<ul class="nav">
+									<li><a href="#" data-site-nav-index="0">HomePage</a></li>
+									<li><a href="#" data-site-nav-index="1">About</a></li>
+									<li><a href="#" data-site-nav-index="2">Services</a></li>
+									<li><a href="#" data-site-nav-index="3">Our Works</a></li>
+									<li><a href="#" data-site-nav-index="4">Team</a></li>
+									<li><a href="#" data-site-nav-index="5">Contact Us</a></li>
+									<li class="section"></li>
+									<li class="social">
+										<a href="#" title="facebook"><i class="fab fa-facebook-f"></i></a>
+										<a href="#" title="twitter"><i class="fab fa-twitter"></i></a>
+									</li>
+								</ul>
+							</div>
+							<div class="col-6 site-nav-extra d-flex">
+								<div class="site-nav-slide-holder align-self-center">
+									<div class="site-nav-slide" data-site-nav="0">
+										<div class="content">
+											<h2>A text or image could be added here</h2>
+										</div>
+									</div>
+									<div class="site-nav-slide" data-site-nav="1"></div>
+									<div class="site-nav-slide" data-site-nav="2"></div>
+									<div class="site-nav-slide" data-site-nav="3"></div>
+									<div class="site-nav-slide" data-site-nav="4"></div>
+									<div class="site-nav-slide" data-site-nav="5"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</header>
+		</div>
+
+		<div class="row full-screen slide-container" id="slide-container">
+			<div class="col-12 slide active fade-up" data-slide-index="0">
+				<div class="slide-content d-flex text-ground">
+					<div class="align-self-center text-holder">
+						<h1>
+							Just some text to see transition
+						</h1>
+						<p>Sub textTo check transition</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 slide" data-slide-index="1">
+				<div class="slide-content d-flex">
+					<h1 class="align-self-center">
+						Just some text to see transition
+					</h1>
+				</div>
+			</div>
+			<div class="col-12 slide" data-slide-index="2">
+				<div class="slide-content d-flex">
+					<h1 class="align-self-center">
+						Just some text to see transition
+					</h1>
+				</div>
+			</div>
+			<div class="col-12 slide" data-slide-index="3">
+				<div class="slide-content d-flex">
+					<h1 class="align-self-center">
+						Just some text to see transition
+					</h1>
+				</div>
+			</div>
+			<div class="col-12 slide" data-slide-index="4">
+				<div class="slide-content d-flex">
+					<h1 class="align-self-center">
+						Just some text to see transition
+					</h1>
+				</div>
+			</div>
+		</div>
+		<div class="slide-toggle-button">
+			
+		</div>
+	</div>
+
+	<script type="text/javascript" src="./assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="./assets/js/tilt.js"></script>
+	<script type="text/javascript" src="./assets/js/swipe_detect.js"></script>
+	<script type="text/javascript" src="./assets/js/slides.js"></script>
+	<script type="text/javascript" src="./assets/js/index.js"></script>
+</body>
+</html>
