@@ -54,47 +54,8 @@ function swipedetect(el, callback){
         handleswipe(swipedir);
     }, false);
 }
-  
-//USAGE:
-/*
-var el = document.getElementById('someel')
-swipedetect(el, function(swipedir){
-    swipedir contains either "none", "left", "right", "top", or "down"
-    if (swipedir =='left')
-        alert('You just swiped left!')
-})
-
-*/
-
 
 $(function() {
-
-	/*var testimony = new Vue({
-		el: "#testimony",
-		data: {
-			testimony: [
-				{
-					user: "Arun Kumar",
-					company: "Designer",
-					review: "It's been few months since I started working with the online monk and it's been great so far. I consider myself fortunate to work with them. We have a structured and well organized system that enables us to focus on our game and deliver the best. The down to earth attitude of the management is an asset. Wishing all the very best for the company to unravel higher levels of success. "
-				},
-				{
-					user: "Archana",
-					company: "Writer",
-					review: "I have been writing for TOM for a few months now and I have no complaints at all. The payments happen proactively and there is a cohesive discussion before content requests are sent out. What more can a writer ask for? ",
-				},
-				{
-					user: "Iti Shree",
-					company: "Writer",
-					review: "My experience has been great with TOM, it is like an amazing family. Arpan is amazingly cooperative. I have learned so many things here and besides all of that writing here is fun.",
-				},
-			]
-		}
-	});*/
-
-	//add slide buttons
-	
-
 	//scroll to top
 	$('.scroll-to-top').click(function(){
 		$('html, body').animate({
@@ -227,5 +188,7 @@ $(function() {
 	});
 
 	console.log("called");
-	
+	//remove loader
+	$('#loader').fadeOut(1000);
+	window.setTimeout(function(){$('#loader').remove();}, 2000);
 });
