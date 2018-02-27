@@ -237,6 +237,8 @@ header.active {
   padding: 0;
   overflow: hidden;
   box-shadow: 0px 0px 16px #999; }
+  .slide .align-self-center {
+    width: 100%; }
   .slide.active.fade-up {
     z-index: 2;
     animation-name: slide-up;
@@ -247,6 +249,8 @@ header.active {
     animation-name: slide-down;
     animation-duration: 1s;
     animation-timing-function: ease-in-out; }
+  .slide.active[data-index-slide="0"] h1 img {
+    transform: translate(0px, 0px) scale(1); }
   .slide.slide-out.fade-up {
     z-index: 1;
     animation-name: slide-up-then-down;
@@ -258,14 +262,13 @@ header.active {
     animation-duration: 2s;
     animation-timing-function: ease-in-out; }
   .slide:nth-child(1) {
-    background-color: #f046a1; }
+    background-color: #fff; }
     .slide:nth-child(1) .text-holder {
       width: 100%;
       position: absolute; }
     .slide:nth-child(1) h1, .slide:nth-child(1) p {
       font-weight: normal;
-      text-align: center;
-      color: #fff; }
+      text-align: center; }
   .slide:nth-child(2) {
     background-color: #ba33ef; }
   .slide:nth-child(3) {
@@ -279,7 +282,6 @@ header.active {
   .slide h1 {
     text-align: center;
     font-weight: normal;
-    color: #fff;
     width: 100%;
     font-size: 40px;
     text-transform: uppercase; }
@@ -297,7 +299,7 @@ header.active {
     height: 8px;
     border-radius: 4px;
     margin: 32px 0px;
-    background-color: #fff;
+    background-color: #212121;
     transition: height .3s linear; }
     .slide-toggle-button span.active {
       height: 100px; }
@@ -329,6 +331,15 @@ header.active {
 @media (max-width: 800px) {
   .slide h1 {
     font-size: 18px; } }
+#animation-background {
+  position: absolute; }
+
+.slide[data-index-slide="0"] h1 img {
+  max-width: 900px;
+  width: 80%;
+  transition: transform .1s linear;
+  transform: translate(-419px, -264px) scale(0.2); }
+
 @media (max-width: 568px) {
   .nav li {
     padding: 16px 0px; }
