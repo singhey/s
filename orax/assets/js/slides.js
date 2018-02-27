@@ -41,10 +41,21 @@ $(function() {
 				$('[data-toggle-button="'+slides.currentSlide+'"]').addClass("active");
 			}
 
-			
-
 			slides.prevSlide = slides.currentSlide;
 			//window.setTimeout(function() {$('.slide[data-slide-index="'+slides.prevSlide+'"]').removeClass('slide-out');}, 1000);
+
+			//remove logo in header if on 1st slide 
+			if(slides.currentSlide == 0) {
+				$('header .logo-holder img').css({
+					'transition': 'opacity .5s .3s linear',
+					'opacity': '0'
+				});
+			}else{
+				$('header .logo-holder img').css({
+					'transition': 'opacity .5s .3s linear',
+					'opacity': '1'
+				});
+			}
 		}
 	};
 

@@ -8,7 +8,7 @@ $(function(){
 		};
 		x = (e.pageX / $(window).innerWidth());
 		y = e.pageY / $(window).innerHeight();
-		console.log(x);
+		//console.log(x);
 		if(x > 0.5) {
 			x = (x - 0.5) * maxTransition.x;
 			x*=-1;
@@ -27,12 +27,5 @@ $(function(){
 		});
 	});
 
-	$('#menu-toggle').click(function() {
-		$('header').toggleClass("active");
-	});
-	$('.nav li a').hover(function(){
-		var index = $(this).attr("data-site-nav-index");
-		console.log(index);
-		$('.site-nav-slide[data-site-nav="'+index+'"]').toggleClass("active");
-	});
+	
 });
