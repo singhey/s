@@ -1,0 +1,66 @@
+.slide h2 {
+  font-weight: normal;
+  text-align: center;
+  padding-bottom: 32px; }
+
+.accordion, .just-list {
+  list-style: none;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 4px 4px 16px #d9e5e8;
+  border-top: 1px solid #d9e5e8;
+  padding: 0;
+  border-radius: 5px;
+  background: #fff; }
+
+.accordion li, .just-list li {
+  border-bottom: 1px solid #d9e5e8;
+  position: relative; }
+
+.accordion li p {
+  display: none;
+  padding: 10px 25px 30px;
+  color: #666; }
+
+.accordion a, .just-list a {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  font-weight: 600;
+  line-height: 3;
+  font-size: 14px;
+  font-size: 0.875rem;
+  text-indent: 15px;
+  user-select: none; }
+
+.accordion a:after {
+  width: 8px;
+  height: 8px;
+  border-right: 1px solid #4a6e78;
+  border-bottom: 1px solid #4a6e78;
+  position: absolute;
+  right: 10px;
+  content: " ";
+  top: 17px;
+  transform: rotate(-45deg);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+
+.accordion p {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 2;
+  padding: 10px; }
+
+a.active:after {
+  transform: rotate(45deg);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+
+.side-image {
+  height: 400px;
+  background-color: #2ae; }
+
+/*# sourceMappingURL=accordion.css.map */
