@@ -15,53 +15,6 @@
 
 	<div class="container-fluid">
 		<div class="row">
-			<!-- <header class="col-12">
-				<div class="row">
-					<div class="col-md-2 col-6 logo-holder">
-						<img src="./assets/images/logo.png" />
-					</div>
-
-					<div class="col-md-10 col-6 menu">
-						<span id="menu-toggle"> 
-							<span class="burger"></span>
-						</span>
-					</div>
-					<div class="col-12">
-						<div class="row site-nav-holder">
-							<div class="col-6 site-nav-content">
-								<ul class="nav">
-									<li><a href="#" data-site-nav-index="0">HomePage</a></li>
-									<li><a href="#" data-site-nav-index="1">About</a></li>
-									<li><a href="#" data-site-nav-index="2">Services</a></li>
-									<li><a href="#" data-site-nav-index="3">Our Works</a></li>
-									<li><a href="#" data-site-nav-index="4">Team</a></li>
-									<li><a href="#" data-site-nav-index="5">Contact Us</a></li>
-									<li class="section"></li>
-									<li class="social">
-										<a href="#" title="facebook"><i class="fab fa-facebook-f"></i></a>
-										<a href="#" title="twitter"><i class="fab fa-twitter"></i></a>
-									</li>
-								</ul>
-							</div>
-							<div class="col-6 site-nav-extra d-flex">
-								<div class="site-nav-slide-holder align-self-center">
-									<div class="site-nav-slide" data-site-nav="0">
-										<div class="content">
-											<h2>A text or image could be added here</h2>
-										</div>
-									</div>
-									<div class="site-nav-slide" data-site-nav="1"></div>
-									<div class="site-nav-slide" data-site-nav="2"></div>
-									<div class="site-nav-slide" data-site-nav="3"></div>
-									<div class="site-nav-slide" data-site-nav="4"></div>
-									<div class="site-nav-slide" data-site-nav="5"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</header> -->
 			<header class="col-12">
 				<div class="row">
 					<div class="col-md-2 col-6 logo-holder">
@@ -92,9 +45,9 @@
 						<div class="row site-nav-holder">
 							<div class="col-6 site-nav-content">
 								<ul class="nav">
-									<li><a href="#" data-site-nav-index="0">HomePage</a></li>
+									<li><a href="./" data-site-nav-index="0">HomePage</a></li>
 									<li><a href="#" data-site-nav-index="1">About</a></li>
-									<li><a href="#" data-site-nav-index="2">Services</a></li>
+									<li><a href="./services/" data-site-nav-index="2">Services</a></li>
 									<li><a href="#" data-site-nav-index="3">Our Works</a></li>
 									<li><a href="#" data-site-nav-index="4">Team</a></li>
 									<li><a href="#" data-site-nav-index="5">Contact Us</a></li>
@@ -127,9 +80,9 @@
 
 		<div class="row full-screen slide-container" id="slide-container">
 			<div class="col-12 slide active fade-up" data-slide-index="0">
-				<canvas class="col-12" id="animation-background"></canvas>
+				<div class="col-12" id="animation-background"></div>
 				<!-- <div id="particles-js" class="animation-"></div> -->
-				<div class="slide-content d-flex text-ground">
+				<div class="slide-content d-flex">
 					<div class="align-self-center text-holder">
 						<h1>
 							<img src="./assets/images/logo.png" />
@@ -320,31 +273,76 @@
 			<div class="col-12 slide" data-slide-index="3">
 				<div class="slide-content d-flex">
 					<div class="align-self-center">
-						<h1>Core team</h1>
-						<div class="content row">
-							<div class="col-4">
-								<div class="member-image"></div>
-								<div class="member-details">
-									<h3 class="member-name">Abhas Kumar(MD)</h3>
-									<p class="member-desc">Graduated from IITK, major in Computer Science. Have 5 years work experience in Intel. He at Intel, designed tools for next generation Xeon and other server grade processors. He is an accomplished engineer with multiple publications in his name in many reputed journals. He has also published multiple papers inside Intel regarding innovative tools for server validation. Worked with other startups like Innovel Technologies, Srapps Consultancy etc.</p>
-								</div>
-							</div>
-							<div class="col-4">
-								<div class="member-image"></div>
-								<div class="member-details">
-									<h3 class="member-name">Akshay Mathur(Director)</h3>
-									<p class="member-desc">Graduated from IITK, and worked for 5 years at Aurora Integrated Systems, a pioneer in Indian UAV (Unmanned Aerial Vehicles) space (now a Tata Group Company). Developed Ground Control Station (GCS), a software suite to control the UAV completely, Base Station (an embedded system relaying commands between GCS & UAV) and some parts of AutoPilot for the UAV. After this, have created an Android based Car Infotainment System which can be installed in all 2DIN cars in India. Other works include developing Remote Monitoring & Control System for solar systems, CAN based OBD2 reader, writing drivers of various components (touch screen, radio, IR remote, FM radio, etc.) for Android, etc. </p>
-								</div>
-							</div>
-							<div class="col-4">
-								<div class="member-image"></div>
-								<div class="member-details">
-									<h3 class="member-name">Harish Chandra Singh(Director)</h3>
-									<p class="member-desc">Graduated from NIT, Patna in Electronics and Electrical Engineering. Has worked with Alstom as system architect for power and communication based automatic control systems involving SIL4 level safety critical technologies. He has designed both embedded control devices as well power electronics systems. Latest projects involve automatic train control systems for Metros, High speed data logger and electronic detonator system for DRDO, Control system for E-bike and alcohol vending machine, Power electronics and communication system for POS system involving high speed power path selection.
-									</p>
+						<h1 style="padding-bottom: 32px;">Core team</h1>
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-10 offset-1">
+									<ul class="member-cards">
+										<li class="active">
+											<div class="member-card">
+												<div class="member-details">
+													<h3 class="member-name">Abhas Kumar (MD) </h3>
+													<p class="member-desc">Graduated from IITK, major in Computer Science. Have 5 years work experience in Intel. He at Intel, designed tools for next generation Xeon and other server grade processors. He is an accomplished engineer with multiple publications in his name in many reputed journals. He has also published multiple papers inside Intel regarding innovative tools for server validation. Worked with other startups like Innovel Technologies, Srapps Consultancy etc.</p>
+												</div>
+												<div class="member-image"></div>
+											</div>
+										</li>
+										<li>
+											<div class="member-card">
+												<div class="member-details">
+													<h3 class="member-name">Akshay Mathur(Director)</h3>
+													<p class="member-desc">Graduated from IITK, and worked for 5 years at Aurora Integrated Systems, a pioneer in Indian UAV (Unmanned Aerial Vehicles) space (now a Tata Group Company). Developed Ground Control Station (GCS), a software suite to control the UAV completely, Base Station (an embedded system relaying commands between GCS & UAV) and some parts of AutoPilot for the UAV. After this, have created an Android based Car Infotainment System which can be installed in all 2DIN cars in India. Other works include developing Remote Monitoring & Control System for solar systems, CAN based OBD2 reader, writing drivers of various components (touch screen, radio, IR remote, FM radio, etc.) for Android, etc. </p>
+												</div>
+												<div class="member-image"></div>
+											</div>
+										</li>
+										<li>
+											<div class="member-card">
+												
+												<div class="member-details">
+													<h3 class="member-name">Harish Chandra Singh(Director)</h3>
+													<p class="member-desc">Graduated from NIT, Patna in Electronics and Electrical Engineering. Has worked with Alstom as system architect for power and communication based automatic control systems involving SIL4 level safety critical technologies. He has designed both embedded control devices as well power electronics systems. Latest projects involve automatic train control systems for Metros, High speed data logger and electronic detonator system for DRDO, Control system for E-bike and alcohol vending machine, Power electronics and communication system for POS system involving high speed power path selection.
+													</p>
+												</div>
+												<div class="member-image"></div>
+											</div>
+										</li>
+									</ul>
 								</div>
 							</div>
 						</div>
+						<!-- <div class="container-fluid">
+							<div class="content row">
+								<div class="col-4">
+									<div class="member-card">
+										<div class="member-image"></div>
+										<div class="member-details">
+											<h3 class="member-name">Abhas Kumar(MD)</h3>
+											<p class="member-desc">Graduated from IITK, major in Computer Science. Have 5 years work experience in Intel. He at Intel, designed tools for next generation Xeon and other server grade processors. He is an accomplished engineer with multiple publications in his name in many reputed journals. He has also published multiple papers inside Intel regarding innovative tools for server validation. Worked with other startups like Innovel Technologies, Srapps Consultancy etc.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-4">
+									<div class="member-card">
+										<div class="member-image"></div>
+										<div class="member-details">
+											<h3 class="member-name">Akshay Mathur(Director)</h3>
+											<p class="member-desc">Graduated from IITK, and worked for 5 years at Aurora Integrated Systems, a pioneer in Indian UAV (Unmanned Aerial Vehicles) space (now a Tata Group Company). Developed Ground Control Station (GCS), a software suite to control the UAV completely, Base Station (an embedded system relaying commands between GCS & UAV) and some parts of AutoPilot for the UAV. After this, have created an Android based Car Infotainment System which can be installed in all 2DIN cars in India. Other works include developing Remote Monitoring & Control System for solar systems, CAN based OBD2 reader, writing drivers of various components (touch screen, radio, IR remote, FM radio, etc.) for Android, etc. </p>
+										</div>
+									</div>
+								</div>
+								<div class="col-4">
+									<div class="member-card">
+										<div class="member-image"></div>
+										<div class="member-details">
+											<h3 class="member-name">Harish Chandra Singh(Director)</h3>
+											<p class="member-desc">Graduated from NIT, Patna in Electronics and Electrical Engineering. Has worked with Alstom as system architect for power and communication based automatic control systems involving SIL4 level safety critical technologies. He has designed both embedded control devices as well power electronics systems. Latest projects involve automatic train control systems for Metros, High speed data logger and electronic detonator system for DRDO, Control system for E-bike and alcohol vending machine, Power electronics and communication system for POS system involving high speed power path selection.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
@@ -365,11 +363,12 @@
 	</div>
 
 	<script type="text/javascript" src="./assets/js/jquery.min.js"></script>
-	<script type="text/javascript" src="./assets/js/animate-canvas.js"></script>
+	<!-- <script type="text/javascript" src="./assets/js/animate-canvas.js"></script> -->
 	<script type="text/javascript" src="./assets/js/swipe_detect.js"></script>
 	<script type="text/javascript" src="./assets/js/header.js"></script>
 	<!-- <script type="text/javascript" src="./assets/js/services_offered.js"></script> -->
 	<script type="text/javascript" src="./assets/js/slides.js"></script>
 	<script type="text/javascript" src="./assets/js/index.js"></script>
+	<script type="text/javascript" src="./assets/js/teams.js"></script>
 </body>
 </html>
