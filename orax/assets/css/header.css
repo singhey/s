@@ -31,7 +31,7 @@ header {
     position: relative;
     height: 2px;
     width: 24px;
-    background-color: #000;
+    background-color: #fff;
     top: -6px;
     -webkit-transition: background-color 0.3s 0.6s linear;
     -moz-transition: background-color 0.3s 0.6s linear;
@@ -44,13 +44,13 @@ header {
       height: 2px;
       width: 100%;
       left: 0;
-      background-color: #000;
+      background-color: #fff;
       transform-origin: 0% 50%;
-      -webkit-transition: transform 0.3s 0.6s linear, background-color 0.3s 0.6s linear;
-      -moz-transition: transform 0.3s 0.6s linear, background-color 0.3s 0.6s linear;
-      -ms-transition: transform 0.3s 0.6s linear, background-color 0.3s 0.6s linear;
-      -o-transition: transform 0.3s 0.6s linear, background-color 0.3s 0.6s linear;
-      transition: transform 0.3s 0.6s linear, background-color 0.3s 0.6s linear; }
+      -webkit-transition: transform 0.3s 1.2s linear, background-color 0.3s 1.2s linear;
+      -moz-transition: transform 0.3s 1.2s linear, background-color 0.3s 1.2s linear;
+      -ms-transition: transform 0.3s 1.2s linear, background-color 0.3s 1.2s linear;
+      -o-transition: transform 0.3s 1.2s linear, background-color 0.3s 1.2s linear;
+      transition: transform 0.3s 1.2s linear, background-color 0.3s 1.2s linear; }
     header .burger:before {
       top: -8px; }
     header .burger::after {
@@ -201,7 +201,7 @@ header.active {
     -o-transform: translateY(0%);
     transform: translateY(0%); }
   header.active .burger {
-    background-color: transparent;
+    background-color: #fff;
     -webkit-transition: background-color 0.3s linear;
     -moz-transition: background-color 0.3s linear;
     -ms-transition: background-color 0.3s linear;

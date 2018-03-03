@@ -76,7 +76,7 @@
     height: 8px;
     border-radius: 4px;
     margin: 32px 0px;
-    background-color: #212121;
+    background-color: #fff;
     -webkit-transition: height 0.3s linear;
     -moz-transition: height 0.3s linear;
     -ms-transition: height 0.3s linear;

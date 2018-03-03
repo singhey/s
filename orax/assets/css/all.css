@@ -31,7 +31,7 @@ header {
     position: relative;
     height: 2px;
     width: 24px;
-    background-color: #000;
+    background-color: #fff;
     top: -6px;
     -webkit-transition: background-color 0.3s 0.6s linear;
     -moz-transition: background-color 0.3s 0.6s linear;
@@ -44,13 +44,13 @@ header {
       height: 2px;
       width: 100%;
       left: 0;
-      background-color: #000;
+      background-color: #fff;
       transform-origin: 0% 50%;
-      -webkit-transition: transform 0.3s 0.6s linear, background-color 0.3s 0.6s linear;
-      -moz-transition: transform 0.3s 0.6s linear, background-color 0.3s 0.6s linear;
-      -ms-transition: transform 0.3s 0.6s linear, background-color 0.3s 0.6s linear;
-      -o-transition: transform 0.3s 0.6s linear, background-color 0.3s 0.6s linear;
-      transition: transform 0.3s 0.6s linear, background-color 0.3s 0.6s linear; }
+      -webkit-transition: transform 0.3s 1.2s linear, background-color 0.3s 1.2s linear;
+      -moz-transition: transform 0.3s 1.2s linear, background-color 0.3s 1.2s linear;
+      -ms-transition: transform 0.3s 1.2s linear, background-color 0.3s 1.2s linear;
+      -o-transition: transform 0.3s 1.2s linear, background-color 0.3s 1.2s linear;
+      transition: transform 0.3s 1.2s linear, background-color 0.3s 1.2s linear; }
     header .burger:before {
       top: -8px; }
     header .burger::after {
@@ -201,7 +201,7 @@ header.active {
     -o-transform: translateY(0%);
     transform: translateY(0%); }
   header.active .burger {
-    background-color: transparent;
+    background-color: #fff;
     -webkit-transition: background-color 0.3s linear;
     -moz-transition: background-color 0.3s linear;
     -ms-transition: background-color 0.3s linear;
@@ -436,7 +436,7 @@ header.active {
     height: 8px;
     border-radius: 4px;
     margin: 32px 0px;
-    background-color: #212121;
+    background-color: #fff;
     -webkit-transition: height 0.3s linear;
     -moz-transition: height 0.3s linear;
     -ms-transition: height 0.3s linear;
@@ -570,10 +570,87 @@ li.active .member-card .member-desc, li.active .member-card .member-image {
   -o-transition: visibility 0s 1s linear, opacity 0.3s 1s linear, transform 0.3s 1s linear;
   transition: visibility 0s 1s linear, opacity 0.3s 1s linear, transform 0.3s 1s linear; }
 
+.slide[data-slide-index="4"] {
+  background-color: #e8a374; }
+
+.form-holder {
+  box-shadow: 4px 4px 16px #212121;
+  background-color: #fff;
+  height: 80vh; }
+  .form-holder h1 {
+    padding: 16px 0px; }
+
+form {
+  padding: 16px; }
+
+.form-row {
+  padding: 16px 0px;
+  position: relative; }
+  .form-row input, .form-row textarea {
+    border: 0;
+    display: block;
+    width: 100%;
+    padding: 8px 16px;
+    outline: 0;
+    border-bottom: 2px solid #ccc; }
+    .form-row input:focus + .bottom-border, .form-row textarea:focus + .bottom-border {
+      width: 100%; }
+  .form-row .bottom-border {
+    display: block;
+    height: 2px;
+    background-color: #ff6f00;
+    position: absolute;
+    width: 0%;
+    bottom: 16px;
+    -webkit-transition: width 0.3s ease-out;
+    -moz-transition: width 0.3s ease-out;
+    -ms-transition: width 0.3s ease-out;
+    -o-transition: width 0.3s ease-out;
+    transition: width 0.3s ease-out; }
+  .form-row .btn {
+    border: 0;
+    outline: 0;
+    background-color: #ff6f00;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer; }
+
 @media (max-width: 568px) {
   .nav li {
     padding: 16px 0px; }
   .nav a {
     font-size: 16px; } }
+@media (max-width: 768px) {
+  .heading-holder {
+    overflow-y: scroll;
+    -webkit-transform: translateY(-150px);
+    -moz-transform: translateY(-150px);
+    -ms-transform: translateY(-150px);
+    -o-transform: translateY(-150px);
+    transform: translateY(-150px); }
+
+  .data-toggler-heading {
+    display: inline-table;
+    border-left: 0;
+    width: 1500px;
+    padding: 0;
+    position: relative;
+    z-index: 12; }
+
+  .data-toggler-heading > li {
+    float: left; }
+    .data-toggler-heading > li a::after {
+      background-color: transparent; }
+    .data-toggler-heading > li:last-child a::before {
+      height: 3px; }
+
+  .images-rotator {
+    display: none; }
+
+  ul.sub-content {
+    padding-left: 16px; }
+    ul.sub-content > li span {
+      padding: 8px 16px; } }
 
 /*# sourceMappingURL=all.css.map */
