@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>The Orax - Home Page</title>
+	<title>Theorax - Home Page</title>
 	<meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#444" />
@@ -19,7 +19,8 @@
 			<header class="col-12">
 				<div class="row">
 					<div class="col-md-2 col-6 logo-holder">
-						<img src="../assets/images/logo.png" />
+						<img src="../assets/images/logo.png" class="logo-white" />
+						<img src="../assets/images/logo-alt.png" class="logo-black" />
 					</div>
 
 					<div class="col-md-10 col-6 menu">
@@ -72,12 +73,8 @@
 
 		<div class="row full-screen slide-container" id="slide-container">
 			<div class="col-12 slide active" data-slide-index="0">
-				<div class="slide-content d-flex">
-					<div class="align-self-center text-holder">
-						<h1>
-							<img src="../assets/images/logo.png" />
-						</h1>
-					</div>
+				<div class="slide-content">
+					
 				</div>
 			</div>
 			<div class="col-12 slide" data-slide-index="1">
@@ -85,12 +82,12 @@
 					<div class="align-self-center">
 						<div class="container-fluid">
 							<div class="row d-flex">
-								<div class="col-4">
+								<div class="col-3">
 									<ul class="data-toggler-heading">
 										<li><a data-toggler="true" data-slide="1" data-content-index="0" class="active"> Consulting </a></li>
 									</ul>
 								</div>
-								<div class="col-8">
+								<div class="col-9">
 									<div class="row">
 										<ul data-slide="1" data-content="0" class="sub-content col-6 active">
 											<li> <span>R&amp;D in electrical and electronics</span></li>
@@ -99,17 +96,12 @@
 											<li> <span>Firmware &amp; Software</span></li>
 											<li> <span>Mobile apps</span></li>
 										</ul>
-										<div class="images-rotator col-5">
-											<div class="rotator-slide pos-0" data-rotator-slide="0"></div>
-											<div class="rotator-slide pos-1" data-rotator-slide="1"></div>
-											<div class="rotator-slide pos-2" data-rotator-slide="2"></div>
-										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="row slide-background">
+					<div class="row slide-background" style="background-image: url(../assets/images/consulting.jpg)">
 					</div>
 				</div>
 			</div>
@@ -127,34 +119,49 @@
 									</ul>
 								</div>
 								<div class="col-9">
-										<ul data-slide="2" data-content="0" class="sub-content active">
-											<li><span>Android based</span></li>
-											<li><span>Navigation, 3G, Wifi</span></li>
-											<li><span>Remote control</span></li>
-											<li><span>Reverse Camera</span></li>
-											<li><span>Peripheral USB support</span></li>
-										</ul>
+									<div class="row d-flex">
+										<div class="col-6">
+											<ul data-slide="2" data-content="0" class="sub-content active">
+												<li><span>Android based</span></li>
+												<li><span>Navigation, 3G, Wifi</span></li>
+												<li><span>Remote control</span></li>
+												<li><span>Reverse Camera</span></li>
+												<li><span>Peripheral USB support</span></li>
+											</ul>
 
-										<ul data-slide="2" data-content="1" class="sub-content">
-											<li><span>Universal support(Patent Filed)</span></li>
-											<li><span>Noise free music(Patent Filed)</span></li>
-											<li><span>FM radio inbuilt</span></li>
-											<li><span>Multiple device charging</span></li>
-										</ul>
-										<ul data-slide="2" data-content="2" class="sub-content">
-											<li><span>HLP support</span></li>
-											<li><span>UDS capable</span></li>
-											<li><span>Multi Frame Messaging</span></li>
-											<li><span>Multi ECU Detection and targeting</span></li>
-											<li><span>Data Collision Monitoring</span></li>
-											<li><span>OOB (Out Of Band Data) support</span></li>
-										</ul>
-										<ul data-slide="2" data-content="3" class="sub-content">
-											<li><span>Track your single vehicle or fleet from anywhere</span></li>
-											<li><span>Know the status of your vehicle</span></li>
-											<li><span>Geo-fencing</span></li>
-											<li><span>No ignition if you lock your vehicle from mobile app</span></li>
-										</ul>
+											<ul data-slide="2" data-content="1" class="sub-content">
+												<li><span>Universal support(Patent Filed)</span></li>
+												<li><span>Noise free music(Patent Filed)</span></li>
+												<li><span>FM radio inbuilt</span></li>
+												<li><span>Multiple device charging</span></li>
+											</ul>
+											<ul data-slide="2" data-content="2" class="sub-content">
+												<li><span>HLP support</span></li>
+												<li><span>UDS capable</span></li>
+												<li><span>Multi Frame Messaging</span></li>
+												<li><span>Multi ECU Detection and targeting</span></li>
+												<li><span>Data Collision Monitoring</span></li>
+												<li><span>OOB (Out Of Band Data) support</span></li>
+											</ul>
+											<ul data-slide="2" data-content="3" class="sub-content">
+												<li><span>Track your single vehicle or fleet from anywhere</span></li>
+												<li><span>Know the status of your vehicle</span></li>
+												<li><span>Geo-fencing</span></li>
+												<li><span>No ignition if you lock your vehicle from mobile app</span></li>
+											</ul>
+										</div>
+										<div class="images-rotator col-5">
+											<div class="rotator-slide pos-0 d-flex" data-rotator-slide="0">
+												<img src="../assets/images/can_enabled.png" class="align-self-center"../>
+											</div>
+											<div class="rotator-slide pos-1 d-flex" data-rotator-slide="1">
+												<img src="../assets/images/h_scan.png" class="align-self-center"../>
+											</div>
+											<div class="rotator-slide pos-2 d-flex" data-rotator-slide="2">
+												<img src="../assets/images/miniature_data_logger.png" class="align-self-center"../>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -168,13 +175,13 @@
 					<div class="align-self-center">
 						<div class="container-fluid">
 							<div class="row d-flex">
-								<div class="col-4">
+								<div class="col-3">
 									<ul class="data-toggler-heading">
 										<li><a data-toggler="true" data-slide="3" data-content-index="0" class="active"> Indoor tracker </a></li>
 										<li><a data-toggler="true" data-slide="3" data-content-index="1"> Outdoor Tracker </a></li>
 									</ul>
 								</div>
-								<div class="col-8">
+								<div class="col-9">
 									<ul data-slide="3" data-content="0" class="sub-content active">
 										<li><span>Active tracking</span></li>
 										<li><span>Track indoor</span></li>
@@ -189,7 +196,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="row slide-background">
+					<div class="row slide-background" style="background-image: url(../assets/images/tracker.jpg)">
 					</div>
 				</div>
 			</div>
@@ -198,14 +205,14 @@
 					<div class="align-self-center">
 						<div class="container-fluid">
 							<div class="row d-flex">
-								<div class="col-4">
+								<div class="col-3">
 									<ul class="data-toggler-heading">
 										<li><a data-toggler="true" data-slide="4" data-content-index="0" class="active"> Miniature Data Logger </a></li>
 										<li><a data-toggler="true" data-slide="4" data-content-index="1"> Electronic Detonator system </a></li>
 										<li><a data-toggler="true" data-slide="4" data-content-index="2"> Mobile man portable Surveillance System(Patented) </a></li>
 									</ul>
 								</div>
-								<div class="col-8">
+								<div class="col-9">
 									<ul data-slide="4" data-content="0" class="sub-content active">
 										<li><span>Extremely miniaturized</span></li>
 										<li><span>High frequency</span></li>
@@ -227,7 +234,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="row slide-background">
+					<div class="row slide-background" style="background-image: url(../assets/images/drdo.jpeg)">
 					</div>
 				</div>
 			</div>
@@ -276,7 +283,7 @@
 										<li><span>Dimming based on motion detection</span></li>
 										<li><span>Dimming based on LUX detection</span></li>
 									</ul>
-									<ul data-slide="5" data-content="0" class="sub-content">
+									<ul data-slide="5" data-content="4" class="sub-content">
 										<li><span>48 V system</span></li>
 										<li><span>CAN communication</span></li>
 										<li><span>Wake Up</span></li>
@@ -287,7 +294,7 @@
 										<li><span>Cooling control</span></li>
 										<li><span>Software update through OTA</span></li>
 									</ul>
-									<ul data-slide="5" data-content="0" class="sub-content">
+									<ul data-slide="5" data-content="5" class="sub-content">
 										<li><span>Closed loop Control system</span></li>
 										<li><span>BLDC motor Control</span></li>
 										<li><span>BMS(36V-48V)</span></li>
@@ -297,7 +304,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="row slide-background">
+					<div class="row slide-background" style="background-image: url(../assets/images/energy.jpeg)">
 					</div>
 				</div>
 			</div>
