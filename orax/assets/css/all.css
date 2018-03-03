@@ -7,7 +7,11 @@ header {
   top: 0;
   left: 0;
   padding-top: 6px;
-  transition: background-color .5s 1.5s linear; }
+  -webkit-transition: background-color 0.5s 1.5s linear;
+  -moz-transition: background-color 0.5s 1.5s linear;
+  -ms-transition: background-color 0.5s 1.5s linear;
+  -o-transition: background-color 0.5s 1.5s linear;
+  transition: background-color 0.5s 1.5s linear; }
   header img {
     max-width: 100%;
     max-height: 50px; }
@@ -25,7 +29,11 @@ header {
     width: 24px;
     background-color: #000;
     top: -6px;
-    transition: background-color .3s .6s linear; }
+    -webkit-transition: background-color 0.3s 0.6s linear;
+    -moz-transition: background-color 0.3s 0.6s linear;
+    -ms-transition: background-color 0.3s 0.6s linear;
+    -o-transition: background-color 0.3s 0.6s linear;
+    transition: background-color 0.3s 0.6s linear; }
     header .burger::after, header .burger::before {
       content: '';
       position: absolute;
@@ -34,7 +42,11 @@ header {
       left: 0;
       background-color: #000;
       transform-origin: 0% 50%;
-      transition: transform .3s .6s linear, background-color .3s .6s linear; }
+      -webkit-transition: transform 0.3s 0.6s linear, background-color 0.3s 0.6s linear;
+      -moz-transition: transform 0.3s 0.6s linear, background-color 0.3s 0.6s linear;
+      -ms-transition: transform 0.3s 0.6s linear, background-color 0.3s 0.6s linear;
+      -o-transition: transform 0.3s 0.6s linear, background-color 0.3s 0.6s linear;
+      transition: transform 0.3s 0.6s linear, background-color 0.3s 0.6s linear; }
     header .burger:before {
       top: -8px; }
     header .burger::after {
@@ -42,24 +54,49 @@ header {
 
 .nav {
   display: inline-block;
-  padding: 0; }
+  padding: 0;
+  margin-top: -90px; }
   .nav li {
     padding: 16px;
-    margin-top: 8px;
     list-style: none;
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    visibility: hidden; }
     .nav li:nth-child(1) a {
+      -webkit-transition: transform 0.3s 0.1s ease-out, opacity 0.3s 0.1s ease-out, color 0.3s linear;
+      -moz-transition: transform 0.3s 0.1s ease-out, opacity 0.3s 0.1s ease-out, color 0.3s linear;
+      -ms-transition: transform 0.3s 0.1s ease-out, opacity 0.3s 0.1s ease-out, color 0.3s linear;
+      -o-transition: transform 0.3s 0.1s ease-out, opacity 0.3s 0.1s ease-out, color 0.3s linear;
       transition: transform 0.3s 0.1s ease-out, opacity 0.3s 0.1s ease-out, color 0.3s linear; }
     .nav li:nth-child(2) a {
+      -webkit-transition: transform 0.3s 0.2s ease-out, opacity 0.3s 0.2s ease-out, color 0.3s linear;
+      -moz-transition: transform 0.3s 0.2s ease-out, opacity 0.3s 0.2s ease-out, color 0.3s linear;
+      -ms-transition: transform 0.3s 0.2s ease-out, opacity 0.3s 0.2s ease-out, color 0.3s linear;
+      -o-transition: transform 0.3s 0.2s ease-out, opacity 0.3s 0.2s ease-out, color 0.3s linear;
       transition: transform 0.3s 0.2s ease-out, opacity 0.3s 0.2s ease-out, color 0.3s linear; }
     .nav li:nth-child(3) a {
+      -webkit-transition: transform 0.3s 0.3s ease-out, opacity 0.3s 0.3s ease-out, color 0.3s linear;
+      -moz-transition: transform 0.3s 0.3s ease-out, opacity 0.3s 0.3s ease-out, color 0.3s linear;
+      -ms-transition: transform 0.3s 0.3s ease-out, opacity 0.3s 0.3s ease-out, color 0.3s linear;
+      -o-transition: transform 0.3s 0.3s ease-out, opacity 0.3s 0.3s ease-out, color 0.3s linear;
       transition: transform 0.3s 0.3s ease-out, opacity 0.3s 0.3s ease-out, color 0.3s linear; }
     .nav li:nth-child(4) a {
+      -webkit-transition: transform 0.3s 0.4s ease-out, opacity 0.3s 0.4s ease-out, color 0.3s linear;
+      -moz-transition: transform 0.3s 0.4s ease-out, opacity 0.3s 0.4s ease-out, color 0.3s linear;
+      -ms-transition: transform 0.3s 0.4s ease-out, opacity 0.3s 0.4s ease-out, color 0.3s linear;
+      -o-transition: transform 0.3s 0.4s ease-out, opacity 0.3s 0.4s ease-out, color 0.3s linear;
       transition: transform 0.3s 0.4s ease-out, opacity 0.3s 0.4s ease-out, color 0.3s linear; }
     .nav li:nth-child(5) a {
+      -webkit-transition: transform 0.3s 0.5s ease-out, opacity 0.3s 0.5s ease-out, color 0.3s linear;
+      -moz-transition: transform 0.3s 0.5s ease-out, opacity 0.3s 0.5s ease-out, color 0.3s linear;
+      -ms-transition: transform 0.3s 0.5s ease-out, opacity 0.3s 0.5s ease-out, color 0.3s linear;
+      -o-transition: transform 0.3s 0.5s ease-out, opacity 0.3s 0.5s ease-out, color 0.3s linear;
       transition: transform 0.3s 0.5s ease-out, opacity 0.3s 0.5s ease-out, color 0.3s linear; }
     .nav li:nth-child(6) a {
+      -webkit-transition: transform 0.3s 0.6s ease-out, opacity 0.3s 0.6s ease-out, color 0.3s linear;
+      -moz-transition: transform 0.3s 0.6s ease-out, opacity 0.3s 0.6s ease-out, color 0.3s linear;
+      -ms-transition: transform 0.3s 0.6s ease-out, opacity 0.3s 0.6s ease-out, color 0.3s linear;
+      -o-transition: transform 0.3s 0.6s ease-out, opacity 0.3s 0.6s ease-out, color 0.3s linear;
       transition: transform 0.3s 0.6s ease-out, opacity 0.3s 0.6s ease-out, color 0.3s linear; }
   .nav a {
     color: #000;
@@ -68,6 +105,10 @@ header {
     font-weight: bold;
     opacity: 0;
     font-size: 32px;
+    -webkit-transform: translateY(120%);
+    -moz-transform: translateY(120%);
+    -ms-transform: translateY(120%);
+    -o-transform: translateY(120%);
     transform: translateY(120%); }
     .nav a:hover {
       color: #666;
@@ -75,50 +116,132 @@ header {
 
 header.active {
   background-color: #fff;
-  transition: background-color .5s linear; }
-  header.active .nav li:nth-child(1) a {
-    opacity: 1;
-    transition: transform 0.3s 0.5s ease-out, opacity 0.3s 0.5s linear, color 0.3s linear;
-    transform: translateY(0%); }
-  header.active .nav li:nth-child(2) a {
-    opacity: 1;
-    transition: transform 0.3s 0.6s ease-out, opacity 0.3s 0.6s linear, color 0.3s linear;
-    transform: translateY(0%); }
-  header.active .nav li:nth-child(3) a {
-    opacity: 1;
-    transition: transform 0.3s 0.7s ease-out, opacity 0.3s 0.7s linear, color 0.3s linear;
-    transform: translateY(0%); }
-  header.active .nav li:nth-child(4) a {
-    opacity: 1;
-    transition: transform 0.3s 0.8s ease-out, opacity 0.3s 0.8s linear, color 0.3s linear;
-    transform: translateY(0%); }
-  header.active .nav li:nth-child(5) a {
-    opacity: 1;
-    transition: transform 0.3s 0.9s ease-out, opacity 0.3s 0.9s linear, color 0.3s linear;
-    transform: translateY(0%); }
-  header.active .nav li:nth-child(6) a {
-    opacity: 1;
-    transition: transform 0.3s 1s ease-out, opacity 0.3s 1s linear, color 0.3s linear;
-    transform: translateY(0%); }
+  -webkit-transition: background-color 0.5s linear;
+  -moz-transition: background-color 0.5s linear;
+  -ms-transition: background-color 0.5s linear;
+  -o-transition: background-color 0.5s linear;
+  transition: background-color 0.5s linear; }
+  header.active .nav li {
+    visibility: visible; }
+    header.active .nav li:nth-child(1) a {
+      opacity: 1;
+      -webkit-transition: transform 0.3s 0.5s ease-out, opacity 0.3s 0.5s linear, color 0.3s linear;
+      -moz-transition: transform 0.3s 0.5s ease-out, opacity 0.3s 0.5s linear, color 0.3s linear;
+      -ms-transition: transform 0.3s 0.5s ease-out, opacity 0.3s 0.5s linear, color 0.3s linear;
+      -o-transition: transform 0.3s 0.5s ease-out, opacity 0.3s 0.5s linear, color 0.3s linear;
+      transition: transform 0.3s 0.5s ease-out, opacity 0.3s 0.5s linear, color 0.3s linear;
+      -webkit-transform: translateY(0%);
+      -moz-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+      -o-transform: translateY(0%);
+      transform: translateY(0%); }
+    header.active .nav li:nth-child(2) a {
+      opacity: 1;
+      -webkit-transition: transform 0.3s 0.6s ease-out, opacity 0.3s 0.6s linear, color 0.3s linear;
+      -moz-transition: transform 0.3s 0.6s ease-out, opacity 0.3s 0.6s linear, color 0.3s linear;
+      -ms-transition: transform 0.3s 0.6s ease-out, opacity 0.3s 0.6s linear, color 0.3s linear;
+      -o-transition: transform 0.3s 0.6s ease-out, opacity 0.3s 0.6s linear, color 0.3s linear;
+      transition: transform 0.3s 0.6s ease-out, opacity 0.3s 0.6s linear, color 0.3s linear;
+      -webkit-transform: translateY(0%);
+      -moz-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+      -o-transform: translateY(0%);
+      transform: translateY(0%); }
+    header.active .nav li:nth-child(3) a {
+      opacity: 1;
+      -webkit-transition: transform 0.3s 0.7s ease-out, opacity 0.3s 0.7s linear, color 0.3s linear;
+      -moz-transition: transform 0.3s 0.7s ease-out, opacity 0.3s 0.7s linear, color 0.3s linear;
+      -ms-transition: transform 0.3s 0.7s ease-out, opacity 0.3s 0.7s linear, color 0.3s linear;
+      -o-transition: transform 0.3s 0.7s ease-out, opacity 0.3s 0.7s linear, color 0.3s linear;
+      transition: transform 0.3s 0.7s ease-out, opacity 0.3s 0.7s linear, color 0.3s linear;
+      -webkit-transform: translateY(0%);
+      -moz-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+      -o-transform: translateY(0%);
+      transform: translateY(0%); }
+    header.active .nav li:nth-child(4) a {
+      opacity: 1;
+      -webkit-transition: transform 0.3s 0.8s ease-out, opacity 0.3s 0.8s linear, color 0.3s linear;
+      -moz-transition: transform 0.3s 0.8s ease-out, opacity 0.3s 0.8s linear, color 0.3s linear;
+      -ms-transition: transform 0.3s 0.8s ease-out, opacity 0.3s 0.8s linear, color 0.3s linear;
+      -o-transition: transform 0.3s 0.8s ease-out, opacity 0.3s 0.8s linear, color 0.3s linear;
+      transition: transform 0.3s 0.8s ease-out, opacity 0.3s 0.8s linear, color 0.3s linear;
+      -webkit-transform: translateY(0%);
+      -moz-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+      -o-transform: translateY(0%);
+      transform: translateY(0%); }
+    header.active .nav li:nth-child(5) a {
+      opacity: 1;
+      -webkit-transition: transform 0.3s 0.9s ease-out, opacity 0.3s 0.9s linear, color 0.3s linear;
+      -moz-transition: transform 0.3s 0.9s ease-out, opacity 0.3s 0.9s linear, color 0.3s linear;
+      -ms-transition: transform 0.3s 0.9s ease-out, opacity 0.3s 0.9s linear, color 0.3s linear;
+      -o-transition: transform 0.3s 0.9s ease-out, opacity 0.3s 0.9s linear, color 0.3s linear;
+      transition: transform 0.3s 0.9s ease-out, opacity 0.3s 0.9s linear, color 0.3s linear;
+      -webkit-transform: translateY(0%);
+      -moz-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+      -o-transform: translateY(0%);
+      transform: translateY(0%); }
+    header.active .nav li:nth-child(6) a {
+      opacity: 1;
+      -webkit-transition: transform 0.3s 1s ease-out, opacity 0.3s 1s linear, color 0.3s linear;
+      -moz-transition: transform 0.3s 1s ease-out, opacity 0.3s 1s linear, color 0.3s linear;
+      -ms-transition: transform 0.3s 1s ease-out, opacity 0.3s 1s linear, color 0.3s linear;
+      -o-transition: transform 0.3s 1s ease-out, opacity 0.3s 1s linear, color 0.3s linear;
+      transition: transform 0.3s 1s ease-out, opacity 0.3s 1s linear, color 0.3s linear;
+      -webkit-transform: translateY(0%);
+      -moz-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+      -o-transform: translateY(0%);
+      transform: translateY(0%); }
   header.active .burger {
     background-color: transparent;
-    transition: background-color .3s linear; }
+    -webkit-transition: background-color 0.3s linear;
+    -moz-transition: background-color 0.3s linear;
+    -ms-transition: background-color 0.3s linear;
+    -o-transition: background-color 0.3s linear;
+    transition: background-color 0.3s linear; }
     header.active .burger::after, header.active .burger::before {
-      transition: transform .5s linear, background-color .5s linear;
+      -webkit-transition: transform 0.5s linear, background-color 0.5s linear;
+      -moz-transition: transform 0.5s linear, background-color 0.5s linear;
+      -ms-transition: transform 0.5s linear, background-color 0.5s linear;
+      -o-transition: transform 0.5s linear, background-color 0.5s linear;
+      transition: transform 0.5s linear, background-color 0.5s linear;
       background-color: #000; }
     header.active .burger::after {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
       transform: rotate(-45deg); }
     header.active .burger::before {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
       transform: rotate(45deg); }
   header.active .site-nav-holder {
     visibility: visible;
+    -webkit-transition: visibility 0s linear;
+    -moz-transition: visibility 0s linear;
+    -ms-transition: visibility 0s linear;
+    -o-transition: visibility 0s linear;
     transition: visibility 0s linear; }
     header.active .site-nav-holder .site-nav-content::after {
       height: 100%;
-      transition: height .5s ease-out; }
+      -webkit-transition: height 0.5s ease-out;
+      -moz-transition: height 0.5s ease-out;
+      -ms-transition: height 0.5s ease-out;
+      -o-transition: height 0.5s ease-out;
+      transition: height 0.5s ease-out; }
     header.active .site-nav-holder .site-nav-extra::after {
       height: 100%;
-      transition: height .5s ease-out; }
+      -webkit-transition: height 0.5s ease-out;
+      -moz-transition: height 0.5s ease-out;
+      -ms-transition: height 0.5s ease-out;
+      -o-transition: height 0.5s ease-out;
+      transition: height 0.5s ease-out; }
 
 .site-nav-holder {
   position: fixed;
@@ -126,7 +249,11 @@ header.active {
   visibility: hidden;
   top: 56px;
   width: 100%;
-  transition: background-color .5s 1s linear, visibility 0s 1.5s linear;
+  -webkit-transition: background-color 0.5s 1s linear, visibility 0s 1.5s linear;
+  -moz-transition: background-color 0.5s 1s linear, visibility 0s 1.5s linear;
+  -ms-transition: background-color 0.5s 1s linear, visibility 0s 1.5s linear;
+  -o-transition: background-color 0.5s 1s linear, visibility 0s 1.5s linear;
+  transition: background-color 0.5s 1s linear, visibility 0s 1.5s linear;
   height: 100%; }
   .site-nav-holder .site-nav-content {
     position: relative;
@@ -139,7 +266,11 @@ header.active {
       bottom: 0;
       left: 0;
       position: absolute;
-      transition: height .5s 1s linear;
+      -webkit-transition: height 0.5s 1s linear;
+      -moz-transition: height 0.5s 1s linear;
+      -ms-transition: height 0.5s 1s linear;
+      -o-transition: height 0.5s 1s linear;
+      transition: height 0.5s 1s linear;
       background-color: #fff; }
   .site-nav-holder .site-nav-extra {
     position: relative;
@@ -152,7 +283,11 @@ header.active {
       top: 0;
       left: 0;
       position: absolute;
-      transition: height .5s 1s linear;
+      -webkit-transition: height 0.5s 1s linear;
+      -moz-transition: height 0.5s 1s linear;
+      -ms-transition: height 0.5s 1s linear;
+      -o-transition: height 0.5s 1s linear;
+      transition: height 0.5s 1s linear;
       background-color: #fff; }
   .site-nav-holder .site-nav-slide-holder {
     display: block;
@@ -166,16 +301,36 @@ header.active {
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.4);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
     transform: translateX(-100%);
-    transition: transform .3s linear; }
+    -webkit-transition: transform 0.3s linear;
+    -moz-transition: transform 0.3s linear;
+    -ms-transition: transform 0.3s linear;
+    -o-transition: transform 0.3s linear;
+    transition: transform 0.3s linear; }
     .site-nav-holder .site-nav-slide.active {
+      -webkit-transform: translateX(0%);
+      -moz-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+      -o-transform: translateX(0%);
       transform: translateX(0%); }
       .site-nav-holder .site-nav-slide.active .content {
         opacity: 1;
-        transition: opacity .3s .3s linear; }
+        -webkit-transition: opacity 0.3s 0.3s linear;
+        -moz-transition: opacity 0.3s 0.3s linear;
+        -ms-transition: opacity 0.3s 0.3s linear;
+        -o-transition: opacity 0.3s 0.3s linear;
+        transition: opacity 0.3s 0.3s linear; }
     .site-nav-holder .site-nav-slide .content {
       opacity: 0;
-      transition: opacity .3s linear;
+      -webkit-transition: opacity 0.3s linear;
+      -moz-transition: opacity 0.3s linear;
+      -ms-transition: opacity 0.3s linear;
+      -o-transition: opacity 0.3s linear;
+      transition: opacity 0.3s linear;
       color: #fff;
       padding-top: 100px; }
       .site-nav-holder .site-nav-slide .content h2 {
@@ -195,32 +350,6 @@ header.active {
     .site-nav-holder .site-nav-slide:nth-child(6) {
       background-color: #2ae; }
 
-/* .side-nav {
-	position: fixed;
-	z-index: 100;
-	right: 0;
-	max-width: 400px;
-	width: 100%;
-	height: 100%;
-	top: 56px;
-	background: #2ae;
-	box-shadow: 0px 0px 16px #000;
-	ul {
-		list-style: none;
-		padding: 0;
-		>li {
-			padding: 8px 0px 8px 32px;
-		}
-		a {
-			color: #fff;
-			transition: color .3s linear;
-			&:hover {
-				color: #ccc;
-				text-decoration: none;
-			}
-		}
-	}
-} */
 .full-screen {
   height: 100vh; }
 
@@ -251,6 +380,10 @@ header.active {
     animation-timing-function: ease-in-out; }
   .slide.active[data-index-slide="0"] h1 img {
     width: 80%;
+    -webkit-transform: translate(0px, 0px) scale(1);
+    -moz-transform: translate(0px, 0px) scale(1);
+    -ms-transform: translate(0px, 0px) scale(1);
+    -o-transform: translate(0px, 0px) scale(1);
     transform: translate(0px, 0px) scale(1); }
   .slide.slide-out.fade-up {
     z-index: 1;
@@ -285,6 +418,10 @@ header.active {
   position: fixed;
   top: 50%;
   right: 16px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
   transform: translateY(-50%);
   z-index: 98; }
   .slide-toggle-button span {
@@ -295,7 +432,11 @@ header.active {
     border-radius: 4px;
     margin: 32px 0px;
     background-color: #212121;
-    transition: height .3s linear; }
+    -webkit-transition: height 0.3s linear;
+    -moz-transition: height 0.3s linear;
+    -ms-transition: height 0.3s linear;
+    -o-transition: height 0.3s linear;
+    transition: height 0.3s linear; }
     .slide-toggle-button span.active {
       height: 100px; }
 
@@ -328,15 +469,9 @@ header.active {
     font-size: 18px; } }
 #animation-background {
   position: absolute;
-  background: url(../images/circuit.gif) left top no-repeat;
+  background: url(/assets/images/circuit.gif) left top no-repeat;
   background-size: cover;
   height: 100%; }
-
-.slide[data-index-slide="0"] h1 img {
-  max-width: 900px;
-  width: 80%;
-  transition: transform .1s linear;
-  transform: translate(-419px, -264px) scale(0.2); }
 
 .member-cards {
   list-style: none;
@@ -356,7 +491,11 @@ header.active {
     overflow: hidden;
     height: inherit;
     cursor: pointer;
-    transition: width .5s ease-in-out;
+    -webkit-transition: width 0.5s ease-in-out;
+    -moz-transition: width 0.5s ease-in-out;
+    -ms-transition: width 0.5s ease-in-out;
+    -o-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
     border-right: 1px solid #ccc; }
     .member-cards > li.active {
       width: 60%; }
@@ -377,22 +516,54 @@ header.active {
   font-weight: normal;
   padding-bottom: 16px;
   transform-origin: left 167%;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
   transform: rotate(90deg);
-  transition: transform .5s linear; }
+  -webkit-transition: transform 0.5s linear;
+  -moz-transition: transform 0.5s linear;
+  -ms-transition: transform 0.5s linear;
+  -o-transition: transform 0.5s linear;
+  transition: transform 0.5s linear; }
 .member-card .member-desc, .member-card .member-image {
   visibility: hidden;
   opacity: 0;
+  -webkit-transform: scale(0.3);
+  -moz-transform: scale(0.3);
+  -ms-transform: scale(0.3);
+  -o-transform: scale(0.3);
   transform: scale(0.3);
-  transition: visibility 0s .3s linear, opacity .3s linear, transform .3s linear; }
+  -webkit-transition: visibility 0s 0.3s linear, opacity 0.3s linear, transform 0.3s linear;
+  -moz-transition: visibility 0s 0.3s linear, opacity 0.3s linear, transform 0.3s linear;
+  -ms-transition: visibility 0s 0.3s linear, opacity 0.3s linear, transform 0.3s linear;
+  -o-transition: visibility 0s 0.3s linear, opacity 0.3s linear, transform 0.3s linear;
+  transition: visibility 0s 0.3s linear, opacity 0.3s linear, transform 0.3s linear; }
 
 li.active .member-card .member-name {
-  transition: transform .5s .5s linear;
+  -webkit-transition: transform 0.5s 0.5s linear;
+  -moz-transition: transform 0.5s 0.5s linear;
+  -ms-transition: transform 0.5s 0.5s linear;
+  -o-transition: transform 0.5s 0.5s linear;
+  transition: transform 0.5s 0.5s linear;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
   transform: rotate(0deg); }
 li.active .member-card .member-desc, li.active .member-card .member-image {
   visibility: visible;
   opacity: 1;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
   transform: scale(1);
-  transition: visibility 0s 1s linear, opacity .3s 1s linear, transform .3s 1s linear; }
+  -webkit-transition: visibility 0s 1s linear, opacity 0.3s 1s linear, transform 0.3s 1s linear;
+  -moz-transition: visibility 0s 1s linear, opacity 0.3s 1s linear, transform 0.3s 1s linear;
+  -ms-transition: visibility 0s 1s linear, opacity 0.3s 1s linear, transform 0.3s 1s linear;
+  -o-transition: visibility 0s 1s linear, opacity 0.3s 1s linear, transform 0.3s 1s linear;
+  transition: visibility 0s 1s linear, opacity 0.3s 1s linear, transform 0.3s 1s linear; }
 
 @media (max-width: 568px) {
   .nav li {
