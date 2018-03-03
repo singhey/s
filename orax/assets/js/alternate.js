@@ -1,5 +1,5 @@
 $(function(){
-	console.log($('.data-toggler'));
+	//console.log($('.data-toggler'));
 	$('[data-toggler="true"]').click(function(){
 		var slide = $(this).attr('data-slide');
 		$('a[data-slide="'+slide+'"]').removeClass("active");
@@ -11,7 +11,7 @@ $(function(){
 		//console.log(_content.length, _content);
 		$(_content).removeClass("active");
 		for(var i = 0;i < _content.length; i++) {
-			console.log($(_content[i]).attr("data-content"));
+			//console.log($(_content[i]).attr("data-content"));
 			if($(_content[i]).attr("data-content") == contentIndex){
 				$(_content[i]).addClass("active");
 			}
@@ -24,10 +24,10 @@ $(function(){
 	function rotatorySlide() {
 
 		var _slides = $('.slide.active').find('.images-rotator').children();
-		console.log(_slides);
+		//console.log(_slides);
 		for(var i = _slides.length - 1; i >= 0; i--) {
 			var pos = $(_slides[i]).attr("data-rotator-slide");
-			console.log(pos);
+			//console.log(pos);
 			$(_slides[i]).removeClass("pos-"+pos);
 			var updatedPos = (pos + 1) % _slides.length;
 
@@ -46,6 +46,33 @@ $(function(){
 
 	}
 
-	rotatorySlide();
+	function setHeadingSize() {
+		var reqWidth = 768;
+		if($(window).innerWidth() <= reqWidth) {
+			$('.data-toggler-heading').each( function(i, el) {
+				var totalChildrenWidth = 0;
+				var child = $(el).children();
+				for(var i = 0; i < child.length; i++) {
+					totalChildrenWidth += parseInt($(child[i]).css('width').replace('px', ''));
+				}
+				totalChildrenWidth += 20;
+				console.log(totalChildrenWidth);
+				$(el).css({
+					"width": totalChildrenWidth+"px",
+				});
+			})
+		}else {
+			$('.data-toggler-heading').css({
+				'width' : '100%',
+			});
+		}
+	}
 
+	rotatorySlide();
+	// if device width is less than 768px make ul width to a certain size 
+	$(window).resize(function(){
+		setHeadingSize();
+	});
+
+	setHeadingSize();
 });
