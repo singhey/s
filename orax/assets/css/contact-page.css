@@ -1,0 +1,29 @@
+.address-bar {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 2; }
+  .address-bar::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: url(../images/contact_background.jpg) center center no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    z-index: -2; }
+  .address-bar::before {
+    position: absolute;
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    z-index: -1; }
+  .address-bar a {
+    color: #ff6f00; }
+
+/*# sourceMappingURL=contact-page.css.map */

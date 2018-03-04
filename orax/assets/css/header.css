@@ -33,11 +33,11 @@ header {
     width: 24px;
     background-color: #000;
     top: -6px;
-    -webkit-transition: background-color 0.3s 0.6s linear;
-    -moz-transition: background-color 0.3s 0.6s linear;
-    -ms-transition: background-color 0.3s 0.6s linear;
-    -o-transition: background-color 0.3s 0.6s linear;
-    transition: background-color 0.3s 0.6s linear; }
+    -webkit-transition: background-color 0.3s 1.2s linear;
+    -moz-transition: background-color 0.3s 1.2s linear;
+    -ms-transition: background-color 0.3s 1.2s linear;
+    -o-transition: background-color 0.3s 1.2s linear;
+    transition: background-color 0.3s 1.2s linear; }
     header .burger::after, header .burger::before {
       content: '';
       position: absolute;
@@ -117,6 +117,11 @@ header {
       color: #666;
       text-decoration: none; }
 
+.keep-black header .logo-holder img.logo-black {
+  display: block !important; }
+.keep-black header .logo-holder img.logo-white {
+  display: none !important; }
+
 header.active {
   background-color: #fff;
   -webkit-transition: background-color 0.5s linear;
@@ -127,7 +132,12 @@ header.active {
   header.active .logo-holder img.logo-white {
     display: none; }
   header.active .logo-holder img.logo-black {
-    display: block; }
+    display: block;
+    -webkit-transition: display 0s 1.2s linear;
+    -moz-transition: display 0s 1.2s linear;
+    -ms-transition: display 0s 1.2s linear;
+    -o-transition: display 0s 1.2s linear;
+    transition: display 0s 1.2s linear; }
   header.active .nav li:nth-child(1) a {
     opacity: 1;
     -webkit-transition: transform 0.3s 0.5s ease-out, opacity 0.3s 0.5s linear, color 0.3s linear;
