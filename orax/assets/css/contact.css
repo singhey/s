@@ -72,5 +72,15 @@ form {
     z-index: -1; }
   .address-bar a {
     color: #ff6f00; }
+  .address-bar .social a {
+    display: inline-block;
+    padding: 0px 8px;
+    -webkit-transition: color 0.3s linear;
+    -moz-transition: color 0.3s linear;
+    -ms-transition: color 0.3s linear;
+    -o-transition: color 0.3s linear;
+    transition: color 0.3s linear; }
+    .address-bar .social a:hover {
+      color: #da7629; }
 
 /*# sourceMappingURL=contact.css.map */

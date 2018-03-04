@@ -178,7 +178,9 @@ ul.sub-content {
   transform: translateY(-50%); }
   .images-rotator h2 {
     margin-top: 80px;
-    font-weight: normal; }
+    font-weight: normal;
+    text-align: center;
+    padding-bottom: 16px; }
   .images-rotator .rotator-slide {
     float: left;
     max-height: 100% !important;
