@@ -5,6 +5,9 @@ ul.data-toggler-heading {
 ul.sub-content {
   margin: 0; }
 
+.slide-btn {
+  display: none; }
+
 .data-toggler-heading {
   border-left: 1px solid #ff6f00;
   padding: 32px 0px; }
