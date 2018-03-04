@@ -510,7 +510,7 @@ header.active {
     transform: translateY(0%); } }
 #animation-background {
   position: absolute;
-  background: url(/assets/images/circuit.gif) 9% center no-repeat;
+  background: url(../images/circuit.gif) 9% center no-repeat;
   background-size: cover;
   height: 100%; }
 
