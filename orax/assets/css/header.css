@@ -31,7 +31,7 @@ header {
     position: relative;
     height: 2px;
     width: 24px;
-    background-color: #fff;
+    background-color: #000;
     top: -6px;
     -webkit-transition: background-color 0.3s 0.6s linear;
     -moz-transition: background-color 0.3s 0.6s linear;
@@ -44,7 +44,7 @@ header {
       height: 2px;
       width: 100%;
       left: 0;
-      background-color: #fff;
+      background-color: #000;
       transform-origin: 0% 50%;
       -webkit-transition: transform 0.3s 1.2s linear, background-color 0.3s 1.2s linear;
       -moz-transition: transform 0.3s 1.2s linear, background-color 0.3s 1.2s linear;
