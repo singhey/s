@@ -521,6 +521,9 @@ ul.data-toggler-heading {
 ul.sub-content {
   margin: 0; }
 
+.slide-btn {
+  display: none; }
+
 .data-toggler-heading {
   border-left: 1px solid #ff6f00;
   padding: 32px 0px; }
@@ -770,7 +773,7 @@ ul.sub-content {
     padding: 16px;
     text-align: center; }
   .member-card .member-image {
-    height: 300px;
+    height: 350px;
     background: #fff;
     overflow: hidden; }
     .member-card .member-image img {
@@ -786,6 +789,7 @@ ul.sub-content {
     color: #212121;
     height: 100%;
     max-height: 100%;
+    width: 100%;
     background-color: rgba(255, 255, 255, 0.95);
     -webkit-transform: translateY(-100%);
     -moz-transform: translateY(-100%);
@@ -798,6 +802,42 @@ ul.sub-content {
     -ms-transition: opacity 0.6s linear;
     -o-transition: opacity 0.6s linear;
     transition: opacity 0.6s linear; }
+    .member-card .modal .later {
+      display: block;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      left: 0;
+      height: 100%;
+      padding: 16px;
+      background: #444;
+      color: #fff;
+      -webkit-transform: translateY(-100%);
+      -moz-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+      -o-transform: translateY(-100%);
+      transform: translateY(-100%);
+      -webkit-transition: transform 0.3s linear;
+      -moz-transition: transform 0.3s linear;
+      -ms-transition: transform 0.3s linear;
+      -o-transition: transform 0.3s linear;
+      transition: transform 0.3s linear; }
+      .member-card .modal .later.seen {
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        -o-transform: translateY(0%);
+        transform: translateY(0%); }
+  .member-card .social {
+    display: block;
+    text-align: center;
+    font-size: 32px; }
+    .member-card .social a {
+      display: inline-block;
+      padding: 0px 8px;
+      color: #ff6f00; }
+      .member-card .social a:hover {
+        color: orange; }
 
 /* li.active .member-card {
 	.member-name {
@@ -926,6 +966,18 @@ form {
     transform: translateY(-150px);
     position: relative;
     z-index: 10; }
+
+  .slide-btn {
+    display: block;
+    position: absolute;
+    color: #fff;
+    z-index: 20;
+    text-align: right;
+    -webkit-transform: translateY(-170px);
+    -moz-transform: translateY(-170px);
+    -ms-transform: translateY(-170px);
+    -o-transform: translateY(-170px);
+    transform: translateY(-170px); }
 
   .data-toggler-heading {
     display: inline-table;
