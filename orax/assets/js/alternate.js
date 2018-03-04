@@ -23,7 +23,7 @@ $(function(){
 
 	function rotatorySlide() {
 
-		var _slides = $('.slide.active').find('.images-rotator').children();
+		var _slides = $('.slide.active').find('.images-rotator').find("[data-rotator-slide]");
 		//console.log(_slides);
 		for(var i = _slides.length - 1; i >= 0; i--) {
 			var pos = $(_slides[i]).attr("data-rotator-slide");
@@ -60,7 +60,7 @@ $(function(){
 				$(el).css({
 					"width": totalChildrenWidth+"px",
 				});
-			})
+			});
 		}else {
 			$('.data-toggler-heading').css({
 				'width' : '100%',
@@ -68,11 +68,28 @@ $(function(){
 		}
 	}
 
-	rotatorySlide();
+	function rotateSlide(index){
+		$('.slide.active .rotator-slide-holder > div').removeClass('active');
+		//console.log($('.rotator-slide-holder div').length);
+		//console.log($('.slide.active .rotator-slide-holder > div:eq('+ (index % 3) +')'), index);
+		index = index % $('.slide.active .rotator-slide-holder > div').length;
+		$('.slide.active .rotator-slide-holder > div:eq('+ index +')').addClass("active");
+		index++;
+		if(isNaN(index)){
+			index = 0;
+		}
+		window.setTimeout(function(){
+			rotateSlide(index);
+		}, 3000);
+	}
+
+	//rotatorySlide();
 	// if device width is less than 768px make ul width to a certain size 
 	$(window).resize(function(){
 		setHeadingSize();
 	});
 
+
+	rotateSlide(0);
 	setHeadingSize();
 });
