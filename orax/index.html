@@ -12,11 +12,16 @@
 <link rel="shortcut icon" type="image/png" href="./assets/images/favicon.png">
 <link rel="stylesheet" type="text/css" href="./assets/css/ripple.css">
 	<link rel="stylesheet" type="text/css" href="./assets/css/all.css">
+	<style type="text/css">
+		/* .slide-toggle-button span{
+			background: #fff !important;
+		} */
+	</style>
 </head>
 <body>
 
 	<div class="container-fluid">
-		<div class="row keep-black">
+		<div class="row">
 			<header class="col-12">
 				<div class="row">
 					<div class="col-md-2 col-6 logo-holder">
@@ -72,108 +77,101 @@
 
 		<div class="row full-screen slide-container" id="slide-container">
 			<div class="col-12 slide active fade-up" data-slide-index="0">
-				<div class="col-12" id="animation-background"></div>
+				<div class="col-12" id="animation-background" style="background-image: url(./assets/images/circuit.gif)"></div>
 				<!-- <div id="particles-js" class="animation-"></div> -->
 				<div class="slide-content d-flex">
 					<div class="align-self-center text-holder">
-						<h1>
-							<img src="./assets/images/logo-alt.png" class="col-lg-8 col-sm-10 col-12"./>
+						<h1 style="text-transform: uppercase; font-size:4rem">
+							Services Provided
 						</h1>
 					</div>
 				</div>
 			</div>
-			<!-- Services -->
 			<div class="col-12 slide" data-slide-index="1">
 				<div class="slide-content d-flex">
-					<div class="align-self-center services-slide">
-						<h1 class="heading">Services Offered</h1>
-						<!-- <div class="content row">
-							<div class="col-sm-6 col-md-4 col-12">
-								
+					<div class="align-self-center">
+						<div class="container-fluid">
+							<div class="row d-flex">
+								<div class="col-12 col-sm-12 col-md-3 heading-holder">
+									<ul class="data-toggler-heading">
+										<li ripple><a data-toggler="true" data-slide="1" data-content-index="0" class="active"> Consulting </a></li>
+									</ul>
+								</div>
+								<div class="col-12 col-sm-12 col-md-9">
+									<div class="row">
+										<ul data-slide="1" data-content="0" class="sub-content col-12 active">
+											<li> <span>R&amp;D in electrical and electronics</span></li>
+											<li> <span>Robotics</span></li>
+											<li> <span>Indigenous Products</span></li>
+											<li> <span>Firmware &amp; Software</span></li>
+											<li> <span>Mobile apps</span></li>
+										</ul>
+									</div>
+								</div>
 							</div>
-						</div> -->
-						<ul id="services">
-							<li>Consulting</li>
-							<li>Automotive Products</li>
-							<li>Trackers</li>
-							<li>Products for DRDO</li>
-							<li>New &amp; Renewable Energy Products</li>
-							<li>CAD/CAE, Product Development</li>
-							<li><a ripple href="./services/">Know More &nbsp; &nbsp; <i class="fas fa-arrow-right"></i></a></li>
-						</ul>
+						</div>
 					</div>
-					<div class="row slide-background" style="background-image: url(./assets/images/services_background.jpg)">
+					<div class="row slide-background" style="background-image: url(./assets/images/consulting.jpg)">
 					</div>
 				</div>
 			</div>
-			<!-- Team -->
 			<div class="col-12 slide" data-slide-index="2">
 				<div class="slide-content d-flex">
 					<div class="align-self-center">
-						<h2 style="text-align: center; font-weight: normal; text-transform: uppercase; padding-bottom: 16px;" class="heading center">Core team</h2>
 						<div class="container-fluid">
-							<div class="row">
-								<div class="col-10 col-md-4 member-card-holder active">
-									<div class="member-card">
-										<div class="member-image d-flex">
-											<img src="./assets/images/abhas.jpg" />	
-										</div>
-										<div class="member-details">
-											<h3 class="member-name">Abhas Kumar (MD) </h3>
-										</div>
-										<div class="modal">
-											<p class="member-desc d-flex">
-												<span class="social align-self-center"><a href="#"><i class="fab fa-facebook-f"></i></a><br>
-													<a href="#"><i class="fab fa-linkedin-in"></i></a><br>
-													<a href="#"><i class="fas fa-envelope"></i></a><br>
-													<i class="fas fa-arrow-down details-toggler"></i>
-												</span>
-												<span class="later">
-													Graduated from IITK, and holds a major in Computer Science. Has 5 years of work experience in Intel. He at Intel, designed tools for next generation Xeon and other server grade processors. He is an accomplished engineer with multiple publications in his name in many reputed journals. Worked with other startups like Innovel Technologies, Srapps Consultancy etc.
-												</span>
-											</p>
-										</div>
-									</div>
+							<div class="row d-flex">
+								<div class="col-12 col-sm-12 col-md-3 heading-holder">
+									<ul class="data-toggler-heading">
+										<li ripple><a data-toggler="true" data-slide="2" data-content-index="0" class="active"> 2-DIN infotainment System </a></li>
+										<li ripple><a data-toggler="true" data-slide="2" data-content-index="1"> 1-DIN infotainment System</a></li>
+										<li ripple><a data-toggler="true" data-slide="2" data-content-index="2"> HSCAN </a></li>
+										<li ripple><a data-toggler="true" data-slide="2" data-content-index="3"> Immobilizer </a></li>
+									</ul>
 								</div>
-								<div class="col-10 col-md-4 member-card-holder">
-									<div class="member-card">
-										<div class="member-image d-flex">
-											<img src="./assets/images/akshay.jpg" />
+								<span class="slide-btn col-12">Slide &nbsp; &nbsp; <i class="fas fa-arrow-right"></i></span>
+								<div class="col-12 col-sm-12 col-md-9">
+									<div class="row d-flex">
+										<div class="col-sm-6 col-12">
+											<ul data-slide="2" data-content="0" class="sub-content active">
+												<li><span>Android based</span></li>
+												<li><span>Navigation, 3G, Wifi</span></li>
+												<li><span>Remote control</span></li>
+												<li><span>Reverse Camera</span></li>
+												<li><span>Peripheral USB support</span></li>
+											</ul>
+
+											<ul data-slide="2" data-content="1" class="sub-content">
+												<li><span>Universal support(Patent Filed)</span></li>
+												<li><span>Noise free music(Patent Filed)</span></li>
+												<li><span>FM radio inbuilt</span></li>
+												<li><span>Multiple device charging</span></li>
+											</ul>
+											<ul data-slide="2" data-content="2" class="sub-content">
+												<li><span>HLP support</span></li>
+												<li><span>UDS capable</span></li>
+												<li><span>Multi Frame Messaging</span></li>
+												<li><span>Multi ECU Detection and targeting</span></li>
+												<li><span>Data Collision Monitoring</span></li>
+												<li><span>OOB (Out Of Band Data) support</span></li>
+											</ul>
+											<ul data-slide="2" data-content="3" class="sub-content">
+												<li><span>Track your single vehicle or fleet from anywhere</span></li>
+												<li><span>Know the status of your vehicle</span></li>
+												<li><span>Geo-fencing</span></li>
+												<li><span>No ignition if you lock your vehicle from mobile app</span></li>
+											</ul>
 										</div>
-										<div class="member-details">
-											<h3 class="member-name">Akshay Mathur(Director) </h3>
-										</div>
-										<div class="modal d-flex">
-											<div class="align-self-center">
-												<p class="social"><a href="#"><i class="fab fa-facebook-f"></i></a><br>
-													<a href="#"><i class="fab fa-linkedin-in"></i></a><br>
-													<a href="#"><i class="fas fa-envelope"></i></a><br>
-													<i class="fas fa-arrow-down details-toggler"></i>
-												</p>
-												<div class="later">
-													Graduated from IITK, and worked for 5 years at Aurora Integrated Systems, a pioneer in Indian UAV (Unmanned Aerial Vehicles) space (now a Tata Group Company). Developed Ground Control Station (GCS), a software suite to control the UAV completely, Base Station (an embedded system relaying commands between GCS & UAV) and some parts of AutoPilot for the UAV. After this, have created an Android based Car Infotainment System which can be installed in all 2DIN cars in India. Other works include developing Remote Monitoring & Control System for solar systems, CAN based OBD2 reader, writing drivers of various components (touch screen, radio, IR remote, FM radio, etc.) for Android, etc.
+										<div class="images-rotator col-12 col-sm-6">
+											<h2 class="heading center">Automotive Products</h2>
+											<div class="rotator-slide-holder">
+												<div class="rotator-slide pos-0 d-flex active" data-rotator-slide="0">
+													<img src="./assets/images/can_enabled.jpg" class="align-self-center"./>
 												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-10 col-md-4 member-card-holder">
-									<div class="member-card">
-										<div class="member-image d-flex">
-											<img src="./assets/images/harish.jpg" />
-										</div>
-										<div class="member-details">
-											<h3 class="member-name">Harish Chandra Singh(Director)</h3>
-										</div>
-										<div class="modal">
-											<div class="member-desc d-flex">
-												<p class="social align-self-center"><a href="#"><i class="fab fa-facebook-f"></i></a><br>
-													<a href="#"><i class="fab fa-linkedin-in"></i></a><br>
-													<a href="#"><i class="fas fa-envelope"></i></a><br>
-													<i class="fas fa-arrow-down details-toggler"></i>
-												</p>
-												<div class="later">
-													Graduated from NIT, Patna in Electronics and Electrical Engineering. Has worked with Alstom as system architect for power and communication based automatic control systems involving SIL4 level safety critical technologies. He has designed both embedded control devices as well power electronics systems. Latest projects involve automatic train control systems for Metros, High speed data logger and electronic detonator system for DRDO, Control system for E-bike and alcohol vending machine, Power electronics and communication system for POS system involving high speed power path selection.
+												<div class="rotator-slide pos-1 d-flex" data-rotator-slide="1">
+													<img src="./assets/images/h_scan.jpg" class="align-self-center"./>
+												</div>
+												<div class="rotator-slide pos-2 d-flex" data-rotator-slide="2">
+													<img src="./assets/images/miniature_data_logger.jpg" class="align-self-center"./>
 												</div>
 											</div>
 										</div>
@@ -182,100 +180,213 @@
 							</div>
 						</div>
 					</div>
+					<div class="row slide-background" style="background-image: url(./assets/images/automotive.jpg)">
+					</div>
 				</div>
 			</div>
-
-
-			<!-- Contact us Slide -->
 			<div class="col-12 slide" data-slide-index="3">
 				<div class="slide-content d-flex">
 					<div class="align-self-center">
-						<div class="row no-gutters">
-							<div class="col-10 offset-1 form-holder">
-								<div class="row no-gutters">
-									<div class="col-6 address-bar">
-										<div class="d-flex">
-											<div class="align-self-center row">
-												<div class="address col-12 row">
-													<div class="icon col-1 offset-2">
-														<i class="fas fa-map-marker-alt"></i>
-													</div>
-													<div class="col-8">
-														<address style="color:#fff">
-															<p><b>Address</b><br>
-																E-health TBI,<br> 
-																Pixel Park A,<br> 
-																Electronic City, Hosur Road,<br> 
-																Bangalore-560100<br><br>
-																</p>
-														</address>
-													</div>
+						<div class="container-fluid">
+							<div class="row d-flex">
+								<div class="col-12 col-sm-12 col-md-3 heading-holder">
+									<ul class="data-toggler-heading">
+										<li ripple><a data-toggler="true" data-slide="3" data-content-index="0" class="active"> Indoor tracker </a></li>
+										<li ripple><a data-toggler="true" data-slide="3" data-content-index="1"> Outdoor Tracker </a></li>
+									</ul>
+								</div>
+								<div class="col-12 col-sm-12 col-md-9">
+									<div class="row d-flex">
+										<div class="col-sm-6 col-12">
+											<ul data-slide="3" data-content="0" class="sub-content active">
+												<li><span>Active tracking</span></li>
+												<li><span>Track indoor</span></li>
+												<li><span>Latest technology</span></li>
+											</ul>
+											<ul data-slide="3" data-content="1" class="sub-content">
+												<li><span>GPS based</span></li>
+												<li><span>App based</span></li>
+												<li><span>Tracking easy</span></li>
+											</ul>
+										</div>
+										<div class="images-rotator col-12 col-sm-6">
+											<h2 class="heading center">Trackers</h2>
+											<div class="rotator-slide-holder">
+												<div class="rotator-slide pos-0 d-flex active" data-rotator-slide="0">
+													<img src="./assets/images/can_enabled.jpg" class="align-self-center"./>
 												</div>
-												<div class="phone col-12 row">
-													<div class="icon col-1 offset-2">
-														<i class="fas fa-phone"></i>
-													</div>
-													<div class="col-8">
-														<p>Phone: <br>
-															<a href="phone:+919008014413">+91 90 08 014413</a><br><br>
-														 </p>
-													</div>
+												<div class="rotator-slide pos-1 d-flex" data-rotator-slide="1">
+													<img src="./assets/images/h_scan.jpg" class="align-self-center"./>
 												</div>
-												<div class="email col-12 row">
-													<div class="icon col-1 offset-2"><i class="far fa-envelope"></i></div>
-													<div class="col-8">
-														<p>Email: <br>
-															<a href="hello@theorax-dynamics.com">hello@theorax-dynamics.com</a><br><br>
-														</p>
-													</div>
-												</div>
-												<div class="social col-12 row">
-													<div class="col-1 offset-2 icon"></div>
-													<div class="col-8">
-														<p>
-															Social: <br>
-															<a href="#">
-																<i class="fab fa-facebook-f"></i>
-															</a>
-															<a href="#">
-																<i class="fab fa-linkedin-in"></i>
-															</a>
-															<a href="#">
-																<i class="fas fa-envelope"></i>
-															</a>
-														</p>
-													</div>
+												<div class="rotator-slide pos-2 d-flex" data-rotator-slide="2">
+													<img src="./assets/images/miniature_data_logger.jpg" class="align-self-center"./>
 												</div>
 											</div>
 										</div>
 									</div>
-									<div class="col-12 col-md-6">
-										<form class="row no-gutters" action="#" method="POST">
-											<h3 class="col-12 heading center">Contact Form</h3>
-											<div class="col-sm-10 offset-sm-1 col-12">
-												<div class="row no-gutters">
-													<div class="col-12 form-row">
-														<input type="text" name="name" placeholder="Name*" required="true">
-														<span class="bottom-border"></span>
-													</div>
-													<div class="col-12 form-row">
-														<input type="email" name="email" placeholder="Email*" required="true">
-														<span class="bottom-border"></span>
-													</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row slide-background" style="background-image: url(./assets/images/tracker.jpg)">
+					</div>
+				</div>
+			</div>
+			<div class="col-12 slide" data-slide-index="4">
+				<div class="slide-content d-flex">
+					<div class="align-self-center">
+						<div class="container-fluid">
+							<div class="row d-flex">
+								<div class="col-12 col-sm-12 col-md-3 heading-holder">
+									<ul class="data-toggler-heading">
+										<li ripple><a data-toggler="true" data-slide="4" data-content-index="0" class="active"> Miniature Data Logger </a></li>
+										<li ripple><a data-toggler="true" data-slide="4" data-content-index="1"> Electronic Detonator system </a></li>
+										<li ripple><a data-toggler="true" data-slide="4" data-content-index="2"> Mobile man portable Surveillance System(Patented) </a></li>
+									</ul>
+								</div>
+								<span class="slide-btn col-12">Slide &nbsp; &nbsp; <i class="fas fa-arrow-right"></i></span>
+								<div class="col-12 col-sm-12 col-md-9">
+									<div class="row d-flex">
+										<div class="col-12 col-md-6">
+											<ul data-slide="4" data-content="0" class="sub-content active">
+												<li><span>Extremely miniaturized</span></li>
+												<li><span>High frequency</span></li>
+												<li><span>Data collection for Grenade and Shell explosions etc.</span></li>
+												<li><span>Configurable frequency and time</span></li>
+											</ul>
+											<ul data-slide="4" data-content="1" class="sub-content">
+												<li><span>High accuracy compared to chemical one</span></li>
+												<li><span>Accurate timing </span></li>
+												<li><span>Works without battery after ejection of projectile</span></li>
+												<li><span>Configurable frequency and time</span></li>
+											</ul>
+											<ul data-slide="4" data-content="2" class="sub-content">
+												<li><span>Wifi based </span></li>
+												<li><span>For urban terrorism</span></li>
+												<li><span>Basically for closed and hazardous spaces</span></li>
+											</ul>
+										</div>
+										<div class="images-rotator col-12 col-md-6">
+											<h2 class="heading center">Products for DRDO</h2>
+											<div class="rotator-slide-holder">
+												<div class="rotator-slide pos-0 d-flex active" data-rotator-slide="0">
+													<img src="./assets/images/can_enabled.jpg" class="align-self-center"./>
+												</div>
+												<div class="rotator-slide pos-1 d-flex" data-rotator-slide="1">
+													<img src="./assets/images/h_scan.jpg" class="align-self-center"./>
+												</div>
+												<div class="rotator-slide pos-2 d-flex" data-rotator-slide="2">
+													<img src="./assets/images/miniature_data_logger.jpg" class="align-self-center"./>
 												</div>
 											</div>
-											<div class="col-sm-10 offset-sm-1 col-12 form-row">
-												<textarea rows="5" placeholder="Message*" name="message"></textarea>
-												<span class="bottom-border"></span>
-											</div>
-											<div class="col-sm-10 offset-sm-1 col-12 form-row">
-												<button type="submit" class="btn">Submit</button>
-											</div>
-										</form>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>					</div>
+						</div>
+					</div>
+					<div class="row slide-background" style="background-image: url(./assets/images/drdo.jpg)">
+					</div>
+				</div>
+			</div>
+			<div class="col-12 slide" data-slide-index="5">
+				<div class="slide-content d-flex">
+					<div class="align-self-center">
+						<div class="container-fluid">
+							<div class="row d-flex">
+								<div class="col-12 col-sm-13 col-md-4 heading-holder">
+									<div>
+										<ul class="data-toggler-heading">
+											<li ripple><a data-toggler="true" data-slide="5" data-content-index="0" class="active">Remote Monitoring System (RMS)</a></li>
+											<li ripple><a data-toggler="true" data-slide="5" data-content-index="1">MPPT with Remote Monitoring System</a></li>
+											<li ripple><a data-toggler="true" data-slide="5" data-content-index="2">Battery Management System (BMS)</a></li>
+											<li ripple><a data-toggler="true" data-slide="5" data-content-index="3">Digital Addressable Lighting Interface (DALI)</a></li>
+											<li ripple><a data-toggler="true" data-slide="5" data-content-index="4">CAN enabled BMS for automobiles</a></li>
+											<li ripple><a data-toggler="true" data-slide="5" data-content-index="5">Electric Bicycle</a></li>
+										</ul>
+									</div>
+								</div>
+								<span class="slide-btn col-12">Slide &nbsp; &nbsp; <i class="fas fa-arrow-right"></i></span>
+								<div class="col-12 col-sm-12 col-md-8">
+									<div class="row d-flex">
+										<div class=" col-12 col-md-5">
+											<ul data-slide="5" data-content="0" class="sub-content active">
+												<li><span>SIM based</span></li>
+												<li><span>Data monitoring</span></li>
+												<li><span>Remotely control the device</span></li>
+												<li><span>SMS service and alerts</span></li>
+												<li><span>Automated data analysis and report generation</span></li>
+											</ul>
+											<ul data-slide="5" data-content="1" class="sub-content">
+												<li><span>Input requirement 8V-36V</span></li>
+												<li><span>Output is 10A and 12V-48V</span></li>
+												<li><span>Modular remote monitoring system</span></li>
+												<li><span>Data logging and analysis</span></li>
+												<li><span>Multilingual support</span></li>
+												<li><span>Security options: Password, Paraphrases, PGP support</span></li>
+											</ul>
+											<ul data-slide="5" data-content="2" class="sub-content">
+												<li><span>Improves safety of Li-ion/Li-polymer batteries</span></li>
+												<li><span>Reduce complexity and increase reliability through modular structure</span></li>
+												<li><span>Manages battery cells within string to increase battery life</span></li>
+												<li><span>Prevents battery damage</span></li>
+												<li><span>Actively balance individual cells during charging, discharging or rest(configurable)</span></li>
+												<li><span>Provides low cost alternative to existing</span></li>
+											</ul>
+											<ul data-slide="5" data-content="3" class="sub-content">
+												<li><span>Digital dimming</span></li>
+												<li><span>Wireless and wired central control</span></li>
+												<li><span>Dimming based on motion detection</span></li>
+												<li><span>Dimming based on LUX detection</span></li>
+											</ul>
+											<ul data-slide="5" data-content="4" class="sub-content">
+												<li><span>48 V system</span></li>
+												<li><span>CAN communication</span></li>
+												<li><span>Wake Up</span></li>
+												<li><span>Timer Function</span></li>
+												<li><span>Contactor control</span></li>
+												<li><span>Watch Dog</span></li>
+												<li><span>CAN collision</span></li>
+												<li><span>Cooling control</span></li>
+												<li><span>Software update through OTA</span></li>
+											</ul>
+											<ul data-slide="5" data-content="5" class="sub-content">
+												<li><span>Closed loop Control system</span></li>
+												<li><span>BLDC motor Control</span></li>
+												<li><span>BMS(36V-48V)</span></li>
+												<li><span>Data acquisition</span></li>
+											</ul>
+										</div>
+										<div class="images-rotator col-12 col-md-6">
+											<h2 class="heading center">New &amp; Renewable Energy Products</h2>
+											<div class="rotator-slide-holder">
+												<div class="rotator-slide pos-0 d-flex active" data-rotator-slide="0">
+													<img src="./assets/images/can_enabled.jpg" class="align-self-center"./>
+												</div>
+												<div class="rotator-slide pos-1 d-flex" data-rotator-slide="1">
+													<img src="./assets/images/h_scan.jpg" class="align-self-center"./>
+												</div>
+												<div class="rotator-slide pos-2 d-flex" data-rotator-slide="2">
+													<img src="./assets/images/miniature_data_logger.jpg" class="align-self-center"./>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row slide-background" style="background-image: url(./assets/images/energy.jpg)">
+					</div>
+				</div>
+			</div>
+			<div class="col-12 slide" data-slide-index="6">
+				<div class="slide-content d-flex">
+					<div class="align-self-center">
+						<h1 class="heading center" style="color: #fff; font-weight: normal;padding-bottom: 16px; text-align: center;">CAD/CAE, Product Development</h1>
+					</div>
+					<div class="row slide-background"  style="background-image: url(./assets/images/background.jpg)">
+					</div>
 				</div>
 			</div>
 		</div>
@@ -285,13 +396,12 @@
 	</div>
 
 	<script type="text/javascript" src="./assets/js/jquery.min.js"></script>
-	<!-- <script type="text/javascript" src="./assets/js/animate-canvas.js"></script> -->
+	<script type="text/javascript" src="./assets/js/ripple.js"></script>
 	<script type="text/javascript" src="./assets/js/swipe_detect.js"></script>
 	<script type="text/javascript" src="./assets/js/header.js"></script>
-	<script type="text/javascript" src="./assets/js/ripple.js"></script>
 	<!-- <script type="text/javascript" src="./assets/js/services_offered.js"></script> -->
 	<script type="text/javascript" src="./assets/js/slides.js"></script>
-	<script type="text/javascript" src="./assets/js/teams.js"></script>
+	<script type="text/javascript" src="./assets/js/alternate.js"></script>
 	<script type="text/javascript" src="./assets/js/index.js"></script>
 </body>
 </html>
