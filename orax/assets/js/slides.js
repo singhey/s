@@ -56,6 +56,13 @@ $(function() {
 					'opacity': '1'
 				});
 			}
+
+			//if on present on home page and the slide is white chnage logo to white
+			if(window.location.pathname == "/" && slides.currentSlide == 1) {
+				$('.header-row').removeClass("keep-black");
+			}else {
+				$('.header-row').addClass("keep-black");
+			}
 		}
 	};
 

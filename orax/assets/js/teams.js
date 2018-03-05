@@ -13,6 +13,7 @@ $(function(){
 	$('.details-toggler').click(function(){
 		console.log("called");
 		$(this).parent().next().addClass('seen');
+		console.log($(this).parent().next());
 		console.log($(this).parent().parent());
 	});
 
