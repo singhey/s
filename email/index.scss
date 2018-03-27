@@ -1,0 +1,166 @@
+*,::after,::before{box-sizing:border-box; line-height: 1.66}
+html{font-family:'Raleway', sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-ms-overflow-style:scrollbar;-webkit-tap-highlight-color:transparent}
+
+.all-wrapper, footer {
+	width: 100%;
+	max-width: 800px;
+	margin:auto;
+	background: #f9f9f9;
+	box-shadow: 4px 4px 16px #ccc;
+	padding: 0px 32px;
+}
+
+.header {
+	border-bottom: 2px solid #ccc;
+	padding-bottom: 24px;
+	margin-bottom: 24px;
+	.header-img{
+		max-width: 70%;
+		width: 70%;
+		display: block;
+		margin:auto;
+	}
+	h2 {
+		text-align: center;
+	}
+}
+
+.poster-holder {
+	width: 100%;
+	.poster-img {
+		max-width: 100%;
+		width: 100%;
+	}
+}
+
+.reasons {
+	padding: 32px 0px;
+	display: inline-table;
+	width: 100%;
+	h2 {
+		color: #1985A1;
+	}
+	.text-col {
+		border-right: 2px solid #ccc;
+		width: calc(33.33% - 2px);
+		float:left;
+		height: 100%;
+		padding-top: 16px;
+		padding-bottom: 16px;
+		min-height: 275px;
+		h3 {
+			letter-spacing: 2px;
+			color: #1985A1;
+			text-transform: uppercase;
+		}
+		&:nth-child(2){
+			padding-right: 16px;
+		}
+		&:nth-child(3) {
+			padding: 16px;
+		}
+		&:last-child{
+			padding-left: 16px;
+			border-right: 0;
+		}
+	}
+}
+
+footer {
+	background: #474747;
+	color: #fff;
+	padding: 16px 0px;
+	ul {
+		padding: 0;
+		display: inline-table;
+		width: 100%;
+		list-style: none;
+		>li {
+			float:left;
+		}
+	}
+	a{
+		color: #fff;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	.links li {
+		float: left;
+		width: 25%;
+		text-align: center;
+	}
+	p.unsubscribe {
+		text-align: center;
+	}
+	.social-links {
+		text-align: center;
+		a {
+			display: inline-block;
+			padding:0px 16px;
+			margin: 0px 16px;
+		}
+		img {
+			width: 100%;
+		}
+	}
+}
+.about{
+	width: 100%;
+	background-color: #ddd;
+	display: inline-table;
+	margin-bottom: 32px;
+	&>div{
+		float:left;
+	}
+	a {
+		color: #1985A1;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+	.about-text {
+		width: 70%;
+		padding: 16px;
+		h2 {
+			letter-spacing: 3px;
+		}
+	}
+	.about-img {
+		width: 30%;
+		height: 360px;
+		background: url('./vidhi.png') center center no-repeat;
+		background-size: cover;
+		img {
+			height: 100%;
+			width: 100%;
+			float: right;
+			max-height: 100%;
+			max-width: 100%;
+		}
+	}
+}
+
+.message-images-holder {
+	display: inline-table;
+	height: 400px;
+	width: 100%;
+	> div {
+		float: left;
+	}
+
+	.message-image {
+		width: 33.33%;
+		&:nth-child(1){
+			padding-right: 16px;
+		}
+		&:nth-child(2) {
+			padding-left: 16px;
+			padding-right: 16px;
+		}
+		&:last-child{
+			padding-left: 16px;
+			border-right: 0;
+		}
+	}
+}
