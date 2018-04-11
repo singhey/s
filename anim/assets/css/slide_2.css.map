@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGA,QAAS,CACR,gBAAgB,CCDT,IAAI",
+"sources": ["../scss/slide_2.scss","../scss/theme.scss"],
+"names": [],
+"file": "slide_2.css"
+}
