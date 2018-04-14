@@ -26,7 +26,7 @@ $(function(){
 		androidDevCodingAnimation = new TimelineMax({paused: true, repeat: -1}),
 		androidDevMobileAnimation = new TimelineMax({paused: true, repeat: -1}),
 		iosDevCodingAnimation = new TimelineMax({paused: true, repeat: -1}),
-		iosDevMobileAnimation = new TimelineMax({paused: true, repeat: -1, repeatDelay: 6});
+		iosDevMobileAnimation = new TimelineMax({paused: true, repeat: -1});
 
 
 	//objects 
@@ -46,7 +46,8 @@ $(function(){
 		formRows = $(".contact-form-browser .form-row"),
 		browserCursor = $(".cursor-image"),
 		modal = $("._modal"),
-		header = $(".heading-0");
+		header = $(".heading-0"),
+		backendHeading = $('.heading-4');
 		
 	var fullStackSlide = {
 			height:0,
@@ -87,10 +88,6 @@ $(function(){
 			{backgroundColor: '#000'},
 			{backgroundColor: '#F87DA9'});
 
-	/*windowAnimation
-		.fromTo(browserWindow, 1, 
-			{backgroundColor: "transparent"},
-			{backgroundColor: "#f4f4f4"});*/
 
 	contactFormRowAnimation
 		.fromTo(formRows, 1,
@@ -167,6 +164,7 @@ $(function(){
 
 	var easing = Power2.easeOut;
 	androidDevAnimation
+		.to('.browser-holder', .3, {backgroundColor: "#efefef"})
 		.to('.server-holder', .3, {y: 50, autoAlpha:0})
 		.from('.android-dev-svg', .3, {autoAlpha: 0})
 		.from('.android-dev.side-nav-hider', .1, {opacity: 0})
@@ -227,7 +225,8 @@ $(function(){
 		.fromTo('.ios-dev.button-click', .2, {fill: "transparent"}, {fill: "#ccc"})
 		.to('.ios-dev.button-click', .1, {fill: "#fff"})
 		.to('.ios-dev.first-screen', .3, {autoAlpha:0, scale: 0.7, transformOrigin: "50% 50%"})
-		.from('.ios-dev.final-screen', .3, {autoAlpha: 0, scale: 0.7, transformOrigin: "50% 50%"});//yet to implement
+		.from('.ios-dev.final-screen', .3, {autoAlpha: 0, scale: 0.7, transformOrigin: "50% 50%"})
+		.from('.ios-dev.final-screen', 5, {});//yet to implement
 
 
 	var htmlHeight,
@@ -275,8 +274,6 @@ $(function(){
 			serverStatusAnimation.pause();
 
 		}else if(scrollTop <= databseDevTop) {
-
-			header.removeClass("fixed");
 			flipBrowserAnimation.play().timeScale(1);
 			androidDevAnimation.reverse().timeScale(2);
 			androidDevCodingAnimation.pause();
@@ -294,10 +291,21 @@ $(function(){
 			iosDevCodingAnimation.play();
 
 		}
+
+		if(scrollTop >= backendTop) {
+			header.removeClass("fixed");
+			backendHeading.addClass("fixed");
+		}else if(scrollTop >= windowHeight){
+			header.addClass("fixed");
+			browserHolderAnimation.play();
+			backendHeading.removeClass("fixed");
+		}
 	});
 
 
 	function calculations(){ 
+
+
 
 		fullStackSlide.height = $(".slide-1").height();
 		fullStackSlide.offsetTop = $(".slide-1").offset().top;
@@ -313,7 +321,11 @@ $(function(){
 		databseDevTop = $(".content-6").offset().top;//heading position of databse section
 		androidDevTop = $(".content-7").offset().top; //heading position of android development
 		iosDevTop = $(".content-9").offset().top;
-		console.log(androidDevTop, backendTop);
+		
+		if($(window).scrollTop()>= frontEndTop) {
+			browserHolderAnimation.play();
+		}
+
 	}
 
 
@@ -348,7 +360,7 @@ $(function(){
 		androidDevCodingAnimation.pause();
 		androidDevMobileAnimation.pause();
 		iosDevCodingAnimation.duration(10).play();
-		iosDevMobileAnimation.duration(4).play();	
+		iosDevMobileAnimation.duration(10).play();	
 	}
 
 });
