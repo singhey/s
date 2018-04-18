@@ -6,9 +6,7 @@ $(function() {
 		
 		windowWidth = $(window).width();
 
-		if(windowWidth > 900) {
-			colWidth = Math.floor(windowWidth / 3);
-		}else if(windowWidth > 600) {
+		if(windowWidth > 800) {
 			colWidth = Math.floor(windowWidth / 2);
 		}
 
@@ -19,9 +17,8 @@ $(function() {
 			"width" : colWidth + "px",
 		});
 		$(".scroller-data").css({
-			"height": colWidth * $(".horizontal-slider-col").length + "px"
+			"height": ((colWidth * $(".horizontal-slider-col").length) - ($(window).height() - colWidth)) + "px"
 		});
-
 		progressTop = $(".progress").offset().top;
 		footerTop = $("footer").offset().top;
 	}
@@ -33,13 +30,13 @@ $(function() {
 
 	$(window).scroll(function(e) {
 		var scrollTop = $(window).scrollTop();
+		//console.log(scrollTop, progressTop);
 		if(scrollTop >= footerTop) {
 			$("._horizontal-slider").removeClass("fixed");
 		}else if(scrollTop >= progressTop) {
 			$("._horizontal-slider").addClass("fixed");
 			$("._horizontal-slider").scrollLeft(scrollTop - progressTop);
 		}else{
-			console.log("final condition");
 			$("._horizontal-slider").removeClass("fixed");
 		}
 	});

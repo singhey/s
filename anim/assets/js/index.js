@@ -267,14 +267,13 @@ $(function(){
 			contactFormSubmitButtonAnimation.progress(progress);
 
 		}else if(scrollTop <= jsTop) {
-
-			flipBrowserAnimation.reverse().timeScale(3);
 			var progress = (scrollTop - cssTop) / (jsTop - cssTop);
 			contactCursorAnimation.progress(progress);
 			serverStatusAnimation.pause();
 
 		}else if(scrollTop <= databseDevTop) {
-			flipBrowserAnimation.play().timeScale(1);
+			var progress = (scrollTop - jsTop) / (databseDevTop - jsTop);
+			flipBrowserAnimation.progress(progress);
 			androidDevAnimation.reverse().timeScale(2);
 			androidDevCodingAnimation.pause();
 
@@ -305,8 +304,6 @@ $(function(){
 
 	function calculations(){ 
 
-
-
 		fullStackSlide.height = $(".slide-1").height();
 		fullStackSlide.offsetTop = $(".slide-1").offset().top;
 		windowHeight = $(window).innerHeight();
@@ -318,9 +315,9 @@ $(function(){
 		jsTop = $(".content-3").offset().top;
 		backendTop = $(".content-4").offset().top;
 
-		databseDevTop = $(".content-6").offset().top;//heading position of databse section
-		androidDevTop = $(".content-7").offset().top; //heading position of android development
-		iosDevTop = $(".content-9").offset().top;
+		databseDevTop = $(".content-9").offset().top;//heading position of databse section
+		androidDevTop = $(".content-10").offset().top; //heading position of android development
+		iosDevTop = $(".content-12").offset().top;
 		
 		if($(window).scrollTop()>= frontEndTop) {
 			browserHolderAnimation.play();
@@ -362,5 +359,9 @@ $(function(){
 		iosDevCodingAnimation.duration(10).play();
 		iosDevMobileAnimation.duration(10).play();	
 	}
+
+	$(window).resize(function() {
+		calculations();
+	})
 
 });
