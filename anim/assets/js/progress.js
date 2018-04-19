@@ -11,13 +11,13 @@ $(function() {
 		}
 
 		$("#horizontal-slider").css({
-				"width": colWidth * $(".horizontal-slider-col").length + "px",
-			});
+			"width": colWidth * $(".horizontal-slider-col").length + "px",
+		});
 		$(".horizontal-slider-col").css({
 			"width" : colWidth + "px",
 		});
 		$(".scroller-data").css({
-			"height": ((colWidth * $(".horizontal-slider-col").length) - ($(window).height() - colWidth)) + "px"
+			"height": (colWidth * $(".horizontal-slider-col").length + $(window).height() - colWidth + 100) + "px"
 		});
 		progressTop = $(".progress").offset().top;
 		footerTop = $("footer").offset().top;
@@ -30,7 +30,7 @@ $(function() {
 
 	$(window).scroll(function(e) {
 		var scrollTop = $(window).scrollTop();
-		//console.log(scrollTop, progressTop);
+		console.log(scrollTop, progressTop, footerTop);
 		if(scrollTop >= footerTop) {
 			$("._horizontal-slider").removeClass("fixed");
 		}else if(scrollTop >= progressTop) {

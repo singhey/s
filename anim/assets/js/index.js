@@ -237,6 +237,11 @@ $(function(){
 	calculations();
 	$(window).scroll(function(){
 		var scrollTop = $(window).scrollTop();
+
+		if(scrollTop <= jsTop && scrollTop >= windowHeight) {
+			flipBrowserAnimation.progress(0);
+		}
+
 		if(scrollTop <= windowHeight){
 			browserHolderAnimation.reverse();
 			header.removeClass("fixed");
@@ -282,7 +287,7 @@ $(function(){
 			androidDevAnimation.duration(2).play();
 			iosDevAnimation.reverse().timeScale(2);
 
-		}else if(scrollTop >= iosDevTop) {
+		}else if(scrollTop <= iosDevTop) {
 
 			androidDevMobileAnimation.pause();
 			androidDevCodingAnimation.pause();

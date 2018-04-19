@@ -26,7 +26,7 @@ $(function() {
 		.staggerFromTo('.stagger-text', .5, {y: -32}, { y: 0}, .1, .5);
 
 	loaderFade
-		.to("#loader", .8, {autoAlpha: 0, scale: .7, ease: Power3.easeIn}, .3);
+		.to(["#loader", '#loader svg'], .8, {autoAlpha: 0, scale: .7, ease: Power3.easeIn}, .3);
 
 	function initiateJump() {
 		text.duration(1.2).play();
