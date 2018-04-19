@@ -3,6 +3,14 @@ $(function() {
 		text = new TimelineMax({repeat: 3, onComplete: fadeLoader, paused: true}),
 		loaderFade = new TimelineMax({paused: true});
 
+
+	if($(window).height() > $(window).width()) {
+		$('#loader svg').css({height: "100%"})
+	}else{
+		$('#loader svg').css({width: "100%"})
+	}
+
+
 	TweenMax.set('svg', {
 		visibility: 'visible'
 	});
