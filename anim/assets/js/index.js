@@ -26,7 +26,8 @@ $(function(){
 		androidDevCodingAnimation = new TimelineMax({paused: true, repeat: -1}),
 		androidDevMobileAnimation = new TimelineMax({paused: true, repeat: -1}),
 		iosDevCodingAnimation = new TimelineMax({paused: true, repeat: -1}),
-		iosDevMobileAnimation = new TimelineMax({paused: true, repeat: -1});
+		iosDevMobileAnimation = new TimelineMax({paused: true, repeat: -1}),
+		browserRotate = new TimelineMax({paused: true});
 
 
 	//objects 
@@ -69,7 +70,7 @@ $(function(){
 
 	contactFormHolderAnimation
 		.to(browserContactForm, 1,/*{width: "100%", marginTop: 0, backgroundColor: "transparent", padding: "0px 0px", boxShadow: "4px 4px 16px transparent",},*/
-		 {width: "50%", margin: "2.4vw auto", backgroundColor: "rgb(56, 56, 56)", boxShadow: "rgb(0, 0, 0) 4px 4px 16px 0px", padding: "1.6vw 1.6vw", fontSize: "1vw"});
+		 {width: "50%", margin: "1.4vw auto", backgroundColor: "rgb(56, 56, 56)", boxShadow: "rgb(0, 0, 0) 4px 4px 16px 0px", padding: "1.6vw 1.6vw", fontSize: "1vw"});
 
 	contactFormHeadingAnimation
 		.to(browserContactHeading, 1, {padding: "0vw 1.6vw", textTransform: "uppercase", textAlign: "center", color:"#fff"});
@@ -96,7 +97,7 @@ $(function(){
 	contactCursorAnimation
 		.fromTo(browserCursor, 1,
 			{left: 0, top: 0},
-			{left: "50%", top: "80%"})
+			{left: "50%", top: "85%"})
 		.fromTo(modal, .3, {opacity: 0}, {opacity: 1});
 
 	flipBrowserAnimation
@@ -227,6 +228,8 @@ $(function(){
 		.from('.ios-dev.final-screen', .3, {autoAlpha: 0, scale: 0.7, transformOrigin: "50% 50%"})
 		.from('.ios-dev.final-screen', 5, {});//yet to implement
 
+	browserRotate
+		.to('.browser-holder', 3, {/*transform: "rotateX(49deg) rotateY(0deg) rotateZ(43deg)"*/ rotationX: 6, rotationZ: 5});
 
 	var htmlHeight,
 		cssHeight,
@@ -303,6 +306,11 @@ $(function(){
 			browserHolderAnimation.play();
 			backendHeading.removeClass("fixed");
 		}
+
+		var progress = (scrollTop - windowHeight) / (iosDevTop - htmlTop);
+
+		if(progress > 0)
+			browserRotate.progress(progress);
 	});
 
 

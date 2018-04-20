@@ -30,7 +30,7 @@ $(function() {
 
 	$(window).scroll(function(e) {
 		var scrollTop = $(window).scrollTop();
-		console.log(scrollTop, progressTop, footerTop);
+		//console.log(scrollTop, progressTop, footerTop);
 		if(scrollTop >= footerTop) {
 			$("._horizontal-slider").removeClass("fixed");
 		}else if(scrollTop >= progressTop) {
