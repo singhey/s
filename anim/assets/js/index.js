@@ -62,25 +62,24 @@ $(function(){
 		.fromTo(browserHolder, .5, {opacity: 0}, {opacity: 1});
 
 	contactFormAnimation
-		.fromTo(browserContactForm, 1, {opacity: 0}, {opacity: 1});
+		.from(browserContactForm, 1, {opacity: 0});
 
 	contactFormContentAnimation
 		.staggerFromTo(browserContactFormContent, 1, {opacity: 0, y: 30}, {opacity: 1, y: 0}, .3);
 
 	contactFormHolderAnimation
-		.fromTo(browserContactForm, 1,{width: "100%", marginTop: 0, backgroundColor: "transparent", padding: "0px 0px", boxShadow: "4px 4px 16px transparent",},
-		 {width: "50%", margin: "2.4vw auto", backgroundColor: "#fff", boxShadow: "4px 4px 16px #ccc", padding: "1.6vw 1.6vw", fontSize: "1vw"});
+		.to(browserContactForm, 1,/*{width: "100%", marginTop: 0, backgroundColor: "transparent", padding: "0px 0px", boxShadow: "4px 4px 16px transparent",},*/
+		 {width: "50%", margin: "2.4vw auto", backgroundColor: "rgb(56, 56, 56)", boxShadow: "rgb(0, 0, 0) 4px 4px 16px 0px", padding: "1.6vw 1.6vw", fontSize: "1vw"});
 
 	contactFormHeadingAnimation
-		.fromTo(browserContactHeading, 1, {padding: "0px", textTransform: "lowercase", textAlign: "left"}, {padding: "0vw 1.6vw", textTransform: "uppercase", textAlign: "center"});
+		.to(browserContactHeading, 1, {padding: "0vw 1.6vw", textTransform: "uppercase", textAlign: "center", color:"#fff"});
 
 	contactFormInputFieldAnimation
-		.staggerFromTo(browserInputField, 1, 
-			{border: "1px solid #000", padding: "0px 0px"},
-			{width: "100%", marginTop: "1.6vw", marginBottom: "1.6vw", padding: ".8vw 1.6vw", boxShadow: "4px 4px 16px #efefef", border:".1vw solid transparent", outline: "0"});
+		.staggerTo(browserInputField, 1, 
+			/*{border: "1px solid #000", padding: "0px 0px"},*/
+			{width: "100%", marginTop: "1.6vw", marginBottom: "1.6vw", padding: ".8vw 1.6vw", boxShadow: "rgb(62, 62, 62) 4px 4px 14px 0px", border:".1vw solid transparent", outline: "0", backgroundColor: "rgb(25, 25, 25)"});
 	contactFormSubmitButtonAnimation
-		.fromTo(browserSubmitButton, 1, 
-			{border: ".1vw solid #000", color: "#000", textTransform: "lowercase", padding: "0px 0px"},
+		.to(browserSubmitButton, 1,
 			{border: ".1vw solid transparent", backgroundColor: "#2ae", width: "100%", color: "#fff", textTransform:"uppercase", textAlign: "center", padding: ".8vw 1.6vw"});
 
 	contactFormRadioButtonAnimation
@@ -164,7 +163,7 @@ $(function(){
 
 	var easing = Power2.easeOut;
 	androidDevAnimation
-		.to('.browser-holder', .3, {backgroundColor: "#efefef"})
+		.to('.browser-holder', .3, {backgroundColor: "rgb(56, 56, 56)"})
 		.to('.server-holder', .3, {y: 50, autoAlpha:0})
 		.from('.android-dev-svg', .3, {autoAlpha: 0})
 		.from('.android-dev.side-nav-hider', .1, {opacity: 0})
