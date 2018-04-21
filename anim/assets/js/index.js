@@ -281,10 +281,10 @@ $(function(){
 		}else if(scrollTop <= databseDevTop) {
 			var progress = (scrollTop - jsTop) / (databseDevTop - jsTop);
 			flipBrowserAnimation.progress(progress);
-			androidDevAnimation.reverse().timeScale(2);
-			androidDevCodingAnimation.pause();
+			/*androidDevAnimation.reverse().timeScale(2);
+			androidDevCodingAnimation.pause();*/
 
-		}else if(scrollTop <= androidDevTop) {
+		}/*else if(scrollTop <= androidDevTop) {
 
 			androidDevAnimation.duration(2).play();
 			iosDevAnimation.reverse().timeScale(2);
@@ -296,7 +296,7 @@ $(function(){
 			iosDevAnimation.play().timeScale(1);
 			iosDevCodingAnimation.play();
 
-		}
+		}*/
 
 		if(scrollTop >= backendTop) {
 			header.removeClass("fixed");
@@ -307,7 +307,7 @@ $(function(){
 			backendHeading.removeClass("fixed");
 		}
 
-		var progress = (scrollTop - windowHeight) / (iosDevTop - htmlTop);
+		var progress = (scrollTop - windowHeight) / (databseDevTop - htmlTop);
 
 		if(progress > 0)
 			browserRotate.progress(progress);
@@ -321,15 +321,15 @@ $(function(){
 		windowHeight = $(window).innerHeight();
 		
 
-		frontEndTop = $(".content-0").offset().top;
-		htmlTop = $(".content-1").offset().top;
-		cssTop = $(".content-2").offset().top;
-		jsTop = $(".content-3").offset().top;
-		backendTop = $(".content-4").offset().top;
+		frontEndTop = $(".front-end").offset().top;
+		htmlTop = $(".html").offset().top;
+		cssTop = $(".css").offset().top;
+		jsTop = $(".js").offset().top;
+		backendTop = $(".backend").offset().top;
 
-		databseDevTop = $(".content-9").offset().top;//heading position of databse section
-		androidDevTop = $(".content-10").offset().top; //heading position of android development
-		iosDevTop = $(".content-12").offset().top;
+		databseDevTop = $(".final").offset().top;//heading position of databse section
+		/*androidDevTop = $(".content-10").offset().top; //heading position of android development
+		iosDevTop = $(".content-12").offset().top;*/
 		
 		if($(window).scrollTop()>= frontEndTop) {
 			browserHolderAnimation.play();
