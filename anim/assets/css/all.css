@@ -344,7 +344,7 @@ footer {
       padding-left: 2.8vw;
       cursor: pointer;
       display: inline-block;
-      color: #666; }
+      color: #fff; }
     .browser-window-osx .window [type="radio"]:checked + label:before,
     .browser-window-osx .window [type="radio"]:not(:checked) + label:before {
       content: '';
