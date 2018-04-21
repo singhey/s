@@ -78,10 +78,10 @@ $(function(){
 	contactFormInputFieldAnimation
 		.staggerTo(browserInputField, 1, 
 			/*{border: "1px solid #000", padding: "0px 0px"},*/
-			{width: "100%", marginTop: "1.6vw", marginBottom: "1.6vw", padding: ".8vw 1.6vw", boxShadow: "rgb(62, 62, 62) 4px 4px 14px 0px", border:".1vw solid transparent", outline: "0", backgroundColor: "rgb(25, 25, 25)"});
+			{width: "100%", marginTop: "1.6vw", marginBottom: "1.6vw", padding: ".4vw 1.6vw", boxShadow: "rgb(62, 62, 62) 4px 4px 14px 0px", border:".1vw solid transparent", outline: "0", backgroundColor: "rgb(25, 25, 25)"});
 	contactFormSubmitButtonAnimation
 		.to(browserSubmitButton, 1,
-			{border: ".1vw solid transparent", backgroundColor: "#2ae", width: "100%", color: "#fff", textTransform:"uppercase", textAlign: "center", padding: ".8vw 1.6vw"});
+			{border: ".1vw solid transparent", backgroundColor: "#2ae", width: "100%", color: "#fff", textTransform:"uppercase", textAlign: "center", padding: ".4vw"});
 
 	contactFormRadioButtonAnimation
 		.fromTo(browserRadioButton, 1, 
@@ -97,7 +97,7 @@ $(function(){
 	contactCursorAnimation
 		.fromTo(browserCursor, 1,
 			{left: 0, top: 0},
-			{left: "50%", top: "85%"})
+			{left: "50%", top: "78%"})
 		.fromTo(modal, .3, {opacity: 0}, {opacity: 1});
 
 	flipBrowserAnimation
