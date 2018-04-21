@@ -5,8 +5,8 @@ $(function(){
 
 	//timelines
 	var androidStudioAnimation = new TimelineMax(),
-		lineAnimation = new TimelineMax({repeat: -1, paused: true}),
-		menuAnimation = new TimelineMax({repeat: -1, paused: true}),
+		lineAnimation = new TimelineMax({paused: true}),
+		menuAnimation = new TimelineMax({paused: true, onComplete: restartAnimation}),
 		fileExplorerAnimation = new TimelineMax({onComplete: onCompleteFileLines});
 
 	//elements
@@ -46,8 +46,8 @@ $(function(){
 		.fromTo([menu1, menu2, menu3], 1, {height: 0, y:8}, {height:2, y:8})
 		.to(menu2, .6, {y: 14, ease: Power2.easeIn})
 		.to(menu3, .6, {y: 2, ease: Power2.easeIn})
-		.fromTo(mobileHeader, 1,{backgroundColor:"transparent"}, {boxShadow: "0px 4px 16px #212121", backgroundColor: "#fff"})
-		.staggerFromTo(cards, 1, {backgroundColor: "transparent", width: 2}, {backgroundColor: "#fff", width: 2})
+		.fromTo(mobileHeader, 1,{backgroundColor:"transparent"}, {boxShadow: "0px 4px 16px #000", backgroundColor: "#21252B"})
+		.staggerFromTo(cards, 1, {backgroundColor: "transparent", width: 2}, {backgroundColor: "#2F333D", width: 2})
 		.staggerTo(cards, 1, {height: 12, width: 5})
 		.staggerTo(cards, 1, {marginTop: 32})
 		.staggerTo(cards, .5, {width: "100%"}, .1)
@@ -56,7 +56,7 @@ $(function(){
 		 	{height: 64} ,
 			.3)
 		.staggerTo(cards, 1,
-		 	{boxShadow: "0px 4px 16px #212121"},
+		 	{boxShadow: "0px 4px 16px #111"},
 			.3)
 		.fromTo(
 			cardHolder, 1, {y: 0}, {y: -200});
@@ -73,5 +73,12 @@ $(function(){
 
 	function getRandomInt(min, max) {
  		return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+
+	function restartAnimation() {
+		window.setTimeout( () => {
+			menuAnimation.duration(15).restart();
+			lineAnimation.duration(15).restart();
+		}, 3000);
 	}
 });
