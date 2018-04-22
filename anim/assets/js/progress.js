@@ -1,7 +1,8 @@
 $(function() {
 	var windowWidth = $(window).width();
 	var colWidth = windowWidth;
-
+	var horizontal = new TimelineMax({paused: true});
+	var _gap;
 	function setSliderWidth() {
 		
 		windowWidth = $(window).width();
@@ -21,12 +22,19 @@ $(function() {
 		});
 		progressTop = $(".progress").offset().top;
 		footerTop = $("footer").offset().top;
+		var p = (colWidth * $(".horizontal-slider-col").length) - $(window).width();
+		horizontal
+			.to('#horizontal-slider', 1, {x: -p});
+
+		_gap = p;
 	}
 
 	setSliderWidth();
 
 	var progressTop,
 		footerTop;
+
+
 
 	$(window).scroll(function(e) {
 		var scrollTop = $(window).scrollTop();
@@ -35,7 +43,10 @@ $(function() {
 			$("._horizontal-slider").removeClass("fixed");
 		}else if(scrollTop >= progressTop) {
 			$("._horizontal-slider").addClass("fixed");
-			$("._horizontal-slider").scrollLeft(scrollTop - progressTop);
+			var progress = (scrollTop - progressTop) / (_gap) ;
+			//console.log(progress);
+			horizontal.progress(progress);
+			//$("._horizontal-slider").scrollLeft(scrollTop - progressTop);
 		}else{
 			$("._horizontal-slider").removeClass("fixed");
 		}
