@@ -157,7 +157,7 @@ $(function(){
 			}, .1);
 
 	browserRotate
-		.to('.browser-holder', 3, { rotationX: 6, rotationZ: 5, ease: Power0.Linear});
+		.to('.browser-holder', 3, { rotationX: 10, rotationZ: 9, ease: Power0.Linear});
 
 	var htmlHeight,
 		cssHeight,
