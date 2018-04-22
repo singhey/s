@@ -291,14 +291,12 @@ $(function(){
 			//console.log(droid);
 			//iosDevAnimation.reverse().timeScale(2);
 
-		}/*else if(scrollTop <= iosDevTop) {
+		}else if(scrollTop <= iosDevTop) {
+			var progress = (scrollTop - androidDevTop) / (iosDevTop - androidDevTop);
+			console.log(progress);
+			ios.progress(progress)
 
-			androidDevMobileAnimation.pause();
-			androidDevCodingAnimation.pause();
-			iosDevAnimation.play().timeScale(1);
-			iosDevCodingAnimation.play();
-
-		}*/
+		}
 
 		if(scrollTop >= backendTop) {
 			header.removeClass("fixed");
@@ -327,11 +325,11 @@ $(function(){
 		htmlTop = $(".html").offset().top;
 		cssTop = $(".css").offset().top;
 		jsTop = $(".js").offset().top;
-		backendTop = $(".backend").offset().top;
+		backendTop = $(".backend-top").offset().top;
 
 		databseDevTop = $(".final").offset().top;//heading position of databse section
 		androidDevTop = $(".android-done").offset().top; //heading position of android development
-		//iosDevTop = $(".content-12").offset().top;*/
+		iosDevTop = $(".ios-done").offset().top;
 		
 		if($(window).scrollTop()>= frontEndTop) {
 			browserHolderAnimation.play();
