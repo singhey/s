@@ -207,7 +207,7 @@ $(function(){
 			serverStatusAnimation.pause();
 
 		}else if(scrollTop <= databseDevTop) {
-			var progress = (scrollTop - jsTop) / (databseDevTop - jsFinalTop);
+			var progress = (scrollTop - jsFinalTop) / (databseDevTop - jsFinalTop);
 			flipBrowserAnimation.progress(progress);
 			/*androidDevAnimation.reverse().timeScale(2);
 			androidDevCodingAnimation.pause();*/
