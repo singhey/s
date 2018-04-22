@@ -21,12 +21,6 @@ $(function(){
 		flipBrowserAnimation = new TimelineMax({paused: true, onComplete: runServerStatusLight})
 		serverStatusAnimation = new TimelineMax({paused: true, onComplete: runServerStatusLight, onReverseComplete: runServerStatusLight})
 		serverLightBarAnimation = new TimelineMax({paused: true}),
-		androidDevAnimation = new TimelineMax({paused: true, onComplete: startAndroidCoding}),
-		iosDevAnimation = new TimelineMax({paused: true, onComplete: startIosCoding}),
-		androidDevCodingAnimation = new TimelineMax({paused: true, repeat: -1}),
-		androidDevMobileAnimation = new TimelineMax({paused: true, repeat: -1}),
-		iosDevCodingAnimation = new TimelineMax({paused: true, repeat: -1}),
-		iosDevMobileAnimation = new TimelineMax({paused: true, repeat: -1}),
 		browserRotate = new TimelineMax({paused: true});
 
 
@@ -162,74 +156,8 @@ $(function(){
 				}
 			}, .1);
 
-	var easing = Power2.easeOut;
-	androidDevAnimation
-		.to('.browser-holder', .3, {backgroundColor: "rgb(56, 56, 56)"})
-		.to('.server-holder', .3, {y: 50, autoAlpha:0})
-		.from('.android-dev-svg', .3, {autoAlpha: 0})
-		.from('.android-dev.side-nav-hider', .1, {opacity: 0})
-		.from('.android-dev.laptop-base', .2, {autoAlpha: 0, y: 10, ease: easing})
-		.from('.android-dev.keyboard-base', .3, {autoAlpha: 0, y: 10, ease: easing})
-		.from('.android-dev.keyboard', .3, {autoAlpha: 0, y: 10, ease: easing})
-		.from('.android-dev.trackpad', .2, {autoAlpha: 0, y: 5, ease:easing})
-		.from('.android-dev.laptop-back-panel', .2, {autoAlpha: 0, y: 5, ease:easing})
-		.from('.android-dev.laptop-screen', .75, {autoAlpha: 0, scale: 0, ease: Elastic.easeOut.config(1.5, 1), transformOrigin: "50% 50%",})
-		.from('.android-dev.mobile', .3, {autoAlpha: 0, y: -20, ease: easing})
-		.fromTo('.android-dev.data-cabel', .75, {strokeDasharray: "0 100"}, {strokeDasharray: "100 100"})
-		.from('.android-dev.code-lines-holder', .2, {autoAlpha: 0});
-		
-	androidDevCodingAnimation
-		.staggerFromTo('.android-dev.code-lines-holder path', .5, {strokeDasharray: "0 100", 
-				cycle: {
-						stroke: function(i){
-							var colors = ["#E63329", "#4794FF", "#FF0173"];
-								return colors[getRandomNumber(0, colors.length)];
-						}
-					}
-				}, {strokeDasharray: "100 100", ease: Power0.linear}, .5);
-
-	androidDevMobileAnimation
-		.from(['.android-dev.side-nav-background', '.android-dev.side-nav-header'], .3, {x: "-120%"})
-		.staggerFrom('.android-dev.side-nav-item', .3, {scale: 0, autoAlpha: 0, }, 1);
-
-
-	iosDevAnimation
-		.to('.android-dev-holder', .3, {y: 50, autoAlpha: 0})
-		.from('.ios-dev-svg', .3, {autoAlpha: 0})
-		.from('.ios-dev.laptop-base', .2, {autoAlpha: 0, y: 10, ease: easing})
-		.from('.ios-dev.keyboard-base', .3, {autoAlpha: 0, y: 10, ease: easing})
-		.from('.ios-dev.keyboard', .3, {autoAlpha: 0, y: 10, ease: easing})
-		.from('.ios-dev.trackpad', .2, {autoAlpha: 0, y: 5, ease:easing})
-		.from('.ios-dev.laptop-back-panel', .2, {autoAlpha: 0, y: 5, ease:easing})
-		.from('.ios-dev.laptop-screen', .75, {autoAlpha: 0, scale: 0, ease: Elastic.easeOut.config(1.5, 1), transformOrigin: "50% 50%",})
-		.staggerFrom('.ios-dev.mobile', .3, {autoAlpha: 0, y: -20, ease: easing})
-		.fromTo('.ios-dev.data-cabel', .75, {strokeDasharray: "0 100"}, {strokeDasharray: "100 100"})
-		.from('.ios-dev.code-lines-holder path', .1, {autoAlpha: 0});
-
-	iosDevCodingAnimation
-		.staggerFromTo('.ios-dev.code-lines-holder path', 1, {strokeDasharray: "0 100", 
-				cycle: {
-						stroke: function(i){
-							var colors = ["#E63329", "#4794FF", "#FF0173"];
-								return colors[getRandomNumber(0, colors.length)];
-						}
-					}
-				}, {strokeDasharray: "100 100", ease: Power0.linear}, 1);
-
-	iosDevMobileAnimation
-		.from('.ios-dev.pop-overlay', .75, {autoAlpha: 0, ease: Power0.easeOut,})
-		.from('.ios-dev.pop-background', .75, {autoAlpha: 0, scale: 0, ease: Power0.easeOut, transformOrigin: "50% 50%",})
-		.from('.ios-dev.pop-horizontal', .3, {autoAlpha: 0, x: -10})
-		.from('.ios-dev.pop-vertical', .3, {autoAlpha: 0, y: 5})
-		.staggerFrom('.ios-dev.pop-text', .3, {autoAlpha: 0, scale: 0, transformOrigin: "50% 50%"}, .2)
-		.fromTo('.ios-dev.button-click', .2, {fill: "transparent"}, {fill: "#ccc"})
-		.to('.ios-dev.button-click', .1, {fill: "#fff"})
-		.to('.ios-dev.first-screen', .3, {autoAlpha:0, scale: 0.7, transformOrigin: "50% 50%"})
-		.from('.ios-dev.final-screen', .3, {autoAlpha: 0, scale: 0.7, transformOrigin: "50% 50%"})
-		.from('.ios-dev.final-screen', 5, {});//yet to implement
-
 	browserRotate
-		.to('.browser-holder', 3, {/*transform: "rotateX(49deg) rotateY(0deg) rotateZ(43deg)"*/ rotationX: 6, rotationZ: 5});
+		.to('.browser-holder', 3, { rotationX: 6, rotationZ: 5, ease: Power0.Linear});
 
 	var htmlHeight,
 		cssHeight,
@@ -273,7 +201,7 @@ $(function(){
 			contactFormRadioButtonAnimation.progress(progress);
 			contactFormSubmitButtonAnimation.progress(progress);
 
-		}else if(scrollTop <= jsTop) {
+		}else if(scrollTop <= jsFinalTop) {
 			var progress = (scrollTop - cssTop) / (jsTop - cssTop);
 			contactCursorAnimation.progress(progress);
 			serverStatusAnimation.pause();
@@ -293,7 +221,7 @@ $(function(){
 
 		}else if(scrollTop <= iosDevTop) {
 			var progress = (scrollTop - androidDevTop) / (iosDevTop - androidDevTop);
-			console.log(progress);
+			//console.log(progress);
 			ios.progress(progress)
 
 		}
@@ -307,8 +235,8 @@ $(function(){
 			backendHeading.removeClass("fixed");
 		}
 
-		var progress = (scrollTop - windowHeight) / (androidDevTop - htmlTop);
-
+		var progress = (scrollTop - windowHeight) / ((iosDevTop - htmlTop) + 1500);
+		console.log(progress);
 		if(progress > 0)
 			browserRotate.progress(progress);
 	});
@@ -325,6 +253,7 @@ $(function(){
 		htmlTop = $(".html").offset().top;
 		cssTop = $(".css").offset().top;
 		jsTop = $(".js").offset().top;
+		jsFinalTop = $(".js-final").offset().top;
 		backendTop = $(".backend-top").offset().top;
 
 		databseDevTop = $(".final").offset().top;//heading position of databse section
@@ -357,19 +286,6 @@ $(function(){
 
 	function getRandomNumber(min, max) {
 		return Math.floor(Math.random() * (max - min + 1)) + min;
-	}
-	function startAndroidCoding() {
-		iosDevCodingAnimation.pause();
-		iosDevMobileAnimation.pause();
-		androidDevCodingAnimation.duration(10).play();
-		androidDevMobileAnimation.duration(10).play();
-	}
-
-	function startIosCoding() {
-		androidDevCodingAnimation.pause();
-		androidDevMobileAnimation.pause();
-		iosDevCodingAnimation.duration(10).play();
-		iosDevMobileAnimation.duration(10).play();	
 	}
 
 	$(window).resize(function() {
