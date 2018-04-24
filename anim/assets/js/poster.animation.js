@@ -25,6 +25,7 @@ $(function(){
 			{opacity: 0, y: '-40%', x:'-50%'},
 			{opacity: 1, y: '-50%', x:'-50%'}, 1);
 
+
 	lineAnimation
 		.staggerFromTo(lines, .4, 
 			{width: "0%"},

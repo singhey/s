@@ -24,7 +24,8 @@ $(function() {
 		footerTop = $("footer").offset().top;
 		var p = (colWidth * $(".horizontal-slider-col").length) - $(window).width();
 		horizontal
-			.to('#horizontal-slider', 1, {x: -p});
+			.to('#horizontal-slider', 1, {x: -p})
+			.staggerFrom(".horizontal-slider-col", .2, {autoAlpha: 0, y: 40}, .2, -.3);
 
 		_gap = p;
 	}

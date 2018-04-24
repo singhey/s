@@ -236,7 +236,7 @@ $(function(){
 		}
 
 		var progress = (scrollTop - windowHeight) / ((iosDevTop - htmlTop) + 1500);
-		console.log(progress);
+		//console.log(progress);
 		if(progress > 0)
 			browserRotate.progress(progress);
 	});
