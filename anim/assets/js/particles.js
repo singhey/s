@@ -11,7 +11,7 @@ $(function() {
 		this.y = y;
 		this.r = 2 + Math.floor(Math.random() * 3);
 		this.intensity = Math.round(Math.random() * 100 )/100;
-		this.maxSpeed = 0.4;
+		this.maxSpeed = 0.3;
 		this.ySpeed = (0.1 + Math.round(Math.random() * this.maxSpeed * 100 )/100);
 		this.xSpeed = (0.1 + Math.round(Math.random() * this.maxSpeed * 100 )/100);
 		//var p = Math.random() < 0.5 ? -1 : 1
@@ -56,7 +56,7 @@ $(function() {
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 		for(let i = 0; i < particles.length; i++) {
-			ctx.fillStyle = "rgba(255, 255, 255, "+particles[i].intensity+")";
+			ctx.fillStyle = "rgba(200, 200, 200, "+particles[i].intensity+")";
 			ctx.beginPath();
 			ctx.arc(particles[i].x, particles[i].y, particles[i].r, 0, 2*Math.PI);
 			ctx.fill();
