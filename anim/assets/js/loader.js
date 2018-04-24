@@ -31,7 +31,7 @@ $(function() {
 
 	text
 		.staggerFromTo('.stagger-text', .5, {y: 0}, { y: -32}, .1)
-		.staggerFromTo('.stagger-text', .5, {y: -32}, { y: 0}, .1, .5);
+		.staggerTo('.stagger-text', .5, { y: 0}, .1, .5);
 
 	loaderFade
 		.to(["#loader", '#loader svg'], .8, {autoAlpha: 0, scale: .7, ease: Power3.easeIn}, .3);
