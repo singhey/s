@@ -44,8 +44,6 @@ $(function(){
 		header = $(".heading-0"),
 		backendHeading = $('.heading-5');
 
-	console.log(backendHeading);
-	console.log(header);
 		
 	var fullStackSlide = {
 			height:0,
@@ -54,19 +52,19 @@ $(function(){
 		windowHeight = 0;
 
 	posterAnimation
-		.staggerFromTo(posterAnimationContent, .3, {opacity: 0, y: 40}, {opacity: 1, y: 0}, .15);
+		.staggerFrom(posterAnimationContent, .3, {opacity: 0, y: 40}, .15);
 
 	browserHolderAnimation
-		.fromTo(browserHolder, .5, {opacity: 0}, {opacity: 1});
+		.from(browserHolder, .5, {opacity: 0});
 
 	contactFormAnimation
 		.from(browserContactForm, 1, {opacity: 0});
 
 	contactFormContentAnimation
-		.staggerFromTo(browserContactFormContent, 1, {opacity: 0, y: 30}, {opacity: 1, y: 0}, .3);
+		.staggerFrom(browserContactFormContent, 1, {opacity: 0, y: 30}, .3);
 
 	contactFormHolderAnimation
-		.to(browserContactForm, 1,/*{width: "100%", marginTop: 0, backgroundColor: "transparent", padding: "0px 0px", boxShadow: "4px 4px 16px transparent",},*/
+		.to(browserContactForm, 1,
 		 {width: "50%", margin: "1.4vw auto", backgroundColor: "rgb(56, 56, 56)", boxShadow: "rgb(0, 0, 0) 4px 4px 16px 0px", padding: "1.6vw 1.6vw", fontSize: "1vw"});
 
 	contactFormHeadingAnimation
@@ -74,7 +72,6 @@ $(function(){
 
 	contactFormInputFieldAnimation
 		.staggerTo(browserInputField, 1, 
-			/*{border: "1px solid #000", padding: "0px 0px"},*/
 			{width: "100%", marginTop: "1.6vw", marginBottom: "1.6vw", padding: ".4vw 1.6vw", boxShadow: "rgb(62, 62, 62) 4px 4px 14px 0px", border:".1vw solid transparent", outline: "0", backgroundColor: "rgb(25, 25, 25)"});
 	contactFormSubmitButtonAnimation
 		.to(browserSubmitButton, 1,
@@ -174,8 +171,8 @@ $(function(){
 	calculations();
 	$(window).scroll(function(){
 		var scrollTop = $(window).scrollTop();
-		currentScrollPosition = scrollTop;
-		window.clearTimeout( isScrolling );
+		/*currentScrollPosition = scrollTop;
+		window.clearTimeout( isScrolling );*/
 		if(scrollTop <= jsTop && scrollTop >= windowHeight) {
 			flipBrowserAnimation.progress(0);
 		}
@@ -190,11 +187,11 @@ $(function(){
 			var progress = (scrollTop - frontEndTop)/(htmlTop - frontEndTop);
 			contactFormAnimation.progress(progress);
 			contactFormContentAnimation.progress(progress);
-			/*if(scrollTop >= frontEndTop + 64) {
+			if(scrollTop >= frontEndTop + 64) {
 				header.addClass("fixed");
 			}else {
 				header.removeClass("fixed");
-			}*/
+			}
 
 		}else if(scrollTop <= cssTop) {
 
@@ -249,15 +246,45 @@ $(function(){
 		if(progress > 0)
 			browserRotate.progress(progress);
 
-		isScrolling = setTimeout(function() {
+		/*isScrolling = setTimeout(function() {
 
 			// Run the callback
 			scrollStopped();
 
-		}, 66);
-
+		}, 66);*/
 	});
 
+
+	$(window).bind('keydown', function(e){
+		scrollWithKeyDown(e);
+	})
+
+	function scrollWithKeyDown(e) {
+		if(e.which === 40 || e.which === 38)
+			e.preventDefault();
+		//window.clearTimeout(keyDownScroll);
+		//38 == up
+		//40 == down
+		if(e.which === 38) {
+			console.log("Scroll up");
+			let finalScroll = $(window).scrollTop() - 100;
+			TweenMax.to($window, scrollTime, {
+			scrollTo : { y: finalScroll, autoKill:true },
+				ease: Power1.easeOut,
+				autoKill: true,
+				overwrite: 5							
+			});
+		}else if(e.which === 40) {
+			console.log("Scroll down");
+			let finalScroll = $(window).scrollTop() + 100;
+			TweenMax.to($window, scrollTime, {
+			scrollTo : { y: finalScroll, autoKill:true },
+				ease: Power1.easeOut,
+				autoKill: true,
+				overwrite: 5							
+			});
+		}
+	}
 
 	function calculations(){ 
 
@@ -308,24 +335,27 @@ $(function(){
 	$(window).resize(function() {
 		calculations();
 	})
-	function scrollStopped(callback) {
-		if(!scrollStopCalled){
-			return;
-		}
-		//console.log("called");
-		let move = 0;
-		if(prevScrollPosition < currentScrollPosition)
-			move = $(window).scrollTop() - 10;
-		else
-			move = $(window).scrollTop() + 10;
-		$('html, body').animate({
-        	scrollTop:  move,
-    	}, 100);
-    	scrollStopCalled = false;
-    	window.setTimeout(function(){
-    		scrollStopCalled = true
-    		prevScrollPosition = $(window).scrollTop();
-    	}, 200);
-	}
+
+	var $window = $(window);		//Window object
+	
+	var scrollTime = .5;			//Scroll time
+	var scrollDistance = 300;		//Distance. Use smaller value for shorter scroll and greater value for longer scroll
+		
+	$window.on("mousewheel DOMMouseScroll", function(event){
+		
+		event.preventDefault();	
+										
+		var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
+		var scrollTop = $window.scrollTop();
+		var finalScroll = scrollTop - parseInt(delta*scrollDistance);
+			
+		TweenMax.to($window, scrollTime, {
+			scrollTo : { y: finalScroll, autoKill:true },
+				ease: Power1.easeOut,
+				autoKill: true,
+				overwrite: 5							
+			});
+					
+	});
 
 });
