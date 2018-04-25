@@ -42,7 +42,10 @@ $(function(){
 		browserCursor = $(".cursor-image"),
 		modal = $("._modal"),
 		header = $(".heading-0"),
-		backendHeading = $('.heading-4');
+		backendHeading = $('.heading-5');
+
+	console.log(backendHeading);
+	console.log(header);
 		
 	var fullStackSlide = {
 			height:0,
@@ -162,19 +165,24 @@ $(function(){
 	var htmlHeight,
 		cssHeight,
 		jsHeight,
-		frontEndHeight;
+		frontEndHeight,
+		isScrolling,
+		scrollStopCalled =true,
+		prevScrollPosition = 0,
+		currentScrollPosition = 0;
 
 	calculations();
 	$(window).scroll(function(){
 		var scrollTop = $(window).scrollTop();
-
+		currentScrollPosition = scrollTop;
+		window.clearTimeout( isScrolling );
 		if(scrollTop <= jsTop && scrollTop >= windowHeight) {
 			flipBrowserAnimation.progress(0);
 		}
 
 		if(scrollTop <= windowHeight){
 			browserHolderAnimation.reverse();
-			header.removeClass("fixed");
+			//header.removeClass("fixed");
 		}else if(scrollTop <= htmlTop) {
 			
 			//fading in browser
@@ -182,11 +190,11 @@ $(function(){
 			var progress = (scrollTop - frontEndTop)/(htmlTop - frontEndTop);
 			contactFormAnimation.progress(progress);
 			contactFormContentAnimation.progress(progress);
-			if(scrollTop >= frontEndTop + 64) {
+			/*if(scrollTop >= frontEndTop + 64) {
 				header.addClass("fixed");
 			}else {
 				header.removeClass("fixed");
-			}
+			}*/
 
 		}else if(scrollTop <= cssTop) {
 
@@ -229,6 +237,7 @@ $(function(){
 		if(scrollTop >= backendTop) {
 			header.removeClass("fixed");
 			backendHeading.addClass("fixed");
+
 		}else if(scrollTop >= windowHeight){
 			header.addClass("fixed");
 			browserHolderAnimation.play();
@@ -239,6 +248,14 @@ $(function(){
 		//console.log(progress);
 		if(progress > 0)
 			browserRotate.progress(progress);
+
+		isScrolling = setTimeout(function() {
+
+			// Run the callback
+			scrollStopped();
+
+		}, 66);
+
 	});
 
 
@@ -291,5 +308,24 @@ $(function(){
 	$(window).resize(function() {
 		calculations();
 	})
+	function scrollStopped(callback) {
+		if(!scrollStopCalled){
+			return;
+		}
+		//console.log("called");
+		let move = 0;
+		if(prevScrollPosition < currentScrollPosition)
+			move = $(window).scrollTop() - 10;
+		else
+			move = $(window).scrollTop() + 10;
+		$('html, body').animate({
+        	scrollTop:  move,
+    	}, 100);
+    	scrollStopCalled = false;
+    	window.setTimeout(function(){
+    		scrollStopCalled = true
+    		prevScrollPosition = $(window).scrollTop();
+    	}, 200);
+	}
 
 });
