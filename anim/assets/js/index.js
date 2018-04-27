@@ -18,8 +18,8 @@ $(function(){
 		contactFormRadioButtonAnimation = new TimelineMax({paused: true}),
 		contactFormSubmitButtonAnimation = new TimelineMax({paused: true}),
 		contactCursorAnimation = new TimelineMax({paused: true}),
-		flipBrowserAnimation = new TimelineMax({paused: true, onComplete: runServerStatusLight})
-		serverStatusAnimation = new TimelineMax({paused: true, onComplete: runServerStatusLight, onReverseComplete: runServerStatusLight})
+		flipBrowserAnimation = new TimelineMax({paused: true, onComplete: runServerStatusLight}),
+		serverStatusAnimation = new TimelineMax({paused: true, onComplete: runServerStatusLight, onReverseComplete: runServerStatusLight}),
 		serverLightBarAnimation = new TimelineMax({paused: true}),
 		browserRotate = new TimelineMax({paused: true});
 
@@ -52,7 +52,7 @@ $(function(){
 		windowHeight = 0;
 
 	posterAnimation
-		.staggerFrom(posterAnimationContent, .3, {opacity: 0, y: 40}, .15);
+		.staggerFrom(posterAnimationContent, 0.3, {opacity: 0, y: 40}, 0.15);
 
 	browserHolderAnimation
 		.from(browserHolder, .5, {opacity: 0});
@@ -149,12 +149,12 @@ $(function(){
 					return getRandomNumber(3, 12) + " 12";
 				}
 			}, .1)
-		.staggerTo('.light-bar', .3,  
+		.staggerTo('.light-bar', 0.3,  
 			{
 				strokeDasharray: function(index) {
 					return getRandomNumber(3, 12) + " 12";
 				}
-			}, .1);
+			}, 0.1);
 
 	browserRotate
 		.to('.browser-holder', 3, { rotationX: 10, rotationZ: 9, ease: Power0.Linear});
@@ -187,11 +187,11 @@ $(function(){
 			var progress = (scrollTop - frontEndTop)/(htmlTop - frontEndTop);
 			contactFormAnimation.progress(progress);
 			contactFormContentAnimation.progress(progress);
-			if(scrollTop >= frontEndTop + 64) {
+			/*if(scrollTop >= frontEndTop + 64) {
 				header.addClass("fixed");
 			}else {
 				header.removeClass("fixed");
-			}
+			}*/
 
 		}else if(scrollTop <= cssTop) {
 
@@ -227,18 +227,18 @@ $(function(){
 		}else if(scrollTop <= iosDevTop) {
 			var progress = (scrollTop - androidDevTop) / (iosDevTop - androidDevTop);
 			//console.log(progress);
-			ios.progress(progress)
+			ios.progress(progress);
 
 		}
 
-		if(scrollTop >= backendTop) {
+		/*if(scrollTop >= backendTop) {
 			header.removeClass("fixed");
 			backendHeading.addClass("fixed");
-
-		}else if(scrollTop >= windowHeight){
-			header.addClass("fixed");
-			browserHolderAnimation.play();
 			backendHeading.removeClass("fixed");
+			header.addClass("fixed");
+		}else */
+		if(scrollTop >= windowHeight){
+			browserHolderAnimation.play();
 		}
 
 		var progress = (scrollTop - windowHeight) / ((iosDevTop - htmlTop) + 1500);
@@ -255,36 +255,7 @@ $(function(){
 	});
 
 
-	$(window).bind('keydown', function(e){
-		scrollWithKeyDown(e);
-	})
-
-	function scrollWithKeyDown(e) {
-		if(e.which === 40 || e.which === 38)
-			e.preventDefault();
-		//window.clearTimeout(keyDownScroll);
-		//38 == up
-		//40 == down
-		if(e.which === 38) {
-			console.log("Scroll up");
-			let finalScroll = $(window).scrollTop() - 100;
-			TweenMax.to($window, scrollTime, {
-			scrollTo : { y: finalScroll, autoKill:true },
-				ease: Power1.easeOut,
-				autoKill: true,
-				overwrite: 5							
-			});
-		}else if(e.which === 40) {
-			console.log("Scroll down");
-			let finalScroll = $(window).scrollTop() + 100;
-			TweenMax.to($window, scrollTime, {
-			scrollTo : { y: finalScroll, autoKill:true },
-				ease: Power1.easeOut,
-				autoKill: true,
-				overwrite: 5							
-			});
-		}
-	}
+	
 
 	function calculations(){ 
 
@@ -334,28 +305,8 @@ $(function(){
 
 	$(window).resize(function() {
 		calculations();
-	})
-
-	var $window = $(window);		//Window object
-	
-	var scrollTime = .5;			//Scroll time
-	var scrollDistance = 300;		//Distance. Use smaller value for shorter scroll and greater value for longer scroll
-		
-	$window.on("mousewheel DOMMouseScroll", function(event){
-		
-		event.preventDefault();	
-										
-		var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
-		var scrollTop = $window.scrollTop();
-		var finalScroll = scrollTop - parseInt(delta*scrollDistance);
-			
-		TweenMax.to($window, scrollTime, {
-			scrollTo : { y: finalScroll, autoKill:true },
-				ease: Power1.easeOut,
-				autoKill: true,
-				overwrite: 5							
-			});
-					
 	});
+
+	
 
 });

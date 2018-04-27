@@ -56,7 +56,7 @@ $(function() {
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 		for(let i = 0; i < particles.length; i++) {
-			ctx.fillStyle = "rgba(200, 200, 200, "+particles[i].intensity+")";
+			ctx.fillStyle = "rgba(150, 150, 150, "+particles[i].intensity+")";
 			ctx.beginPath();
 			ctx.arc(particles[i].x, particles[i].y, particles[i].r, 0, 2*Math.PI);
 			ctx.fill();
