@@ -228,8 +228,7 @@ body {
 
 .poster {
   position: relative;
-  z-index: 3;
-  background: #2B2B2B; }
+  z-index: 3; }
 
 .poster-anim {
   margin-bottom: 32px;
