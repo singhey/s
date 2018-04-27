@@ -1,38 +1,32 @@
 $(function(){
 
-	var frontEndEle = ['#front-end-heading', '#html-heading', '#css-heading', '#js-heading'];
-	var backEndEle = ['#backend-heading', '#server-heading', '#database-heading', '#mongo-db-heading', '#apache-heading', '#node-js-heading'];
 	var gap = 64;
 
-	const ANDROID = 'android',
+	/*const ANDROID = 'android',
 		IOS = 'ios',
 		FRONTEND = 'frontend',
-		BACKEND = 'backend';
+		BACKEND = 'backend';*/
 
 	$(window).scroll(function() {
 		var scrollTop = window.pageYOffset;
 		if(scrollTop >= iosTop) {
-			stickElements(IOS);
-			unstickElements(ANDROID);
-			unstickElements(BACKEND);
-			unstickElements(FRONTEND);
+			console.log($('#ios-heading'));
+			$('#ios-heading').sticky({topSpacing: (($(window).height() / 2) - $('#ios-heading').height()/2)});
+			$('#android-heading').unstick();
+			$('#backend-heading').unstick();
+			$('#front-end-heading').unstick();
 		}else if(scrollTop >= androidTop) {
-			stickElements(ANDROID);
-			unstickElements(BACKEND);
-			unstickElements(IOS);
-			unstickElements(FRONTEND);
+			$('#android-heading').sticky({topSpacing: (($(window).height() / 2) - $('#android-heading').height()/2)});
+			//$('#ios-heading').unstick();
+			$('#backend-heading').unstick();
+			$('#front-end-heading').unstick();
 		}else if(scrollTop >= backendTop) {
 
-			stickElements(BACKEND);
-			unstickElements(ANDROID);
-			unstickElements(IOS);
-			unstickElements(FRONTEND);
+			$('#backend-heading').sticky({topSpacing: (($(window).height() / 2) - $('#backend-heading').height()/2)});
+			$('#front-end-heading').unstick();
 
 		}else if(scrollTop >= frontendTop) {
-			stickElements(FRONTEND);
-			unstickElements(ANDROID);
-			unstickElements(IOS);
-			unstickElements(BACKEND);
+			$('#front-end-heading').sticky({topSpacing: (($(window).height() / 2) - $('#front-end-heading').height()/2)});
 		}
 	});
 
@@ -44,8 +38,8 @@ $(function(){
 
 	function calculatePositions () {
 		frontendTop =  $('.content-0').offset().top;
-		backendTop = $('.content-5').offset().top;
-		androidTop = $('.content-11').offset().top;
+		backendTop = $('.content-4').offset().top;
+		androidTop = $('.content-10').offset().top;
 		iosTop = $('.content-15').offset().top;
 	}
 
@@ -79,14 +73,10 @@ $(function(){
 	function unstickElements(c){
 		switch(c){
 			case FRONTEND:
-				for(var i in frontEndEle){
-					$(frontEndEle[i]).unstick();
-				}
+				$('#front-end-heading').unstick();
 				break;
 			case BACKEND:
-				for(var i in backEndEle){
-					$(backEndEle[i]).unstick();
-				}
+				$('#backend-heading').unstick();
 				break;
 
 			case ANDROID:

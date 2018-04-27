@@ -9,9 +9,9 @@ $(function() {
 	var Particle = function(x, y) {
 		this.x = x;
 		this.y = y;
-		this.r = 2 + Math.floor(Math.random() * 3);
+		this.r = 2 + Math.floor(Math.random() * 2);
 		this.intensity = Math.round(Math.random() * 100 )/100;
-		this.maxSpeed = 0.3;
+		this.maxSpeed = 0.2;
 		this.ySpeed = (0.1 + Math.round(Math.random() * this.maxSpeed * 100 )/100);
 		this.xSpeed = (0.1 + Math.round(Math.random() * this.maxSpeed * 100 )/100);
 		//var p = Math.random() < 0.5 ? -1 : 1
