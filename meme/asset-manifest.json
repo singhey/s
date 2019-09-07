@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/singhey/meme/static/js/main.12501c23.chunk.js",
-    "main.js.map": "/singhey/meme/static/js/main.12501c23.chunk.js.map",
+    "main.js": "/singhey/meme/static/js/main.def554f0.chunk.js",
+    "main.js.map": "/singhey/meme/static/js/main.def554f0.chunk.js.map",
     "runtime~main.js": "/singhey/meme/static/js/runtime~main.8f19ff88.js",
     "runtime~main.js.map": "/singhey/meme/static/js/runtime~main.8f19ff88.js.map",
-    "static/js/2.7a4a93de.chunk.js": "/singhey/meme/static/js/2.7a4a93de.chunk.js",
-    "static/js/2.7a4a93de.chunk.js.map": "/singhey/meme/static/js/2.7a4a93de.chunk.js.map",
+    "static/js/2.3729443d.chunk.js": "/singhey/meme/static/js/2.3729443d.chunk.js",
+    "static/js/2.3729443d.chunk.js.map": "/singhey/meme/static/js/2.3729443d.chunk.js.map",
     "index.html": "/singhey/meme/index.html",
-    "precache-manifest.48352451a3b8cdf8887d401ddb4a7974.js": "/singhey/meme/precache-manifest.48352451a3b8cdf8887d401ddb4a7974.js",
+    "precache-manifest.f8fb7b8fa11947bda32c0007640f4f4f.js": "/singhey/meme/precache-manifest.f8fb7b8fa11947bda32c0007640f4f4f.js",
     "service-worker.js": "/singhey/meme/service-worker.js"
   }
 }
