@@ -200,7 +200,7 @@ window.addEventListener('load', function() {
 
 function download() {
   //e.preventDefault();
-  document.getElementById("downloader").download = "image.jpg";
+  document.getElementById("downloader").download = "image.png";
   console.log("hello")
   document.getElementById("downloader").href = document.querySelector("canvas").toDataURL("image/png").replace(/^data:image\/[^;]/, 'data:application/octet-stream');
 }
