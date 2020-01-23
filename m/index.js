@@ -60,8 +60,11 @@ var Meme = {
     this.spacing = obj.spacing || this.spacing
     this.textAlign = obj.textAlign || this.textAlign
     lines = []
-    for(var i = 0; i < this.text.split("\n").length; i++)
-      lines.push(getLines(Canvas.ctx, this.text.split("\n")[i], Canvas.width - this.spacing * 2, this.font + "px " + Meme.fontFamily))
+    for(var i = 0; i < this.text.split("\n").length; i++){
+      var d = getLines(Canvas.ctx, this.text.split("\n")[i], Canvas.width - this.spacing * 2, this.font + "px " + Meme.fontFamily)
+      lines = lines.concat(d)
+      console.log(lines)
+    }
     Canvas.ctx.clearRect(0, 0, Canvas.el.width, Canvas.el.height)
     Meme.banner();
     //Canvas.drawLine({x: 0, y: Canvas.height / 2}, {x: Canvas.width, y: Canvas.height / 2});
