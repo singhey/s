@@ -86,6 +86,8 @@ var Meme = {
       x = Canvas.width / 2
     }
 
+    //console.log(Meme)
+
     for(var i = 0; i < lines.length; i++)
       Canvas.writeText({
         msg: lines[i],
@@ -185,7 +187,7 @@ window.addEventListener('load', function() {
     Meme.setState({spacing: e.target.value})
   })
 
-  var btns = this.document.querySelectorAll(".btn")
+  var btns = this.document.querySelectorAll(".orange")
   for(var i = 0; i < btns.length; i++) {
     btns[i].addEventListener('click', function(e){
       Meme.setState({textAlign: e.target.innerText.toLowerCase()})
@@ -198,7 +200,7 @@ window.addEventListener('load', function() {
 
 function download() {
   //e.preventDefault();
-  document.getElementById("downloader").download = "image.png";
+  document.getElementById("downloader").download = "image.jpeg";
   console.log("hello")
   document.getElementById("downloader").href = document.querySelector("canvas").toDataURL("image/png").replace(/^data:image\/[^;]/, 'data:application/octet-stream');
 }
