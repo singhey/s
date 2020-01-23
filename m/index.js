@@ -159,7 +159,7 @@ function getLines(ctx, phrase, maxPxLength, textStyle) {
 window.addEventListener('load', function() {
 
   //Create canvas with the device resolution.
-  var myCanvas = createHiDPICanvas(window.innerWidth - 16, window.innerWidth - 16);
+  var myCanvas = createHiDPICanvas(window.innerWidth, window.innerWidth);
   var con = document.getElementById('canvas-holder')
   con.append(myCanvas)
   Canvas.el = myCanvas;
