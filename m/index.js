@@ -192,4 +192,13 @@ window.addEventListener('load', function() {
     })
   }
 
+  downloader = this.document.getElementById('downloader');
+  downloader.addEventListener('click', download);
 }) 
+
+function download() {
+  //e.preventDefault();
+  document.getElementById("downloader").download = "image.png";
+  console.log("hello")
+  document.getElementById("downloader").href = document.querySelector("canvas").toDataURL("image/png").replace(/^data:image\/[^;]/, 'data:application/octet-stream');
+}
