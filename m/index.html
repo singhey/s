@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Meme</title>
+  <script src="./index.js"></script>
+  <link rel="stylesheet" href="./index.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="all-container">
+    <div class="modifiers material">
+      <div class="paper">
+        <div class="form-row">
+          <textarea rows="5" id="meme-text" class="form-input" required></textarea><span></span>
+          <label for="meme-text" class="input-title">Meme Text</label>
+        </div>
+        <div class="split">
+          <div>
+            <div class="form-row">
+              <input type="number" id="padding" class="form-input" required/><span></span>
+              <label for="padding" class="input-title">Spacing</label>
+            </div>
+          </div>
+          <div>
+            <div class="form-row">
+              <input type="number" id="font" class="form-input" required/><span></span>
+              <label for="font" class="input-title">Font Size</label>
+            </div>
+          </div>
+        </div>
+        <h2>Text Align</h2>
+        <div class="btn-holder">
+          <button class="btn orange"><span>Start</span></button>
+          <button class="btn orange"><span>Center</span></button>
+          <button class="btn orange"><span>End</span></button>
+        </div>
+      </div>
+    </div>
 
+    <div class="canvas-holder" id="canvas-holder">
+    </div>
+  </div>
+</body>
+</html>
