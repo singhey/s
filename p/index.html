@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Patterns</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    canvas {
+      display: block;
+      background: #212121;
+    }
+  </style>
+  <script src="./Canvas.js"> </script>
+  <script>
+    window.addEventListener('load', function(){
+      Canvas.create(window.innerWidth , window.innerHeight, document.querySelector('body'))
+      window.requestAnimationFrame(draw)
+      Canvas.ctx.font = '24px sans-serif'
+      Canvas.ctx.fillStyle = '#fff'
+      Canvas.ctx.fillText("Lines: "+count, window.innerWidth - 200, 50)
+      Canvas.ctx.fillText("Multiplier: "+number, window.innerWidth - 200, 100)
+      
+    })
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
