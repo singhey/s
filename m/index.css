@@ -2,10 +2,15 @@ html, body {
   padding: 0;
   margin: 0;
   background-color: #fff;
+  height: 100%;
 }
 *{
   box-sizing: border-box;
   font-family: 'Raleway', Arial, Helvetica, sans-serif;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 .canvas-holder {
@@ -118,13 +123,19 @@ textarea.form-input {
   border-radius: 2px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
   
-  background-color: #2ecc71;
+  background-color: #0091EA;
   color: #ecf0f1 !important;
   
   transition: background-color .3s;
+  padding: 8px 16px;
+  cursor: pointer;
 }
 
-.btn:hover, .btn:focus {
+.btn.meme-download{
+  padding: 0
+}
+
+/* .btn:hover, .btn:focus {
   background-color: #27ae60;
 }
 
@@ -171,7 +182,7 @@ textarea.form-input {
   box-sizing: border-box;
 }
 
-.btn.orange {
+ /* .btn.orange {
   background-color: #e67e22;
 }
 
@@ -185,7 +196,7 @@ textarea.form-input {
 
 .btn.red:hover, .btn.red:focus {
   background-color: #c0392b;
-}
+} */
 
 .btn-holder {
   display: flex;
@@ -209,4 +220,160 @@ h2 {
 .meme-download a {
   text-decoration: none;
   color: #fff;  
+  display: block;
+  padding: 8px 16px;
+}
+
+[ripple]{
+	position:relative;
+	overflow: hidden;
+}
+
+.center {
+  min-height: 300px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  text-align: center;
+}
+
+[ripple] ripple{
+	background-color: rgba(255, 255, 255, 0.7);
+	position: absolute;
+	transform: scale(0.0);
+	border-radius: 100%;
+	animation: ripple .6s linear;
+}
+[ripple-dark] ripple{
+	background-color: rgba(100, 100, 100, 0.5);
+}
+@keyframes ripple{
+	0%{
+		transform: scale(.0);
+		opacity:1;
+	}
+	100%{
+		transform: scale(2.5);
+		opacity:0;
+	}
+}
+
+.color-item {
+  display: inline-block;
+  width: 32px;
+  height: 16px;
+}
+
+.color-box {
+  display: inline-flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.color-title {
+  font-size: 12px;
+  color: #fff;
+  padding: 8px 16px;
+  display: block;
+  cursor: pointer
+}
+
+
+
+.color-layer {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background: #fff;
+  transition: all .3s ease-out;
+  transform: translateY(100%)
+}
+
+.color-layer.visible {
+  transform: translateY(0%);
+}
+
+.cont {
+  display: flex;
+  flex-direction:row;
+}
+
+.color-names, .colors {
+  width: 50%;
+}
+
+.color-block, .color-label {
+  height: 48px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.color-label span{
+  height: 100%;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.close-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 32px;
+  align-items: center;
+  padding: 0px 8px;
+}
+
+.close {
+  position: relative;
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.close::after, .close::before {
+  position: absolute;
+  content: '';
+  height: 24px;
+  width: 2px;
+  background: #212121;
+  left: 16px;
+  top: 8px;
+  transform: rotate(45deg)
+}
+
+.close::before {
+  transform: rotate(-45deg);
+}
+
+.select {
+  border: 0;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 4px;
+  box-shadow: 2px 4px 8px #ccc, -1px -1px 4px #ccc;
+  background-color: #fff;
+}
+
+.color-icon {
+  width: 32px;
+  width: 32px;
+}
+
+.mod {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0px;
+}
+
+.color-names, .colors {
+  height: calc(100vh - 32px);
+  overflow: scroll
 }
