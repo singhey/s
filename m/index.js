@@ -64,7 +64,7 @@ var Meme = {
     for(var i = 0; i < this.text.split("\n").length; i++){
       var d = getLines(Canvas.ctx, this.text.split("\n")[i], Canvas.width - this.spacing * 2, this.font + "px " + Meme.fontFamily)
       lines = lines.concat(d)
-      console.log(lines)
+      //console.log(lines)
     }
     Canvas.ctx.clearRect(0, 0, Canvas.el.width, Canvas.el.height)
     Meme.banner();
@@ -192,7 +192,7 @@ function generateColorCatalogue(){
   for(let i = 0; i < colors.length; i++){
     holder.innerHTML += createItem(colors[i])
   }
-  console.log(holder)
+  //console.log(holder)
 }
 var Ripple = {
   init: function(){
@@ -244,6 +244,46 @@ function addColorListeners(){
       
     })
   }
+}
+
+function selectDraft(index) {
+  var a = localStorage.getItem("draft")
+    if(a === null){
+      a = [{primary: "No draft yet", secondary: "Write one"}]
+    }else {
+      a = JSON.parse(a)
+    }
+  var item = a[index-1]
+
+  Meme.setState({text: item.primary, font: item.font, spacing: item.spacing})
+  document.querySelector("#close-draft").click()
+  var textfield = document.getElementById('meme-text'),
+  font = document.getElementById('font'),
+  padding = document.getElementById('padding')
+
+  textfield.value = item.primary
+  font.value = item.font
+  padding.value = item.spacing
+
+}
+
+function draftListItem(index, title, secondary){
+  return `<li ripple ripple-dark onclick="selectDraft(${index})">
+    <span class="draft-index">${index}</span>
+    <div class="text-container">
+      <span class="draft-title"> ${title.substr(0, 40)}</span>
+      <span class="draft-secondary">${secondary}</span>
+    </div>
+  </li>`
+}
+
+function renderDraft(data){
+  var list = document.querySelector(".draft-list")
+  list.innerHTML = ""
+  for(let i = 0; i < data.length; i++){
+    list.innerHTML += draftListItem(i+1, data[i].primary, data[i].secondary)
+  }
+  Ripple.init()
 }
 
 window.addEventListener('load', function() {
@@ -300,6 +340,60 @@ window.addEventListener('load', function() {
   })
   generateColorCatalogue()
   addColorListeners()
+
+  var viewDraft = document.querySelector("#view-draft")
+  viewDraft.addEventListener("click", function(e){
+    document.querySelector(".draft-layer").classList.add("visible")
+    var a = localStorage.getItem("draft")
+    if(a === null){
+      a = [{primary: "No draft yet", secondary: "Write one"}]
+    }else {
+      a = JSON.parse(a)
+    }
+    renderDraft(a)
+  })
+
+  var closeDraft = document.querySelector("#close-draft")
+  closeDraft.addEventListener("click", function(e){
+    document.querySelector(".draft-layer").classList.remove("visible")
+  })
+
+  //save draft
+  document.querySelector("#save-draft").addEventListener("click", function(e){
+    if(Meme.text.length === 0){
+      return
+    }
+
+    let tobeSaved = {
+      primary: Meme.text,
+      secondary: new Date().toString().substr(0, 24),
+      font: Meme.font,
+      spacing: Meme.spacing 
+    }
+
+    console.log(tobeSaved)
+
+    var a = localStorage.getItem("draft")
+    if(a === null){
+      a = []
+    }else {
+      a = JSON.parse(a)
+    }
+    //console.log(a)
+    a.unshift(tobeSaved)
+    if(a.length > 30){
+      a = a.slice(0, 30)
+    }
+    localStorage.setItem('draft', JSON.stringify(a))
+    message.classList.add("visible")
+    message.innerText = "Draft saved"
+    window.setTimeout(function(){
+      let message = document.querySelector(".message")
+      message.classList.remove("visible")
+    }, 2000)
+  })
+
+  //renderDraft([{primary: "Hello", secondary: "Hey"}])
 
   downloader = this.document.getElementById('downloader');
   downloader.addEventListener('click', download);

@@ -63,6 +63,14 @@
 
           </span>
         </div>
+        <div class="draft">
+          <button class="btn" id="save-draft" ripple>
+            Save as draft
+          </button>
+          <button class="btn" id="view-draft" ripple>
+            View saved 
+          </button>
+        </div>
       </div>
     </div>
     <div class="canvas-holder" id="canvas-holder">
@@ -81,6 +89,19 @@
         <div class="color-names"></div>
         <div class="colors"></div>
       </div>
+    </div>
+    <div class="draft-layer">
+      <div class="close-container">
+        <span>Choose a draft</span>
+        <span class="close-draft" id="close-draft"></span>
+      </div>
+      <div>
+        <ul class="draft-list">
+        </ul>
+      </div>
+    </div>
+    <div class="message" id="message">
+      This is message
     </div>
     <script type="text/javascript">
       
