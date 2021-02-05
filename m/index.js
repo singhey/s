@@ -402,7 +402,7 @@ window.addEventListener('load', function() {
 
 function download() {
   //e.preventDefault();
-  document.getElementById("downloader").download = "image.png";
+  document.getElementById("downloader").download = "image.jpeg";
   console.log("hello")
-  document.getElementById("downloader").href = document.querySelector("canvas").toDataURL("image/png").replace(/^data:image\/[^;]/, 'data:application/octet-stream');
+  document.getElementById("downloader").href = document.querySelector("canvas").toDataURL("image/jpeg").replace(/^data:image\/[^;]/, 'data:application/octet-stream');
 }
