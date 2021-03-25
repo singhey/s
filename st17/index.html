@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Meme</title>
+  <script src="./index.js"></script>
+  <link rel="stylesheet" href="./index.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+  <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="all-container">
+    <div class="modifiers material">
+      <div class="paper">
+        <div class="form-row">
+          <textarea rows="5" id="meme-text" class="form-input" required></textarea><span></span>
+          <label for="meme-text" class="input-title">Meme Text</label>
+        </div>
+        <div class="split">
+          <div>
+            <div class="form-row">
+              <input type="number" id="padding" class="form-input" required/><span></span>
+              <label for="padding" class="input-title">Spacing</label>
+            </div>
+          </div>
+          <div>
+            <div class="form-row">
+              <input type="number" id="font" class="form-input" required/><span></span>
+              <label for="font" class="input-title">Font Size</label>
+            </div>
+          </div>
+        </div>
+        <div class="mod">
+          <select name="text-align" class="select">
+            <option value="start">Start</option>
+            <option value="center">Center</option>
+            <option value="end">End</option>
+          </select>
+          <span style="display: flex; align-items: center;">
+            <span style="padding:0px 8px; display: inline-flex;">Background</span>
+              <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" class="color-icon">
+                <path style="fill:#53BCE9;" d="M256,0C114.615,0,0,114.615,0,256s114.615,256,256,256s256-114.615,256-256S397.385,0,256,0z
+                  M256,348.076c-50.855,0-92.087-41.221-92.087-92.076s41.232-92.076,92.087-92.076s92.076,41.221,92.076,92.076
+                  S306.855,348.076,256,348.076z"/>
+                <path style="fill:#47C97F;" d="M256,348.076V512c-70.698,0-134.687-28.651-181.018-74.982l115.911-115.911
+                  C207.559,337.774,230.567,348.076,256,348.076z"/>
+                <path style="fill:#36A6CE;" d="M74.982,74.982l115.911,115.911c-16.666,16.656-26.969,39.685-26.969,65.108H0
+                  C0,185.313,28.651,121.302,74.982,74.982z"/>
+                <path style="fill:#FA3F68;" d="M437.018,74.982L321.108,190.892c-16.666-16.666-39.675-26.969-65.108-26.969V0
+                  C326.698,0,390.687,28.651,437.018,74.982z"/>
+                <path style="fill:#E29A4B;" d="M348.076,256H512c0,70.687-28.651,134.698-74.982,181.018L321.108,321.108
+                  C337.774,304.452,348.076,281.422,348.076,256z"/>
+                <path style="fill:#FCB65F;" d="M321.108,321.108l115.911,115.911C390.687,483.349,326.698,512,256,512V348.076
+                  C281.433,348.076,304.441,337.774,321.108,321.108z"/>
+                <path style="fill:#E02F5E;" d="M512,256H348.076c0-25.422-10.303-48.452-26.969-65.108L437.018,74.982
+                  C483.349,121.302,512,185.313,512,256z"/>
+                <path style="fill:#35B568;" d="M163.924,256c0,25.422,10.303,48.452,26.969,65.108L74.982,437.018C28.651,390.698,0,326.687,0,256
+                  H163.924z"/>
+              </svg>
+
+          </span>
+        </div>
+        <div class="draft">
+          <button class="btn" id="save-draft" ripple>
+            Save as draft
+          </button>
+          <button class="btn" id="view-draft" ripple>
+            View saved 
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="canvas-holder" id="canvas-holder">
+    </div>
+    <div class="btn-holder" style="padding: 8px">
+      <button class="btn meme-download" ripple>
+        <a href="#" id="downloader" download="image.png">Download Meme!</a>
+      </button>
+    </div>
+    <div class="color-layer">
+      <div class="close-container">
+        <span>Choose a color</span>
+        <span class="close" id="close"></span>
+      </div>
+      <div class="cont">
+        <div class="color-names"></div>
+        <div class="colors"></div>
+      </div>
+    </div>
+    <div class="draft-layer">
+      <div class="close-container">
+        <span>Choose a draft</span>
+        <span class="close-draft" id="close-draft"></span>
+      </div>
+      <div>
+        <ul class="draft-list">
+        </ul>
+      </div>
+    </div>
+    <div class="message" id="message">
+      This is message
+    </div>
+    <script type="text/javascript">
+      
+    </script>
+  </div>
+</body>
+</html>
