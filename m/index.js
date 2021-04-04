@@ -121,7 +121,7 @@ var Meme = {
     })
 
     Canvas.writeText({
-      msg: "@thecheaptalkers",
+      msg: "@theclassytalkers",
       x: Canvas.width - 8,
       y: 16,
       color: "rgba(255, 255, 255, 0.8)",
